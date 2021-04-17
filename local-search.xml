@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>general_relativity_review</title>
+    <link href="/2021/04/17/general-relativity-review/"/>
+    <url>/2021/04/17/general-relativity-review/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2021/04/17/hello-world/"/>
+    <url>/2021/04/17/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: [Writin]<a href="https://hexo.io/docs/writing.html">https://hexo.io/docs/writing.html</a>)</p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>球面坐标系中的微分几何及其应用</title>
+    <link href="/2020/05/05/DG_in_spherical_coordinate/"/>
+    <url>/2020/05/05/DG_in_spherical_coordinate/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/fig/cover/cover.png" alt=""></p><blockquote><p>前几个月一直忙着保研的事情, 好像已经好几个月没写成形一些的 note 了… 算一算上一次在知乎上传 note 好像是上学期期末? 话说这学期也快到期末了, 没想到鸽一下一个学期就没了 <code>┑(￣Д ￣)┍</code>.</p><p>今后上传的笔记在相比以往会有一些调整. 最显注的可能是封面选择. 主要是考虑到文风似乎过于严肃了一些, 所以向其它一些文章作者学习一下, 封面干脆换成可爱的二次元妹子, 希望能吸引更多的 (lsp) 读者 <code>(⊙ω⊙)</code> (虽然我有点怀疑是不是因为前面的大半年压力太大, 导致现在整个人变宅了一点…). 其二是之前上传笔记的动机是为了复习四大力学以应对理论所的面试, 但后来我将专栏名称改成了 “冬季银河的理论物理笔记”, 因此只要是和物理相关的一些内容应该都会上传. 其三是之前的笔记内容上更专一一些, 基本上每一篇都是来自某本教材的某一节或某几节, 今后的笔记应该会以平时碰到的问题为主干来组织内容, 因而可能会混杂好几门教材或好几门课的内容的情况 (比如这次的就混杂了微分几何, 数学物理方法, 量子力学三门课程的内容. 之所以想到计算球面坐标系的 Christoff 符号, 也是因为看宇宙学的时候计算了 FRW 度规下的 Christoff 符号, 打算再找个算 Christoff 符号的例子练习一下.). 最近一段时间主要是在看场论和宇宙学, 之后可能这些方面的内容会多一点. 最后一点是笔记上传格式的变化, 之前的时候都是把 LaTeX 编译的 pdf 文件导出后拼接成一整张长图, 但现在看来不拼接可能阅读体验会好一些, 而且也便于有需要的读者将每页图片保存后重新整合为单独的 pdf 文件. 所以今后除了将多余的页边剪裁一下以外, 不再将图片进行拼接.</p><blockquote><p>写这篇文章的主要动机是前不久在写数理方法的作业的参考答案的时候, 刚好碰到了球坐标下 Laplace 算符的问题, 加之高量考试又有径向角动量算符的题目, 以及一直想算一个微分几何的具体算例, 所以就写了这篇 note.</p></blockquote><p>这次的封面是藤原大佬 (pid: 27517) 的画中我最喜欢的一张, 算是入坑作吧 (最早好像在贴吧时代就看见过了).</p></blockquote><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;正文部分一开始先计算了球面坐标系下的度规张量, 并由此计算了相应的 Christoff 符号. 随后利用相应的计算结果, 讨论了 Laplace 算符和角动量算符在球面坐标系下的形式. 其中在 Laplace 算符的部分, 简单讨论了分离变量的问题. 在角动量算符的部分, 简单阐述了协变导数在动量及角动量算符中的必要性, 随后分别利用抽象指标和具体指标进行了计算, 并定义了径向动量模方算符, 以及能过对比证明了了角向 Laplace 算符与角动量算符只相差一个常系数. 文章的最后, 还从径向动量算符的定义出发, 证明了该算符的平方正是之前所定义的径向动量模方算符.</p><p>&emsp;&emsp;附录部分是笔记的手稿, 内有具体的计算过程. 用英文主要是因为英文写起来比较省力 <code>_(:з」∠)_</code>. (注意手稿的每一页是从左往右的, 水印的位置是每一页的右上角)</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="figure/main_body-1.jpg" alt="main body (1)"><br><img src="figure/main_body-2.jpg" alt="main body (2)"><br><img src="figure/main_body-3.jpg" alt="main body (3)"><br><img src="figure/main_body-4.jpg" alt="main body (4)"><br><img src="figure/main_body-5.jpg" alt="main body (5)"><br><img src="figure/main_body-6.jpg" alt="main body (6)"><br><img src="figure/main_body-7.jpg" alt="main body (7)"></p><h2 id="附录-手稿"><a href="#附录-手稿" class="headerlink" title="附录 (手稿)"></a>附录 (手稿)</h2><p><img src="figure/handwriting_1.jpg" alt="handwriting (1)"><br><img src="figure/handwriting_2.jpg" alt="handwriting (2)"><br><img src="figure/handwriting_3.jpg" alt="handwriting (3)"><br><img src="figure/handwriting_4.jpg" alt="handwriting (4)"><br><img src="figure/handwriting_5.jpg" alt="handwriting (5)"><br><img src="figure/handwriting_6.jpg" alt="handwriting (6)"><br><img src="figure/handwriting_7.jpg" alt="handwriting (7)"><br><img src="figure/handwriting_8.jpg" alt="handwriting (8)"><br><img src="figure/handwriting_9.jpg" alt="handwriting (9)"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
