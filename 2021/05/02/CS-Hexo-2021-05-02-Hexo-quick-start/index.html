@@ -18,7 +18,7 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>在 macOS 上使用 Firefox 运行 Flash - 博客 | 冬季银河</title>
+  <title>Hexo 快速上手 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="在 macOS 上使用 Firefox 运行 Flash">
+            <span class="h2" id="subtitle" title="Hexo 快速上手">
               
             </span>
 
@@ -178,7 +178,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-02 15:44" pubdate>
+      <time datetime="2021-05-02 17:02" pubdate>
         May 2, 2021 pm
       </time>
     </span>
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      833 字
+      1.5k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      16
        分钟
     </span>
   
@@ -238,7 +238,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">在 macOS 上使用 Firefox 运行 Flash</h1>
+            <h1 style="display: none">Hexo 快速上手</h1>
             
               <p class="note note-info">
                 
@@ -247,35 +247,72 @@
               </p>
             
             <div class="markdown-body">
-              <h2 id="Flash-插件的兼容性"><a href="#Flash-插件的兼容性" class="headerlink" title="Flash 插件的兼容性"></a>Flash 插件的兼容性</h2><p>&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> (比如新建网站时公安备案的网站 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="全国互联网安全管理平台
-">[2]</span></a></sup>, 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.</p>
-<p>&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正确运行 Flash 插件, 需要安装较旧的版本. 根据插件兼容性说明 (见 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> 主页面), 其对 macOS 的支持情况为:</p>
+              <p>本文绝大部分内容参考自 Hexo 的官方参考文档 <sup><a href="#fn_official_doc" id="reffn_official_doc">official_doc</a></sup>, 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会.</p>
+<h2 id="建站及-Hexo-目录结构-build"><a href="#建站及-Hexo-目录结构-build" class="headerlink" title="建站及 Hexo 目录结构 build"></a>建站及 Hexo 目录结构 <sup><a href="#fn_build" id="reffn_build">build</a></sup></h2><p>&emsp;&emsp;类似于 <code>git</code> 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化. 如</p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ hexo init &lt;folder&gt;<br>$ <span class="hljs-built_in">cd</span> &lt;folder&gt;<br>$ npm install<br></code></pre></div></td></tr></table></figure>
+<p>其中第一行是 <code>hexo</code> 的初始化语句, 第二行是跳转至建站的路径, 第三行是在路径下使用 <code>npm</code> 安装所需插件. 新建完成后的目录结构为</p>
+<figure class="highlight sqf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sqf">.<br>├── <span class="hljs-variable">_config</span>.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── <span class="hljs-variable">_drafts</span><br>|   └── <span class="hljs-variable">_posts</span><br>└── themes<br></code></pre></div></td></tr></table></figure>
+<p>各个路径的简介如下 (详细介绍见官方文档 <sup><a href="#fn_build" id="reffn_build">build</a></sup>)</p>
 <ul>
-<li>系统要求:Mac OS X 10.10 版或更高版本</li>
-<li>浏览器要求: 低于14版本的Safari、低于85版本的Mozilla Firefox、低于88版本内核的Google Chrome</li>
+<li><code>_config.yml</code>: Hexo 的 (全局) 配置文件</li>
+<li><code>package.json</code>: 通过 <code>npm install</code> 安装的包</li>
+<li><code>scaffolds</code>: 模板文件夹. 如使用指令 <code>hexo new [layout] &lt;title&gt;</code> <sup><a href="#fn_write" id="reffn_write">write</a></sup>, 将按照 <code>scaffolds</code> 中的模板文件 <code>[layout].md</code> 在当前目录下建立标题为 <code>&lt;title&gt;</code> 的新文件. (如果设置了资源文件夹<sup><a href="#fn_Asset" id="reffn_Asset">Asset</a></sup>, 除了建立 <code>&lt;title&gt;.md</code> 以外, 还会在当前位置建立名为 <code>&lt;title&gt;</code> 的文件夹)</li>
+<li><code>source</code>: 存放博客的核心—Markdown 文件及图片等资源的地方.</li>
+<li><code>theme</code>: 主题文件</li>
 </ul>
-<p>安装方式同一般的 macOS App 一致: 在网站上 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> 下载对应的 <code>.dmg</code> 文件, 并根据提示安装即可.</p>
-<h2 id="关闭-Flash-插件的自动更新"><a href="#关闭-Flash-插件的自动更新" class="headerlink" title="关闭 Flash 插件的自动更新"></a>关闭 Flash 插件的自动更新</h2><p>&emsp;&emsp;笔者在下载旧版本后一开始可能正常运行 Flash 插件, 但等一段时间以后就又无法运行了. 经检查发现, 关键原因在于 Firefox 默认进行自动更新.</p>
-<p>&emsp;&emsp;Firefox 本身是无法直接关闭自动更新的. 欲停止自动更新, 需配置 Firefox 的策略文件 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="禁用 Firefox 自动更新（macOS 版）
-">[3]</span></a></sup>. 首先打开文件 (没有则自行新建. 其本质上是一个文本文件)</p>
-<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">Firefox.app<span class="hljs-regexp">/Contents/</span>Resources<span class="hljs-regexp">/distribution/</span>policies.json<br></code></pre></div></td></tr></table></figure>
-<p>并向其中写入如下内容以禁止自动更新</p>
-<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">&#123;<br>  <span class="hljs-string">&quot;policies&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;DisableAppUpdate&quot;</span>: <span class="hljs-literal">true</span><br>  &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
-<p>操作完成后在 <em>Firefox</em> 菜单栏 <code>Firefox</code> -&gt; <code>关于 Firefox</code> 界面可看见 <code>更新已被系统管理员禁用</code> 的字样.</p>
-<p><img src="forbid_update.png" srcset="/img/loading.gif" lazyload alt="禁用更新成功后" title="禁用更新成功后"></p>
-<p>&emsp;&emsp;注意, 一旦 Firefox 已经自动更新, 目前笔者尚未发现直接降级的方法, 此时最好卸载当前 Firefox 后重新安装旧版</p>
-<h2 id="打开本地-Flash-文件"><a href="#打开本地-Flash-文件" class="headerlink" title="打开本地 Flash 文件"></a>打开本地 Flash 文件</h2><h3 id="获取-Flash-文件-swf"><a href="#获取-Flash-文件-swf" class="headerlink" title="获取 Flash 文件 (.swf)"></a>获取 Flash 文件 (<code>.swf</code>)</h3><p>&emsp;&emsp;Flash 文件的后缀一般为 <code>.swf</code>. 一般来说, 如果想要下载网页上的某个 Flash 资源 (如一个 Flash 小游戏), 可通过开发者页面 (如 Chrome 下按 <code>F12</code>) 以查看对应的 HTML 源码. 在源码中搜索 <code>.swf</code>, 找到想要下载的 Flash 文件链接后, 下载对应文件即可 (如 <em>Safari</em> 中可通过右击鼠标, 找到 <code>Download Linked File</code> 并点击来实现)</p>
-<h3 id="使用-Firefox-打开本地-swf-文件"><a href="#使用-Firefox-打开本地-swf-文件" class="headerlink" title="使用 Firefox 打开本地 .swf 文件"></a>使用 Firefox 打开本地 <code>.swf</code> 文件</h3><p>&emsp;&emsp;对 <em>Firefox</em>, 打开本地文件时 Flash 插件默认是不启用的. 欲对本地文件启用 Flash 插件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="火狐始终打不开本地swf文件
-">[4]</span></a></sup>, 在地址栏中输入 <code>about:config</code>, 搜索找到 <code>plugins.http_https_only</code> 项, 双击将其设置为 <code>flase</code> 即可.</p>
-<p><strong>关于选项名的理解 :</strong> 选项名 <code>plugins.http_https_only</code> 可理解为 “只在打开 http/https 启用 (Firefox 的) 插件”. 由于 <code>http/https</code> 是不同计算机进行通信时的通信协议, 该选项若为 <code>ture</code>, 则意味着只有在和其它计算机进行通信时才能启用 Firefox 插件. 换而言之, 该选项若打开, 则在访问本地资源时无法启用 Firefox 插件, 因而要将其设置为 <code>false</code> 以实现启用 Flash 插件打开本地 <code>.swf</code> 文件的需求.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="link">Adobe Flash Player</a><a target="_blank" rel="noopener" href="https://www.flash.cn">https://www.flash.cn</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/index.do">全国互联网安全管理平台</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/netgc/article/details/107593377">禁用 Firefox 自动更新（macOS 版）</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/pkowner/article/details/79416652">火狐始终打不开本地swf文件</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<h2 id="Markdown-写作"><a href="#Markdown-写作" class="headerlink" title="Markdown 写作"></a>Markdown 写作</h2><p>&emsp;&emsp;采用 Hexo 等博客框架的一大优势就是可以直接使用 Markdown 进行写作, 并自动生成最终所需的 HTML 文件, 而无需直接面对 HTML 文件. 相比通常的 Markdown 语法, Hexo 有自己独有的一些特点. 笔者将简单介绍如下</p>
+<h3 id="Front-Matter-FrontMatter"><a href="#Front-Matter-FrontMatter" class="headerlink" title="Front Matter FrontMatter"></a>Front Matter <sup><a href="#fn_FrontMatter" id="reffn_FrontMatter">FrontMatter</a></sup></h3><p>&emsp;&emsp;相比于一般的 Markdonw 语法, Hexo 提供了 Front Matterh 用以指定每篇文章的变量. 如标题名, 建立日期, 分类, 标签等. Front Matter 区域在 Markdonw 文件开头, 以两条三横线分隔, 如</p>
+<figure class="highlight md"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs md">---<br>title: <br>math: true<br>data: 2021-05-02<br>categories:<br><span class="hljs-bullet">-</span> <br>tags: <br>---<br></code></pre></div></td></tr></table></figure>
+<p>其中若有项目没有指定值. 将采用默认值. 部分参数控制的功能如下</p>
+<ul>
+<li><code>layout</code>: 文章布局, 默认为 <code>config.default_layout</code></li>
+<li><code>title</code>: 文章标题, 默认为文章的文件名</li>
+<li><code>date</code>: 文章的建立日期, 默认为文件建立日期.</li>
+<li><code>update</code>: 文章更新日期</li>
+<li><code>comments</code>: 是否开启文章评论</li>
+<li><code>tags</code>: 标签. 若希望有多个标签, 可采取类似 Markdown list 的形式, 如  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">tags:<br><span class="hljs-bullet">-</span> CS<br><span class="hljs-bullet">-</span> TODO<br></code></pre></div></td></tr></table></figure></li>
+<li><code>categories:</code>文章的分类. 采用类似 Markdown list 的形式, 前一个分类为后一个分类的父分类. 如  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">categories:<br><span class="hljs-bullet">-</span> Diary<br><span class="hljs-bullet">-</span> Life<br></code></pre></div></td></tr></table></figure>
+  其含义为: 该文件属于父分类 <code>Diary</code> 的子分类 <code>Life</code>. 关于为文章添加多个分类的方法详见官方参考文档 <sup><a href="#fn_Front Matter" id="reffn_Front Matter">Front Matter</a></sup>.</li>
+</ul>
+<p>部分主题 <code>theme</code> 提供了更丰富的 Front Matter. 如 Fluid 主题 <sup><a href="#fn_Fluid" id="reffn_Fluid">Fluid</a></sup> 提供了 <code>math</code>, <code>mermaid</code> 等来控制数学公式和 <code>mermaid</code> 流程图 <sup><a href="#fn_mermaid" id="reffn_mermaid">mermaid</a></sup> 的渲染开关.</p>
+<h3 id="Tag-插件"><a href="#Tag-插件" class="headerlink" title="Tag 插件"></a>Tag 插件</h3><p>&emsp;&emsp;官方文档直接翻译的是 “标签插件 <sup><a href="#fn_tag_plugin" id="reffn_tag_plugin">tag_plugin</a></sup>“. 这个名字一开始让我有些不明所以. 后来才认识到, 这个词语应分为两部分: “标签 (Tag)” 与 “插件 (Plugin)”, 亦即这是一类插件, 不过是比较特殊的一类插件. “Plugin” 表明, 这类功能的实现往往需要一些第三方程序—-也就是插件提供; “Tag” 表明, 这类功能的实现主要是由一种被称为 “标签 (Tag)” 的特殊语法来实现. 其与 “HTML 标签” 在使用上有相似之处, 但毕竟是不同的东西, 要注意与 “HTML 标签” 进行区分. 当然, 这一节的标题特意将前半部分用英文、而后半部分用中文, 亦是为了强调对这个名词的正确断句.</p>
+<p>&emsp;&emsp;标签的基本形式形如 <code>&#123;% <syntax> %&#125;</code>, 其中 <code>&lt;syntax&gt;</code> 部分没有特别统一的形式, 需要根据使用的具体插件进行学习. 官方文档 <sup><a href="#fn_tag_plugin" id="reffn_tag_plugin">tag_plugin</a></sup> 中给出了一些插件的例子.</p>
+<p>&emsp;&emsp;值得主要, 既然这些东西属于 “插件”, 自然必须安装了对应的第三方程序才能使用. 如果你发现一段代码在其他人的文章介绍里可以进行渲染, 但在自己的 Hexo 却无法实现, 就得怀疑是否是因为没有安装相应插件了.</p>
+<h2 id="资源-Asset-文件夹-Asset"><a href="#资源-Asset-文件夹-Asset" class="headerlink" title="资源 (Asset) 文件夹 Asset"></a>资源 (Asset) 文件夹 <sup><a href="#fn_Asset" id="reffn_Asset">Asset</a></sup></h2><p>&emsp;&emsp;相比于在 <code>source</code> 文件夹下建立诸如 <code>fig</code> 文件夹来统一管理文章所用到的资源 (如图片插入), 笔者更喜欢采取 “project” 的范式来撰写文章. 亦即将每一篇视为一个独立的 “project”, 不同 “project” 的资源彼此独立存储, 以减少不同 “project” 之间的耦合, 增强各自的独立性. 为在 Hexo 中实现此目的, 可在 <code>_config.yml</code> 中配置</p>
+<figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure>
+<p>当该选项开启后, 可在与文章同名的文件夹中放置资源, 并在对应文章中通过相对该文件夹的路径来引用资源. 例如, <code>source/</code> 下有博客 <code>hello.md</code>, 以及文件夹 <code>source/hello/</code>, 该文件夹中有子文件夹 <code>fig/</code>, 其中有图片 <code>test.png</code>. 那么在 <code>hello.md</code> 中使用该图片时, 可以直接使用相对与 <code>source/hello/</code> 的路径 <code>fig/test.png</code>, 而非相对 <code>source</code> 的路径. </p>
+<p>&emsp;&emsp;在官方中文文档中, 资源文件夹对应的是 Asset 文件夹, 而非 Source 文件夹. 笔者个人认为, Asset 文件夹的功效其实更接近英文 “Assistant”, 亦即辅助. 实际上, 官方文档中将 “Asset” 诠释为 “<code>source</code> 文件夹中除了文章以外的所有文件”. 从这个角度来说, 将此文件夹理解为 “使博客内容更加丰富的辅助文件” 也颇为贴切.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><blockquote id="fn_official_doc">
+<sup>official_doc</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hexo 官方中文文档</a><a href="#reffn_official_doc" title="Jump back to footnote [official_doc] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_build">
+<sup>build</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">建站</a><a href="#reffn_build" title="Jump back to footnote [build] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_write">
+<sup>write</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing">写作</a><a href="#reffn_write" title="Jump back to footnote [write] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_tag_plugin">
+<sup>tag_plugin</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins.html">标签插件（Tag Plugins）</a><a href="#reffn_tag_plugin" title="Jump back to footnote [tag_plugin] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_Asset">
+<sup>Asset</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">资源文件夹</a><a href="#reffn_Asset" title="Jump back to footnote [Asset] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_FrontMatter">
+<sup>FrontMatter</sup>. <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a><a href="#reffn_FrontMatter" title="Jump back to footnote [FrontMatter] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_mermaid">
+<sup>mermaid</sup>. <a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a><a href="#reffn_mermaid" title="Jump back to footnote [mermaid] in the text."> &#8617;</a>
+</blockquote>
+</li>
+</ul>
+
             </div>
             <hr>
             <div>
@@ -284,10 +321,17 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-Web/">CS Web</a>
+                      <a class="hover-with-bg" href="/categories/CS-Hexo/">CS Hexo</a>
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
+                    
+                  </div>
                 
               </div>
               
@@ -302,9 +346,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/02/CS-Hexo-2021-05-02-Hexo-quick-start/">
+                      <a href="/2021/05/02/CS-Web-2021-05-02-markdown-syntax-ref/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hexo 快速上手</span>
+                        <span class="hidden-mobile">Markdown 语法速查</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -312,8 +356,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/19/CS-Hexo-2021-04-19-plugin-introduce/">
-                        <span class="hidden-mobile">Hexo 插件简介</span>
+                      <a href="/2021/05/02/CS-Web-2021-05-02-Firefox-flash/">
+                        <span class="hidden-mobile">在 macOS 上使用 Firefox 运行 Flash</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -542,45 +586,6 @@
 
 
 
-
-  
-
-  
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
-
-  
 
 
 

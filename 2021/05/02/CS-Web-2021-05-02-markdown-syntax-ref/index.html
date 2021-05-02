@@ -18,7 +18,7 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>在 macOS 上使用 Firefox 运行 Flash - 博客 | 冬季银河</title>
+  <title>Markdown 语法速查 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="在 macOS 上使用 Firefox 运行 Flash">
+            <span class="h2" id="subtitle" title="Markdown 语法速查">
               
             </span>
 
@@ -178,7 +178,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-02 15:44" pubdate>
+      <time datetime="2021-05-02 20:16" pubdate>
         May 2, 2021 pm
       </time>
     </span>
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      833 字
+      345 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      4
        分钟
     </span>
   
@@ -238,7 +238,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">在 macOS 上使用 Firefox 运行 Flash</h1>
+            <h1 style="display: none">Markdown 语法速查</h1>
             
               <p class="note note-info">
                 
@@ -247,35 +247,78 @@
               </p>
             
             <div class="markdown-body">
-              <h2 id="Flash-插件的兼容性"><a href="#Flash-插件的兼容性" class="headerlink" title="Flash 插件的兼容性"></a>Flash 插件的兼容性</h2><p>&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> (比如新建网站时公安备案的网站 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="全国互联网安全管理平台
-">[2]</span></a></sup>, 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.</p>
-<p>&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正确运行 Flash 插件, 需要安装较旧的版本. 根据插件兼容性说明 (见 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> 主页面), 其对 macOS 的支持情况为:</p>
+              <p>&emsp;&emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.</p>
+<h2 id="图片及超链接"><a href="#图片及超链接" class="headerlink" title="图片及超链接"></a>图片及超链接</h2><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">fig name</span>](<span class="hljs-link">path &quot;alt name&quot;</span>)<br>[<span class="hljs-string">link display</span>](<span class="hljs-link">link</span>)<br></code></pre></div></td></tr></table></figure>
+<h2 id="表格-table"><a href="#表格-table" class="headerlink" title="表格 table"></a>表格 <sup><a href="#fn_table" id="reffn_table">table</a></sup></h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| 表头   | 表头   |<br>|--------|--------|<br>| 单元格 | 单元格 |<br>| 单元格 | 单元格 |<br></code></pre></div></td></tr></table></figure>
+<p>其中可在表头与内容的分割线处通过 <code>:-</code>, <code>-:</code>, <code>:-:</code> 指定对齐方式, 如:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| 左对齐 | 右对齐 | 居中对齐 |<br>|:-------|-------:|:--------:|<br>| 单元格 | 单元格 | 单元格   |<br>| 单元格 | 单元格 | 单元格   |<br></code></pre></div></td></tr></table></figure>
+<p>如 Vim 等文本编辑器通常提供有辅助源代码对齐的插件. 对于 Vim 插件 <code>plasticboy/vim-markdown</code> <sup><a href="#fn_vim-markdown" id="reffn_vim-markdown">vim-markdown</a></sup>, 其提供了对齐表格的指令 <code>:TableFormat</code>, 笔者将其设为了 NORMAL 模式下的快捷键 <code>&lt;localleader&gt;la</code>.</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="复选框-todo-list"><a href="#复选框-todo-list" class="headerlink" title="复选框 todo_list"></a>复选框 <sup><a href="#fn_todo_list" id="reffn_todo_list">todo_list</a></sup></h2><p>&emsp;&emsp;之前 (2021.04.30) 从 macOS 的 <em>Note</em> 中复制复选框列表到 Markdown 源文件时, 意外地发现列表开头自动变为了诸如 <code>[x]</code>, <code>[]</code> 的形式, 这才意识到 Markdown 或许也支持复选框.</p>
+<h3 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">[x] A<br>[ ] B<br><span class="hljs-bullet">-</span> [x] 已选中<br><span class="hljs-bullet">-</span> [ ] 未选中<br></code></pre></div></td></tr></table></figure>
+<p>应注意 “未选中” 框</p>
+<h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p>[x] A<br>[ ] B</p>
 <ul>
-<li>系统要求:Mac OS X 10.10 版或更高版本</li>
-<li>浏览器要求: 低于14版本的Safari、低于85版本的Mozilla Firefox、低于88版本内核的Google Chrome</li>
+<li>[x] 已选中</li>
+<li>[ ] 未选中</li>
 </ul>
-<p>安装方式同一般的 macOS App 一致: 在网站上 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn
-">[1]</span></a></sup> 下载对应的 <code>.dmg</code> 文件, 并根据提示安装即可.</p>
-<h2 id="关闭-Flash-插件的自动更新"><a href="#关闭-Flash-插件的自动更新" class="headerlink" title="关闭 Flash 插件的自动更新"></a>关闭 Flash 插件的自动更新</h2><p>&emsp;&emsp;笔者在下载旧版本后一开始可能正常运行 Flash 插件, 但等一段时间以后就又无法运行了. 经检查发现, 关键原因在于 Firefox 默认进行自动更新.</p>
-<p>&emsp;&emsp;Firefox 本身是无法直接关闭自动更新的. 欲停止自动更新, 需配置 Firefox 的策略文件 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="禁用 Firefox 自动更新（macOS 版）
-">[3]</span></a></sup>. 首先打开文件 (没有则自行新建. 其本质上是一个文本文件)</p>
-<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">Firefox.app<span class="hljs-regexp">/Contents/</span>Resources<span class="hljs-regexp">/distribution/</span>policies.json<br></code></pre></div></td></tr></table></figure>
-<p>并向其中写入如下内容以禁止自动更新</p>
-<figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">&#123;<br>  <span class="hljs-string">&quot;policies&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;DisableAppUpdate&quot;</span>: <span class="hljs-literal">true</span><br>  &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
-<p>操作完成后在 <em>Firefox</em> 菜单栏 <code>Firefox</code> -&gt; <code>关于 Firefox</code> 界面可看见 <code>更新已被系统管理员禁用</code> 的字样.</p>
-<p><img src="forbid_update.png" srcset="/img/loading.gif" lazyload alt="禁用更新成功后" title="禁用更新成功后"></p>
-<p>&emsp;&emsp;注意, 一旦 Firefox 已经自动更新, 目前笔者尚未发现直接降级的方法, 此时最好卸载当前 Firefox 后重新安装旧版</p>
-<h2 id="打开本地-Flash-文件"><a href="#打开本地-Flash-文件" class="headerlink" title="打开本地 Flash 文件"></a>打开本地 Flash 文件</h2><h3 id="获取-Flash-文件-swf"><a href="#获取-Flash-文件-swf" class="headerlink" title="获取 Flash 文件 (.swf)"></a>获取 Flash 文件 (<code>.swf</code>)</h3><p>&emsp;&emsp;Flash 文件的后缀一般为 <code>.swf</code>. 一般来说, 如果想要下载网页上的某个 Flash 资源 (如一个 Flash 小游戏), 可通过开发者页面 (如 Chrome 下按 <code>F12</code>) 以查看对应的 HTML 源码. 在源码中搜索 <code>.swf</code>, 找到想要下载的 Flash 文件链接后, 下载对应文件即可 (如 <em>Safari</em> 中可通过右击鼠标, 找到 <code>Download Linked File</code> 并点击来实现)</p>
-<h3 id="使用-Firefox-打开本地-swf-文件"><a href="#使用-Firefox-打开本地-swf-文件" class="headerlink" title="使用 Firefox 打开本地 .swf 文件"></a>使用 Firefox 打开本地 <code>.swf</code> 文件</h3><p>&emsp;&emsp;对 <em>Firefox</em>, 打开本地文件时 Flash 插件默认是不启用的. 欲对本地文件启用 Flash 插件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="火狐始终打不开本地swf文件
-">[4]</span></a></sup>, 在地址栏中输入 <code>about:config</code>, 搜索找到 <code>plugins.http_https_only</code> 项, 双击将其设置为 <code>flase</code> 即可.</p>
-<p><strong>关于选项名的理解 :</strong> 选项名 <code>plugins.http_https_only</code> 可理解为 “只在打开 http/https 启用 (Firefox 的) 插件”. 由于 <code>http/https</code> 是不同计算机进行通信时的通信协议, 该选项若为 <code>ture</code>, 则意味着只有在和其它计算机进行通信时才能启用 Firefox 插件. 换而言之, 该选项若打开, 则在访问本地资源时无法启用 Firefox 插件, 因而要将其设置为 <code>false</code> 以实现启用 Flash 插件打开本地 <code>.swf</code> 文件的需求.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="link">Adobe Flash Player</a><a target="_blank" rel="noopener" href="https://www.flash.cn">https://www.flash.cn</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/index.do">全国互联网安全管理平台</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/netgc/article/details/107593377">禁用 Firefox 自动更新（macOS 版）</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/pkowner/article/details/79416652">火狐始终打不开本地swf文件</a>
-<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><blockquote id="fn_table">
+<sup>table</sup>. <a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-table.html">Markdown 表格</a><a href="#reffn_table" title="Jump back to footnote [table] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_vim-markdown">
+<sup>vim-markdown</sup>. <a target="_blank" rel="noopener" href="https://github.com/plasticboy/vim-markdown">plasticboy/vim-markdown</a><a href="#reffn_vim-markdown" title="Jump back to footnote [vim-markdown] in the text."> &#8617;</a>
+</blockquote>
+</li>
+<li><blockquote id="fn_todo_list">
+<sup>todo_list</sup>. <a target="_blank" rel="noopener" href="http://amwiki.org/doc/?file=020-教程学习篇/005-学习markdown/12-Markdown复选框">Markdown 复选框 (todo list)</a><a href="#reffn_todo_list" title="Jump back to footnote [todo_list] in the text."> &#8617;</a>
+</blockquote>
+</li>
+</ul>
+
             </div>
             <hr>
             <div>
@@ -288,6 +331,15 @@
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/TODO/">TODO</a>
+                    
+                      <a class="hover-with-bg" href="/tags/syntax/">syntax</a>
+                    
+                  </div>
                 
               </div>
               
@@ -302,18 +354,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/02/CS-Hexo-2021-05-02-Hexo-quick-start/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hexo 快速上手</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/19/CS-Hexo-2021-04-19-plugin-introduce/">
-                        <span class="hidden-mobile">Hexo 插件简介</span>
+                      <a href="/2021/05/02/CS-Hexo-2021-05-02-Hexo-quick-start/">
+                        <span class="hidden-mobile">Hexo 快速上手</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
