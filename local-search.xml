@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>在 macOS 上使用 Firefox 运行 Flash</title>
+    <link href="/2021/05/02/CS-Web-2021-05-02-Firefox-flash/"/>
+    <url>/2021/05/02/CS-Web-2021-05-02-Firefox-flash/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Flash-插件的兼容性"><a href="#Flash-插件的兼容性" class="headerlink" title="Flash 插件的兼容性"></a>Flash 插件的兼容性</h2><p>&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn">[1]</span></a></sup> (比如新建网站时公安备案的网站 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="全国互联网安全管理平台">[2]</span></a></sup>, 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.</p><p>&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正确运行 Flash 插件, 需要安装较旧的版本. 根据插件兼容性说明 (见 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn">[1]</span></a></sup> 主页面), 其对 macOS 的支持情况为:</p><ul><li>系统要求:Mac OS X 10.10 版或更高版本</li><li>浏览器要求: 低于14版本的Safari、低于85版本的Mozilla Firefox、低于88版本内核的Google Chrome</li></ul><p>安装方式同一般的 macOS App 一致: 在网站上 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Adobe Flash Playerhttps://www.flash.cn">[1]</span></a></sup> 下载对应的 <code>.dmg</code> 文件, 并根据提示安装即可.</p><h2 id="关闭-Flash-插件的自动更新"><a href="#关闭-Flash-插件的自动更新" class="headerlink" title="关闭 Flash 插件的自动更新"></a>关闭 Flash 插件的自动更新</h2><p>&emsp;&emsp;笔者在下载旧版本后一开始可能正常运行 Flash 插件, 但等一段时间以后就又无法运行了. 经检查发现, 关键原因在于 Firefox 默认进行自动更新.</p><p>&emsp;&emsp;Firefox 本身是无法直接关闭自动更新的. 欲停止自动更新, 需配置 Firefox 的策略文件 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="禁用 Firefox 自动更新（macOS 版）">[3]</span></a></sup>. 首先打开文件 (没有则自行新建. 其本质上是一个文本文件)</p><figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">Firefox.app<span class="hljs-regexp">/Contents/</span>Resources<span class="hljs-regexp">/distribution/</span>policies.json<br></code></pre></div></td></tr></table></figure><p>并向其中写入如下内容以禁止自动更新</p><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js">&#123;<br>  <span class="hljs-string">&quot;policies&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;DisableAppUpdate&quot;</span>: <span class="hljs-literal">true</span><br>  &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure><p>操作完成后在 <em>Firefox</em> 菜单栏 <code>Firefox</code> -&gt; <code>关于 Firefox</code> 界面可看见 <code>更新已被系统管理员禁用</code> 的字样.</p><p><img src="forbid_updat.png" alt="禁用更新成功后" title="禁用更新成功后"></p><p>&emsp;&emsp;注意, 一旦 Firefox 已经自动更新, 目前笔者尚未发现直接降级的方法, 此时最好卸载当前 Firefox 后重新安装旧版</p><h2 id="打开本地-Flash-文件"><a href="#打开本地-Flash-文件" class="headerlink" title="打开本地 Flash 文件"></a>打开本地 Flash 文件</h2><h3 id="获取-Flash-文件-swf"><a href="#获取-Flash-文件-swf" class="headerlink" title="获取 Flash 文件 (.swf)"></a>获取 Flash 文件 (<code>.swf</code>)</h3><p>&emsp;&emsp;Flash 文件的后缀一般为 <code>.swf</code>. 一般来说, 如果想要下载网页上的某个 Flash 资源 (如一个 Flash 小游戏), 可通过开发者页面 (如 Chrome 下按 <code>F12</code>) 以查看对应的 HTML 源码. 在源码中搜索 <code>.swf</code>, 找到想要下载的 Flash 文件链接后, 下载对应文件即可 (如 <em>Safari</em> 中可通过右击鼠标, 找到 <code>Download Linked File</code> 并点击来实现)</p><h3 id="使用-Firefox-打开本地-swf-文件"><a href="#使用-Firefox-打开本地-swf-文件" class="headerlink" title="使用 Firefox 打开本地 .swf 文件"></a>使用 Firefox 打开本地 <code>.swf</code> 文件</h3><p>&emsp;&emsp;对 <em>Firefox</em>, 打开本地文件时 Flash 插件默认是不启用的. 欲对本地文件启用 Flash 插件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="火狐始终打不开本地swf文件">[4]</span></a></sup>, 在地址栏中输入 <code>about:config</code>, 搜索找到 <code>plugins.http_https_only</code> 项, 双击将其设置为 <code>flase</code> 即可.</p><p><strong>关于选项名的理解 :</strong> 选项名 <code>plugins.http_https_only</code> 可理解为 “只在打开 http/https 启用 (Firefox 的) 插件”. 由于 <code>http/https</code> 是不同计算机进行通信时的通信协议, 该选项若为 <code>ture</code>, 则意味着只有在和其它计算机进行通信时才能启用 Firefox 插件. 换而言之, 该选项若打开, 则在访问本地资源时无法启用 Firefox 插件, 因而要将其设置为 <code>false</code> 以实现启用 Flash 插件打开本地 <code>.swf</code> 文件的需求.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="link">Adobe Flash Player</a><a href="https://www.flash.cn">https://www.flash.cn</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="http://www.beian.gov.cn/portal/index.do">全国互联网安全管理平台</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://blog.csdn.net/netgc/article/details/107593377">禁用 Firefox 自动更新（macOS 版）</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://blog.csdn.net/pkowner/article/details/79416652">火狐始终打不开本地swf文件</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Web</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo 插件简介</title>
     <link href="/2021/04/19/CS-Hexo-2021-04-19-plugin-introduce/"/>
     <url>/2021/04/19/CS-Hexo-2021-04-19-plugin-introduce/</url>
@@ -13,9 +32,7 @@
     
     <categories>
       
-      <category>Computer</category>
-      
-      <category>Hexo</category>
+      <category>CS Hexo</category>
       
     </categories>
     
@@ -40,9 +57,7 @@
     
     <categories>
       
-      <category>Computer</category>
-      
-      <category>Hexo</category>
+      <category>CS Hexo</category>
       
     </categories>
     
