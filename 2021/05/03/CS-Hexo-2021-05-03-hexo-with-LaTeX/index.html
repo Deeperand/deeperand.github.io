@@ -18,7 +18,7 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>Markdown 语法速查 - 博客 | 冬季银河</title>
+  <title>在 Hexo 的 Fluid 主题中使用 LaTeX 公式 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Markdown 语法速查">
+            <span class="h2" id="subtitle" title="在 Hexo 的 Fluid 主题中使用 LaTeX 公式">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-02 20:16" pubdate>
-        May 2, 2021 pm
+      <time datetime="2021-05-03 07:41" pubdate>
+        May 3, 2021 am
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      317 字
+      730 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      9
        分钟
     </span>
   
@@ -238,74 +238,50 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Markdown 语法速查</h1>
+            <h1 style="display: none">在 Hexo 的 Fluid 主题中使用 LaTeX 公式</h1>
             
               <p class="note note-info">
                 
-                  最后更新：May 2, 2021 pm
+                  最后更新：May 3, 2021 am
                 
               </p>
             
             <div class="markdown-body">
-              <p>&emsp;&emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.</p>
-<h2 id="图片及超链接"><a href="#图片及超链接" class="headerlink" title="图片及超链接"></a>图片及超链接</h2><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">fig name</span>](<span class="hljs-link">path &quot;alt name&quot;</span>)<br>[<span class="hljs-string">link display</span>](<span class="hljs-link">link</span>)<br></code></pre></div></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>&emsp;&emsp;表格基本格式为 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 表格
-">[1]</span></a></sup></p>
-<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| item 1 | item 2 |<br>|--------|--------|<br>| cell   | cell   |<br>| cell   | cell   |<br></code></pre></div></td></tr></table></figure>
-<p>其中可在表头与内容的分割线处通过 <code>:-</code>, <code>-:</code>, <code>:-:</code> 指定对齐方式, 如:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| left | right | center |<br>|:-----|------:|:------:|<br>| cell | cell  | cell   |<br>| cell | cell  | cell   |<br></code></pre></div></td></tr></table></figure>
-<p>如 Vim 等文本编辑器通常提供有辅助源代码对齐的插件. 对于 Vim 插件 <code>plasticboy/vim-markdown</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="plasticboy/vim-markdown
-">[2]</span></a></sup>, 其提供了对齐表格的指令 <code>:TableFormat</code>, 笔者将其设为了 NORMAL 模式下的快捷键 <code>&lt;localleader&gt;la</code>.</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>item 1</th>
-<th>item 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cell</td>
-<td>cell</td>
-</tr>
-<tr>
-<td>cell</td>
-<td>cell</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">left</th>
-<th style="text-align:right">right</th>
-<th style="text-align:center">center</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">cell</td>
-<td style="text-align:right">cell</td>
-<td style="text-align:center">cell</td>
-</tr>
-<tr>
-<td style="text-align:left">cell</td>
-<td style="text-align:right">cell</td>
-<td style="text-align:center">cell</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h2><p>&emsp;&emsp;之前 (2021.04.30) 从 macOS 的 <em>Note</em> 中复制复选框列表到 Markdown 源文件时, 意外地发现列表开头自动变为了诸如 <code>[x]</code>, <code>[]</code> 的形式, 这才意识到部分 Markdown 或许也支持复选框 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 复选框 (todo list)
-">[3]</span></a></sup>.</p>
-<h3 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">[x] A<br>[ ] B<br><span class="hljs-bullet">-</span> [x] 已选中<br><span class="hljs-bullet">-</span> [ ] 未选中<br></code></pre></div></td></tr></table></figure>
-<p>应注意 “未选中” 框中间有一个空格. (由于本网站的 Markdown 渲染器尚未部署该功能, 故这里不给出效果预览)</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-table.html">Markdown 表格</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/plasticboy/vim-markdown">plasticboy/vim-markdown</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://amwiki.org/doc/?file=020-教程学习篇/005-学习markdown/12-Markdown复选框">Markdown 复选框 (todo list)</a>
+              <h2 id="1-在-Fluid-主题中开启数学公式"><a href="#1-在-Fluid-主题中开启数学公式" class="headerlink" title="1 在 Fluid 主题中开启数学公式"></a>1 在 Fluid 主题中开启数学公式</h2><p>&emsp;&emsp;Hexo 主题 Fluid 中提供了数学公式支持 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTeX 数学公式
+">[1]</span></a></sup>, 主要流程分为如下几步</p>
+<ol>
+<li><strong>在主题配置文件中开启数学公式:</strong> 这需要在 Fluid 主题的配置文件 <code>_config.fluid.yml</code> 中进行配置 (摘录于主题默认配置文件 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="hexo-theme-fluid/_config.yml
+">[2]</span></a></sup>) <figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br><span class="hljs-attr">math:</span><br>    <span class="hljs-comment"># 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `math: true`</span><br>    <span class="hljs-comment"># If you want to use math on the custom page, you need to set `math: true` in Front-matter</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度</span><br>    <span class="hljs-comment"># If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math</span><br>    <span class="hljs-attr">specific:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># Options: mathjax | katex</span><br>    <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></div></td></tr></table></figure>
+ 关于 mathjax 与 katex 引擎的比较见 Fluid 主题的参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTeX 数学公式
+">[1]</span></a></sup>.</li>
+<li><strong>更换 Markdown 渲染器:</strong> 第一步先卸载默认渲染器 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm uninstall hexo-renderer-marked --save<br></code></pre></div></td></tr></table></figure>
+ 第二步根据需要安装如下两个渲染器<strong>之一</strong> (<strong>不能同时存在两个渲染器!</strong>)<ul>
+<li>使用 mathjax 渲染:  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install hexo-renderer-kramed --save<br></code></pre></div></td></tr></table></figure></li>
+<li>使用 katex 渲染:  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install @upupming/hexo-renderer-markdown-it-plus --save<br></code></pre></div></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-解决-mathjax-无法渲染行间公式的问题"><a href="#2-解决-mathjax-无法渲染行间公式的问题" class="headerlink" title="2 解决 mathjax 无法渲染行间公式的问题"></a>2 解决 mathjax 无法渲染行间公式的问题</h2><p>&emsp;&emsp;在按照上面步骤中执行操作后, 如果使用 mathjax 进行渲染, 可能会发现通过通常的诸如 <script type="math/tex">F = ma</script> 的的行内公式无法渲染的问题. 经调查, 这是由 markdown 渲染时转义字符的设置引起的 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Hexo中渲染MathJax数学公式
+">[3]</span></a></sup>. 目前笔者仅配置过 mathjax 的渲染, 如果使用 katex 渲染时同样出现此问题, 或可考虑一下是否同样存在转义字符的问题.</p>
+<p>&emsp;&emsp;解决方式是调整插件 <code>kramed</code> 中关于行间的字符转义配置. 以 <code>$HEXO</code> 代表 Hexo 博客的根目录, (比如说配置 Hexo 的配置文件就应该在 <code>$HEXO/_config.ylm</code>). 打开文件 <code>$HEXO/node_modules\kramed\lib\rules\inline.js</code>, 取消 <code>\,&#123;,&#125;</code> 的转义. 具体而言, 分下面两步进行修改 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Hexo中渲染MathJax数学公式
+">[3]</span></a></sup> :</p>
+<ol>
+<li>修改的 <code>escape</code> 变量值 (在第 11 行左右): <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="hljs-built_in">escape</span>: <span class="hljs-regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span><br></code></pre></div></td></tr></table></figure></li>
+<li>修改 <code>em</code> 变量值 (在第 20 行左右): <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br>em: <span class="hljs-regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span> <br></code></pre></div></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="3-公式使用"><a href="#3-公式使用" class="headerlink" title="3 公式使用"></a>3 公式使用</h2><p>&emsp;&emsp;经过上述配置后理论上就可以按照通常的 Markdown 中的 LaTeX 公式语法来输入公式了. 如:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 行内公式 (一对单美元符号 <span class="hljs-code">`$ $`</span>): $F = ma$<br><span class="hljs-bullet">-</span> 行间公式 (一对双美元符号 <span class="hljs-code">`$$ $$`</span>):<br><span class="hljs-code">    $$</span><br><span class="hljs-code">    G_&#123;\mu\nu&#125; = R_&#123;\mu\nu&#125; - \dfrac&#123;1&#125;&#123;2&#125; R g_&#123;\mu\nu&#125; = 8 \pi T_&#123;\mu\nu&#125;</span><br><span class="hljs-code">    $$</span><br></code></pre></div></td></tr></table></figure>
+<p>效果为:</p>
+<ul>
+<li>行内公式 (一对单美元符号): $F = ma$</li>
+<li>行间公式 (一对双美元符号):<script type="math/tex; mode=display">
+  G_{\mu\nu} = R_{\mu\nu} - \dfrac{1}{2} R g_{\mu\nu} = 8 \pi G T_{\mu\nu}</script></li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#latex-数学公式">LaTeX 数学公式</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">hexo-theme-fluid/_config.yml</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7ab21c7f0674">在Hexo中渲染MathJax数学公式</a>
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
@@ -315,7 +291,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-Web/">CS Web</a>
+                      <a class="hover-with-bg" href="/categories/CS-Hexo/">CS Hexo</a>
                     
                   </div>
                 
@@ -323,9 +299,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/TODO/">TODO</a>
-                    
-                      <a class="hover-with-bg" href="/tags/syntax/">syntax</a>
+                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
                   </div>
                 
@@ -342,18 +316,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/03/CS-Hexo-2021-05-03-hexo-with-LaTeX/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">在 Hexo 的 Fluid 主题中使用 LaTeX 公式</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/02/CS-Hexo-2021-05-02-hexo-quick-start/">
-                        <span class="hidden-mobile">Hexo 快速上手</span>
+                      <a href="/2021/05/02/CS-Web-2021-05-02-markdown-syntax-ref/">
+                        <span class="hidden-mobile">Markdown 语法速查</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
