@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.04, 12:06
+                  最后更新：2021.05.04, 12:07
                 
               </p>
             
@@ -266,7 +266,7 @@
 <li><a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/" title="什么是 HTTP 与 HTTPS 协议?">什么是 HTTP 与 HTTPS 协议?</a>
 </li>
 </ul>
-<h2 id="2-文件名含空格"><a href="#2-文件名含空格" class="headerlink" title="2 文件名含空格"></a>2 文件名含空格</h2><p>&emsp;&emsp;原则上来说, 对于编程时可能会引用到的文件, 其路径中最好不要含有空格等特殊字符. 由于笔者在 Hexo 的写作中特别注意这一点, 目前还没有碰到这种情况. 对于这种情况, 文章 <a target="_blank" rel="noopener" href="https://blog.jijian.link/2020-01-08/hexo-anchor-link/">hexo 链接到站内文章指定锚点</a> 中给出了一个例子, 这里文件为 <code>_post/hexo blog.md</code></p>
+<h2 id="2-文件名含空格"><a href="#2-文件名含空格" class="headerlink" title="2 文件名含空格"></a>2 文件名含空格</h2><p>&emsp;&emsp;原则上来说, 对于编程时可能会引用到的文件, 其路径中最好不要含有空格等特殊字符. 由于笔者在 Hexo 的写作中特别注意这一点, 目前还没有碰到这种情况. 对于这种情况, 文章 “<a target="_blank" rel="noopener" href="https://blog.jijian.link/2020-01-08/hexo-anchor-link/">hexo 链接到站内文章指定锚点</a>“ 中给出了一个例子, 这里文件为 <code>_post/hexo blog.md</code></p>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% post<span class="hljs-emphasis">_link &#x27;hexo blog&#x27; %&#125;</span><br></code></pre></div></td></tr></table></figure>
 <p>亦即可尝试通过加上单引号来实现引用.</p>
 <h2 id="3-Debug"><a href="#3-Debug" class="headerlink" title="3 Debug"></a>3 Debug</h2><h3 id="无法引用子目录中的文件"><a href="#无法引用子目录中的文件" class="headerlink" title="无法引用子目录中的文件"></a>无法引用子目录中的文件</h3><p>&emsp;&emsp;今早在尝试该功能时, 发现无法引用 <code>_post</code> 的子目录下的文件, 并在本应出现超链接的位置一直显示 <code>Post not found</code>. 通过一番测试, 发现了两个原因.</p>
