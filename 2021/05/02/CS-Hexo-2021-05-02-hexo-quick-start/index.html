@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.03, 11:07
+                  最后更新：2021.05.04, 09:14
                 
               </p>
             
@@ -294,8 +294,8 @@
 <p>&emsp;&emsp;值得主要, 既然这些东西属于 “插件”, 自然必须安装了对应的第三方程序才能使用. 如果你发现一段代码在其他人的文章介绍里可以进行渲染, 但在自己的 Hexo 却无法实现, 就得怀疑是否是因为没有安装相应插件了.</p>
 <h2 id="资源-Asset-文件夹"><a href="#资源-Asset-文件夹" class="headerlink" title="资源 (Asset) 文件夹"></a>资源 (Asset) 文件夹</h2><p>&emsp;&emsp;相比于在 <code>source</code> 文件夹下建立诸如 <code>fig</code> 文件夹来统一管理文章所用到的资源 (如图片插入), 笔者更喜欢采取 “project” 的范式来撰写文章. 亦即将每一篇视为一个独立的 “project”, 不同 “project” 的资源彼此独立存储, 以减少不同 “project” 之间的耦合, 增强各自的独立性. 为在 Hexo 中实现此目的, 可在 <code>_config.yml</code> 中配置 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="资源文件夹
 ">[5]</span></a></sup></p>
-<figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure>
-<p>当该选项开启后, 可在与文章同名的文件夹中放置资源, 并在对应文章中通过相对该文件夹的路径来引用资源. 例如, <code>source/</code> 下有博客 <code>hello.md</code>, 以及文件夹 <code>source/hello/</code>, 该文件夹中有子文件夹 <code>fig/</code>, 其中有图片 <code>test.png</code>. 那么在 <code>hello.md</code> 中使用该图片时, 可以直接使用相对与 <code>source/hello/</code> 的路径 <code>fig/test.png</code>, 而非相对 <code>source</code> 的路径. </p>
+<figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">marked:</span><br>  <span class="hljs-attr">prependRoot:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">postAsset:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure>
+<p>当这些选项开启后, 可在与文章同名的文件夹中放置资源, 并在对应文章中通过相对该文件夹的路径来引用资源. 例如, <code>source/</code> 下有博客 <code>hello.md</code>, 以及文件夹 <code>source/hello/</code>, 该文件夹中有子文件夹 <code>fig/</code>, 其中有图片 <code>test.png</code>. 那么在 <code>hello.md</code> 中使用该图片时, 可以直接使用相对与 <code>source/hello/</code> 的路径 <code>fig/test.png</code>, 而非相对 <code>source</code> 的路径. </p>
 <p>&emsp;&emsp;在官方中文文档中, 资源文件夹对应的是 Asset 文件夹, 而非 Source 文件夹. 笔者个人认为, Asset 文件夹的功效其实更接近英文 “Assistant”, 亦即辅助. 实际上, 官方文档中将 “Asset” 诠释为 “<code>source</code> 文件夹中除了文章以外的所有文件”. 从这个角度来说, 将此文件夹理解为 “使博客内容更加丰富的辅助文件” 也颇为贴切.</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hexo 官方中文文档</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">Hexo 建站</a>
