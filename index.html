@@ -182,6 +182,58 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/05/04/CS_Hexo/2021-05-04_cite_local_post/" target="_self">
+          在 Hexo 中引用站内文章
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/05/04/CS_Hexo/2021-05-04_cite_local_post/" target="_self">
+          
+          
+            
+          
+          1 基本使用&emsp;&emsp;Hexo 中使用 Tag 插件实现站内文章的引用. 基本格式为
+1&#123;% post_link &lt;path&gt; [title] %&#125;
+其中 &lt;path&gt; 是站内文章的路径 (无 .md 后缀名), 其是相对于 $HEXO/source/_post 的. 可选项 [title] 是最终渲染出的超链接显示的文字, 默认为文章标题
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-04 11:47" pubdate>
+              2021-05-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Hexo/">CS Hexo</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/" target="_self">
           什么是 HTTP 与 HTTPS 协议?
         </a>
@@ -193,7 +245,7 @@
           
             
           
-            简单来说, HTTP 与 HTTPS [1] 都是是通信协议. 但二者最大的区别在于, HTTP 是通过明文进行数据传输, 而 HTTPS 在传输过程中进行加密 (通过 SSL/TLS 协议). 试想这样一个过程: 在数据传输途中, 其被第三方进行了截获. 如果是采用的 HTTP 协议, 则截获者可以直接读懂传输的数据; 但如果采用的是 HTTPS 协议, 截获者必须找到正确的破译方法才能读懂
+          &emsp;&emsp;简单来说, HTTP 与 HTTPS [1] 都是是通信协议. 但二者最大的区别在于, HTTP 是通过明文进行数据传输, 而 HTTPS 在传输过程中进行加密 (通过 SSL/TLS 协议). 试想这样一个过程: 在数据传输途中, 其被第三方进行了截获. 如果是采用的 HTTP 协议, 则截获者可以直接读懂传输的数据; 但如果采用的是 HTTPS 协议, 截获者必须找到正
         </a>
       </p>
 
@@ -243,17 +295,8 @@
           
             
           
-           购买腾讯云
- 启用 SSH 密钥*
- 配置 Git 远程仓库
- Hook 设置
- 新建用户
- 启用 HTTPS
-  关于 HTTP/HTTPS 协议的简介可以参考我的这篇博客: 什么是 HTTP 与 HTTPS 协议?
- CC 协议
- FQA
- 权限问题
-
+          购买腾讯云启用 SSH 密钥*配置 Git 远程仓库Hook 设置新建用户启用 HTTPS&emsp;&emsp;关于 HTTP/HTTPS 协议的简介可以参考我的这篇博客: 什么是 HTTP 与 HTTPS 协议?
+CC 协议FQA权限问题
         </a>
       </p>
 
@@ -289,10 +332,9 @@
           
             
           
-           1 在主题配置文件中开启评论
-  首先在主题的 post 选项下开启主题并选择想启用的评论插件 [1] . 在 _config.fluid.yml 下设置
+          1 在主题配置文件中开启评论&emsp;&emsp;首先在主题的 post 选项下开启主题并选择想启用的评论插件 [1] . 在 _config.fluid.yml 下设置
 1234post:  comments:    enable: true    type: valine
-由于本博客搭建时采用的是 Valine [2], 这里也以 Valine 为例. 在 type 中支持的类型请查看官方参考文档 [1] 
+由于本博客搭建时采用的是 Valine [2], 这里也以 Valine 为例. 在 type 中支持的类型请查看官方参
         </a>
       </p>
 
@@ -342,10 +384,9 @@
           
             
           
-           1 在 Fluid 主题中开启数学公式
-  Hexo 主题 Fluid 中提供了数学公式支持 [1], 主要流程分为如下几步
+          1 在 Fluid 主题中开启数学公式&emsp;&emsp;Hexo 主题 Fluid 中提供了数学公式支持 [1], 主要流程分为如下几步
 
-在主题配置文件中开启数学公式: 这需要在 Fluid 主题的配置文件 _config.fluid.yml 中进行配置 (摘录于主题默认配置文件 [2]) 123456789101112post:math:    # 开启后文章默认可用，自定义页面如需使用，需在 Fron
+在主题配置文件中开启数学公式: 这需要在 Fluid 主题的配置文件 _config.fluid.yml 中进行配置 (摘录于主题默认配置文件 [2]) 123456789101112post:math:    # 开启后文章默认可用，自定义页面如需使用
         </a>
       </p>
 
@@ -395,13 +436,10 @@
           
             
           
-            本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.
- 图片及超链接
-12![fig name](path &quot;alt name&quot;)[link display](link)
- 表格
- Syntax
-  表格基本格式为 [1]
-1234| item 1 | item 2 ||--------|--------|| cell  
+          &emsp;&emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.
+图片及超链接12![fig name](path &quot;alt name&quot;)[link display](link)
+表格Syntax&emsp;&emsp;表格基本格式为 [1]
+1234| item 1 | item 2 ||--------|---
         </a>
       </p>
 
@@ -454,10 +492,9 @@
             
           
           本文绝大部分内容参考自 Hexo 的官方参考文档 [1], 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会.
- 建站及 Hexo 目录结构
-  类似于 git 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 [2]. 如
+建站及 Hexo 目录结构&emsp;&emsp;类似于 git 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 [2]. 如
 123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install
-其中第一行是 hexo
+其中第
         </a>
       </p>
 
@@ -507,9 +544,8 @@
           
             
           
-           Flash 插件的兼容性
-  从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 [1] (比如新建网站时公安备案的网站 [2], 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.
-  Firefox 的较新版本是不支持 Flash 的. 想要正确运行 Flash 插件, 需要安装
+          Flash 插件的兼容性&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 [1] (比如新建网站时公安备案的网站 [2], 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.
+&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正
         </a>
       </p>
 
@@ -555,15 +591,13 @@
           
 写这篇文章的目的是为了记录使用 HEXO 的过程中了解到的插件
 
- hexo-pdf
-
-(2021-04-19)
+hexo-pdf
+(2021-04-19) 
 
 
 Introduce: Hexo tag for embeded pdf
 Install:  1npm install --save hexo-pdf
-
-Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/ba
+Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash
         </a>
       </p>
 
@@ -613,10 +647,8 @@ Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/ba
           
             
           
-           日期开头的分隔符问题
-  今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了.
- asset 文件夹的分隔符问题
-  另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时, 如果 &lt;file_na
+          日期开头的分隔符问题&emsp;&emsp;今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了.
+asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时
         </a>
       </p>
 
@@ -644,43 +676,6 @@ Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/ba
               <a href="/tags/TODO/">TODO</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/17/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/17/hello-world/" target="_self">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
- Quic
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 21:31" pubdate>
-              2021-04-17
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>

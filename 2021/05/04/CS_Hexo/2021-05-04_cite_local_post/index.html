@@ -18,7 +18,7 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>在 Hexo 的 Fluid 主题中使用 LaTeX 公式 - 博客 | 冬季银河</title>
+  <title>在 Hexo 中引用站内文章 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="在 Hexo 的 Fluid 主题中使用 LaTeX 公式">
+            <span class="h2" id="subtitle" title="在 Hexo 中引用站内文章">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-03 07:41" pubdate>
-        2021.05.03, 07:41
+      <time datetime="2021-05-04 11:47" pubdate>
+        2021.05.04, 11:47
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      730 字
+      714 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      8
        分钟
     </span>
   
@@ -238,51 +238,48 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">在 Hexo 的 Fluid 主题中使用 LaTeX 公式</h1>
+            <h1 style="display: none">在 Hexo 中引用站内文章</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.03, 08:24
+                  最后更新：2021.05.04, 12:06
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="1-在-Fluid-主题中开启数学公式"><a href="#1-在-Fluid-主题中开启数学公式" class="headerlink" title="1 在 Fluid 主题中开启数学公式"></a>1 在 Fluid 主题中开启数学公式</h2><p>&emsp;&emsp;Hexo 主题 Fluid 中提供了数学公式支持 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTeX 数学公式
-">[1]</span></a></sup>, 主要流程分为如下几步</p>
-<ol>
-<li><strong>在主题配置文件中开启数学公式:</strong> 这需要在 Fluid 主题的配置文件 <code>_config.fluid.yml</code> 中进行配置 (摘录于主题默认配置文件 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="hexo-theme-fluid/_config.yml
-">[2]</span></a></sup>) <figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br><span class="hljs-attr">math:</span><br>    <span class="hljs-comment"># 开启后文章默认可用，自定义页面如需使用，需在 Front-matter 中指定 `math: true`</span><br>    <span class="hljs-comment"># If you want to use math on the custom page, you need to set `math: true` in Front-matter</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># 开启后，只有在文章 Front-matter 里指定 `math: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度</span><br>    <span class="hljs-comment"># If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math</span><br>    <span class="hljs-attr">specific:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-comment"># Options: mathjax | katex</span><br>    <span class="hljs-attr">engine:</span> <span class="hljs-string">mathjax</span><br></code></pre></div></td></tr></table></figure>
- 关于 mathjax 与 katex 引擎的比较见 Fluid 主题的参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTeX 数学公式
-">[1]</span></a></sup>.</li>
-<li><strong>更换 Markdown 渲染器:</strong> 第一步先卸载默认渲染器 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm uninstall hexo-renderer-marked --save<br></code></pre></div></td></tr></table></figure>
- 第二步根据需要安装如下两个渲染器<strong>之一</strong> (<strong>不能同时存在两个渲染器!</strong>)<ul>
-<li>使用 mathjax 渲染:  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install hexo-renderer-kramed --save<br></code></pre></div></td></tr></table></figure></li>
-<li>使用 katex 渲染:  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install @upupming/hexo-renderer-markdown-it-plus --save<br></code></pre></div></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="2-解决-mathjax-无法渲染行间公式的问题"><a href="#2-解决-mathjax-无法渲染行间公式的问题" class="headerlink" title="2 解决 mathjax 无法渲染行间公式的问题"></a>2 解决 mathjax 无法渲染行间公式的问题</h2><p>&emsp;&emsp;在按照上面步骤中执行操作后, 如果使用 mathjax 进行渲染, 可能会发现通过通常的诸如 <script type="math/tex">F = ma</script> 的的行内公式无法渲染的问题. 经调查, 这是由 markdown 渲染时转义字符的设置引起的 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Hexo中渲染MathJax数学公式
-">[3]</span></a></sup>. 目前笔者仅配置过 mathjax 的渲染, 如果使用 katex 渲染时同样出现此问题, 或可考虑一下是否同样存在转义字符的问题.</p>
-<p>&emsp;&emsp;解决方式是调整插件 <code>kramed</code> 中关于行间的字符转义配置. 以 <code>$HEXO</code> 代表 Hexo 博客的根目录, (比如说配置 Hexo 的配置文件就应该在 <code>$HEXO/_config.ylm</code>). 打开文件 <code>$HEXO/node_modules\kramed\lib\rules\inline.js</code>, 取消 <code>\,&#123;,&#125;</code> 的转义. 具体而言, 分下面两步进行修改 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Hexo中渲染MathJax数学公式
-">[3]</span></a></sup> :</p>
-<ol>
-<li>修改的 <code>escape</code> 变量值 (在第 11 行左右): <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span><br><span class="hljs-built_in">escape</span>: <span class="hljs-regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span><br></code></pre></div></td></tr></table></figure></li>
-<li>修改 <code>em</code> 变量值 (在第 20 行左右): <figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br>em: <span class="hljs-regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span> <br></code></pre></div></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="3-公式使用"><a href="#3-公式使用" class="headerlink" title="3 公式使用"></a>3 公式使用</h2><p>&emsp;&emsp;经过上述配置后理论上就可以按照通常的 Markdown 中的 LaTeX 公式语法来输入公式了. 如:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 行内公式 (一对单美元符号): $F = ma$<br><span class="hljs-bullet">-</span> 行间公式 (一对双美元符号):<br><span class="hljs-code">    $$</span><br><span class="hljs-code">    G_&#123;\mu\nu&#125; = R_&#123;\mu\nu&#125; - \dfrac&#123;1&#125;&#123;2&#125; R g_&#123;\mu\nu&#125; = 8 \pi T_&#123;\mu\nu&#125;</span><br><span class="hljs-code">    $$</span><br></code></pre></div></td></tr></table></figure>
-<p>效果为:</p>
+              <h2 id="1-基本使用"><a href="#1-基本使用" class="headerlink" title="1 基本使用"></a>1 基本使用</h2><p>&emsp;&emsp;Hexo 中使用 Tag 插件实现站内文章的引用. 基本格式为</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% post<span class="hljs-emphasis">_link <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">path</span>&gt;</span></span> [title] %&#125;</span><br></code></pre></div></td></tr></table></figure>
+<p>其中 <code>&lt;path&gt;</code> 是站内文章的路径 (无 <code>.md</code> 后缀名), 其是相对于 <code>$HEXO/source/_post</code> 的. 可选项 <code>[title]</code> 是最终渲染出的超链接显示的文字, 默认为文章标题. 例如, 文件 <code>hello_world.md</code> 位于 <code>_post/hello-world</code>, 引用它可通过</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> &#123;% post<span class="hljs-emphasis">_link hello-world %&#125;</span><br><span class="hljs-emphasis">- &#123;% post_</span>link hello-world 站内引用示例 %&#125;<br></code></pre></div></td></tr></table></figure>
+<p>渲染结果为</p>
 <ul>
-<li>行内公式 (一对单美元符号): $F = ma$</li>
-<li>行间公式 (一对双美元符号):<script type="math/tex; mode=display">
-  G_{\mu\nu} = R_{\mu\nu} - \dfrac{1}{2} R g_{\mu\nu} = 8 \pi G T_{\mu\nu}</script></li>
+<li><a href="/2021/04/17/hello-world/" title="Hello World">Hello World</a></li>
+<li><a href="/2021/04/17/hello-world/" title="站内引用示例">站内引用示例</a>
+</li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#latex-数学公式">LaTeX 数学公式</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml">hexo-theme-fluid/_config.yml</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7ab21c7f0674">在Hexo中渲染MathJax数学公式</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<p>实际撰写博客时, 笔者个人习惯在 <code>_post</code> 下按分类建立子文件夹, 此时可在 <code>&lt;path&gt;</code> 的位置加上子文件夹路径. 如我们有一篇文章位于</p>
+<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">CS_Web</span>/<span class="hljs-number">2021</span>-<span class="hljs-number">05</span>-<span class="hljs-number">04</span>_http_and_https<br></code></pre></div></td></tr></table></figure>
+<p>引用时可采用</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> &#123;% post<span class="hljs-emphasis">_link CS_</span>Web/2021-05-04<span class="hljs-emphasis">_http_</span>and<span class="hljs-emphasis">_https %&#125;</span><br></code></pre></div></td></tr></table></figure>
+<p>最终效果为</p>
+<ul>
+<li><a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/" title="什么是 HTTP 与 HTTPS 协议?">什么是 HTTP 与 HTTPS 协议?</a>
+</li>
+</ul>
+<h2 id="2-文件名含空格"><a href="#2-文件名含空格" class="headerlink" title="2 文件名含空格"></a>2 文件名含空格</h2><p>&emsp;&emsp;原则上来说, 对于编程时可能会引用到的文件, 其路径中最好不要含有空格等特殊字符. 由于笔者在 Hexo 的写作中特别注意这一点, 目前还没有碰到这种情况. 对于这种情况, 文章 <a target="_blank" rel="noopener" href="https://blog.jijian.link/2020-01-08/hexo-anchor-link/">hexo 链接到站内文章指定锚点</a> 中给出了一个例子, 这里文件为 <code>_post/hexo blog.md</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% post<span class="hljs-emphasis">_link &#x27;hexo blog&#x27; %&#125;</span><br></code></pre></div></td></tr></table></figure>
+<p>亦即可尝试通过加上单引号来实现引用.</p>
+<h2 id="3-Debug"><a href="#3-Debug" class="headerlink" title="3 Debug"></a>3 Debug</h2><h3 id="无法引用子目录中的文件"><a href="#无法引用子目录中的文件" class="headerlink" title="无法引用子目录中的文件"></a>无法引用子目录中的文件</h3><p>&emsp;&emsp;今早在尝试该功能时, 发现无法引用 <code>_post</code> 的子目录下的文件, 并在本应出现超链接的位置一直显示 <code>Post not found</code>. 通过一番测试, 发现了两个原因.</p>
+<p>&emsp;&emsp;第一个是之前笔者作死把 <code>_config.yml</code> 中的 <code>new_post_name</code> 选项进行了修改</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-comment"># modified</span><br><span class="hljs-attr">new_post_name:</span> <span class="hljs-string">:year-:month-:day_:title.md</span> <span class="hljs-comment"># File name of new posts</span><br><br><span class="hljs-comment"># original</span><br><span class="hljs-attr">new_post_name:</span> <span class="hljs-string">:title.md</span> <span class="hljs-comment"># File name of new posts</span><br></code></pre></div></td></tr></table></figure>
+<p>将内容从 <code>modified</code> 中的调整回默认的 <code>original</code> 中的后, 才可正确引用.</p>
+<p>&emsp;&emsp;第二个原因至今不明确. 笔者在 debug 时在空文件夹 (不妨以 <code>$HEXO_NEW</code> 表示) 中重新使用 <code>hexo init</code> 以及安装主题后, 采用相同的配置文件可以正常进行站内引用. 但之前的博客文件夹 (不妨以 <code>$HEXO</code> 表示) 中死活无法正确引用. 后将 <code>$HEXO/node_modules</code> 文件夹以 <code>$HEXO_NEW/node_modules</code> 替换后, 站内引用回复正常. 个人猜测可能是昨天调试模块时把什么弄炸了… 所以如果你在检查完第一步后仍无法修复 bug, 可以尝试重装 Hexo.</p>
+<p>&emsp;&emsp;最后提一下怀疑是该 bug 产生原因, 但事实证明无关的因素:</p>
+<ul>
+<li>Fluid 插件: 装上插件后可正常引用</li>
+<li>Asset 文件夹: 无论是否开启, 无论 <code>marked: prependRoot:</code> 与 <code>marked: postAsset</code> 如何设置, 都不影响站内引用.</li>
+</ul>
+
             </div>
             <hr>
             <div>
@@ -316,18 +313,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/03/CS_Hexo/2021-05-03_add_comment_with_fluid/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">通过 Fluid 主题为 Hexo 博客添加评论功能及站点统计</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/02/CS_Web/2021-05-02_markdown_syntax_ref/">
-                        <span class="hidden-mobile">Markdown 语法速查</span>
+                      <a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/">
+                        <span class="hidden-mobile">什么是 HTTP 与 HTTPS 协议?</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -553,45 +544,6 @@
 
 
 
-
-  
-
-  
-    <!-- MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        options: {
-          renderActions: {
-            findScript: [10, doc => {
-              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-                const display = !!node.type.match(/; *mode=display/);
-                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                const text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = { node: text, delim: '', n: 0 };
-                math.end = { node: text, delim: '', n: 0 };
-                doc.math.push(math);
-              });
-            }, '', false],
-            insertedScript: [200, () => {
-              document.querySelectorAll('mjx-container').forEach(node => {
-                let target = node.parentNode;
-                if (target.nodeName.toLowerCase() === 'li') {
-                  target.parentNode.classList.add('has-jax');
-                }
-              });
-            }, '', false]
-          }
-        }
-      };
-    </script>
-
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
-
-  
 
 
 
