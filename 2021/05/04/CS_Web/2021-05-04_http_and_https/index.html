@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      458 字
+      491 字
     </span>
   
 
@@ -247,20 +247,21 @@
               </p>
             
             <div class="markdown-body">
-              <p>&emsp;&emsp;简单来说, HTTP 与 HTTPS <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="HTTP和HTTPS有什么区别？
-">[1]</span></a></sup> 都是是通信协议. 但二者最大的区别在于, HTTP 是通过明文进行数据传输, 而 HTTPS 在传输过程中进行加密 (通过 SSL/TLS 协议). 试想这样一个过程: 在数据传输途中, 其被第三方进行了截获. 如果是采用的 HTTP 协议, 则截获者可以直接读懂传输的数据; 但如果采用的是 HTTPS 协议, 截获者必须找到正确的破译方法才能读懂其中的数据. 由此可见, 为了网站数据通信的安全性—-特别是设计密码输入时, 采用 HTTPS 协议很有必要.</p>
-<p>&emsp;&emsp;那么如何区分自己平时访问的网页是 HTTP 协议还是 HTTPS 协议呢? 设我们有一个名为 <code>11.11.11.11</code> 的公网 IP, 使用 HTTP 对其进行访问时, 基本格式为 </p>
+              <p>  简单来说, HTTP 与 HTTPS <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="HTTP和HTTPS有什么区别？
+">[1]</span></a></sup> 都是是通信协议. 但二者最大的区别在于, HTTP 是通过明文进行数据传输, 而 HTTPS 在传输过程中进行加密 (通过 SSL/TLS 协议). 试想这样一个过程: 在数据传输途中, 其被第三方进行了截获. 如果是采用的 HTTP 协议, 则截获者可以直接读懂传输的数据; 但如果采用的是 HTTPS 协议, 截获者必须找到正确的破译方法才能读懂其中的数据. 由此可见, 为了网站数据通信的安全性—特别是设计密码输入时, 采用 HTTPS 协议很有必要.</p>
+<p>  那么如何区分自己平时访问的网页是 HTTP 协议还是 HTTPS 协议呢? 设我们有一个名为 <code>11.11.11.11</code> 的公网 IP, 使用 HTTP 对其进行访问时, 基本格式为</p>
 <figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span><span class="hljs-number">11.11</span>.<span class="hljs-number">11.11</span><br></code></pre></div></td></tr></table></figure>
-<p>而使用 HTTPS 协议进行访问时, 基本格式为 </p>
+<p>而使用 HTTPS 协议进行访问时, 基本格式为</p>
 <figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span><span class="hljs-number">11.11</span>.<span class="hljs-number">11.11</span><br></code></pre></div></td></tr></table></figure>
 <p>可见, 二者的区别在于域名前指定通信协议的字符.</p>
-<p>&emsp;&emsp;另一方面, 现在的浏览器都会自动检测协议的安全性. 一般来说, 如果浏览器地址栏中提示 “Not Secure”, 则一般为 HTTP 协议; 如果有一个类似锁的图标 (或显示 “Secure” 等), 则一般为 HTTPS 协议. 此外, 采用 HTTP 协议时, 地址栏中一般不会把 <code>http://</code> 字段显示出来, 而采用 HTTPS 协议时,  <code>https://</code> 字段一般会被显示出来.</p>
-<p><img src="http_1.png" srcset="/img/loading.gif" lazyload alt="HTTP 协议: 浏览器提示 &quot;Not Secure&quot;" title="HTTP 协议: 浏览器提示 &quot;Not Secure&quot;"></p>
-<p><img src="https_1.png" srcset="/img/loading.gif" lazyload alt="HTTPS 协议: 无 &quot;Not Secure&quot; 提示" title="HTTP 协议: 无 &quot;Not Secure&quot; 提示"></p>
-<p><img src="http_2.png" srcset="/img/loading.gif" lazyload alt="HTTP 协议: 不显示通信协议" title="HTTP 协议: 不显示通信协议"></p>
-<p><img src="https_2.png" srcset="/img/loading.gif" lazyload alt="HTTPS 协议: 地址栏显示通信协议" title="HTTPS 协议: 地址栏显示通信协议"></p>
-<p>&emsp;&emsp;由于 HTTPS 通常通过 SSL/TLS 协议, 因此开启 HTTPS 协议需要相应的证书. 不过现在这类证书一般都可以免费申请 (如笔者是直接在腾讯云申请的证书).</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/151764515">HTTP和HTTPS有什么区别？</a>
+<p>  另一方面, 现在的浏览器都会自动检测协议的安全性. 一般来说, 如果浏览器地址栏中提示 “Not Secure”, 则一般为 HTTP 协议; 如果有一个类似锁的图标 (或显示 “Secure” 等), 则一般为 HTTPS 协议. 此外, 采用 HTTP 协议时, 地址栏中一般不会把 <code>http://</code> 字段显示出来, 而采用 HTTPS 协议时,  <code>https://</code> 字段一般会被显示出来.</p>
+<p>![HTTP 协议: 浏览器提示 “Not Secure”](http_1.png “HTTP 协议: 浏览器提示 “Not Secure””)</p>
+<p>![HTTPS 协议: 无 “Not Secure” 提示](https_1.png “HTTP 协议: 无 “Not Secure” 提示”)</p>
+<p><img src="http_2.png" srcset="/img/loading.gif" lazyload alt="HTTP 协议: 不显示通信协议" title="HTTP 协议: 不显示通信协议" /></p>
+<p><img src="https_2.png" srcset="/img/loading.gif" lazyload alt="HTTPS 协议: 地址栏显示通信协议" title="HTTPS 协议: 地址栏显示通信协议" /></p>
+<p>  由于 HTTPS 通常通过 SSL/TLS 协议, 因此开启 HTTPS 协议需要相应的证书. 不过现在这类证书一般都可以免费申请 (如笔者是直接在腾讯云申请的证书).</p>
+<h2 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h2>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/151764515">HTTP和HTTPS有什么区别？</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
@@ -299,7 +300,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/03/CS-Hexo-2021-05-03-build-blog-with-tencent-and-hexo/">
+                      <a href="/2021/05/03/CS_Hexo/2021-05-03_build_blog_with_tencent_and_hexo/">
                         <span class="hidden-mobile">使用腾讯云和 Hexo 搭建个人博客</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>

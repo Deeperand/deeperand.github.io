@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      317 字
+      313 字
     </span>
   
 
@@ -247,16 +247,19 @@
               </p>
             
             <div class="markdown-body">
-              <p>&emsp;&emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.</p>
-<h2 id="图片及超链接"><a href="#图片及超链接" class="headerlink" title="图片及超链接"></a>图片及超链接</h2><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">fig name</span>](<span class="hljs-link">path &quot;alt name&quot;</span>)<br>[<span class="hljs-string">link display</span>](<span class="hljs-link">link</span>)<br></code></pre></div></td></tr></table></figure>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>&emsp;&emsp;表格基本格式为 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 表格
+              <p>  本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.</p>
+<h2 id="图片及超链接"><a class="markdownIt-Anchor" href="#图片及超链接"></a> 图片及超链接</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">![<span class="hljs-string">fig name</span>](<span class="hljs-link">path &quot;alt name&quot;</span>)<br>[<span class="hljs-string">link display</span>](<span class="hljs-link">link</span>)<br></code></pre></div></td></tr></table></figure>
+<h2 id="表格"><a class="markdownIt-Anchor" href="#表格"></a> 表格</h2>
+<h3 id="syntax"><a class="markdownIt-Anchor" href="#syntax"></a> Syntax</h3>
+<p>  表格基本格式为 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 表格
 ">[1]</span></a></sup></p>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| item 1 | item 2 |<br>|--------|--------|<br>| cell   | cell   |<br>| cell   | cell   |<br></code></pre></div></td></tr></table></figure>
 <p>其中可在表头与内容的分割线处通过 <code>:-</code>, <code>-:</code>, <code>:-:</code> 指定对齐方式, 如:</p>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| left | right | center |<br>|:-----|------:|:------:|<br>| cell | cell  | cell   |<br>| cell | cell  | cell   |<br></code></pre></div></td></tr></table></figure>
 <p>如 Vim 等文本编辑器通常提供有辅助源代码对齐的插件. 对于 Vim 插件 <code>plasticboy/vim-markdown</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="plasticboy/vim-markdown
 ">[2]</span></a></sup>, 其提供了对齐表格的指令 <code>:TableFormat</code>, 笔者将其设为了 NORMAL 模式下的快捷键 <code>&lt;localleader&gt;la</code>.</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><div class="table-container">
+<h3 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h3>
 <table>
 <thead>
 <tr>
@@ -275,8 +278,6 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -298,14 +299,16 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h2><p>&emsp;&emsp;之前 (2021.04.30) 从 macOS 的 <em>Note</em> 中复制复选框列表到 Markdown 源文件时, 意外地发现列表开头自动变为了诸如 <code>[x]</code>, <code>[]</code> 的形式, 这才意识到部分 Markdown 或许也支持复选框 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 复选框 (todo list)
+<h2 id="复选框"><a class="markdownIt-Anchor" href="#复选框"></a> 复选框</h2>
+<p>  之前 (2021.04.30) 从 macOS 的 <em>Note</em> 中复制复选框列表到 Markdown 源文件时, 意外地发现列表开头自动变为了诸如 <code>[x]</code>, <code>[]</code> 的形式, 这才意识到部分 Markdown 或许也支持复选框 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 复选框 (todo list)
 ">[3]</span></a></sup>.</p>
-<h3 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">[x] A<br>[ ] B<br><span class="hljs-bullet">-</span> [x] 已选中<br><span class="hljs-bullet">-</span> [ ] 未选中<br></code></pre></div></td></tr></table></figure>
+<h3 id="syntax-2"><a class="markdownIt-Anchor" href="#syntax-2"></a> Syntax</h3>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">[x] A<br>[ ] B<br><span class="hljs-bullet">-</span> [x] 已选中<br><span class="hljs-bullet">-</span> [ ] 未选中<br></code></pre></div></td></tr></table></figure>
 <p>应注意 “未选中” 框中间有一个空格. (由于本网站的 Markdown 渲染器尚未部署该功能, 故这里不给出效果预览)</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-table.html">Markdown 表格</a>
+<h2 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h2>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-table.html">Markdown 表格</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/plasticboy/vim-markdown">plasticboy/vim-markdown</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://amwiki.org/doc/?file=020-教程学习篇/005-学习markdown/12-Markdown复选框">Markdown 复选框 (todo list)</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://amwiki.org/doc/?file=020-%E6%95%99%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AF%87/005-%E5%AD%A6%E4%B9%A0markdown/12-Markdown%E5%A4%8D%E9%80%89%E6%A1%86">Markdown 复选框 (todo list)</a>
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
@@ -342,7 +345,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/03/CS-Hexo-2021-05-03-hexo-with-LaTeX/">
+                      <a href="/2021/05/03/CS_Hexo/2021-05-03_hexo_with_LaTeX/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">在 Hexo 的 Fluid 主题中使用 LaTeX 公式</span>
                         <span class="visible-mobile">Previous</span>
@@ -352,7 +355,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/02/CS-Hexo-2021-05-02-hexo-quick-start/">
+                      <a href="/2021/05/02/CS_Hexo/2021-05-02_hexo_quick_start/">
                         <span class="hidden-mobile">Hexo 快速上手</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
