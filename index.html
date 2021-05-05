@@ -349,8 +349,7 @@ PS: 之前为了 debug 无法
           
             
           
-          购买腾讯云启用 SSH 密钥*配置 Git 远程仓库Hook 设置新建用户启用 HTTPS&emsp;&emsp;关于 HTTP/HTTPS 协议的简介可以参考我的这篇博客: 什么是 HTTP 与 HTTPS 协议?
-CC 协议备案&emsp;&emsp;个人网站除了进行 ICP 备案外还要进行公安备案 beian_1. 备案过程中会遇到 “前置许可” 一项, 对于不涉及没涉及新闻、出版、教育、尾
+          概述&emsp;&emsp;基本思路 [1] 是在本地先进行 Hexo 的配置 (可参考我的这篇文章: Hexo 快速上手) 后, 在远程服务器搭建远程 git 库. 每次 deploy 时, 通过 hexo-deployer-git 插件先将本地的 hexo 生成的 public 内容推送到服务器上的远程库, 再通过 hook 自动将远程库中的内容拉取到网站存储的目录. 其中远程服务器采用 Ng
         </a>
       </p>
 
