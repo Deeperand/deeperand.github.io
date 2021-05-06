@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="本文简要介绍了 CDN 的基本概念, 以及使用腾讯云 CDN 服务的基本配置流程.">
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>[DEBUG] ERROR Deployer not found: git - 博客 | 冬季银河</title>
+  <title>使用 CDN 为网站加速 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="[DEBUG] ERROR Deployer not found: git">
+            <span class="h2" id="subtitle" title="使用 CDN 为网站加速">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-05-04 12:54" pubdate>
-        2021.05.04, 12:54
+      <time datetime="2021-05-06 22:09" pubdate>
+        2021.05.06, 22:09
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      178 字
+      712 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      7
        分钟
     </span>
   
@@ -238,23 +238,36 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">[DEBUG] ERROR Deployer not found: git</h1>
+            <h1 style="display: none">使用 CDN 为网站加速</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.04, 13:07
+                  最后更新：2021.05.06, 22:38
                 
               </p>
             
             <div class="markdown-body">
-              <p>&emsp;&emsp;今天上午在折腾完站内引用后, 发现运行 <code>hexo g -d</code> 后出现报错</p>
-<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">ERROR Deployer not found: git<br></code></pre></div></td></tr></table></figure>
-<p>经查阅 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="hexo d命令报错 ERROR Deployer not found: git
-">[1]</span></a></sup> 发现这是由于缺少 <code>hexo-deployer-git</code> 插件. 因此为解决此 Bug, 使用 <code>npm</code> 按照该插件即可</p>
-<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install hexo-deployer-git --save<br></code></pre></div></td></tr></table></figure>
-<p>PS: 之前为了 debug 无法站内引用的问题, 新建了一个 Hexo 文件夹, 之后用这个文件夹中的 <code>node_modules/</code> 文件夹替换了旧 Hexo 文件夹中的 <code>node_modules/</code>. 看起来这个插件并不是 Hexo 自带的, 可能之前在第一次搭建 Hexo 博客时无意中已经装上了此插件, 所以才没有感觉.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21808961/article/details/84476504">hexo d命令报错 ERROR Deployer not found: git</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+              <p>本文简要介绍了 CDN 的基本概念, 以及使用腾讯云 CDN 服务的基本配置流程.</p>
+<span id="more"></span>
+<h2 id="1-CDN-概述"><a href="#1-CDN-概述" class="headerlink" title="1 CDN 概述"></a>1 CDN 概述</h2><p>&emsp;&emsp;一般而言, 个人网站的服务器在带宽选择上基本是 1 到数 M. 换算成下载速度, 基本只有几百 Kb/s. 这还是总的下载速度, 如果考虑到多人同时访问网站, 速度只会更慢.</p>
+<p>&emsp;&emsp;为了解决静态资源的访问速度问题, 可以考虑使用 CDN 进行加速. CDN 全称是 <em>内容分发网络 (Content Delivery Network)</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="CDN是什么？使用CDN有什么优势？
+">[1]</span></a></sup> . 粗率来说, 其运行机制可以被理解为: 静态资源被复制到 CDN 的服务器, 用户访问静态资源时, 优先根据离其较近的服务器选择访问节点进行访问. 可见, 用户在访问资源时并不直接访问网站服务器. 因此不占用网站带宽, 且访问速度是由 CDN 服务器带宽来决定的. 另一面, CDN 在同带宽下相较服务器更为低廉, 因此是网站加速的首选技术. 此外, 对于纯静态的网站, 原则上连服务器都不需要, 直接采用 cos-cdn 方案即可 (Hexo 中有对应的插件 <code>hexo-deployer-cos-cdn</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo-deployer-cos-cdn 插件安装使用指南
+">[2]</span></a></sup> ).</p>
+<h2 id="2-使用腾讯云的-CDN-服务"><a href="#2-使用腾讯云的-CDN-服务" class="headerlink" title="2 使用腾讯云的 CDN 服务"></a>2 使用腾讯云的 CDN 服务</h2><p>&emsp;&emsp;笔者使用的是腾讯云的 CDN 服务, 其配置方式有详细的参考文档 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="从零开始配置 CDN
+">[3]</span></a></sup> , 在此仅进行概述. 腾讯云的 CDN 服务是针对域名进行加速的, 在购买了 CDN 服务后, 受限要添加上需要加速的域名 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="接入域名
+">[4]</span></a></sup>, 之后可找到生成的 CDN 域名. 将该域名加入 DNS 列表 (这一步需要在自己的域名供应商处操作), 类型为 <code>CNAME</code>, 其意义是解析到域名.</p>
+<h2 id="3-升级至-HTTPS"><a href="#3-升级至-HTTPS" class="headerlink" title="3 升级至 HTTPS"></a>3 升级至 HTTPS</h2><p>&emsp;&emsp;略. 这一步只需要在 CDN 服务中的控制台找到相应配置项并上传 HTTPS 证书即可, 整个过程比从头为服务器配置 HTTPS 更简单.</p>
+<h2 id="4-其它注意事项"><a href="#4-其它注意事项" class="headerlink" title="4 其它注意事项"></a>4 其它注意事项</h2><h3 id="域名解析流程分析"><a href="#域名解析流程分析" class="headerlink" title="域名解析流程分析"></a>域名解析流程分析</h3><p>&emsp;&emsp;简单来说, 如果你在域名解析处将 <code>www.example.com</code> 设置为解析到 CDN 域名, 则访问时将先由该域名解析到对应 CDN 域名, 再由根据用户所处位置访问具体的某一个 CDN 服务器.</p>
+<h3 id="检验域名解析结果"><a href="#检验域名解析结果" class="headerlink" title="检验域名解析结果"></a>检验域名解析结果</h3><p>&emsp;&emsp;可通过指令 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="配置 CNAME
+">[5]</span></a></sup></p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">nslookup -qt=cname &lt;domain_name&gt;<br></code></pre></div></td></tr></table></figure>
+<p>查看域名解析情况. 如果 CDN 域名加速成功, 理论上结果会返回多个 IP. 如果域名解析对应的是服务器 IP, 则该指令会返回服务器 IP.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/36514327/answer/1604554133">CDN是什么？使用CDN有什么优势？</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.lixl.cn/2020/020936412.html">Hexo-deployer-cos-cdn 插件安装使用指南</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/3149">从零开始配置 CDN</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/41215">接入域名</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/228/3121?from=information.detail.腾讯云cname配置">配置 CNAME</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -263,7 +276,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-Hexo/">CS Hexo</a>
+                      <a class="hover-with-bg" href="/categories/CS-Web/">CS Web</a>
                     
                   </div>
                 
@@ -271,7 +284,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Debug/">Debug</a>
+                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
                   </div>
                 
@@ -288,9 +301,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/06/CS_Web/2021-05-06_cdn/">
+                      <a href="/2021/05/06/CS_Hexo/2021-05-06_TRICK_drafts_in_Hexo/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">使用 CDN 为网站加速</span>
+                        <span class="hidden-mobile">[TRICK] Hexo 中的草稿</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -298,8 +311,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/05/04/CS_Hexo/2021-05-04_cite_local_post/">
-                        <span class="hidden-mobile">在 Hexo 中引用站内文章</span>
+                      <a href="/2021/05/04/CS_Hexo/2021-05-04_DEBUG_deployer_not_found/">
+                        <span class="hidden-mobile">[DEBUG] ERROR Deployer not found: git</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
