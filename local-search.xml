@@ -22,6 +22,8 @@
       
       <tag>CS</tag>
       
+      <tag>TRICK</tag>
+      
     </tags>
     
   </entry>
@@ -47,6 +49,8 @@
       
       <tag>CS</tag>
       
+      <tag>DEBUG</tag>
+      
     </tags>
     
   </entry>
@@ -70,9 +74,9 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
+      
+      <tag>TRICK</tag>
       
     </tags>
     
@@ -122,7 +126,9 @@
     
     <tags>
       
-      <tag>Debug</tag>
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
       
     </tags>
     
@@ -197,9 +203,9 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
