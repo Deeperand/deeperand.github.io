@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>[READ] Chapter 2 Special Relativity and Extra Dimensions</title>
+    <link href="/2021/05/10/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-10_READ_chapter_2_special_relativity_and_extra_dimensions/"/>
+    <url>/2021/05/10/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-10_READ_chapter_2_special_relativity_and_extra_dimensions/</url>
+    
+    <content type="html"><![CDATA[<p>This eassy is a reading notes of <em>A First Course in String Theory</em>, <em>Chapter 2 Special relativity and extra dimensions</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Zwiebach, Barton. “A First Course in String Theory,” 2009">[1]</span></a></sup></p><span id="more"></span><h2 id="2-1-Units-and-parameters"><a href="#2-1-Units-and-parameters" class="headerlink" title="2.1 Units and parameters"></a>2.1 Units and parameters</h2><ul><li>Units: a fixed quantities that we use for purposses of reference (e.g.: time, length, mass)</li><li>unit of charge<ul><li>Gaussian unit (esu)<script type="math/tex; mode=display">  [\mathrm{esu}^{2}] = [\mathrm{N}\cdot \mathrm{m}^{2}]</script></li><li>SI unit (coulombs)</li></ul></li><li>dimensionful parameters and dimensionless parameters</li></ul><h2 id="2-2-Intervals-and-Lorentz-transformation"><a href="#2-2-Intervals-and-Lorentz-transformation" class="headerlink" title="2.2 Intervals and Lorentz transformation"></a>2.2 Intervals and Lorentz transformation</h2><ul><li>4-coordinate</li><li>interval (sign: $(+,-,-,-)$, so time-like means $\mathrm{d} s^2 &gt; 0$)<ul><li>finite</li><li>infinitesimal</li><li>Einstein’s summation convention</li></ul></li><li>metric<ul><li>lower indices</li><li>scalar product</li><li>inverse of $\eta_{\mu\nu}$</li></ul></li><li>Lorentz transformation and boost<ul><li>the corresponding matric transformation of coordinate transformation $x’^\mu = L^{\mu}_{~~~\nu} x^\nu$</li><li>determinant of $L$ ($\det L = \pm 1$)</li></ul></li><li>other types of Lorentz transformation (spatial rotation)</li><li>Lorentz vector<ul><li>timelike ($v^2 &lt; 0$), spacelike ($v^2 &gt; 0$), <em>null</em> ($v^2 = 0$)</li></ul></li></ul><h2 id="2-3-Light-cone-coordinates"><a href="#2-3-Light-cone-coordinates" class="headerlink" title="2.3 Light-cone coordinates"></a>2.3 Light-cone coordinates</h2><ul><li>usage: quantization of the relativistic string</li><li>$x^+$ and $x^-$:<ul><li>definition<script type="math/tex; mode=display">  \begin{align}      & x^+ \equiv \dfrac{1}{\sqrt{2}} (x^0 + x^1) \\      & x^- \equiv \dfrac{1}{\sqrt{2}} (x^0 - x^1).  \end{align}</script></li><li>property: for special light rays, light-cone time will freeze</li><li>index: $+, -, 2, 3$</li></ul></li><li>light-cone components of Lorentz vector</li><li>example: light-cone velocity</li><li>note: light-cone coordinate can’t be got from Lorentz transformation</li></ul><h2 id="2-4-Relativistic-energy-and-momentum"><a href="#2-4-Relativistic-energy-and-momentum" class="headerlink" title="2.4 Relativistic energy and momentum"></a>2.4 Relativistic energy and momentum</h2><ul><li>review of relativistic energy and momentum<script type="math/tex; mode=display">  \dfrac{E^{2}}{c^{2}} - \boldsymbol{p} \cdot \boldsymbol{p} = m^2 c^2</script>  there $m$, $c$ are both constant</li><li>4-momentum</li><li>proper time<ul><li>differential relation<script type="math/tex; mode=display">  \dfrac{\mathrm{d} t}{\mathrm{d} s} = \dfrac{\gamma}{c}</script></li></ul></li><li>4-velocity</li><li>relationship between 4-velocity and 4-momentum<script type="math/tex; mode=display">  p^\mu = m u^\mu</script></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Zwiebach, Barton. “A First Course in String Theory,” 2009<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS String Theory</category>
+      
+      <category>BOOK A First Course in String Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>READ</tag>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[READ] Chapter 4 论技术训练</title>
+    <link href="/2021/05/10/MUSIC_piano/BOOK_art_of_piano_performance/2021-05-10_READ_chapter_4_technique_practice/"/>
+    <url>/2021/05/10/MUSIC_piano/BOOK_art_of_piano_performance/2021-05-10_READ_chapter_4_technique_practice/</url>
+    
+    <content type="html"><![CDATA[<p>本文为 <em>论钢琴表演艺术 (涅高兹)</em> 第四章的读书笔记.</p><span id="more"></span><h2 id="4-1-概论"><a href="#4-1-概论" class="headerlink" title="4.1 概论"></a>4.1 概论</h2><ul><li>调用一切可用的身体资源</li><li>从使琴键发声的角度来看 (即便是 FF), 弹琴是一件轻松的事</li><li>肖邦的教学理念<ul><li>第一课: E, F#, E#, G#, A#, B#, 半断奏 (portamento) 而非边奏 (legato)</li><li>黑键更适合手指弹奏<ul><li>音阶练习黑键由多到少</li><li>钢琴弹奏理论具有不同于一般音乐理论的特点 (乐理上简单等同弹奏简单!)</li></ul></li></ul></li><li>钢琴的机械性及击键过程的物理描述<ul><li>F: 手指力度</li><li>h: 手抬起的高度</li><li>v: 手的击键速度</li><li>m: 手臂质量</li><li>“他越是善于把自己的知识归纳为具有规律作用的精确定义, 他的知识也就越巩固, 深刻.”</li></ul></li></ul><h2 id="4-2-信心是放松的基础"><a href="#4-2-信心是放松的基础" class="headerlink" title="4-2 信心是放松的基础"></a>4-2 信心是放松的基础</h2><ul><li>“放松” 是 “任意” 的对立面</li><li>放松的先决条件是 “信心”</li><li>巴赫: 技术练习与音乐性相结合</li><li>“弹得聚精会神, 结实有力, ‘深刻’ 和准确”<ul><li>整只手完全放松</li><li>完全平静, 非必要动作不用</li><li>“金属之声” 的获得</li></ul></li></ul><h2 id="4-3-动作器官"><a href="#4-3-动作器官" class="headerlink" title="4-3 动作器官"></a>4-3 动作器官</h2><ul><li>钢琴演奏中的 “手指力量”: 实质为承受某一重量时的稳定性</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>MUSIC Piano</category>
+      
+      <category>BOOK 论钢琴表演艺术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MUSIC</tag>
+      
+      <tag>READ</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] 插件 vimtex 中的 Text Objects</title>
     <link href="/2021/05/08/CS_vim/20021-05-08_TRICK_text_objects_in_vimtex/"/>
     <url>/2021/05/08/CS_vim/20021-05-08_TRICK_text_objects_in_vimtex/</url>
@@ -32,8 +90,8 @@
   
   <entry>
     <title>[READ] Chapter 1 A Brief Introduction</title>
-    <link href="/2021/05/08/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-08_READ_chapter_1introduction/"/>
-    <url>/2021/05/08/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-08_READ_chapter_1introduction/</url>
+    <link href="/2021/05/08/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-08_READ_chapter_1_introduction/"/>
+    <url>/2021/05/08/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-08_READ_chapter_1_introduction/</url>
     
     <content type="html"><![CDATA[<p>This eassy is a reading notes of <em>A First Course in String Theory</em>, <em>Chapter 1 A brief introduction</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Zwiebach, Barton. “A First Course in String Theory,” 2009">[1]</span></a></sup></p><span id="more"></span><h2 id="1-1-The-road-to-unification"><a href="#1-1-The-road-to-unification" class="headerlink" title="1.1 The road to unification"></a>1.1 The road to unification</h2><ul><li>review of four basic forces</li><li>quantization of electric force, week force, strong force (include unification of electric and weekforce)</li><li>particles in <em>Standard Model (SM)</em> (60 types)<ul><li>bosons (12 types): force carriers, 8 (QCD) + 4 (QED)</li><li>fermions (48 types): matter particle, lepton (12) + quarks (36)</li></ul></li><li>problem of Standard Model<ul><li>does not include gravity</li><li>too many parameters (twenty)</li></ul></li></ul><h2 id="1-2-String-theory-as-a-unified-theory-of-physics"><a href="#1-2-String-theory-as-a-unified-theory-of-physics" class="headerlink" title="1.2 String theory as a unified theory of physics"></a>1.2 String theory as a unified theory of physics</h2><ul><li>view phoints of decay process $\alpha \to \beta + \gamma$ of string theory</li><li>only parameter in string theory: $\mathscr{l}_s$</li><li>spatial dimension of string theory: 26 for bosonic string, 10 for superstring</li><li>types of string (open, close, bosonic, superstring)</li><li>five ten-dimensional superstring and M-theory</li></ul><h2 id="1-3-String-theory-and-its-verification"><a href="#1-3-String-theory-and-its-verification" class="headerlink" title="1.3 String theory and its verification"></a>1.3 String theory and its verification</h2><ul><li>lenth scale of string: less than $10^{-16} \mathrm{cm}$ (ref: Plank scale $\mathscr{l}_p \sim 10^{-33} \mathrm{cm}$)</li><li>chapter 3: D-brane</li><li>chapter 7: cosmic string</li><li>supersymmetry</li><li>Standard Model can emerge from string theory</li><li>solution selection problems and the <em>landscape</em> of string theory</li><li>gravity from quantum vibrations of relativistic string</li></ul><h2 id="1-4-Developments-and-outlook"><a href="#1-4-Developments-and-outlook" class="headerlink" title="1.4 Developments and outlook"></a>1.4 Developments and outlook</h2><ul><li>use string theory to understand conventional problems<ul><li>Chapter 15: D-branes</li><li>Chapter 23: Ads/CFT</li></ul></li><li>black hole entropy and string theory (chapter 22)</li><li>inflation and string theory</li><li>string theory have no complete formulation (e.g., had no similar equations like Einstein’s gravity field equation in GR)</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Zwiebach, Barton. “A First Course in String Theory,” 2009<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
@@ -49,9 +107,9 @@
     
     <tags>
       
-      <tag>PHYS</tag>
-      
       <tag>READ</tag>
+      
+      <tag>PHYS</tag>
       
     </tags>
     
