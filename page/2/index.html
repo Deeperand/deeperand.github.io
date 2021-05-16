@@ -182,13 +182,223 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/" target="_self">
+        <a href="/2021/05/06/CS_hexo/2021-05-06_TRICK_drafts_in_Hexo/" target="_self">
+          [TRICK] Hexo 中的草稿
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/05/06/CS_hexo/2021-05-06_TRICK_drafts_in_Hexo/" target="_self">
+          
+          
+            
+          
+          &emsp;&emsp;Hexo 中 source 文件夹下的特殊文件夹除了 _posts 以外还有 _drafts. 其中的内容在通常的 hexo g, hexo s 指令下并不会被渲染, 只有加上参数 --draft 才会被渲染并在网页中显示.
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-06 22:39" pubdate>
+              2021-05-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Hexo/">CS Hexo</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+              <a href="/tags/TRICK/">TRICK</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/05/06/CS_web/2021-05-06_cdn/" target="_self">
+          使用 CDN 为网站加速
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/05/06/CS_web/2021-05-06_cdn/" target="_self">
+          
+          
+            
+          
+          本文简要介绍了 CDN 的基本概念, 以及使用腾讯云 CDN 服务的基本配置流程.
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-06 22:09" pubdate>
+              2021-05-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Web/">CS Web</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/05/04/CS_hexo/2021-05-04_DEBUG_deployer_not_found/" target="_self">
+          [DEBUG] ERROR Deployer not found: git
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/05/04/CS_hexo/2021-05-04_DEBUG_deployer_not_found/" target="_self">
+          
+          
+            
+          
+          &emsp;&emsp;今天上午在折腾完站内引用后, 发现运行 hexo g -d 后出现报错
+1ERROR Deployer not found: git
+经查阅 [1] 发现这是由于缺少 hexo-deployer-git 插件. 因此为解决此 Bug, 使用 npm 按照该插件即可
+1npm install hexo-deployer-git --save
+PS: 之前为了 debug 无法
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-04 12:54" pubdate>
+              2021-05-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Hexo/">CS Hexo</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+              <a href="/tags/DEBUG/">DEBUG</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/05/04/CS_hexo/2021-05-04_cite_local_post/" target="_self">
+          在 Hexo 中引用站内文章
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/05/04/CS_hexo/2021-05-04_cite_local_post/" target="_self">
+          
+          
+            
+          
+          1 基本使用&emsp;&emsp;Hexo 中使用 Tag 插件实现站内文章的引用. 基本格式为
+1&#123;% post_link &lt;path&gt; [title] %&#125;
+其中 &lt;path&gt; 是站内文章的路径 (无 .md 后缀名), 其是相对于 $HEXO/source/_post 的. 可选项 [title] 是最终渲染出的超链接显示的文字, 默认为文章标题
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-04 11:47" pubdate>
+              2021-05-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Hexo/">CS Hexo</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/05/04/CS_web/2021-05-04_http_and_https/" target="_self">
           什么是 HTTP 与 HTTPS 协议?
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/04/CS_Web/2021-05-04_http_and_https/" target="_self">
+        <a href="/2021/05/04/CS_web/2021-05-04_http_and_https/" target="_self">
           
           
             
@@ -232,18 +442,18 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_build_blog_with_tencent_and_hexo/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_build_blog_with_tencent_and_hexo/" target="_self">
           使用腾讯云和 Hexo 搭建个人博客
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_build_blog_with_tencent_and_hexo/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_build_blog_with_tencent_and_hexo/" target="_self">
           
           
             
           
-          概述&emsp;&emsp;基本思路 [1] 是在本地先进行 Hexo 的配置 (可参考我的这篇文章: Hexo 快速上手) 后, 在远程服务器搭建远程 git 库. 每次 deploy 时, 通过 hexo-deployer-git 插件先将本地的 hexo 生成的 public 内容推送到服务器上的远程库, 再通过 hook 自动将远程库中的内容拉取到网站存储的目录. 其中远程服务器采用 Ng
+          概述&emsp;&emsp;基本思路 [1] 是在本地先进行 Hexo 的配置 (可参考我的这篇文章: Post not found: CS_Hexo/2021-05-02_hexo_quick_start) 后, 在远程服务器搭建远程 git 库. 每次 deploy 时, 通过 hexo-deployer-git 插件先将本地的 hexo 生成的 public 内容推送到服务器上的远程库, 再
         </a>
       </p>
 
@@ -284,13 +494,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_add_comment_with_fluid/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_add_comment_with_fluid/" target="_self">
           通过 Fluid 主题为 Hexo 博客添加评论功能及站点统计
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_add_comment_with_fluid/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_add_comment_with_fluid/" target="_self">
           
           
             
@@ -336,13 +546,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_hexo_with_LaTeX/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_hexo_with_LaTeX/" target="_self">
           在 Hexo 的 Fluid 主题中使用 LaTeX 公式
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/03/CS_Hexo/2021-05-03_hexo_with_LaTeX/" target="_self">
+        <a href="/2021/05/03/CS_hexo/2021-05-03_hexo_with_LaTeX/" target="_self">
           
           
             
@@ -388,13 +598,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/02/CS_Web/2021-05-02_markdown_syntax_ref/" target="_self">
+        <a href="/2021/05/02/CS_web/2021-05-02_markdown_syntax_ref/" target="_self">
           Markdown 语法速查
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/02/CS_Web/2021-05-02_markdown_syntax_ref/" target="_self">
+        <a href="/2021/05/02/CS_web/2021-05-02_markdown_syntax_ref/" target="_self">
           
           
             
@@ -443,13 +653,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/05/02/CS_Hexo/2021-05-02_hexo_quick_start/" target="_self">
+        <a href="/2021/05/02/CS_hexo/2021-05-02_hexo_quick_start/" target="_self">
           Hexo 快速上手
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2021/05/02/CS_Hexo/2021-05-02_hexo_quick_start/" target="_self">
+        <a href="/2021/05/02/CS_hexo/2021-05-02_hexo_quick_start/" target="_self">
           
           
             
@@ -485,197 +695,6 @@
               <a href="/tags/CS/">CS</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/05/02/CS_Web/2021-05-02_Firefox_flash/" target="_self">
-          在 macOS 上使用 Firefox 运行 Flash
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/05/02/CS_Web/2021-05-02_Firefox_flash/" target="_self">
-          
-          
-            
-          
-          Flash 插件的兼容性&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 [1] (比如新建网站时公安备案的网站 [2], 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.
-&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-02 15:44" pubdate>
-              2021-05-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Web/">CS Web</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/19/CS_Hexo/2021-04-19_hexo_plugin_introduce/" target="_self">
-          Hexo 插件简介
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/19/CS_Hexo/2021-04-19_hexo_plugin_introduce/" target="_self">
-          
-          
-            
-          
-          
-写这篇文章的目的是为了记录使用 HEXO 的过程中了解到的插件
-
-hexo-pdf
-(2021-04-19) 
-
-
-Introduce: Hexo tag for embeded pdf
-Install:  1npm install --save hexo-pdf
-Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 16:00" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Hexo/">CS Hexo</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ref/">ref</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/19/CS_Hexo/2021-04-19-name_rule_of_hexo_markdown/" target="_self">
-          Hexo 的文件命名格式
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/19/CS_Hexo/2021-04-19-name_rule_of_hexo_markdown/" target="_self">
-          
-          
-            
-          
-          日期开头的分隔符问题&emsp;&emsp;今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了.
-asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 12:07" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Hexo/">CS Hexo</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TODO/">TODO</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/17/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/17/hello-world/" target="_self">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 21:31" pubdate>
-              2021-04-17
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>
