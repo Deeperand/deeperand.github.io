@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>[DEBUG] 个人博客访问出现 404 问题</title>
+    <link href="/CS_web/2021-05-19_DEBUG_404_problem/"/>
+    <url>/CS_web/2021-05-19_DEBUG_404_problem/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文介绍了 404 问题的基本概念, 以及对今天处理的一个 404 问题发生原因的分析.</p></blockquote><span id="more"></span><p>&emsp;&emsp;<code>404</code> 问题是常见的网络问题, 其基本原因是访问的服务器路径上不存在可供访问的文件.</p><p>&emsp;&emsp;今天访问个人博客时突然发现分类 <code>CS Web</code> 和 <code>CS Hexo</code> 下的文章在进行访问时出现了 404 问题. 经分析, 可能是因为前两天改变了 <code>Hexo</code> 目录中两个文件夹 <code>CS_Web</code> 和 <code>CS_Hexo</code> 中字母的大小写 (分别改为了 <code>CS_web</code> 和 <code>CS_hexo</code>). 而我自己的电脑为 macOS 系统, 其文件名是对大小写不敏感的, 于是我自己的电脑判定文件夹名称没有变化, 在上传远程服务器时文件夹名称亦没有改变. 而远程服务器为 Ubuntu 系统, 其文件名可能是大小写敏感的, 于是通过原本的大写字母路径无法访问实际的小写字母路径.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] Hexo 中设置永久链接</title>
     <link href="/CS_hexo/2021-05-17_TRICK_hexo_permalink/"/>
     <url>/CS_hexo/2021-05-17_TRICK_hexo_permalink/</url>
@@ -21,6 +46,8 @@
     <tags>
       
       <tag>CS</tag>
+      
+      <tag>TRICK</tag>
       
     </tags>
     
