@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      387 字
+      557 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      6
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.13, 10:47
+                  最后更新：2021.05.16, 10:58
                 
               </p>
             
@@ -264,6 +264,10 @@
 <li>使用 <code>\eqref</code> 引用公式时也形如 “式 (.1)”</li>
 </ul>
 <h3 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>\appendix</code> 指令后显式设置公式编号格式, 如<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\renewcommand</span><span class="hljs-keyword">\theequation</span>&#123;<span class="hljs-comment">%</span><br>    <span class="hljs-keyword">\thechapter</span>.<span class="hljs-keyword">\arabic</span>&#123;equation&#125;&#125;<br></code></pre></div></td></tr></table></figure></p>
+<h2 id="Vim-vimtex-目录中不显示注释中的-TODO"><a href="#Vim-vimtex-目录中不显示注释中的-TODO" class="headerlink" title="[Vim] vimtex 目录中不显示注释中的 TODO"></a>[Vim] <code>vimtex</code> 目录中不显示注释中的 <code>TODO</code></h2><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>理论上来说, 在 <code>.tex</code> 的注释中包含了 <code>TODO</code> 的部分会在 <code>vimtex</code> 的目录指令中显示出来, 但在使用 <code>% TODO</code> 时该条目不显示</p>
+<h3 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h3><p>经测试, <code>TODO</code> 后必须包含文字才可以, 且其后跟着的冒号不会在目录中额外显示. 如, 下面两种写法是等效的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% <span class="hljs-doctag">TODO:</span> introduction for GW</span><br><span class="hljs-comment">% TODO introduction for GW</span><br></code></pre></div></td></tr></table></figure><br>均会在 <code>vimtex</code> 提供的目录 <em>顶端</em> 中显示该 <code>TODO</code> 条目, 后面会跟随相应的文字描述</p>
+<p><img src="content_TODO.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>另一方面, 若只使用<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% TODO</span><br></code></pre></div></td></tr></table></figure><br>则在 <code>vimtex</code> 的目录中不会有任何显示.</p>
 
             </div>
             <hr>
