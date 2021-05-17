@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>test</title>
+    <link href="/2021/05/17/CS_hexo/2021-05-17_test/"/>
+    <url>/2021/05/17/CS_hexo/2021-05-17_test/</url>
+    
+    <content type="html"><![CDATA[<p>this is a test file about 404 problem</p><span id="more"></span>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>利用 convert 将 PDF 转化为图片并调整分辩率</title>
     <link href="/2021/05/16/CS_linux/2021-05-16_convert_pdf/"/>
     <url>/2021/05/16/CS_linux/2021-05-16_convert_pdf/</url>
@@ -124,9 +149,9 @@
     
     <tags>
       
-      <tag>PHYS</tag>
-      
       <tag>READ</tag>
+      
+      <tag>PHYS</tag>
       
     </tags>
     
@@ -153,9 +178,9 @@
     
     <tags>
       
-      <tag>READ</tag>
-      
       <tag>MUSIC</tag>
+      
+      <tag>READ</tag>
       
     </tags>
     
@@ -209,9 +234,9 @@
     
     <tags>
       
-      <tag>PHYS</tag>
-      
       <tag>READ</tag>
+      
+      <tag>PHYS</tag>
       
     </tags>
     
