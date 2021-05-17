@@ -4,31 +4,6 @@
   
   
   <entry>
-    <title>test</title>
-    <link href="/2021/05/17/CS_hexo/2021-05-17_test/"/>
-    <url>/2021/05/17/CS_hexo/2021-05-17_test/</url>
-    
-    <content type="html"><![CDATA[<p>this is a test file about 404 problem</p><span id="more"></span>]]></content>
-    
-    
-    <categories>
-      
-      <category>CS Hexo</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>CS</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>利用 convert 将 PDF 转化为图片并调整分辩率</title>
     <link href="/2021/05/16/CS_linux/2021-05-16_convert_pdf/"/>
     <url>/2021/05/16/CS_linux/2021-05-16_convert_pdf/</url>
@@ -303,7 +278,7 @@
     <link href="/2021/05/06/CS_hexo/2021-05-06_TRICK_drafts_in_Hexo/"/>
     <url>/2021/05/06/CS_hexo/2021-05-06_TRICK_drafts_in_Hexo/</url>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;Hexo 中 <code>source</code> 文件夹下的特殊文件夹除了 <code>_posts</code> 以外还有 <code>_drafts</code>. 其中的内容在通常的 <code>hexo g</code>, <code>hexo s</code> 指令下并不会被渲染, 只有加上参数 <code>--draft</code> 才会被渲染并在网页中显示.</p><span id="more"></span><p>&emsp;&emsp;Hexo 中 <code>source</code> 文件夹下的特殊文件夹除了 <code>_posts</code> 以外还有 <code>_drafts</code>. 其中的内容在通常的 <code>hexo g</code>, <code>hexo s</code> 指令下并不会被渲染, 只有加上参数 <code>--draft</code> 才会被渲染并在网页中显示. 如</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">hexo s --draft<br>hexo g --draft<br></code></pre></div></td></tr></table></figure><p>利用该特性, 可以避免作为草稿的文章被发布到网站上.</p><p>&emsp;&emsp;Hexo 实际上提供了更丰富的 <code>hexo publish</code> 指令等来辅助进行草稿的发布 (详见官方参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://hexo.io/zh-cn/docs/writing#草稿">[1]</span></a></sup>), 不过笔者并不太喜欢这种范式. 相较而言, 我更青睐于给未完成的文章打上 <code>TODO</code> 的 tag.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing#草稿">https://hexo.io/zh-cn/docs/writing#草稿</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;Hexo 中 <code>source</code> 文件夹下的特殊文件夹除了 <code>_posts</code> 以外还有 <code>_drafts</code>. 其中的内容在通常的 <code>hexo g</code>, <code>hexo s</code> 指令下并不会被渲染, 只有加上参数 <code>--draft</code> 才会被渲染并在网页中显示.</p><span id="more"></span><p>&emsp;&emsp;Hexo 中 <code>source</code> 文件夹下的特殊文件夹除了 <code>_posts</code> 以外还有 <code>_drafts</code>. 其中的内容在通常的 <code>hexo g</code>, <code>hexo s</code> 指令下并不会被渲染, 只有加上参数 <code>--draft</code> 才会被渲染并在网页中显示. 如</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">hexo s --draft<br>hexo g --draft<br></code></pre></div></td></tr></table></figure><p>利用该特性, 可以避免作为草稿的文章被发布到网站上.</p><p>&emsp;&emsp;Hexo 实际上提供了更丰富的 <code>hexo publish</code> 指令等来辅助进行草稿的发布 (详见官方参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://hexo.io/zh-cn/docs/writing#草稿">[1]</span></a></sup>), 不过笔者并不太喜欢这种范式. 相较而言, 我更青睐于给未完成的文章打上 <code>TODO</code> 的 tag.</p><p>test</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing#草稿">https://hexo.io/zh-cn/docs/writing#草稿</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
