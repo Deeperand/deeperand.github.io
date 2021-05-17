@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      317 字
+      342 字
     </span>
   
 
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.02, 23:38
+                  最后更新：2021.05.17, 21:30
                 
               </p>
             
@@ -252,7 +252,7 @@
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>&emsp;&emsp;表格基本格式为 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Markdown 表格
 ">[1]</span></a></sup></p>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| item 1 | item 2 |<br>|--------|--------|<br>| cell   | cell   |<br>| cell   | cell   |<br></code></pre></div></td></tr></table></figure>
-<p>其中可在表头与内容的分割线处通过 <code>:-</code>, <code>-:</code>, <code>:-:</code> 指定对齐方式, 如:</p>
+<p>注意<em>如果处于同一缩进级, 表格与前面的文字部分要空一行</em>. 其中可在表头与内容的分割线处通过 <code>:-</code>, <code>-:</code>, <code>:-:</code> 指定对齐方式, 如:</p>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">| left | right | center |<br>|:-----|------:|:------:|<br>| cell | cell  | cell   |<br>| cell | cell  | cell   |<br></code></pre></div></td></tr></table></figure>
 <p>如 Vim 等文本编辑器通常提供有辅助源代码对齐的插件. 对于 Vim 插件 <code>plasticboy/vim-markdown</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="plasticboy/vim-markdown
 ">[2]</span></a></sup>, 其提供了对齐表格的指令 <code>:TableFormat</code>, 笔者将其设为了 NORMAL 模式下的快捷键 <code>&lt;localleader&gt;la</code>.</p>

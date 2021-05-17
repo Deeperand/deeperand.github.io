@@ -14,7 +14,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="本文介绍了 Hexo 中永久链接的概念和相应设置方法">
+  <meta name="description" content="
+本文介绍了 Hexo 中永久链接的概念和相应设置方法
+">
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
@@ -242,16 +244,86 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.17, 21:23
+                  最后更新：2021.05.17, 21:28
                 
               </p>
             
             <div class="markdown-body">
-              <p>本文介绍了 Hexo 中永久链接的概念和相应设置方法</p>
+              <blockquote>
+<p>本文介绍了 Hexo 中永久链接的概念和相应设置方法</p>
+</blockquote>
 <span id="more"></span>
 <p>&emsp;&emsp;对于 Hexo 来说, 永久链接的格式控制着生成的文件相对于 <code>public</code> 的路径. 基本设置格式如<br>    <figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">permalink:</span> <span class="hljs-string">:category/:title/</span><br></code></pre></div></td></tr></table></figure><br>于是文件名称为 <code>hello.md</code> 分类为 <code>test</code> 的 markdown 文档生成的对应 HTML 文件将在 <code>public/test/</code> 下. 值得注意的是, <code>:title</code> 是相对 <code>source</code> 的路径而非文件的名称. 例如, 若 markdown 文件在 <code>source</code> 的子目录下, 如 <code>source/test1/hello.md</code>, 则生成的对应 HTML 文件在目录 <code>public/test1/hello</code> 下. 所以<em>如果已经利用子目录进行文章分类, 在使用 <code>:title</code> 时不再需要加上 <code>:category</code></em>, 或者采用 <code>:name</code> 来代替 <code>:title</code>. 此外, <em>末尾的斜杠 <code>/</code> 不能省略</em></p>
 <p>&emsp;&emsp;具体而言, 其中可选的参数为 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo: 永久链接
-">[1]</span></a></sup><br>| item        | meaning                                                          |<br>|——————-|—————————————————————————————————|<br>| :year       | 文章的发表年份（4 位数）                                         |<br>| :month      | 文章的发表月份（2 位数）                                         |<br>| :i_month    | 文章的发表月份（去掉开头的零）                                   |<br>| :day        | 文章的发表日期 (2 位数)                                          |<br>| :i_day      | 文章的发表日期（去掉开头的零）                                   |<br>| :hour       | 文章发表时的小时 (2 位数)                                        |<br>| :minute     | 文章发表时的分钟 (2 位数)                                        |<br>| :second     | 文章发表时的秒钟 (2 位数)                                        |<br>| :title      | 文件名称 (relative to “source/_posts/“ folder)                   |<br>| :name       | 文件名称                                                         |<br>| :post_title | 文章标题                                                         |<br>| :id         | 文章 ID (not persistent across cache reset)                      |<br>| :category   | 分类。如果文章没有分类，则是 default_category 配置信息。         |<br>| :hash       | SHA1 hash of filename (same as :title) and date (12-hexadecimal) |</p>
+">[1]</span></a></sup></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:year</code></td>
+<td>文章的发表年份（4 位数）</td>
+</tr>
+<tr>
+<td><code>:month</code></td>
+<td>文章的发表月份（2 位数）</td>
+</tr>
+<tr>
+<td><code>:i_month</code></td>
+<td>文章的发表月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td><code>:day</code></td>
+<td>文章的发表日期 (2 位数)</td>
+</tr>
+<tr>
+<td><code>:i_day</code></td>
+<td>文章的发表日期（去掉开头的零）</td>
+</tr>
+<tr>
+<td><code>:hour</code></td>
+<td>文章发表时的小时 (2 位数)</td>
+</tr>
+<tr>
+<td><code>:minute</code></td>
+<td>文章发表时的分钟 (2 位数)</td>
+</tr>
+<tr>
+<td><code>:second</code></td>
+<td>文章发表时的秒钟 (2 位数)</td>
+</tr>
+<tr>
+<td><code>:title</code></td>
+<td>文件名称 (relative to “source/_posts/“ folder)</td>
+</tr>
+<tr>
+<td><code>:name</code></td>
+<td>文件名称</td>
+</tr>
+<tr>
+<td><code>:post_title</code></td>
+<td>文章标题</td>
+</tr>
+<tr>
+<td><code>:id</code></td>
+<td>文章 ID (not persistent across cache reset)</td>
+</tr>
+<tr>
+<td><code>:category</code></td>
+<td>分类。如果文章没有分类，则是 default_category 配置信息。</td>
+</tr>
+<tr>
+<td><code>:hash</code></td>
+<td>SHA1 hash of filename (same as :title) and date (12-hexadecimal)</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/permalinks.html">Hexo: 永久链接</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
