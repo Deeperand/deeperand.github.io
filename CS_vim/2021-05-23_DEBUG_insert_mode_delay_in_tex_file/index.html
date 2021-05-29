@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      475 字
+      489 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      6
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.23, 12:12
+                  最后更新：2021.05.23, 18:22
                 
               </p>
             
@@ -250,7 +250,7 @@
               <p>今天在编辑 <code>.tex</code> 文件 (写毕业论文…) 时, 发现进入 <code>INSERT</code> 模式后要等到 “pending” 时间结束后才能键入字符 <code>E</code>. 后发现是 <code>textobject</code> 的快捷键重映射定义导致的, 并通过单独定义 <code>operate</code> 模式和 <code>visual</code> 模式下的快捷键映射解决了该问题.</p>
 <span id="more"></span>
 <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>编辑 <code>.tex</code> 文件时, 在 NORMAL 模式下按下 <code>i</code> 进入 INSERT 模式时, 发现大写字母 $E$ 的输入十分迟缓, 得等到完全进入 INSRT 模式后才可输入, 而在其它类型的文件中则没有出现此问题.</p>
-<h2 id="出现原因"><a href="#出现原因" class="headerlink" title="出现原因"></a>出现原因</h2><p>一开始以为是因为编辑的 <code>.tex</code> 文件太大导致, 但后来发现在较小的 <code>.tex</code> 文件中同样出现此问题. 经排查后发现原因是为 <code>textobject</code> 定义了快捷键重映射 (作用于所有 <code>NORMAL</code>, <code>VISUAL</code> 相关的模式)</p>
+<h2 id="出现原因"><a href="#出现原因" class="headerlink" title="出现原因"></a>出现原因</h2><p>一开始以为是因为编辑的 <code>.tex</code> 文件太大或是 <code>vim</code> 的寄存器储存的内容太多导致, 但后来发现在较小的 <code>.tex</code> 文件中同样出现此问题. 经排查后发现原因是为 <code>textobject</code> 定义了快捷键重映射 (作用于所有 <code>NORMAL</code>, <code>VISUAL</code> 相关的模式)</p>
 <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">map</span> iE <span class="hljs-symbol">&lt;plug&gt;</span>(vimtex-ie)<br><span class="hljs-keyword">map</span> aE <span class="hljs-symbol">&lt;plug&gt;</span>(vimtex-ae)<br><span class="hljs-keyword">map</span> iC <span class="hljs-symbol">&lt;plug&gt;</span>(vimtex-ic)<br><span class="hljs-keyword">map</span> aC <span class="hljs-symbol">&lt;plug&gt;</span>(vimtex-ac)<br></code></pre></div></td></tr></table></figure>
 <p>这导致输出 <code>i</code> 后会有一个 “pending” 的时间来检测是否继续输入指令. 同理, 按下 <code>i</code> 键入 <code>C</code>, 以及按下 <code>a</code> 后键入 <code>E</code> 和 <code>C</code> 都会出现问题.</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>由于我们仅希望其在 <code>NORMAL</code> 模式下作为文本对象, <strong>而不是独立指令</strong>, 因此需要利用 <code>omap</code> 单独指定其作为 <code>operate</code> 时的快捷键 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="vim: 命令后缀映射
@@ -278,6 +278,8 @@
                     
                       <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
+                      <a class="hover-with-bg" href="/tags/DEBUG/">DEBUG</a>
+                    
                   </div>
                 
               </div>
@@ -292,6 +294,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-24_READ_chapter_3_electromagnetism_and_gravitation/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[READ] Chapter 3 Electromagnetism and gravitation in various dimensions</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

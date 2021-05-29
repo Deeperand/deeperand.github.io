@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      557 字
+      723 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      8
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.23, 12:03
+                  最后更新：2021.05.29, 09:57
                 
               </p>
             
@@ -268,7 +268,16 @@
 <h3 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h3><p>经测试, <code>TODO</code> 后必须包含文字才可以, 且其后跟着的冒号不会在目录中额外显示. 如, 下面两种写法是等效的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% <span class="hljs-doctag">TODO:</span> introduction for GW</span><br><span class="hljs-comment">% TODO introduction for GW</span><br></code></pre></div></td></tr></table></figure><br>均会在 <code>vimtex</code> 提供的目录 <em>顶端</em> 中显示该 <code>TODO</code> 条目, 后面会跟随相应的文字描述</p>
 <p><img src="content_TODO.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>另一方面, 若只使用<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% TODO</span><br></code></pre></div></td></tr></table></figure><br>则在 <code>vimtex</code> 的目录中不会有任何显示.</p>
-
+<h2 id="LaTeX-清除空白页"><a href="#LaTeX-清除空白页" class="headerlink" title="[LaTeX] 清除空白页"></a>[LaTeX] 清除空白页</h2><h3 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h3><p>将 <code>cquthesis</code> 设为 <code>twoside</code> 模式后发现部分章节在结束后出现空白页.</p>
+<h3 id="解决方法-4"><a href="#解决方法-4" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>cquthesis.cls</code> 中发现了代码</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\DeclareDefaultOption</span>&#123;<span class="hljs-keyword">\PassOptionsToClass</span>&#123;<span class="hljs-keyword">\CurrentOption</span>&#125;&#123;ctexbook&#125;&#125;<br></code></pre></div></td></tr></table></figure>
+<p>意味着在 <code>cquthesis</code> 文档类的 <code>option</code> 会传递给 <code>ctexbook</code> 因此解决方法参考普通文档的即可. 问题发生的根本原因在于 <code>book</code> 中默认强制章节从奇数页开始. 为了解决此问题, 可加上选项 <code>openany</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Latex 如何清除空白页？
+">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTex的book类型中，目录及chapter前自动插入空白页面
+">[2]</span></a></sup> , 如</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[type=bachelor, bilinguallist=apart, printmode=twoside, openany]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/266237548">Latex 如何清除空白页？</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/Sarah_LZ/article/details/90737631">LaTex的book类型中，目录及chapter前自动插入空白页面</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
