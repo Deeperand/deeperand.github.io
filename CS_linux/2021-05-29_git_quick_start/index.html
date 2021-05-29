@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.29, 10:25
+                  最后更新：2021.05.29, 10:31
                 
               </p>
             
@@ -254,7 +254,7 @@
 <ol>
 <li>参数 <code>--no-ff</code> 的作用是禁用 <code>Fast forward</code> 模式, 使 Git 在 <code>merge</code> 的时候生成一个新的 commit, 这样就可以看出分支的合并历史.</li>
 </ol>
-<h2 id="2-Remote"><a href="#2-Remote" class="headerlink" title="2 Remote"></a>2 Remote</h2><p><strong>Description :</strong> 与远程同步相关的命令</p>
+<h2 id="2-Remote"><a href="#2-Remote" class="headerlink" title="2 Remote"></a>2 Remote</h2><p>首先给出与远程同步相关的命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># 下载远程仓库的所有变动</span><br>$ git fetch &lt;remote&gt;<br><br><span class="hljs-comment"># 显示所有远程仓库</span><br>$ git remote -v<br><br><span class="hljs-comment"># 显示某个远程仓库的信息</span><br><br><br><span class="hljs-comment"># 增加一个新的远程仓库，并命名</span><br>$ git remote add &lt;shortname&gt; &lt;url&gt;<br><br><span class="hljs-comment"># 取回远程仓库的变化，并与本地分支合并</span><br>$ git pull &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 上传本地指定分支到远程仓库</span><br>$ git push &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 强行推送当前分支到远程仓库，即使有冲突</span><br>$ git push &lt;remote&gt; --force<br>$ git push &lt;remote&gt; &lt;branch&gt; -f<br><br><span class="hljs-comment"># 推送所有分支到远程仓库</span><br>$ git push &lt;remote&gt; --all<br></code></pre></div></td></tr></table></figure>
 <h3 id="Collide"><a href="#Collide" class="headerlink" title="Collide"></a>Collide</h3><p>如果远程库与本地库不同, 将无法 <code>push</code> 成功. 此时需要先 <code>pull</code> 下来, 手动解决冲突并在本地进行提交后再进行 <code>push</code>. 具体来说, 可能遇到如下类型的冲突:</p>
 <ol>
@@ -285,7 +285,7 @@
 <ol>
 <li>可以在后面加上 <code>-v</code> 选项将所作的改变的 diff 输出放在编辑器中总而可知道本次具体做了哪些修改.</li>
 </ol>
-<h3 id="Standard-of-commit-message"><a href="#Standard-of-commit-message" class="headerlink" title="Standard of commit message"></a>Standard of commit message</h3><p>每次提交, commit message 都包括三个部分 : Header, Body, Footer. 基本格式为 :</p>
+<h3 id="Standard-of-commit-message"><a href="#Standard-of-commit-message" class="headerlink" title="Standard of commit message"></a>Standard of commit message</h3><p>本部分内容主要来自 <em>阮一峰的网络日志</em> <sup><a href="#fn_6" id="reffn_6">6</a></sup>. 每次提交, commit message 都包括三个部分 : Header, Body, Footer. 基本格式为 :</p>
 <figure class="highlight dts"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dts"><span class="hljs-params">&lt;type&gt;</span>(<span class="hljs-params">&lt;scope&gt;</span>): <span class="hljs-params">&lt;subject&gt;</span><br><span class="hljs-comment">// 1 blank line</span><br><span class="hljs-params">&lt;body&gt;</span><br><span class="hljs-comment">// 1 blank line</span><br><span class="hljs-params">&lt;footer&gt;</span><br></code></pre></div></td></tr></table></figure>
 <p>其中 Header 是必须的, Body 和 Footer 可以省略.</p>
 <h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>Header 只有一行, 包括三个字段 :</p>
@@ -338,7 +338,7 @@
 <p>&emsp;&emsp;随后设置环境变量:</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">export</span> LESSCHARSET=utf-8<br></code></pre></div></td></tr></table></figure>
 <p>其设置LESS字符集为utf-8.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344">解决冲突</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a target="_blank" rel="noopener" href="https://blog.csdn.net/M87138/article/details/44921583">github远程仓库和本地仓库冲突</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a target="_blank" rel="noopener" href="https://blog.csdn.net/starter_____/article/details/79250129">Git —— 解决本地仓库和GitHub库的冲突</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yanzige/p/9810333.html">GIT使用log命令显示中文乱码</a><br><sup><a href="#fn_5" id="reffn_5">5</a></sup> <a target="_blank" rel="noopener" href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">.gitignore</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344">解决冲突</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a target="_blank" rel="noopener" href="https://blog.csdn.net/M87138/article/details/44921583">github远程仓库和本地仓库冲突</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a target="_blank" rel="noopener" href="https://blog.csdn.net/starter_____/article/details/79250129">Git —— 解决本地仓库和GitHub库的冲突</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/yanzige/p/9810333.html">GIT使用log命令显示中文乱码</a><br><sup><a href="#fn_5" id="reffn_5">5</a></sup> <a target="_blank" rel="noopener" href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">.gitignore</a><br><sup><a href="#fn_6" id="reffn_6">6</a></sup> <a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html">Commit message 和 Change log 编写指南</a></p>
 
             </div>
             <hr>
