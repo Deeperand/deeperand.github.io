@@ -14,13 +14,31 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="
+本文介绍了 Inkscape 中取消填充图形的边缘线的方法.
+">
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>博客 | 冬季银河</title>
+  <title>[TRICK] 取消 Inkscape 中填充图形的边缘线 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/a11y-dark.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +66,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -142,22 +160,68 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/fig/galaxy.png') no-repeat center center;
+         style="background: url('/fig/blackhole.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="欢迎来到冬季银河的博客">
+            <span class="h2" id="subtitle" title="[TRICK] 取消 Inkscape 中填充图形的边缘线">
               
             </span>
 
             
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      冬季银河
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-29 10:37" pubdate>
+        2021.05.29, 10:37
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      46 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -166,280 +230,110 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[TRICK] 取消 Inkscape 中填充图形的边缘线</h1>
+            
+              <p class="note note-info">
                 
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/CS_hexo/2021-04-19_hexo_plugin_introduce/" target="_self">
-          Hexo 插件简介
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/CS_hexo/2021-04-19_hexo_plugin_introduce/" target="_self">
-          
-          
+                  最后更新：2021.05.29, 10:42
+                
+              </p>
             
-          
-          
-写这篇文章的目的是为了记录使用 HEXO 的过程中了解到的插件
+            <div class="markdown-body">
+              <blockquote>
+<p>本文介绍了 Inkscape 中取消填充图形的边缘线的方法.</p>
+</blockquote>
+<span id="more"></span>
+<p>在 <code>Fill and Stroke (&lt;S-M-f&gt;)</code> -&gt; <code>Stroke paint</code> 中将边缘线取消即可, 如下图所示.</p>
+<p><img src="cancel_paint.png" srcset="/img/loading.gif" lazyload alt=""></p>
 
-hexo-pdf
-(2021-04-19) 
-
-
-Introduce: Hexo tag for embeded pdf
-Install:  1npm install --save hexo-pdf
-Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 16:00" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Hexo/">CS Hexo</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/ref/">ref</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/CS_hexo/2021-04-19-name_rule_of_hexo_markdown/" target="_self">
-          Hexo 的文件命名格式
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/CS_hexo/2021-04-19-name_rule_of_hexo_markdown/" target="_self">
-          
-          
-            
-          
-          日期开头的分隔符问题&emsp;&emsp;今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了.
-asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-19 12:07" pubdate>
-              2021-04-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Hexo/">CS Hexo</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/TODO/">TODO</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/hello-world/" target="_self">
-          
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-17 21:31" pubdate>
-              2021-04-17
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/MATH_differentail_geometry/2020-12-05_(DG)_DG_in_spherical_coordinate/" target="_self">
-          <img src="/fig/cover/cover.png" srcset="/img/loading.gif" lazyload alt="球面坐标系中的微分几何及其应用">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/MATH_differentail_geometry/2020-12-05_(DG)_DG_in_spherical_coordinate/" target="_self">
-          球面坐标系中的微分几何及其应用
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/MATH_differentail_geometry/2020-12-05_(DG)_DG_in_spherical_coordinate/" target="_self">
-          
-          
-            
-          
-          
-
-前几个月一直忙着保研的事情, 好像已经好几个月没写成形一些的 note 了… 算一算上一次在知乎上传 note 好像是上学期期末? 话说这学期也快到期末了, 没想到鸽一下一个学期就没了 ┑(￣Д ￣)┍.
-今后上传的笔记在相比以往会有一些调整. 最显注的可能是封面选择. 主要是考虑到文风似乎过于严肃了一些, 所以向其它一些文章作者学习一下, 封面干脆换成可爱的二次元妹子, 希望能吸引更多的 (
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-12-08 00:00" pubdate>
-              2020-12-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/Differential-Geometry/">Differential Geometry</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/PHYS_general_relativity/2020-05-08_(GR)_basic_conception_of_manifold/" target="_self">
-          流形的基本概念
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/PHYS_general_relativity/2020-05-08_(GR)_basic_conception_of_manifold/" target="_self">
-          
-          
-            
-          
-          
-本来是在看《物理学中的群论》中的第四章的, 奈何实在看不懂里面对李群的介绍, 于是开始看梁灿彬的《微分几何入门与广义相对论》中册的附录中关于李群的部分. 不得不说, 有微分几何基础的话看这部分相当的舒畅. 看的过程中顺带复习了一些关于微分几何的基本概念.
-这篇文章对应《微分几何入门与广义相对论》第 2.1 节的内容.
-
-
-1 基本概念&emsp;&emsp;首先给出流形的定义:
-
-微分流形:对于
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-08 22:18" pubdate>
-              2020-05-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/General-Relativity/">General Relativity</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span>
-    </span>
-  </nav>
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/CS-GUI-Software/">CS GUI Software</a>
+                    
+                      <a class="hover-with-bg" href="/categories/CS-GUI-Software/Inkscape/">Inkscape</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/TRICK/">TRICK</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/PHYS_mathematical_physics/BOOK_Arfken_2013/2021-05-29_chapter_7_ODE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[READ] Chapter 7 Ordinary Differential Equations</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/CS_linux/2021-05-29_git_quick_start/">
+                        <span class="hidden-mobile">版本管理工具 git 快速上手</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -571,9 +465,15 @@ Quick
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
