@@ -14,11 +14,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="
+本文于 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于知乎, 主要介绍了流形及流形间映射的基本定义.
+">
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>球面坐标系中的微分几何及其应用 - 博客 | 冬季银河</title>
+  <title>流形的基本概念 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="球面坐标系中的微分几何及其应用">
+            <span class="h2" id="subtitle" title="流形的基本概念">
               
             </span>
 
@@ -178,8 +180,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-12-08 00:00" pubdate>
-        2020.12.08, 00:00
+      <time datetime="2021-05-30 10:54" pubdate>
+        2021.05.30, 10:54
       </time>
     </span>
   
@@ -190,7 +192,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      1.4k 字
     </span>
   
 
@@ -200,7 +202,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      16
        分钟
     </span>
   
@@ -238,28 +240,62 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">球面坐标系中的微分几何及其应用</h1>
+            <h1 style="display: none">流形的基本概念</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.04.19, 21:43
+                  最后更新：2021.05.30, 10:55
                 
               </p>
             
             <div class="markdown-body">
-              <p><img src="/fig/cover/cover.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<blockquote>
-<p>前几个月一直忙着保研的事情, 好像已经好几个月没写成形一些的 note 了… 算一算上一次在知乎上传 note 好像是上学期期末? 话说这学期也快到期末了, 没想到鸽一下一个学期就没了 <code>┑(￣Д ￣)┍</code>.</p>
-<p>今后上传的笔记在相比以往会有一些调整. 最显注的可能是封面选择. 主要是考虑到文风似乎过于严肃了一些, 所以向其它一些文章作者学习一下, 封面干脆换成可爱的二次元妹子, 希望能吸引更多的 (lsp) 读者 <code>(⊙ω⊙)</code> (虽然我有点怀疑是不是因为前面的大半年压力太大, 导致现在整个人变宅了一点…). 其二是之前上传笔记的动机是为了复习四大力学以应对理论所的面试, 但后来我将专栏名称改成了 “冬季银河的理论物理笔记”, 因此只要是和物理相关的一些内容应该都会上传. 其三是之前的笔记内容上更专一一些, 基本上每一篇都是来自某本教材的某一节或某几节, 今后的笔记应该会以平时碰到的问题为主干来组织内容, 因而可能会混杂好几门教材或好几门课的内容的情况 (比如这次的就混杂了微分几何, 数学物理方法, 量子力学三门课程的内容. 之所以想到计算球面坐标系的 Christoff 符号, 也是因为看宇宙学的时候计算了 FRW 度规下的 Christoff 符号, 打算再找个算 Christoff 符号的例子练习一下.). 最近一段时间主要是在看场论和宇宙学, 之后可能这些方面的内容会多一点. 最后一点是笔记上传格式的变化, 之前的时候都是把 LaTeX 编译的 pdf 文件导出后拼接成一整张长图, 但现在看来不拼接可能阅读体验会好一些, 而且也便于有需要的读者将每页图片保存后重新整合为单独的 pdf 文件. 所以今后除了将多余的页边剪裁一下以外, 不再将图片进行拼接.</p>
-<blockquote>
-<p>写这篇文章的主要动机是前不久在写数理方法的作业的参考答案的时候, 刚好碰到了球坐标下 Laplace 算符的问题, 加之高量考试又有径向角动量算符的题目, 以及一直想算一个微分几何的具体算例, 所以就写了这篇 note.</p>
+              <blockquote>
+<p>本文于 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139082693">知乎</a>, 主要介绍了流形及流形间映射的基本定义.</p>
 </blockquote>
-<p>这次的封面是藤原大佬 (pid: 27517) 的画中我最喜欢的一张, 算是入坑作吧 (最早好像在贴吧时代就看见过了).</p>
+<span id="more"></span>
+<blockquote>
+<p>本来是在看《物理学中的群论》中的第四章的, 奈何实在看不懂里面对李群的介绍, 于是开始看梁灿彬的《微分几何入门与广义相对论》中册的附录中关于李群的部分. 不得不说, 有微分几何基础的话看这部分相当的舒畅. 看的过程中顺带复习了一些关于微分几何的基本概念.</p>
+<p>这篇文章对应《微分几何入门与广义相对论》第 2.1 节的内容.</p>
 </blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;正文部分一开始先计算了球面坐标系下的度规张量, 并由此计算了相应的 Christoff 符号. 随后利用相应的计算结果, 讨论了 Laplace 算符和角动量算符在球面坐标系下的形式. 其中在 Laplace 算符的部分, 简单讨论了分离变量的问题. 在角动量算符的部分, 简单阐述了协变导数在动量及角动量算符中的必要性, 随后分别利用抽象指标和具体指标进行了计算, 并定义了径向动量模方算符, 以及能过对比证明了了角向 Laplace 算符与角动量算符只相差一个常系数. 文章的最后, 还从径向动量算符的定义出发, 证明了该算符的平方正是之前所定义的径向动量模方算符.</p>
-<p>&emsp;&emsp;附录部分是笔记的手稿, 内有具体的计算过程. 用英文主要是因为英文写起来比较省力 <code>_(:з」∠)_</code>. (注意手稿的每一页是从左往右的, 水印的位置是每一页的右上角)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="figure/main_body-1.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-2.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-3.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-4.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-5.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-6.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/main_body-7.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
-<h2 id="附录-手稿"><a href="#附录-手稿" class="headerlink" title="附录 (手稿)"></a>附录 (手稿)</h2><p><img src="figure/handwriting_1.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_2.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_3.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_4.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_5.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_6.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_7.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_8.jpg" srcset="/img/loading.gif" lazyload alt=""><br><img src="figure/handwriting_9.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="./2.1_basic_conception_about_manifold.png" srcset="/img/loading.gif" lazyload alt="outline"></p>
+<h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1 基本概念"></a>1 基本概念</h2><p>&emsp;&emsp;首先给出流形的定义:</p>
+<ul>
+<li><u><strong>微分流形:</strong></u><br>对于拓扑空间 $M$, 若其有开覆盖 $\left\{ O_\alpha \right\}$ (即 $M = \bigcap_{\alpha} O_\alpha$) 满足下列条件, 则可称为 $n$ 维微分流形, 或简称 $n$ 维流形:<ol>
+<li>$\forall\ O_\alpha$, $\exists$ 拓扑同胚映射 $\psi_\alpha: O_\alpha \to V_\alpha$ ($V_\alpha$ 是用通常拓扑衡量的开子集);</li>
+<li>若 $O_\alpha \cap O_\beta$, 则复合映射 $\psi_\beta \circ \psi_\alpha^{-1}$ 是 $C^{\infty}$ 光滑的;</li>
+</ol>
+</li>
+</ul>
+<p>粗略地说, $n$ 维流形是带有微分结构的拓扑空间, 其局部地像 $\mathbb{R}^n$ (体现在可以局部地构建该集合与 $\mathbb{R}^n$ 的同胚关系), 但整体不一定像 $\mathbb{R}^n$. 具体而言, 定义的第一条表明, 微分流形是由一片一片的开集构成的, 每一片 $n$ 维微分流形上的开集, 都可通过某种映射, 使得其与 $R^{n}$ 上的某个开集同胚. 而定义的第二条表明, 如果 $M$ 的两个开集有交, 则可诱导出一个 $R^{n}$ 的某个开区域到 $R^{n}$ 的另一开区域的映射, 这个映射按照通常在数学分析中的定义是 $C^{\infty}$ 的.</p>
+<h2 id="2-坐标系与图"><a href="#2-坐标系与图" class="headerlink" title="2 坐标系与图"></a>2 坐标系与图</h2><p>&emsp;&emsp;由于流形上每一片开集都可和 $\mathbb{R}^n$ 上的某个开区域对应, 因此可以借助这个开区域定义坐标系:</p>
+<ul>
+<li><u><strong>流形上的坐标系:</strong></u><br>设映射 $\psi_\alpha: O_\alpha \to \psi_\alpha[O_\alpha] \subset \mathbb{R}^n$ 是流形上的某个开集 $O_\alpha$ 到 $\mathbb{R}^n$ 的某个开区域的拓扑同胚映射, 则任一 $p \in O_\alpha$ 自然地通过这个映射与 $n$ 个数对应, 称这 $n$ 个数是点 $p$ 对应的坐标, 称 $(O_\alpha, \psi_\alpha)$ 构成一个坐标系.</li>
+</ul>
+<p>坐标系的取法往往不是唯一的. 试想流形上有交集的两个开区域 $O_\alpha$ 与 $O_\beta$, 其分别对应映射 $\psi_\alpha$ 与 $\psi_\beta$. 则在交集 $O_\alpha \cap O_\beta$ 中, 即可使用坐标系 $(O_\alpha, \psi_\alpha$, 也可使用坐标系 $(O_\beta, \psi_\beta)$. 于是同一个点对应两个 $\mathbb{R}^{n}$ 上的点, 由此可诱导出联系则两个点的一个的映射 (或者说 $n$ 个 $n$ 元函数):</p>
+<script type="math/tex; mode=display">
+    x'^{\mu} = \phi^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>称这个映射 (或者说 $n$ 个 $n$ 元函数) 为一个 <strong>坐标变换</strong>. 此外, 通常也将对应的 $n$ 个数 $\left\{ x^{\mu} \right\}$ 称为坐标系, 以及将坐标变换简记为:</p>
+<script type="math/tex; mode=display">
+    x'^{\mu} = x'^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>&emsp;&emsp;接下来介绍数学上另一种看待坐标系的观点:</p>
+<ul>
+<li><u><strong>图:</strong></u><br>坐标系 $(O_\alpha, \psi_\alpha)$ 在数学上又叫 <strong>图</strong>. 若图中的映射满足微分流形定义中对映射的要求, 则将这样的图的集合 $\left\{ (O_\alpha, \psi_\alpha) \right\}$ 称为 <strong>图册</strong>. 其中定义第二个要求又叫相容性条件, 因此图册中任意两个图都是相容的.</li>
+</ul>
+<p>对于同一个微分流形, 可以两个图册并不一定是相容的, 此时说两个图册代表不同的 <strong>微分结构</strong>.</p>
+<h2 id="3-流形间的映射"><a href="#3-流形间的映射" class="headerlink" title="3 流形间的映射"></a>3 流形间的映射</h2><p>&emsp;&emsp;流形与拓扑不同的是, 除了具有拓扑结构以外, 还具有微分结构 (可以视为通过 $\mathbb{R}^n$ 上的函数来间接体现的). 对于流形间的映射, 除了一般的连续性以外, 还可谈论高阶的连续性. 具体定义如下:</p>
+<ul>
+<li><u><strong>流形间映射的连续性:</strong></u><br>  设 $f: M \to M’$ 是流形间的映射, 则可诱导出一个多元函数 $\psi’_\beta \circ f \circ \psi_\alpha^{-1}$ ($\psi’_\beta$ 与 $\psi’_\alpha$ 分别是 $M’$ 与 $M$ 上的坐标系). 若对于任意 $p \in M$, 该多元函数是 $C^{r}$ 的, 则称映射 $f$ 是 $C^{r}$ 类映射.</li>
+</ul>
+<p>&emsp;&emsp;类似与之前定义的拓扑同胚, 这里可以定义微分同胚, 反映两个流形微分结构的一致性:</p>
+<ul>
+<li><u><strong>微分同胚:</strong></u><br>  若存在 $f: M \to M’$, 满足:<ol>
+<li>$f$ 是一一到上的;</li>
+<li>$f$ 及 $f^{-1}$ 是 $C^{\infty}$ 的;<br>则称 $f$ 是 $M$ 到 $M’$ 的微分同胚映射, 且称 $M$ 与 $M’$ 互为微分同胚.</li>
+</ol>
+</li>
+</ul>
+<p>流形间的映射 $f: M \to M’$ 有一个特例, 即 $M’$ 为 $\mathbb{R}$ 的情形, 此时流形 $M$ 的每一点都对应着一个实数, 由此可引出第一个关于 “场” 的概念:</p>
+<ul>
+<li><u><strong>流形上的标量场:</strong></u><br>  称映射 $f: M \to \mathbb{R}$ 为流形 $M$ 上的 <strong>函数</strong>, 或 $M$ 上的 <strong>标量场</strong>. 若 $f$ 为 $C^{\infty}$ 的, 则称该标量场是 <strong>光滑的</strong>. 将 $M$ 上全体光滑标量场的集合记为 $\mathscr{F}_{M}$ 或 $\mathscr{F}$.</li>
+</ul>
 
             </div>
             <hr>
@@ -269,10 +305,19 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Differential-Geometry/">Differential Geometry</a>
+                      <a class="hover-with-bg" href="/categories/PHYS-General-Relativity/">PHYS General Relativity</a>
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PHYS/">PHYS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MATH/">MATH</a>
+                    
+                  </div>
                 
               </div>
               
@@ -287,18 +332,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hello-world/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/PHYS_general_relativity/2020-05-08_(GR)_basic_conception_of_manifold/">
-                        <span class="hidden-mobile">流形的基本概念</span>
+                      <a href="/PHYS_mathematical_physics/2020-12-05_(DG)_DG_in_spherical_coordinate/">
+                        <span class="hidden-mobile">球面坐标系中的微分几何及其应用</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -509,6 +548,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
