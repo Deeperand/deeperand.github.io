@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>[TRICK] Fluid 中的 Categories 设置选项</title>
+    <link href="/CS_hexo/2021-05-31_TRICK_fluid_categories_setting/"/>
+    <url>/CS_hexo/2021-05-31_TRICK_fluid_categories_setting/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文记录了 Hexo 的 Fluid 主题中的 Categories 相关设置选项.</p></blockquote><span id="more"></span><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;写本文的动机是今天在转载了许多文章后 (也增加了一些文章分类), 发现分类排序没有按照字母顺序, 于是查看了一下 Categories 的分类排序的设置方法.</p><figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">category:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">banner_img:</span> <span class="hljs-string">/fig/galaxy_1.jpg</span><br>  <span class="hljs-attr">banner_img_height:</span> <span class="hljs-number">60</span><br>  <span class="hljs-attr">banner_mask_alpha:</span> <span class="hljs-number">0.3</span><br>  <span class="hljs-attr">subtitle:</span><br><br>  <span class="hljs-comment"># 分类的排序字段，前面带减号是倒序，不带减号是正序</span><br>  <span class="hljs-comment"># Options: length | name</span><br>  <span class="hljs-attr">order_by:</span> <span class="hljs-string">&quot;name&quot;</span><br><br>  <span class="hljs-comment"># 层级的折叠深度，0 是全部折叠，大于 0 后如果存在子分类则默认展开</span><br>  <span class="hljs-attr">collapse_depth:</span> <span class="hljs-number">1</span><br><br>  <span class="hljs-comment"># 文章的排序字段，前面带减号是倒序，不带减号是正序</span><br>  <span class="hljs-comment"># Options: date | title | or other field of front-matter</span><br>  <span class="hljs-attr">post_order_by:</span> <span class="hljs-string">&quot;title&quot;</span><br><br>  <span class="hljs-comment"># 单个分类中折叠展示文章数的最大值，超过限制会显示 More，0 则不限制</span><br>  <span class="hljs-attr">post_limit:</span> <span class="hljs-number">10</span><br></code></pre></div></td></tr></table></figure><h2 id="Bugs"><a href="#Bugs" class="headerlink" title="Bugs"></a>Bugs</h2><p>&emsp;&emsp;在设轩过程中发现了一个 bug: 若设置层级自动展开, 在有子层级时, 首层的文章在自动展开下不会显示, 而只有在该层级被折叠时才会显示. 下面是一个例子, 在该例子中, 文章 “音阶弹奏助记表” 只有在折叠母层级后才能看见.</p><p><img src="fold_1.png" alt="自动展开时不显示文章"></p><p><img src="fold_2.png" alt="将母层级折叠后才显示文章" title="将母层级折叠后才显示文章"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>理论力学复习概要</title>
     <link href="/PHYS_unclassified/2021-05-31_theoretical_mechanics_review/"/>
     <url>/PHYS_unclassified/2021-05-31_theoretical_mechanics_review/</url>
