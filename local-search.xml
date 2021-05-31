@@ -4,11 +4,311 @@
   
   
   <entry>
-    <title>流形的基本概念</title>
-    <link href="/PHYS_general_relativity/2020-05-08_basic_conception_of_manifold/"/>
-    <url>/PHYS_general_relativity/2020-05-08_basic_conception_of_manifold/</url>
+    <title>理论力学复习概要</title>
+    <link href="/PHYS_unclassified/2021-05-31_theoretical_mechanics_review/"/>
+    <url>/PHYS_unclassified/2021-05-31_theoretical_mechanics_review/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>本文于 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于<a href="https://zhuanlan.zhihu.com/p/139082693">知乎</a>, 主要介绍了流形及流形间映射的基本定义.</p></blockquote><span id="more"></span><blockquote><p>本来是在看《物理学中的群论》中的第四章的, 奈何实在看不懂里面对李群的介绍, 于是开始看梁灿彬的《微分几何入门与广义相对论》中册的附录中关于李群的部分. 不得不说, 有微分几何基础的话看这部分相当的舒畅. 看的过程中顺带复习了一些关于微分几何的基本概念.</p><p>这篇文章对应《微分几何入门与广义相对论》第 2.1 节的内容.</p></blockquote><p><img src="./2.1_basic_conception_about_manifold.png" alt="outline"></p><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1 基本概念"></a>1 基本概念</h2><p>&emsp;&emsp;首先给出流形的定义:</p><ul><li><u><strong>微分流形:</strong></u><br>对于拓扑空间 $M$, 若其有开覆盖 $\left\{ O_\alpha \right\}$ (即 $M = \bigcap_{\alpha} O_\alpha$) 满足下列条件, 则可称为 $n$ 维微分流形, 或简称 $n$ 维流形:<ol><li>$\forall\ O_\alpha$, $\exists$ 拓扑同胚映射 $\psi_\alpha: O_\alpha \to V_\alpha$ ($V_\alpha$ 是用通常拓扑衡量的开子集);</li><li>若 $O_\alpha \cap O_\beta$, 则复合映射 $\psi_\beta \circ \psi_\alpha^{-1}$ 是 $C^{\infty}$ 光滑的;</li></ol></li></ul><p>粗略地说, $n$ 维流形是带有微分结构的拓扑空间, 其局部地像 $\mathbb{R}^n$ (体现在可以局部地构建该集合与 $\mathbb{R}^n$ 的同胚关系), 但整体不一定像 $\mathbb{R}^n$. 具体而言, 定义的第一条表明, 微分流形是由一片一片的开集构成的, 每一片 $n$ 维微分流形上的开集, 都可通过某种映射, 使得其与 $R^{n}$ 上的某个开集同胚. 而定义的第二条表明, 如果 $M$ 的两个开集有交, 则可诱导出一个 $R^{n}$ 的某个开区域到 $R^{n}$ 的另一开区域的映射, 这个映射按照通常在数学分析中的定义是 $C^{\infty}$ 的.</p><h2 id="2-坐标系与图"><a href="#2-坐标系与图" class="headerlink" title="2 坐标系与图"></a>2 坐标系与图</h2><p>&emsp;&emsp;由于流形上每一片开集都可和 $\mathbb{R}^n$ 上的某个开区域对应, 因此可以借助这个开区域定义坐标系:</p><ul><li><u><strong>流形上的坐标系:</strong></u><br>设映射 $\psi_\alpha: O_\alpha \to \psi_\alpha[O_\alpha] \subset \mathbb{R}^n$ 是流形上的某个开集 $O_\alpha$ 到 $\mathbb{R}^n$ 的某个开区域的拓扑同胚映射, 则任一 $p \in O_\alpha$ 自然地通过这个映射与 $n$ 个数对应, 称这 $n$ 个数是点 $p$ 对应的坐标, 称 $(O_\alpha, \psi_\alpha)$ 构成一个坐标系.</li></ul><p>坐标系的取法往往不是唯一的. 试想流形上有交集的两个开区域 $O_\alpha$ 与 $O_\beta$, 其分别对应映射 $\psi_\alpha$ 与 $\psi_\beta$. 则在交集 $O_\alpha \cap O_\beta$ 中, 即可使用坐标系 $(O_\alpha, \psi_\alpha$, 也可使用坐标系 $(O_\beta, \psi_\beta)$. 于是同一个点对应两个 $\mathbb{R}^{n}$ 上的点, 由此可诱导出联系则两个点的一个的映射 (或者说 $n$ 个 $n$ 元函数):</p><script type="math/tex; mode=display">    x'^{\mu} = \phi^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>称这个映射 (或者说 $n$ 个 $n$ 元函数) 为一个 <strong>坐标变换</strong>. 此外, 通常也将对应的 $n$ 个数 $\left\{ x^{\mu} \right\}$ 称为坐标系, 以及将坐标变换简记为:</p><script type="math/tex; mode=display">    x'^{\mu} = x'^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>&emsp;&emsp;接下来介绍数学上另一种看待坐标系的观点:</p><ul><li><u><strong>图:</strong></u><br>坐标系 $(O_\alpha, \psi_\alpha)$ 在数学上又叫 <strong>图</strong>. 若图中的映射满足微分流形定义中对映射的要求, 则将这样的图的集合 $\left\{ (O_\alpha, \psi_\alpha) \right\}$ 称为 <strong>图册</strong>. 其中定义第二个要求又叫相容性条件, 因此图册中任意两个图都是相容的.</li></ul><p>对于同一个微分流形, 可以两个图册并不一定是相容的, 此时说两个图册代表不同的 <strong>微分结构</strong>.</p><h2 id="3-流形间的映射"><a href="#3-流形间的映射" class="headerlink" title="3 流形间的映射"></a>3 流形间的映射</h2><p>&emsp;&emsp;流形与拓扑不同的是, 除了具有拓扑结构以外, 还具有微分结构 (可以视为通过 $\mathbb{R}^n$ 上的函数来间接体现的). 对于流形间的映射, 除了一般的连续性以外, 还可谈论高阶的连续性. 具体定义如下:</p><ul><li><u><strong>流形间映射的连续性:</strong></u><br>  设 $f: M \to M’$ 是流形间的映射, 则可诱导出一个多元函数 $\psi’_\beta \circ f \circ \psi_\alpha^{-1}$ ($\psi’_\beta$ 与 $\psi’_\alpha$ 分别是 $M’$ 与 $M$ 上的坐标系). 若对于任意 $p \in M$, 该多元函数是 $C^{r}$ 的, 则称映射 $f$ 是 $C^{r}$ 类映射.</li></ul><p>&emsp;&emsp;类似与之前定义的拓扑同胚, 这里可以定义微分同胚, 反映两个流形微分结构的一致性:</p><ul><li><u><strong>微分同胚:</strong></u><br>  若存在 $f: M \to M’$, 满足:<ol><li>$f$ 是一一到上的;</li><li>$f$ 及 $f^{-1}$ 是 $C^{\infty}$ 的;<br>则称 $f$ 是 $M$ 到 $M’$ 的微分同胚映射, 且称 $M$ 与 $M’$ 互为微分同胚.</li></ol></li></ul><p>流形间的映射 $f: M \to M’$ 有一个特例, 即 $M’$ 为 $\mathbb{R}$ 的情形, 此时流形 $M$ 的每一点都对应着一个实数, 由此可引出第一个关于 “场” 的概念:</p><ul><li><u><strong>流形上的标量场:</strong></u><br>  称映射 $f: M \to \mathbb{R}$ 为流形 $M$ 上的 <strong>函数</strong>, 或 $M$ 上的 <strong>标量场</strong>. 若 $f$ 为 $C^{\infty}$ 的, 则称该标量场是 <strong>光滑的</strong>. 将 $M$ 上全体光滑标量场的集合记为 $\mathscr{F}_{M}$ 或 $\mathscr{F}$.</li></ul>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>本文总结了本科理论力学学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, <a href="https://zhuanlan.zhihu.com/p/138168223">原标题为 “两个月速成 (误) 物理学本科高年级课程之理论力学篇: 总纲</a>“.</p></blockquote><span id="more"></span><h2 id="原-序言"><a href="#原-序言" class="headerlink" title="(原) 序言"></a>(原) 序言</h2><blockquote><p>虽然说是速成, 但其实是复习, 希望不要被标题误导了… 因为研究生想做引力方面理论研究, 所以在两个月左右之后大概会去参加理论所的夏令营. 复习的内容主要是四大力学, 基本的广义相对论以及群论, 还有时间的话可能会写一点傅里叶光学和数理方法方面的东西. 虽然内容确实不少, 但想想去年电动力学考试的时候也才花了三天的时间复习, 两个月复习完这些也是有可能的吧? 果然 deadline 才是第一生产力 😂</p><p>由于写这个系列的目的是为了复习, 大部分内容都是按照自己的理解来写的, 难免有所纰漏. 如认为内容存在任何问题, 欢迎在评论区提出.</p></blockquote><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><img src="theoretical_mechanics_review_outline.png" alt=""></p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;理论力学是四大力学中最基本的一门课程, 可以说是其它三大力学的基础.</p><p>&emsp;&emsp;对物理系学生来说, 理论力学中最主要的是分析力学的部分. 但在实际的教学中, 似乎老师都会选择复习一下经典牛顿力学 (特点是微积分的使用比例相较力学课程中大幅上升). 在总纲部分仍打算沿用此思路, 先回顾一下经典牛顿力学 (主要是比力学学习时多出的部分), 再介绍分析力学 (不过之后的文章将主要介绍分析力学).</p><p>&emsp;&emsp;按照研究体系, 牛顿力学可以分为两个部分: 质点力学与质点组力学.</p><p>&emsp;&emsp;在质点力学中, 首先利用微积分的来对质点的运动进行描述, 一般认为这是属于运动学的内容. 随后借助牛顿三大定律, 将动力学因素与运动学因素联系起来. 值得注意的是, 牛顿定律本身并不告诉我们具体的力的作用 (正如量子力学的基本假设并不告诉我们体系的哈密顿量怎么写), 具体的力如何作用是由诸如库伦定律, 胡克定律等实验定律来决定的. 除了直接利用运动方程来对系统进行描述外, 还可从牛顿定律出发, 推导出机械能守恒定律, 第一次引入了能量的概念.</p><p>&emsp;&emsp;相比与力学课程的学习, 理论力学牛顿力学的部分额外讨论了质点在有心力场下的运动, 并在进行坐标变换后, 给出了一般的运动方程—-比耐公式, 随后讨论了在平方反比的中心力场下质点的运动. 在这之后, 则介绍了如何从开普勒三大定律归纳出万有引力定律.</p><p>&emsp;&emsp;在质点组力学中, 重要的是质心的引入, 以及与之相关的一系列质心运动定理. 这使得我们可以先考虑质点组的整体运动, 而无须考虑其内部自由度. 在具体的例子中, 考虑了两体问题 (行星绕日运动的修正、卢瑟福散射). 此外, 相比力学中的学习, 理论力学中额外学习了维里定理, 其表述为: 在很长时间间隔内, 质点组的动能对时间的平均值取负号等于作用在此质点组上的力的维里. 该定理具有统计性质, 着重研究各种力学量对时间的平均值的相互关系, 阐述了质点组随时间演化的整体规律, 其在量子力学, 统计物理中都有应用.</p><p>&emsp;&emsp;除了两体体系以外, 最简单的质点组是刚体. 对于刚体, 其内部自由度只有转动自由度.</p><p>&emsp;&emsp;在利用较多的数学 (相比力学学习) 重新回顾了经典牛顿力学后, 来到了理论力学的重点: 分析力学.</p><p>&emsp;&emsp;从牛顿力学过渡到分析力学的重要性在于: 牛顿力学是矢量力学, 而分析力学是标量力学. 从拓展的观点上看, 标量力学更容易拓展. 而过渡的基本出发点在于, 对于静止体系的研究.</p><p>&emsp;&emsp;在引入了自由度及约束的概念后, 将介绍的第一个重要的思想是 <strong>虚功原理</strong>. 为了阐释方便, 不妨将考虑约束后物体剩下的自由度称为 “剩余自由度”. 所谓 “虚功”, 即是假定物体的剩余自由度进行一个微小的变化时, 体系所做的功. 虚功原理认为, 物体的平衡条件是虚功为 0. 利用此思想, 可以简化一些使用传统矢量力学难以分析的受力平衡问题.</p><p>&emsp;&emsp;但只分析静力学是不够的, 接下来引入的另一个思想是 <strong>达朗贝尔原理</strong>. 表面上看, 达朗贝尔原理进行的操作在数学上是及其平凡的: 无非是将速度项移到运动方程的左侧. 但从物理上看, 这相当于<u>将惯性系中的动力学问题, 转化为了非惯性系中的受力平衡问题</u>, 从而可以利用虚功原理进行分析. 在进行具体计算后, 不但引入了 <strong>广义动量</strong> 与 <strong>广义力</strong> 的概念, 还给出了一般形式的拉格朗日方程. 若力为保守力, 则可得到保守系下的拉氏方程, 并归纳出极为重要的 <strong>拉格朗日量</strong> 的概念.</p><p>&emsp;&emsp;利用拉氏方程, 可以引出循环积分的概念. 具体而言, 若拉氏量不显含某个广义坐标 (或称关于某个广义坐标具有对称性), 则对应的拉氏量对相应广义速度的微分 (亦即广义动量) 为一不变量. 这个过程初步揭示了对称性与守恒量的关系. 随后利用保守系下的拉氏方程研究了最简单的保守体系: 微振动.</p><p>&emsp;&emsp;虽然得到了拉氏方程, 形式上也可以加上广义坐标与广义速度的关系来将二阶微分方程化为一阶方程组, 但得到的方程组形式上并不对称, 并没有使问题得到简化. 此外, 拉氏量本身没有明确的物理意义, 因此分析力学的工作仍然没有结束. 为此, 利用数学上的勒让得变换, 将拉氏方程由广义坐标与广义速度的函数, 变为了关于广义坐标与广义动量的函数, 并得到了形式对称的一阶方程组—- <strong>哈密顿正则方程组</strong>.</p><p>&emsp;&emsp;在得到了形式上更对称的方程后, 可以进一步引入一些手段来方便对其的研究. 为此引入的第一个数学工具是泊松括号, 而其最重要的结果是泊松定理. 泊松定理给出了一种从两个已知运动积分构造新的运动积分的方式.</p><p>&emsp;&emsp;随后提出了哈密顿原理. 相比与牛顿定律, 哈密顿原理是更具普遍性的原理. 在该原理的阐述中, 引入了作用量的概念 (其实就是拉氏函数对时间的积分). 该原理给出了在已知起始态与末态时, 求解相空间演化轨迹的方式. 具体而言, 哈密顿原理认为, 相空间真实的动力学演化轨迹, 对应于使作用量变分取极值的轨迹. 值得一提的是, 朗道的《力学》就是先从哈密顿原理出发, 给出拉氏方程, 并通过对时空对称性的分析, 归纳出经典物理中拉氏量的形式.</p><p>&emsp;&emsp;除了上述内容之外, 分析力学中一般还包括正则变换 (可以将勒让得变换视为正则变换的一种特殊情形), 哈密顿—-雅可比理论, 刘维尔定理等内容.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Unclassified</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>热力学与统计物理物理复习概要</title>
+    <link href="/PHYS_condensed_physics/2021-05-31_statistic_physics_review/"/>
+    <url>/PHYS_condensed_physics/2021-05-31_statistic_physics_review/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文总结了本科热力学及统计物理学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “<a href="https://zhuanlan.zhihu.com/p/138168378">两个月速成 (误) 物理学本科高年级课程之统计物理篇: 总纲</a>“.</p></blockquote><span id="more"></span><h2 id="原-序言"><a href="#原-序言" class="headerlink" title="(原) 序言"></a>(原) 序言</h2><blockquote><p>虽然说是速成, 但其实是复习, 希望不要被标题误导了… 因为研究生想做引力方面理论研究, 所以在两个月左右之后大概会去参加理论所的夏令营. 复习的内容主要是四大力学, 基本的广义相对论以及群论, 还有时间的话可能会写一点傅里叶光学和数理方法方面的东西. 虽然内容确实不少, 但想想去年电动力学考试的时候也才花了三天的时间复习, 两个月复习完这些也是有可能的吧? 果然 deadline 才是第一生产力 😂</p><p>由于写这个系列的目的是为了复习, 大部分内容都是按照自己的理解来写的, 难免有所纰漏. 如认为内容存在任何问题, 欢迎在评论区提出.</p></blockquote><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><img src="statistic_physics_review_outline.png" alt=""></p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;这是两个月速成本科物理高年级课程系列文章的的统计物理篇, 这篇主要是整理一下上学期学过的内容的主干.</p><p>&emsp;&emsp;在课程基础部分, 主要是简单回顾一下热力学, 以及补充一点后面将用到的关于多元函数及概率论的知识.</p><p>&emsp;&emsp;正篇大致可分为四个部分: 经典统计, 量子统计, 相变理论, 涨落和非平衡统计理论.</p><p>&emsp;&emsp;经典统计的重点是系综理论. 系综是统计物理中最重要的概念, 简单地来说, 系综是给定宏观态 (如系统的体积 $V$, 粒子数 $N$, 能量 $E$) 下, 所有可能的微观态组合形成的集合 (感觉上有点像量子力学中的简并能级?). 注意, 这个集合中的元素不是单个的微观态, 而是微观态的组合. </p><p>&emsp;&emsp;根据所取定的宏观量的不同, 将系综分为微正则系综, 正则系综, 巨正则系综三种. <strong>微正则系综</strong> 的特点是体系具有确定的粒子 $N$, 体积 $V$, 能量 $E$, 其统计特点是直接考虑系统的每一个微观态, 因此使用上并不方便. <strong>正则系综</strong> 则不要求体系具有确定的能量, 且其是对体系能量进行统计, 无须知道微观态的计算方法, 使用上更为方便. 此外, 在处理诸如气体吸附的问题时, 体系的粒子数会发生变化, 由此想到在正则系综的基础上, 进一步去除对体系粒子数目 $N$ 的限制, 由此得到的系综称为 <strong>巨正则系综</strong>.</p><p>&emsp;&emsp;无论是正则系综还是巨正则系综, 其理论的根源都是微正则系综, 而微正则系综又归结与统计物理的两大基本假设: 等概率原理与最概然原理. 等概率原理认为每一个微观台出现的机率都是相同的, 而最概然原理则认为平衡时系统所处的状态是概率最大的状态. 从平衡假设 (最概然原理) 出发, 可以导出平衡条件, 由此可以定义出一系列热力学量.</p><p>&emsp;&emsp;利用系综理论进行计算时, 最重要的量是体系的 (巨) 配分函数. 简单来说, 所谓配分函数就是归一化常数的倒数. 一旦知道了系统的配分函数, 就可利用其计算出所有热力学量.</p><p>&emsp;&emsp;经典统计之后是量子统计. 一般的教材会直接通过数个数的方式直接给出三大统计分布 (麦克斯韦—玻尔兹曼分布, 波色—爱因斯坦分布, 费米—狄拉克分布), 但更本质的方法是直接从多体波函数出发, 得到费米子和玻色子的统计方法, 再结合不同系综的密度矩阵 (可视为经典系综理论中的概率分布在量子力学中的推广), 得到运用量子统计法时的分布. 此外, 玻尔兹曼分布可视为费米分布与玻色分布在某种情形下的极限分布.</p><p>&emsp;&emsp;在多体波函数的研究中, 由于玻色子和费米子的多体波函数具有不同的轮换对称性 (对称与反称), 而各粒子态的张量积本身并不具有这样的对称性, 需要按照对称性, 利用单粒子态的张量积, 构造对称与反称波函数作为哈密顿算符的本征函数.</p><p>&emsp;&emsp;在得到了不同的量子统计分布后, 为了便于计算, 往往将求和换为积分, 则通常通过引入准经典假设来进行. 所谓准经典假设, 就是认为相空间具有最小分辨率 $h^{DN}$ ($D$ 为位形空间的维数, $N$ 为体系的粒子数目), 从而利用该分辨率可得到一个平均态密度. 原本的求和式可视为态密度为无数 $\delta$ 函数的求和, 因此求和化为积分的过程实际上就是利用平均态密度代替 $\delta$ 函数形式的态密度, 亦即使态的分布平滑化. 在相空间足够大时 (相对最小分辨率), 这样的近似具有很好的精度.</p><p>&emsp;&emsp;利用获得的量子配分函数, 可以以类似经典系综理论中的方法, 计算体系的各种热力学量. 其中最简单的体系是理想玻色气体与理想费米气体.</p><p>&emsp;&emsp;在相变理论的部分, 先是从范德瓦耳斯气体 (气—液相变) 出发, 引出临界点、临界指数等基本概念, 随后讨论了超导相变的唯象解释.</p><p>&emsp;&emsp;在有了两个具体例子之后, 介绍了相变的分类, 并进一步介绍了朗道二级相变理论. Ginzberg—Landau 理论可以视为其在超导中的一个具体应用.</p><p>&emsp;&emsp;Ising 模型是介绍相变时一个重要的模型. 在一维情形中, 平均场近似下的 Ising 模型可以观测到相变解, 但随后的严格解表明, 一维情形并不存在相变解. 与一维情形不同, 二维 Ising 模型中是可以观测到相变的. 不过解析解法较为复杂, 所以一般在热统学习中具体求解.</p><p>&emsp;&emsp;在有了对 Ising 模型的基本认知之后, 简单介绍了重整化群的基本思想.</p><p>&emsp;&emsp;在统计物理这门课程的最后一个部分, 介绍了非平衡统计理论. 与平衡态统计中关注物理量平均值不同, 非平衡统计关注的是物理量的涨落. 随后通过对一维随机行走的研究, 具体计算了涨落、关联函数等物理量, 并引出了涨落—耗散关系.</p><p>&emsp;&emsp;在非平衡统计理论的最后, 还介绍了 Onsager 关系.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Condensed Physics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>固体物理复习概要</title>
+    <link href="/PHYS_condensed_physics/2021-05-31_solid_physics_review/"/>
+    <url>/PHYS_condensed_physics/2021-05-31_solid_physics_review/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文总结了本科固体物理学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “<a href="https://zhuanlan.zhihu.com/p/147668269">两个月速成 (误) 物理学本科高年级课程之固体物理篇: 总纲</a>“.</p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><p><img src="outline.png" alt=""></p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;本专栏中涉及的固体物理主要可以分为五个部分 (对应与黄昆的固体物理教材的第 1 至 5 章), 下面分别进行简要介绍. </p><p>&emsp;&emsp;第一部分主要从数学的角度讲述了如何描述三维点阵的周期性. 在引入了布拉伐格子的概念后, 便可从纯数学的角度来探讨这种周期性. 对空间点阵进行傅里叶变换, 便可在频率空间对晶体进行讨论, 进而引入倒空间的概念 (倒空间的概念也可从对偶基矢的角度来引入. 事实上, 实空间基矢的倒格基矢就是其对偶基矢. 利用这种对偶基矢, 谈论晶格周期性时可以更方便地写出并矢, 从而研究晶体的特性时会更方便. 这种方法在群论的研究中被广泛采用.). 另一面, 利用倒格矢, 在研究晶面的时候也会更加方便. 在实验上, 通过布拉格衍射方程或劳厄衍射公式, 可以得到产生衍射时对于波矢的限制, 从而推出实验上直接观测到的衍射点阵实际上反映的是倒空间的点阵, 这进一步说明了引入倒空间的必要性. 此外, 还可很自然地在讨论衍射时引入布里渊区的概念, 其在后续的固体物理理论中被广泛使用.</p><p>&emsp;&emsp;晶体的全部对称操作形成一个对称变换群. 可以证明, 由于倒空间是实空间的对偶空间, 因此二者具有相同的对称性, 亦即实空间的对称变换同样是倒空间的对称变换. 对称操作的基本要求是晶格矢量变换后仍为晶格矢量, 进而可由此分析出可能的变换, 并对变换进行分类. 反之, 给定了对称操作, 其对晶格的排列方式又会作出限制, 由此可将晶体分为 7 大晶系以及 14 种布拉伐格子.</p><p>&emsp;&emsp;第二章则定性讲解了原子间是如何通过化学键连接起来的, 包含共价键, 离子键, 金属键, 范德瓦耳斯力. 其与高中化学中关于晶体的选修有不少相似之处, 但更侧重在量子力学的基础上对大体的物理图像进行解释. 需要进行计算的部分主要集中与离子键和共价键的部分. 离子键这一块主要是在引入结合能后, 推导出平衡条件 (结合能一阶导数为零), 并对平衡时的体变模量进行计算. 共价键这一块, 主要是在忽略电子间的耦合作用的情况下, 对于分子轨道进行计算 (严格来说这一部分是半定量的).</p><p>&emsp;&emsp;第三章主要分析了固体中的原子的运动, 基本的研究手段是简谐近似. 在经典处理上, 主要依赖于原子链模型, 以及引入了周期性边界条件的思想来对格波的振动模式进行限制. 在研究原胞含多个原子的体系时, 还将振动分为了光学支及声学支. 粗略而言, 光学支反映的是质心系内的自由度的振动 (内部振动), 声学支反映的是质心自由度的振动 (整体振动). 量子处理方面, 最重要的是引入了声子的概念, 以及通过玻色统计辅以不同的色散关系来对固体热容进行计算 (包括 Einstein 模型和 Debye 模型). 在对粒子晶体的红外光学性质的研究中, 介绍了 LST 关系, 其解释了长光学波的横波与纵波频率之间是如何通过介电常数向联系的. 在这一章的末尾, 还定性介绍了势能的非简谐项是如何引起热膨胀及热传导等效应的. </p><p>&emsp;&emsp;第四章和第五章则是侧重电子的介绍, 其主要的理论依据是能带论. 这里有三条基本近似以简化问题的研究, 分别是: 绝热近似, 周期性近似, 平均场近似.</p><p>&emsp;&emsp;第四章主要介绍了电子在周期性势场中的运动. 先是介绍了最一般情况下的 Bloch 定理, 揭示了周期性势场下电子波函数的基本特性. 再后面介绍了两种模型: 近自由电子模型与紧束缚模型. 两种模型处理的基本方法均是微扰论, 不同的在于微扰算符的不同. </p><p>&emsp;&emsp;对于近自由电子模型, 其假设周期性势场仅在其平均值附近具有较小的起伏, 因此可以将平均势能作为零阶微扰, 将势场相对平均势能的起伏视为微扰算符. 在布里渊区中心处, 通过非简并微扰即可解决问题. 但在布里渊区边界处, 不同边界的态对应的能量一致, 因此应采用简并微扰, 采用非简并微扰时会出现微扰能级无穷大的问题. 不过, 直接采用简并微扰不便于讨论能量在布里渊区边界附近的变化, 黄昆教材采用的方法是进行二能级近似, 以及只考虑相差一个倒格矢的两个布里渊区边界能级的影响. </p><p>&emsp;&emsp;对于紧束缚模型, 其是将单原子势场作为零阶微扰, 而将整个空间的周期场与所在原子提供的势场之差作为微扰算符. 由于零阶微扰时, 所有原子之间没有耦合, 因此它们之间的能级分布完全一致, 从而这是一个简并微扰的问题. 由于处理该问题时会将原本的能量本征态进行线性组合来得到记入微扰后的能量本征态, 因此也称之为原子轨道线性组合方法. 具体计算时, 往往又只考虑相邻原子之间的相互作用 (不由让人想到 Ising 模型), 进而使问题进一步简化.</p><p>&emsp;&emsp;这一章的最后, 还对能态密度和费米面进行了介绍. 计算能态密度的基本思想是, 限制能量为某个值, 从而在 $k$ 空间中诱导出一个曲面. 通过计算这个曲面上的能态数目即可得到能态密度. 换句话说, 这是将能态在 $k$ 空间的分布转化到能态按能量的分布. 另一方面, 由于电子波函数是全反称的, 其服从泡利不相容原理, 其无法像玻色子一样所有粒子都尽可能跑到低能级, 而是由下向上将能级进行填充, 从而电子数一定时, 最上侧的能级在 $k$ 空间中将对应一个曲面, 这个面即是费米面, 相应的能级称为费米能级.</p><p>&emsp;&emsp;第五章主要研究的是加入外部电磁场后电子的运动. 为了简化问题, 采用了准经典近似, 亦即研究 Bloch 波函数的波包的移动. 在考虑外场的作用时发现, 电子运动的描述类似牛顿运动方程的形式, 具体来说, 外力与电子波包的加速度呈线性关系. 由于外力和及电子的加速度均为矢量, 因此二者的线性变换应通过一个二阶张量来表述, 这个张量正是有效质量张量. 有效质量在真空中将会退化为电子的质量, 因此有效质量与电子质量的差异表征了电子与固体的周期性势场之间的耦合作用. 在准经典描述下, 还可结合能带论, 解释满带不导电与非满带导电的原因, 进而更深刻地理解导体和非导体的差异.</p><p>&emsp;&emsp;在外加磁场的研究方面, 除了通过准经典近似来计算波包在空间中的移动以外, 还通过量子理论研究了外加磁场时体系的能级. 具体而言, 写出外加磁场下的哈密顿量后, 通过化简可发现其具有和谐振子哈密顿量相同的形式, 由此得到的能级被称为朗道能级. 利用朗道能级, 可以定量解释 De Hass—Van Alphen 效应, 亦即固体的磁导率随磁感应强度倒数的周期性变化. 该效应的根本原因在于磁场的改变引起了朗道能级的变化. 具体来说, 磁场改变后, 能级的结构会发生变化, 进而影响费米面和费米能级. 这种变化关于磁感应强度的倒数的变化具有周期性, 这便是 D—V 效应的物理实质.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Condensed Physics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>晶体的离子性结合</title>
+    <link href="/PHYS_condensed_physics/2021-05-31_ionic_crystal/"/>
+    <url>/PHYS_condensed_physics/2021-05-31_ionic_crystal/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文是黄昆固体物理教材的 2.1 节的读书笔记, 介绍了离子晶体的内能, 体变模量, 结合能等相关概念. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “<a href="https://zhuanlan.zhihu.com/p/148283596">两个月速成 (误) 物理学本科高年级课程之固体物理篇: 晶体的离子性结合</a>“.</p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>&emsp;&emsp;本文主要是参考的黄昆固体物理教材的 2.1 节. 正文部分首先介绍了离子晶体的内能的推导, 随后通过平衡条件与内能的关系, 推导了平衡时离子晶体的体变模量以及结合能的表达式.</p><p>&emsp;&emsp;正文中的推导比较简略, 在附录中附有公式推导的详细过程.</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="mainbody.jpg" alt=""></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p><img src="appendix.jpg" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Condensed Physics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>晶体的 X 射线衍射</title>
+    <link href="/PHYS_condensed_physics/2021-05-31_crystal_diffraction/"/>
+    <url>/PHYS_condensed_physics/2021-05-31_crystal_diffraction/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文介绍了晶体的 X 射线衍射相关的知识, 包括布拉格反射公式, 劳厄衍射方程, 布拉格反射公式等. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “<a href="https://zhuanlan.zhihu.com/p/148186087">两个月速成 (误) 物理学本科高年级课程之固体物理篇: 晶体的 X 射线衍射</a>“, </p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>&emsp;&emsp;本文先介绍了描述晶体衍射的一般公式 (布拉格反射公式以及劳厄衍射方程), 随后从劳厄衍射方程出发, 推导出了布拉格反射公式, 揭示了两者的内在联系. 在劳厄衍射公式的基础上, 介绍了如何利用布里渊区对衍射条件进行诠释, 以及反射球的概念. 在后面对晶体衍射实验的介绍部分, 着重利用反射球对单晶法的实验原理进行了介绍, 同时亦简单提到了旋转单晶法以及粉末法的基本思想.</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="mainbody.jpg" alt="mainbody" title="mainbody"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Condensed Physics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>周期势场中电子的波函数</title>
+    <link href="/PHYS_condensed_physics/2021-05-31_Bloch_theorem/"/>
+    <url>/PHYS_condensed_physics/2021-05-31_Bloch_theorem/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要推导了 Bloch 定理. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于[知乎], 原标题为 “<a href="https://zhuanlan.zhihu.com/p/142267574">两个月速成 (误) 物理学本科高年级课程之固体物理篇:周期势场中电子的波函数</a>“, </p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p><img src="outline.png" alt="outline" title="outline"></p><p>&emsp;&emsp;本文主要介绍了 Bloch 定理. 其中包括了 Bloch 定理的推导以及 Bloch 函数的导出. 定理推导中首先证明了平移算符之间的对易性以及平移算符与哈密顿量的对易性, 随后引入周期性边界条件, 限制了平移算符本征值的取值. 最后将对函数的平移操作用平移算符对其的作用代替, 并利用平移算符的本征值, 给出周期性势场下能量本征函数的形式. </p><p>&emsp;&emsp;随后假设能量本征函数可以表现为对严格周期函数的调制, 并利用能量本征函数进行平移时的特性给出了调制函数的形式 (其是一个平面波), 因此也可将其视为周期函数对平面波的调制. 而该形式的函数即是通常所谓的 Bloch 函数.</p><p>&emsp;&emsp;为保证波矢可以对平移算符的本征值进行一一的标记, 可将波矢限制在第一布里渊区内, 从而引出简约波矢的概念.</p><p>&emsp;&emsp;正文部分主要给出大体的推导思路, 附录给出了详细的推导.</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="mainbody.jpg" alt="mainbody" title="mainbody"></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p><img src="appendix.jpg" alt="appendix" title="appendix"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Condensed Physics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>电动力学复习概要</title>
+    <link href="/PHYS_electrodynamics_and_optics/2021-05-31_electrodynamics_review/"/>
+    <url>/PHYS_electrodynamics_and_optics/2021-05-31_electrodynamics_review/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>主要回顾了本科期间电动力学所学过的内容. 该文章于去年 (2020 年) 为理念经所夏令营面试做准备所写,  本文最早发布于知乎, 原标题为 <a href="https://zhuanlan.zhihu.com/p/138318789">两个月速成 (误) 物理学本科高年级课程之电动力学篇: 总纲</a></p></blockquote><span id="more"></span><p><img src="electrodynamics_review_outline.png" alt="outline"></p><h2 id="原-序言"><a href="#原-序言" class="headerlink" title="(原) 序言"></a>(原) 序言</h2><blockquote><p>虽然说是速成, 但其实是对复习, 希望不要被标题误导了… 因为研究生想做引力方面理论研究, 所以在两个月左右之后大概会去参加理论所的夏令营. 复习的内容主要是四大力学, 基本的广义相对论以及群论, 还有时间的话可能会写一点傅里叶光学和数理方法方面的东西. 虽然内容确实不少, 但想想去年电动力学考试的时候也才花了三天的时间复习, 两个月复习完这些也是有可能的吧? 果然 deadline 才是第一生产力 😂</p><p>由于写这个系列的目的是为了复习, 大部分内容都是按照自己的理解来写的, 难免有所纰漏. 如认为内容存在任何问题, 欢迎在评论区提出.</p></blockquote><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;在正式开始电动力学的介绍之前, 先来看一下需要的数学基础.</p><p>&emsp;&emsp;总的来说, 一般的高数课程中关于场论 (指数学中的场论) 及矢量/张量分析的内容是不充分的. 因此, 在数学基础部分, 主要是补充一些基本的矢量/张量分析的概念, 其中重点关注梯度、散度、旋度的混合运算律, 以及正交曲线座标系的基本概念. 由于描述点电荷的电荷密度需要用到 $\delta$ 函数, 因此对于三维中的 $\delta$ 函数 (包括如何由二阶微分运算获得 $\delta$ 函数) 是需要有基本的了解的. 此外, 如果想要学习电动力学的相对论形式, 一些关于度规张量以及对偶微分形式的基本概念也是需要了解的.</p><p>&emsp;&emsp;正式的电动力学大致可以分为三个部分. 第一个部分从实验中得到的唯象规律总结出麦氏方程组; 第二部分研究静场 (磁场与电场),  并引入了矢势与标势, 以使问题简化; 第三部分研究变化的电磁场, 考虑了较简单的平面电磁波与相对复杂的电磁辐射的问题. 第四部分是与相对论相关的内容, 除了介绍狭义相对论的基本内容以外, 还利用微分几何 (或者说张量分析) 的语言重新对电动力学进行阐述.</p><p>&emsp;&emsp;第一部分中, 最重要的是总结出麦克思维方程组. 高斯定理, 法拉第电磁感应定律, 电流连续性方程, 毕奥—萨伐尔定律等四条实验定律的微分写法对应了四条麦氏方程. 但这里会遇到流不守恒的问题, 于是麦克斯韦引入了位移电流的概念, 再附加上四条实验定律的微分写法, 构成了真空中麦氏方程的基本内容. </p><p>&emsp;&emsp;随后研究的问题是介质中的麦氏方程具有什么样的形式. 这里引入了电极化强度以及磁化强度, 且由于研究的是均匀各向同性的介质, 因此 $\varepsilon$, $\mu$ 等常数为标量. 若介质具有各向异性, 相应的量变为张量, 使研究更为复杂. 在引入这两个量并进行进一步归纳后, 可以得到线性介质中的麦氏方程组. 利用介质中的麦氏方程组, 可以推导出介质性质发生突变时, 电磁场的边界条件.</p><p>&emsp;&emsp;接下来的工作是给出电磁场的能量与动量. 在此之前, 我们只定义过实物粒子的能量与动量, 因此这是一个概念上的进步. 推导的基本思想是利用实验中得到的洛仑兹力的表达式, 将物体的能量与动量的变化, 归结于电磁场能量与动量的转移, 从而形式上可以总结出电磁场的能量与动量. 波印亭矢量 (以及麦克斯韦力张量?) 是其中比较重要的一个概念.</p><p>&emsp;&emsp;在得到了电磁场的普遍规律后, 下面任务是描述最简单的一类场: 静场. 静场的好处在于: 由麦克斯韦方程组的形式可知, 电场与磁场的耦合项是二者对时间的导数项, 因此场为静场时, 可以分别只研究电场与磁场.</p><p>&emsp;&emsp;由于静电场是无旋场, 因此可以引入标势, 并将电场部分的麦克斯韦方程用标势来描述, 得到的方程是泊松方程. 在实际求解问题时, 最核心的结论是唯一性定理. 实际上这也可以看成是一个数学定理, 类比于常微分方程, 就好像是在说: 知道了零阶与一阶初始条件, 就可以求解二阶方程. 或者用一种计算的眼光来看待: 一旦知道了初始边界条件, 便可以设计迭代方程 (需将方程离散化, 利用微分代替差分) 来通过边界条件对于区域内的点进行迭代求解. 有了唯一性定理, 在处理对称性较高的系统时, 可以先猜测一个试探解, 若其满足给定的边界条件, 那么该解是唯一的. </p><p>&emsp;&emsp;此外, 在实际的求解中, 往往将存在电荷源的区域与没有电荷源的区域分开求解, 从而将问题简化为了带边界条件的拉普拉斯方程, 于是可以用分离变量的方式求解方程. 除了直接利用本征函数展开的方法求解泊松方程外, 还有诸如镜像电荷法和格林函数法的计算方法.</p><p>&emsp;&emsp;在静电场的最后一部分, 将讨论电势的多级展开问题, 用到的数学技巧是多元标量函数的泰勒展开. 引入的所谓电多级矩, 实质上是展开式中的一些高阶张量, 通过构造具有特殊对称性的点电荷电场, 可以说明张量分量的物理意义.</p><p>&emsp;&emsp;静电场之后是静磁场. 由于不存在磁单极子, 静磁场是无源场, 因此可引入磁标势, 并推导出标势满足的方程 (每个分量均满足泊松方程). 此外, 在磁场中的某些无旋区域, 还可引入磁标势, 此时问题的分析完全类似与静电场的情形.</p><p>&emsp;&emsp;第三部分是研究磁场与电场交替激发产生的波动—-电磁波. 从数学上考虑, 这是由于在电磁场随时间演化的时候, 麦氏方程组中的电磁耦合项非零, 此时必须将电场和磁场一起考虑. 在没有电流与电荷分布的自由空间, 由麦氏方程可以导出最简单的电磁波: 平面电磁波. 随后结合电磁场的边值关系, 可以解释诸如折射, 反射, 布儒斯特角, 全反射等一系列光学现象. 在平面电磁波的最后, 还介绍了谐振腔及波导相关的知识. 实际上, 利用谐振腔的知识, 稍作推导, 可以得出对黑体辐射的经典解释.</p><p>&emsp;&emsp;在进一步研究含有电荷及电流的空间中的电磁场性质时, 需要通过电磁场的规范不变性来改写方程, 是问题的研究得以简化. 常用的规范有库伦规范与洛仑兹规范. 值得注意的是, 若采用洛仑兹规范, 则分别得到关于矢势和标势的波动方程, 形式上相当对称.</p><p>&emsp;&emsp;由于电磁波的传播速度是有限的, 因此具有有限体积的运动带电体对远处一点的作用时, 该带电体上各点对于该点的作用存在延迟, 从这个意义上讲, 时间与空间产生了某种耦合, 于是由此引出了推迟势的概念.</p><p>&emsp;&emsp;实际的电磁辐射的计算相当复杂, 即便是最简单的振荡电偶极子系统也是如此. 因此, 在研究其电磁辐射时, 往往按照相对偶极子的距离, 在不同标度下进行研究. 解析求解中, 重点考虑的是偶极子附近与极远出的电磁辐射状态.</p><p>&emsp;&emsp;在第四部分, 主要加入了狭义相对论的知识. 除了对洛仑兹变换带来的基本推论以外, 重要的是如何用张量代数的语言来描述电动力学理论. 麦氏方程本身就是洛仑兹协变的, 而使用张量代数的语言, 可以更明显地看到其洛仑兹协变性, 对于深入的讨论有极大的益处.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Electrodynamics and Optics</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>切矢及切矢场</title>
+    <link href="/PHYS_general_relativity/2021-05-31_tangent_vector/"/>
+    <url>/PHYS_general_relativity/2021-05-31_tangent_vector/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要对应于梁灿彬《微分几何入门与广义相对论》第 2.2 节的内容, 但提前介始了抽象指标. 该篇文章于去年为理念经所夏令营面试做准备所写. 最早发布于知乎, 原标题为 <a href="https://zhuanlan.zhihu.com/p/142378492">两个月速成 (误) 物理学本科高年级课程之微分几何篇: 切矢及切矢场</a>.</p></blockquote><span id="more"></span><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p><img src="outline.png" alt="outlie" title="outlie"></p><p>&emsp;&emsp;本文对应于《微分几何入门与广义相对论》上册的第 2.2 节. 可以说这一节是整个第二章中最重要的一节了, 相应的, 内容也是最多的. 此外, 本节中介绍的切矢、矢量场、单参微分同胚群等概念在后续李群的学习中大量用到. 理论上来说这一节学好了, 再加上一点群论基础, 中册后面关于李群的附录中的很多内容就可以开始学习了.</p><p>&emsp;&emsp;和原书中最后再介绍抽象指标记号不同, 本文在定义了矢量后就直接引入抽象指标记号, 力图在概念的阐述中自然地学会抽象指标记号的使用. 在后面对对偶矢量及张量的讲解中也将采用该策略.</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="mainbody.jpg" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS General Relativity</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>群及其乘法表</title>
+    <link href="/PHYS_group_theory/2021-05-31_conception_of_group/"/>
+    <url>/PHYS_group_theory/2021-05-31_conception_of_group/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要介绍了群论中的基本概念. 该文章写于去年为理论所夏令营面试做准备期间, , 最早发布于知乎, 原标题为 <a href="https://zhuanlan.zhihu.com/p/139733105">两个月速成 (误) 物理学本科高年级课程之群论篇: 群及其乘法表</a></p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="原-序论"><a href="#原-序论" class="headerlink" title="(原) 序论"></a>(原) 序论</h2><blockquote><p>本文对应的内容主要为《物理学中的群论》中第 2.2 节的内容.</p><p>不得不吐槽一下, 马中骐的这本书的很多地方看得我头大… 所以除了群的基本概念主要依据马中骐的教材外, 有限群的群表示论, 空间群, 转动群, 置换群等四部分将主要参考北大李新征的讲义; 李群的部分主要参考梁灿彬《微分几何入门与广义相对论 (中册)》关于李群的数学附录.</p></blockquote><p><img src="2.2_basic_conception_about_group.png" alt="outline" title="outline"></p><h2 id="1-群的基本概念"><a href="#1-群的基本概念" class="headerlink" title="1 群的基本概念"></a>1 群的基本概念</h2><h3 id="1-1-群的定义"><a href="#1-1-群的定义" class="headerlink" title="1.1 群的定义"></a>1.1 群的定义</h3><p><u><strong>对称变换:</strong></u><br>    保持系统不变的变换称为 <strong>对称变换</strong> .</p><ul><li><u><strong>群:</strong></u><br>在规定了元素的乘法后, 元素的集合 $G$ 若满足下面四条公理, 则这个集合可被称为 <strong>群</strong> :<ol><li><strong>封闭性 :</strong> 任意两元素的乘积仍然属于这个集合. 亦即:<script type="math/tex; mode=display">     RS \in G, \quad \forall R, S \in G</script></li><li><strong>结合律 :</strong> 乘积满足结合律, 亦即:<script type="math/tex; mode=display">     R (ST) = (RS) T, \quad \forall R,\ S,\ T\ \in G</script></li><li><strong>存在单位元 :</strong> 存在一个被称为单位元的元素 $E$, 用它左乘任意元素, 该元素均保持不变. 亦即:<script type="math/tex; mode=display">     ER = R, \forall R \in G</script></li><li><strong>任何元素存在逆元 :</strong> 任意元素 $R$ 均存在对应的逆元 $R^{-1}$, 其定义为:<script type="math/tex; mode=display">     R^{-1} R = E</script>亦即元素与其逆元的乘积等于单位元.</li></ol></li></ul><h3 id="1-2-群的基本性质"><a href="#1-2-群的基本性质" class="headerlink" title="1.2 群的基本性质"></a>1.2 群的基本性质</h3><p>&emsp;&emsp;可以看到, 在对单位元及逆元进行定义的时候, 只定义了左乘, 那么单位元右乘或逆元右乘时, 还会有相同的性质吗? 实际上, 从基本定义出发, 可以得到以下推论:</p><ul><li><u><strong>恒元及逆元的右乘:</strong></u><ol><li><strong>恒元右乘:</strong> 恒元右乘时, 同样保有恒元的性质, 亦即:<script type="math/tex; mode=display">     RE = R</script></li><li><strong>逆元右乘:</strong> 逆元右乘时, 还是得到恒元. 换而言之, 逆元 $R^{-1}$ 的逆, 恰是 $R$ 自身:<script type="math/tex; mode=display">\begin{aligned}     RR^{-1} &= E \\     (R^{-1})^{-1} &= R \end{aligned}</script></li></ol></li></ul><p>&emsp;&emsp;可以看见, 对于恒元及逆元, 其运算是可交换的, 这个性质对所有群均成立. 由于恒元及逆元在乘法运算上的对称性, 在之后讨论或证明相关性质时, 可以只考虑一个方向上的乘法. 由恒元及逆元的右乘的性质出发, 不难得出恒元及逆元的唯一性:</p><ul><li><u><strong>恒元及逆元的唯一性:</strong></u><ol><li><strong>恒元的唯一性:</strong> 若 $TR = R$ 或 $RT = R$, 则 $T = E$.</li><li><strong>逆元的唯一性:</strong> 若 $TR = E$ 或 $RT = E$, 则 $T = R^{-1}$.</li></ol></li></ul><p><strong>Notation :</strong></p><ol><li>对于奇数阶群, 因为单位元自身是自身的逆元. 因而此时除了单位元以外的元素为偶数个, 从而可以成对地提取出元素以及它的逆元; 对于偶数阶群, 由于除了单位元外的元素为奇数个, 因此必然有元素其逆元是自身, 也就是说, <u>偶数阶群必然存在二阶元素.</u></li><li>不难证明: <u>若一个群 $G$ 中含有二阶元素, 则该二阶元素与幺元素构成该群的一个子群</u></li></ol><p>&emsp;&emsp;一般而言, 除了恒元及逆元外, 一般元素之间的乘法是不可对易的, 但也存在如实数加法群这样的乘法可对易的群, 于是有了 <strong>阿贝尔群</strong> 的概念:</p><ul><li><u><strong>阿贝尔群:</strong></u><br>元素乘积都可对易的群称为 <strong>阿贝尔群</strong> .</li></ul><h3 id="1-3-群的阶数"><a href="#1-3-群的阶数" class="headerlink" title="1.3 群的阶数"></a>1.3 群的阶数</h3><p>&emsp;&emsp;按照群元素的数目, 可以定义 <strong>群的阶数:</strong></p><ul><li><u><strong>群的阶数:</strong></u><br>群 $G$ 的群元素的个数 $g$ 称为群 $G$ 的阶数.</li></ul><p>&emsp;&emsp;还可以对群的阶数进行更细致的讨论:</p><ul><li><u><strong>无限群:</strong></u><br>群元数目无限多的群称为 <strong>无限群.</strong></li></ul><ul><li><u><strong>连续群:</strong></u><br>若可以建立群元到一组连续参数的一一映射, 则这样的群称为 <strong>连续群.</strong></li></ul><p>连续群的一个例子是之后将要接触到的 <strong>李群.</strong></p><p>&emsp;&emsp;对于有限群, 由于群元素的有限性, 群中任一元素的幂次足够高时, 其总会回归到自身. 如: 对于 6 阶群 $G_{6}$, 其只有 6 个不同的元素. 设 $R \in G_{6}$, 对于 $R^n$, 在 $n &gt; 6$ 之前, 一定会出现 $R^n = R$ 的情形, 因为 6 阶群不可能有 7 个不同元素. 由此可以引出 <strong>群元素的阶数</strong> 的定义:</p><ul><li><u><strong>群元素的阶数:</strong></u><br>若群 $G$ 中的群元 $R$ 满足:<script type="math/tex; mode=display">      R^{a} = E, \quad a \in \mathbb{Z}^{+}</script>则称 $a$ 为群元素 $R$ 的阶数</li></ul><h2 id="2-重排定理与乘法表"><a href="#2-重排定理与乘法表" class="headerlink" title="2 重排定理与乘法表"></a>2 重排定理与乘法表</h2><h3 id="2-1-重排定理"><a href="#2-1-重排定理" class="headerlink" title="2.1 重排定理"></a>2.1 重排定理</h3><p>&emsp;&emsp;群论中有一个名为 <strong>重排定理</strong> 的基本定理, 为更方便地对其进行表述, 首先引入 <strong>复元素</strong> 的概念:</p><ul><li><u><strong>复元素:</strong></u><br>在群 $G$ 中选取一个子集 $R$, 将该子集 $R$ 称为群 $G$ 的一个复元素.</li></ul><p>从定义可以发现, 复元素的本质是一个集合, 因此满足集合的 <strong>无序性</strong> ,  <strong>确定性</strong> ,  <strong>互异性</strong> 等基本性质. 此外, <u>两复元素 $R_1$, $R_2$ 相等的充要条件是它们所包含的元素完全相同.</u> 这一点和一般的集合相等是完全一致的. 在有了复元素的基本概念之后, 需要考虑的是如何定义复元素与普通元素的乘法:</p><ul><li><u><strong>复元素与普通元素的乘法:</strong></u><br>复元素乘上普通元素仍然得到一个复元素, 该复元素由该普通元素分别与原本复元素的每一元素相乘得到. 亦即, 若 $R = \{r_i\}$, $s$ 为一普通元素, 则:<script type="math/tex; mode=display">      sR := \{s r_i\}, Rs:= \{r_i s\}</script></li></ul><p>复元素也可与复元素相乘, 其结果是所有乘积组合形成的新集合, 即:</p><ul><li><u><strong>复元素与复元素相乘:</strong></u><br>若 $R = \{r_i\}$, $S = \{s_i\}$, 则:</li></ul><script type="math/tex; mode=display">    RS := \{r_i s_j\}, SR := \{s_i r_j\}</script><p>接下来正式介绍重排定理:</p><ul><li><p><u><strong>重排定理:</strong></u><br>用 $G$ 表示群中所有元素构成的复元素, $G^{-1}$ 表示群中所有元素的逆元素构成的复元素, $T$ 为群中任一普通元素, 于是:</p><script type="math/tex; mode=display">      TG = GT = G^{-1} = G</script><p>  <strong>Pf:</strong><br>  &emsp;&emsp;欲证明两个集合相等, 需要证明两个集合相互包含. 而证明一个集合属于另一个集合, 需要证明其中的每一元素均属于另一集合. 基于这个思想, 下面给出 $TG = G$ 的证明, 其余的证明同理.</p><p>  &emsp;&emsp;记 $G = {R_i}$, $TG = {TR_i}$, 由群运算的封闭性, 可知:</p><script type="math/tex; mode=display">      TR_i \in G</script><p>  从而:</p><script type="math/tex; mode=display">      TG \subset G</script><p>  &emsp;&emsp;另一面, 对于 $G$ 中任一元素 $R_i$, 总可写为:</p><script type="math/tex; mode=display">      R_i = T(T^{-1} R_i)</script><p>  由于 $T^{-1} R_i \in G$, 从而 $T(T^{-1} R_i) \in TG$, 故 $R_i \in TG$, 于是:</p><script type="math/tex; mode=display">      G \subset TG</script><p>  结合前面的讨论可知:</p><script type="math/tex; mode=display">      TG = G</script></li></ul><h3 id="2-2-乘法表"><a href="#2-2-乘法表" class="headerlink" title="2.2 乘法表"></a>2.2 乘法表</h3><p>&emsp;&emsp;对于有限群, 可以把群中每一对乘积得到的结果都列出来形成一张表, 由此引出 <strong>乘法表</strong> 的概念:</p><ul><li><u><strong>乘法表:</strong></u><br>对于有限群, 在行与列都填满该群中的所有元素. 若记 $R = \{r_i\}$ 在第 $i$ 行第 $j$ 列的位置, 填上元素 $r_i$ 右乘 $r_j$ 的结果 $r_i r_j$, 由此形成的表称为乘法表.</li></ul><p><strong>Notation :</strong></p><ol><li>从重排定理可以推出: <u>乘法表的每一行或每一列均没有重复元素.</u></li><li>可以预见, <u>对于阿贝尔群, 乘法表是关于对角线对称的.</u></li></ol><h2 id="3-群的同构"><a href="#3-群的同构" class="headerlink" title="3 群的同构"></a>3 群的同构</h2><ul><li><u><strong>群的同构:</strong></u><br>若存在一个从群 $G$ 到群 $G’$ 的一一映射 $f$:</li></ul><script type="math/tex; mode=display">    f: G \to G', R \mapsto R'</script><p>若 $\forall R, S \in G, R’ = f(R), S’ = f(S)$, 满足:</p><script type="math/tex; mode=display">    F(R, S) = F'(R', S')</script><p>即称 $G$ 与 $G’$  <strong>同构 (isomorphism)</strong> , 记为 $G \approx G’$. 其中 $F$, $F’$ 分别表示两群的群乘法.</p><ul><li><u><strong>Example (空间反演群与二阶循环群):</strong></u><br>若以 $e$ 代表恒等变换 e, 以 $\sigma$ 代表空间反演变换, 则此群是对空间反演不变的系统的对称变换群, 记为 $V_2$. 其与二阶循环群 $C_2$ 同构.</li></ul><h2 id="4-群的生成元与秩"><a href="#4-群的生成元与秩" class="headerlink" title="4 群的生成元与秩"></a>4 群的生成元与秩</h2><p>&emsp;&emsp;前面提到过, 有限群的元素有阶数的概念. 也就是说: 或许可以只用很少的几个元素以及它们的幂来构造出该群的所有元素, 这就涉及到下面将介绍的 <strong>生成元</strong> 的概念:</p><ul><li><u><strong>循环群与生成元:</strong></u><br>由一个元素 $R$ 及其幂次构成的有限群称为由 $R$ 生成的循环群, 记为 $C_n$. $n$ 称为 <strong>循环群的阶</strong> , $R$ 称为 <strong>循环群的生成元</strong> . 一般地, 循环群 $C_n$ 可以被描述为:</li></ul><script type="math/tex; mode=display">    C_n = \{E, R, R^{1}, R^{2}, \dots , R^{n-1}\}, R^{n} = E</script><p>对于 $n$ 阶循环群, <u>其阶数等于其生成元的阶数.</u> 此外, 不难得知:</p><script type="math/tex; mode=display">    R^{-1} = R^{1-n}</script><p>更一般地, 若用记号 $j\ \mathrm{mod}\ N$ 来表示 $j$ 整除 $N$ 后的余数, 则对于 $n$ 阶循环群 $C_n$, 有:</p><script type="math/tex; mode=display">    R^{a} = R^{a\ \mathrm{mod}\ N}</script><p>于是可以从循环的角度来理解模运算: $j\ \mathrm{mod}\ N$ 表示将取值相差 $N$ 的两个 $j$ 看成相同的.</p><p>&emsp;&emsp;以上只讨论了对于循环群如何定义阶数, 那么, 对任一有限群, 能否定义阶数以及生成元呢? 答案是肯定的, 由此还能引出有限群的秩的概念:</p><ul><li><u><strong>有限群的生成元与秩:</strong></u><br>对于群 $G$, 任取一个元素 $R_1$, 若其幂次构成的集合尚无法填满整个群, 那么再取下一个元素 $R_2$, 并考虑 $R_2$ 的幂次构成的集合. 如此反复操作, 直至由取出的元素的幂次构成的元素集合的并集能够填满整个群为止, 将这些基本元素的集合 $\{R_i\}$ 称为群 $G$ 的 <strong>生成元</strong> , 集合 $\{R_i\}$ 中元素的数目称为该群的 <strong>秩</strong> .</li></ul><p>&emsp;&emsp;生成元的概念在之后学习李群时可以做进一步推广为李群单位元切空间的一组基矢. 但相同之处在于: 无论是李群还是在离散群中, 均可由生成元导出一个子群.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Group Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>晶体的对称变换群</title>
+    <link href="/PHYS_group_theory/2021-05-31_crystal_symmetry_group/"/>
+    <url>/PHYS_group_theory/2021-05-31_crystal_symmetry_group/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要重写了马中骐群论教材第 5.1 节的内容 此篇文章写于去年为理论所夏令营面试做准备期间, 最早发布于知乎, 原标题为 “<a href="https://zhuanlan.zhihu.com/p/138278671">两个月速成 (误) 物理学本科高年级课程之群论篇: 晶体的对称变换群</a>“</p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="原-序论"><a href="#原-序论" class="headerlink" title="(原) 序论"></a>(原) 序论</h2><blockquote><p>本文主要将马中骐《物理学中的群论》的第 5.1 节重新叙述了一遍. 感觉这一节的不足在于关于空间群的商群与点群的同构关系的证明不够清晰, 中途跳过了太多步骤, 希望本文能将这一部分讲解得更为清晰.</p></blockquote><p><img src="5.1_outline.png" alt="outline"></p><h2 id="原胞及晶体的平移对称性"><a href="#原胞及晶体的平移对称性" class="headerlink" title="原胞及晶体的平移对称性"></a>原胞及晶体的平移对称性</h2><p>&emsp;&emsp;晶体可以视为具有平移对称性的空间点阵. 取定点阵中的一点, 由该点出发, 指向其它格点的矢量称为 <strong>晶格矢量</strong> (本文中简称 “格矢”). 在这些晶格矢量中, 通过合理选择基矢标架 $\boldsymbol{a}_i$ ($i = 1, 2, 3$), 可以使任意格矢 $\boldsymbol{l}$ 均以该组基矢的整数线性组合表出:</p><script type="math/tex; mode=display">    \boldsymbol{l} = \sum_{i = 1}^{3} l_i \boldsymbol{a}_i</script><p>可知, 这样选择的标架张成的平行六面体是晶格的最小周期单元, 称为 <strong>原胞</strong>.</p><p>&emsp;&emsp;晶格所具有的平移对称性使得晶格整体平移任意格矢 $\boldsymbol{l}$ 后不变. 若记平移 $\boldsymbol{l}$ 的变换为 $T(\boldsymbol{l})$, 则这样的变换构成晶体的一个对称变换群, 称为 <strong>晶体的平移群</strong>, 简称 <strong>平移群</strong>, 记为 $\mathscr{T}$.</p><h2 id="晶体的协同对称变换"><a href="#晶体的协同对称变换" class="headerlink" title="晶体的协同对称变换"></a>晶体的协同对称变换</h2><p>&emsp;&emsp;除了平移变换外, 一些平移, 旋转, 反射的协同变换同样可能是晶体的对称操作. 因此, 首先要研究如何表示协同对称变换, 以及推导出其变换率. 注意, 与马中骐中的教材不同, 这里先讨论的是变换的一般性描述, 在之后才会加上其是晶体对称操作的限制.</p><p>&emsp;&emsp;设 $R$ 为一实正交变换 (其包含了固有与非固有转动, 简单来说, 非固有转动相对固有转动多出了空间反演的变换), $\boldsymbol{\alpha}$ 为一矢量, 则将先进行 $R$ 转动, 再进行 $\boldsymbol{\alpha}$ 平移的变换记为 $g(R, \boldsymbol{\alpha})$. 以及该变换作用在任一矢量 $\boldsymbol{r}$ 上的效果为:</p><script type="math/tex; mode=display">    g(R, \boldsymbol{\alpha}) \boldsymbol{r} = R \boldsymbol{r} + \boldsymbol{\alpha}</script><p>由该变换的定义, 不难推导出不同变换的乘积规律 (推导见文末):</p><script type="math/tex; mode=display">    g(R, \boldsymbol{\alpha})g(R', \boldsymbol{\beta}) = g(RR', \boldsymbol{\alpha} + R \boldsymbol{\beta})</script><p>以及变换相应的逆变换:</p><script type="math/tex; mode=display">    g(R, \boldsymbol{\alpha})^{-1} = g(R^{-1}, - R^{-1} \boldsymbol{\alpha})</script><p>&emsp;&emsp;特别地, 若 $\boldsymbol{\alpha}$ 恒为 0, 则变换退化为实正交变换 $R$. 若再附加上 $g$ 是晶格的对称变换的条件, 则将该条件下出现的所有实正交变换 $R$ 的集合构成的群称为 <strong>点群</strong>, 有时也称为 <strong>晶格点群</strong> (注意, 晶格点群虽然名字中有 “晶格” 二字, 但则只表明其是从对称变换中提取出的, 单独的变换 $R$ 并不一定是晶体的对称变换, 要是对称变换, 往往还要附加一定的平移), 记为 $G$.</p><p>&emsp;&emsp;此外, 若 $R$ 为恒等变换 $E$, 则变换退化为平移变换, 亦即:</p><script type="math/tex; mode=display">    g(E, \boldsymbol{t}) = T(\boldsymbol{t})</script><p>注意, 一般而言, 平移变换与变换 $g$ 是不对易的:</p><script type="math/tex; mode=display">\begin{align}    & g(R, \boldsymbol{\alpha}) T(\boldsymbol{t}) = g(R, \boldsymbol{\alpha} + R \boldsymbol{t}) \\    & T(\boldsymbol{t}) g(R, \boldsymbol{\alpha}) = g(R, \boldsymbol{\alpha} + \boldsymbol{t})\end{align}</script><h2 id="空间群及其商群"><a href="#空间群及其商群" class="headerlink" title="空间群及其商群"></a>空间群及其商群</h2><p>&emsp;&emsp;之前讨论的两种群 (平移群, 点群) 中, 只有平移群一定是晶体的对称变换. 一般地, 将晶体对称变换的几何构成的对称变换群称为 <strong>空间群</strong>, 记为 $\mathscr{S}$.</p><p>&emsp;&emsp;设 $g(R, \boldsymbol{\alpha})$ 是 $\mathscr{S}$ 中的元素 (注意! 这里虽然符号一样, 但 $g$ 是表示群 $\mathscr{S}$ 中的元素, 而非任意的变换操作). 可以证明, 晶体的平移变换的共轭元素仍是平移变换 (证明见文末), 从而可知: <u>平移变换群是空间群的不变子群</u>, 从而可以得到对应的商群 $\mathscr{S}/\mathscr{T}$.</p><p>&emsp;&emsp;(注意, 从下面开始的叙述将和教材中有相当大的不同, 但表述的物理图像是一样的. 如果同样被 5.1 节后半部分给坑了, 仔细看一下应该会有很大的帮助)</p><p>&emsp;&emsp;一般来说, 空间群元素 $g(R, \boldsymbol{\alpha})$ 中的平移矢量 $\boldsymbol{\alpha}$ 分量不一定是整数, 不妨将其拆分为整数与非整数部分:</p><script type="math/tex; mode=display">    \boldsymbol{\alpha} = \boldsymbol{l} + \boldsymbol{t},\ 0 \leq t_i < 1</script><p>这里考虑到整数的平移一定对应某一晶格矢量, 故用符号 $\boldsymbol{l}$ 来代表整数部分. 在这样的拆分下, 群元 $g(R, \boldsymbol{\alpha})$ 可以写为:</p><script type="math/tex; mode=display">    g(R, \boldsymbol{\alpha}) = T(\boldsymbol{l})g(R, \boldsymbol{t})</script><p>若让 $\boldsymbol{l}$ 遍历每一个格矢, 则等式的右侧可视为平移群的右陪集. 下面将证明, 对于给定的 $R$, 上式中的 $\boldsymbol{t}$ 是唯一的 (这也是感觉教材中 5.1 节讲得最不清楚的部分), 或者说: <u>空间群 $\mathscr{S}$ 关于不变子群 $\mathscr{T}$ 的商群与点群 $R$ 同构</u>. 基本证明思想是: 相同的 $R$ 下, 一个元素与另一个元素的逆元相乘的结果为一个平移群元素, 而该平移群元素对应的平移矢量的分量必定为整数, 从而给定 $R$ 时, 不同 $\boldsymbol{\alpha}$ 的对应分量之间只能相差整数, 于是分量的小数部分必定相同, 从而 $\boldsymbol{t}$ 相同.</p><p>&emsp;&emsp;设给定 $R$, 取空间群元素 $g_1 = g(R, \boldsymbol{\alpha}) = T(\boldsymbol{l}_1)g(R, \boldsymbol{t}_1)$ 与 $g_2 = g(R, \boldsymbol{\alpha’}) = T(\boldsymbol{l}_2)g(R, \boldsymbol{t}_2)$. 由上一节得出的运算律可知:</p><script type="math/tex; mode=display">    g_{1}^{-1} g_{2} = g(R_{-1}, - R^{-1} \boldsymbol{\alpha}) g(R, \boldsymbol{\alpha}') = T(-R^{-1} \boldsymbol{\alpha} + R^{-1} \boldsymbol{\alpha}') = T(R^{-1} (- \boldsymbol{\alpha} + \boldsymbol{\alpha}'))</script><p>由于 $g_{1}^{-1}$ 与$g_{2}$ 都是空间群中的元素, 由群运算的封闭性知, 其乘积也应是空间群中的元素. 上面的推导可以看出, 乘积的结果是一个平移变换, 因此其是一个平移群中的元素, 从而平移的矢量应是一个格矢 (上面的讨论都是在原胞基矢下的, 所以格矢的各分量均为整数):</p><script type="math/tex; mode=display">    R^{-1} (- \boldsymbol{\alpha} + \boldsymbol{\alpha}') = \boldsymbol{l}</script><p>从而可知:</p><script type="math/tex; mode=display">    - \boldsymbol{\alpha} + \boldsymbol{\alpha}' = R \boldsymbol{l} = \boldsymbol{l}'</script><p>后面一步是因为我们限制了变换为对称变换, 从而 $R$ 并不是任意的实正交变换, 而是一个点群元素, 其一定可以将一个晶格矢量变为另一个晶格 (总感觉这一段的叙述有点小问题…). 由于 $\boldsymbol{l}$ 的各分量是整数, 那么等式右侧 $\boldsymbol{\alpha}$ 与 $\boldsymbol{\alpha}’$ 的差值的分量也应是整数, 从而小数部分 $\boldsymbol{t}$ 与 $\boldsymbol{t}’$ 应当一致, 这就证明了我们的结论.</p><h2 id="具体推导"><a href="#具体推导" class="headerlink" title="具体推导"></a>具体推导</h2><p>&emsp;&emsp;前文中省略的一些推导如下图所示:<br><img src="5.1_specific_derivation.jpg" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Group Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>量子力学中的微扰论</title>
+    <link href="/PHYS_quantum_theory/2021-05-31_perturbation_theory/"/>
+    <url>/PHYS_quantum_theory/2021-05-31_perturbation_theory/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要介绍了量子力学中的微扰论, 包括简并与非简并微扰. 此篇文章写于去年为理论所夏令营面试做准备期间, 最早发布于知乎, 原标题为 <a href="https://zhuanlan.zhihu.com/p/141366040">两个月速成 (误) 物理学本科高年级课程之量子力学篇: 微扰论</a></p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="原-序论"><a href="#原-序论" class="headerlink" title="(原) 序论"></a>(原) 序论</h2><blockquote><p>本来按照之前的习惯我会把 LaTeX 的源码转换成 Markdown 的, 再通过 Zhihu On VSCode 来发文章的. 但无奈这次用的狄拉克符号太多了, Vim 的正则表达式又没办法只匹配成对的外层括号, 所以就无法自动化地实现源码的转换了. </p><p>因此, 这次仅在开头给出正文的概述, 正文部分则直接是 LaTeX 生成的 PDF 转化的图片 (经过剪裁及拼接). 如果觉得这样的阅读体验比之前 Markdown 编写的更好 (毕竟 LaTeX 的排版我是特意调整过的… 而且又有交叉引用), 那今后都采用这种模式 (其实就是懒…). 所以希望各位能在评论区反馈一下, Markdwon 版和 LaTeX 版 (图片) 的哪一种的阅读体验更好.</p><p>另外最近应该会复习固体物理中的近自由电子模型和紧束缚模型, 微扰论算是这两个理论的基础吧 (这也就是为什么这里没有放微扰论解决具体问题的例子).</p></blockquote><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>&emsp;&emsp;本文主要介绍了微扰论的一般思想, 导出了微扰方程. 对于非简并的情形, 求解了一、二阶微扰的本征值, 以及一阶微扰的本征矢. 对于简并微扰, 给出了一阶简并微扰能级满足的本征值方程.</p><p>&emsp;&emsp;正文部分只给出了推导的大致思路, 附录部分给出了详细的推导过程 (手写版).</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="mainbody.jpg" alt=""></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p><img src="appendix.jpg" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Quantum Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>量子力学复习概要</title>
+    <link href="/PHYS_quantum_theory/2021-05-31_quantum_mechanics_review/"/>
+    <url>/PHYS_quantum_theory/2021-05-31_quantum_mechanics_review/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要回顾了本科期间量子力学课上学到的东西. 此篇文章写于去年为理论所夏令营面试做准备期间, 最早发布于知乎, 原标题为 <a href="https://zhuanlan.zhihu.com/p/138351998">两个月速成 (误) 物理学本科高年级课程之量子力学篇: 总纲</a></p></blockquote><span id="more"></span><p><img src="cover.jpg" alt=""></p><h2 id="原-序言"><a href="#原-序言" class="headerlink" title="(原) 序言"></a>(原) 序言</h2><blockquote><p>虽然说是速成, 但其实是复习, 希望不要被标题误导了… 因为研究生想做引力方面理论研究, 所以在两个月左右之后大概会去参加理论所的夏令营. 复习的内容主要是四大力学, 基本的广义相对论以及群论, 还有时间的话可能会写一点傅里叶光学和数理方法方面的东西. 虽然内容确实不少, 但想想去年电动力学考试的时候也才花了三天的时间复习, 两个月复习完这些也是有可能的吧? 果然 deadline 才是第一生产力 😂</p><p>由于写这个系列的目的是为了复习, 大部分内容都是按照自己的理解来写的, 难免有所纰漏. 如认为内容存在任何问题, 欢迎在评论区提出.</p></blockquote><p><img src="quantum_mechanics_review_outline.png" alt=""></p><p>&emsp;&emsp;总的来说, 量子力学有两种讲法. 一种是利用波函数来讲, 其优势在于计算某些势场 (如方势阱) 时会比较方便, 较为典型的有曾谨言的量子力学教材. 另一种是从线性代数的角度来讲, 广泛运用狄拉克符号, 坐标表象下的波函数在这种语言中, 相当于所讨论的态在坐标本征态下的分量, 较为典型的有科恩的量子力学教材. 后一种讲法的优点在于, 抽象程度更高, 能清晰地看到量子力学的代数结构, 在讨论本征值时更方便, 且对于今后学习量子计算很有帮助. 在这个系列的量子力学部分, 着重从线性代数的角度来讲, 这部分内容的参考教材包括科恩的量子力学教材, 以及 Nielsen 的量子信息教材.</p><p>&emsp;&emsp;按照惯例, 在正式进入量子力学之前, 会介绍一点旧量子论的东西. 主要的内容包括黑体辐射, 光电效应, 玻尔理论, 索末菲量子化条件, 德布罗意波. 由于大部分内容在原子物理中已经学过, 所以不展开讨论旧量子论的内容.</p><p>&emsp;&emsp;数学基础主要是拓展的线性代数. 在正常的线性代数教学中, 主要是学的具体矩阵运算, 且几乎都只在实数域上讨论. 但在量子力学中, 关心的是算符, 矩阵知识一种计算手段, 且讨论的数域拓展到复数域. 另一方面, 还需要了解希尔伯特空间的基本概念. 不严谨地说, 希尔伯特空间就是一个定义了内积的复线性空间 (当然还有其它要求), 一般要求内积具有厄米性. 而一旦定义了内积, 就可以由内积衍生出希尔伯特空间的对偶空间, 进而衍生出算符的对偶算符和伴随算符等概念. 其中, 算符 $A$ 作用于态矢 $| \phi \rangle$ 后得到的矢量 $A | \phi \rangle$, 其在对偶空间中的对应量为 $\langle \phi | A^\dag$. 在量子力学的符号系统里面, 用右矢表示希尔伯特空间的矢量, 用左矢表示其对偶矢量. 有了基本概念之后, 就可以开始讨论算符的幺正性, 厄米性等性质. 值得一提的是, 算符的本征值以及不变子空间等概念也是相当重要的.</p><p>&emsp;&emsp;有了基本的数学基础后, 就可以正式开始量子力学的学习了. 首先是量子力学的基本假设: 态的假设, 物理体系演化规律的假设, 测量假设, 多粒子体系假设. </p><p>&emsp;&emsp;态假设认为, 单粒子的每一个状态, 都对应于希尔伯特空间中的一个射线 (之所以说是射线, 由于概率诠释, 最终都要做归一化, 所态矢的模意义不大). </p><p>&emsp;&emsp;物理体系演化规律假设有两种叙述方法: 一种认为态的演化可以用厄米算符来描述 (实质是概率守恒), 另一种是认为态的演化遵循薛定谔方程. 但只要由薛定谔方程出发, 提取出时间演化算符, 就可看到这两种表述的统一性. </p><p>&emsp;&emsp;测量假设则描述了测量这个过程. 在这个假设中, 每一个力学量对应一个幺正算符, 测量结果只能是该算符的本征值, 且测量后会坍缩到对应的某个本征态, 相应的概率是将波函数在正交归一的本征态下做展开时对应的展开系数.</p><p>&emsp;&emsp;最后的假设是多粒子体系波函数的假设. 简单来说, 其认为多粒子体系的态矢可以由原本的诸粒子态矢的各个直积的线性组合构成.</p><p>&emsp;&emsp;一般来说, 除了态矢描述以外, 还可采用密度矩阵 (可以视为经典统计中态的概率分布函数在量子力学中的推广) 描述, 其四条假设都可以用密度矩阵等效的来表示. 特别是在量子统计中, 密度矩阵扮演着及其重要的地位.</p><p>&emsp;&emsp;在有了基本的假设之后, 就是解一些具体的薛定谔方程了.</p><p>&emsp;&emsp;第一部分是方势阱 (包括束缚态及散射态) 及自由粒子. 考虑到势场的分布特性, 这类问题适合用波函数来讨论.</p><p>&emsp;&emsp;第二个部分是一维谐振子, 解法大致可分为代数解法和解析解法. 解析解法就是直接求解谐振子势下的薛定谔方程, 其中会用到厄米多项式等特殊函数, 总的来说计算较为繁琐, 且先得到本征函数后才考虑能级. 另一种是代数解法, 其先构造出产生湮灭算符, 及数算符, 再结合数算符的正定性以及产生湮灭算符作用到态上的特性直接给出本征值谱, 计算上更加简洁. 总的来说, 谐振子是相当重要和基本的一个模型, 在固体物理中, 将会由谐振子导出声子的概念.</p><p>&emsp;&emsp;第三部分是氢原子. 不该在介绍氢原子之前, 会先讨论角动量算符的一般理论, 主要是先从对易关系, 形式上定义出角动量算符, 并研究其本征值和本征函数. 对这些通用性质的研究, 将会很大的简化氢原子以及自旋、角动量耦合等诸多问题的讨论. (下面这段表述暂时不十分有把握, 故先写在括号里, 仅供参考: 如果从群论来考虑, 若系统具有球对称性, 其本征态是角动量算符的本征态. 这是由于球对称系统对应的对称变换群为 SO(3) 群, 而 SO(3) 群的生成元正式一种角动量算符. 换而言之, 角动量算符可能是与系统球对称性相联系的).</p><p>&emsp;&emsp;第四部分是关于自旋及角动量耦合理论的内容. 自旋部分, 重要的是泡利算符的引入 (群论中似乎也反复提到自旋是与某种对称性相联系的? 这部分还不太清楚). 值得注意的是, 自旋相关的内容在量子计算中是很重要的. 角动量耦合理论主要研究如何取合适的量子数来描述系统整体, 其中涉及到不同量子数对应的各个子空间如何进行联系的问题.</p><p>&emsp;&emsp;第五部分是对有外加磁场时的系统的研究. 主要的内容包括正常及反常塞曼效应, 以及朗道能级的介绍. 其中朗道能级在固体物理中也有涉及.</p><p>&emsp;&emsp;第五部分是关于微扰论的介绍, 主要分为非简并微扰和简并微扰. 微扰是十分重要的思想, 如固体物理中的紧束缚模型和近自由电子模型中均用到了微扰的方法. 在量子力学的范畴, 主要的简并微扰的两个例子是耦合谐振子 (其实也可以做严格解), 以及氢原子的 Stake 效应.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>PHYS Quantum Theory</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHYS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>流形的基本概念</title>
+    <link href="/PHYS_general_relativity/2021-05-31_basic_conception_of_manifold/"/>
+    <url>/PHYS_general_relativity/2021-05-31_basic_conception_of_manifold/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文主要介绍了流形及流形间映射的基本定义. 该文章为 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于<a href="https://zhuanlan.zhihu.com/p/139082693">知乎</a>, </p></blockquote><span id="more"></span><h2 id="原-序论"><a href="#原-序论" class="headerlink" title="(原) 序论"></a>(原) 序论</h2><blockquote><p>本来是在看《物理学中的群论》中的第四章的, 奈何实在看不懂里面对李群的介绍, 于是开始看梁灿彬的《微分几何入门与广义相对论》中册的附录中关于李群的部分. 不得不说, 有微分几何基础的话看这部分相当的舒畅. 看的过程中顺带复习了一些关于微分几何的基本概念.</p><p>这篇文章对应《微分几何入门与广义相对论》第 2.1 节的内容.</p></blockquote><p><img src="./2.1_basic_conception_about_manifold.png" alt="outline"></p><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1 基本概念"></a>1 基本概念</h2><p>&emsp;&emsp;首先给出流形的定义:</p><ul><li><u><strong>微分流形:</strong></u><br>对于拓扑空间 $M$, 若其有开覆盖 $\left\{ O_\alpha \right\}$ (即 $M = \bigcap_{\alpha} O_\alpha$) 满足下列条件, 则可称为 $n$ 维微分流形, 或简称 $n$ 维流形:<ol><li>$\forall\ O_\alpha$, $\exists$ 拓扑同胚映射 $\psi_\alpha: O_\alpha \to V_\alpha$ ($V_\alpha$ 是用通常拓扑衡量的开子集);</li><li>若 $O_\alpha \cap O_\beta$, 则复合映射 $\psi_\beta \circ \psi_\alpha^{-1}$ 是 $C^{\infty}$ 光滑的;</li></ol></li></ul><p>粗略地说, $n$ 维流形是带有微分结构的拓扑空间, 其局部地像 $\mathbb{R}^n$ (体现在可以局部地构建该集合与 $\mathbb{R}^n$ 的同胚关系), 但整体不一定像 $\mathbb{R}^n$. 具体而言, 定义的第一条表明, 微分流形是由一片一片的开集构成的, 每一片 $n$ 维微分流形上的开集, 都可通过某种映射, 使得其与 $R^{n}$ 上的某个开集同胚. 而定义的第二条表明, 如果 $M$ 的两个开集有交, 则可诱导出一个 $R^{n}$ 的某个开区域到 $R^{n}$ 的另一开区域的映射, 这个映射按照通常在数学分析中的定义是 $C^{\infty}$ 的.</p><h2 id="2-坐标系与图"><a href="#2-坐标系与图" class="headerlink" title="2 坐标系与图"></a>2 坐标系与图</h2><p>&emsp;&emsp;由于流形上每一片开集都可和 $\mathbb{R}^n$ 上的某个开区域对应, 因此可以借助这个开区域定义坐标系:</p><ul><li><u><strong>流形上的坐标系:</strong></u><br>设映射 $\psi_\alpha: O_\alpha \to \psi_\alpha[O_\alpha] \subset \mathbb{R}^n$ 是流形上的某个开集 $O_\alpha$ 到 $\mathbb{R}^n$ 的某个开区域的拓扑同胚映射, 则任一 $p \in O_\alpha$ 自然地通过这个映射与 $n$ 个数对应, 称这 $n$ 个数是点 $p$ 对应的坐标, 称 $(O_\alpha, \psi_\alpha)$ 构成一个坐标系.</li></ul><p>坐标系的取法往往不是唯一的. 试想流形上有交集的两个开区域 $O_\alpha$ 与 $O_\beta$, 其分别对应映射 $\psi_\alpha$ 与 $\psi_\beta$. 则在交集 $O_\alpha \cap O_\beta$ 中, 即可使用坐标系 $(O_\alpha, \psi_\alpha$, 也可使用坐标系 $(O_\beta, \psi_\beta)$. 于是同一个点对应两个 $\mathbb{R}^{n}$ 上的点, 由此可诱导出联系则两个点的一个的映射 (或者说 $n$ 个 $n$ 元函数):</p><script type="math/tex; mode=display">    x'^{\mu} = \phi^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>称这个映射 (或者说 $n$ 个 $n$ 元函数) 为一个 <strong>坐标变换</strong>. 此外, 通常也将对应的 $n$ 个数 $\left\{ x^{\mu} \right\}$ 称为坐标系, 以及将坐标变换简记为:</p><script type="math/tex; mode=display">    x'^{\mu} = x'^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>&emsp;&emsp;接下来介绍数学上另一种看待坐标系的观点:</p><ul><li><u><strong>图:</strong></u><br>坐标系 $(O_\alpha, \psi_\alpha)$ 在数学上又叫 <strong>图</strong>. 若图中的映射满足微分流形定义中对映射的要求, 则将这样的图的集合 $\left\{ (O_\alpha, \psi_\alpha) \right\}$ 称为 <strong>图册</strong>. 其中定义第二个要求又叫相容性条件, 因此图册中任意两个图都是相容的.</li></ul><p>对于同一个微分流形, 可以两个图册并不一定是相容的, 此时说两个图册代表不同的 <strong>微分结构</strong>.</p><h2 id="3-流形间的映射"><a href="#3-流形间的映射" class="headerlink" title="3 流形间的映射"></a>3 流形间的映射</h2><p>&emsp;&emsp;流形与拓扑不同的是, 除了具有拓扑结构以外, 还具有微分结构 (可以视为通过 $\mathbb{R}^n$ 上的函数来间接体现的). 对于流形间的映射, 除了一般的连续性以外, 还可谈论高阶的连续性. 具体定义如下:</p><ul><li><u><strong>流形间映射的连续性:</strong></u><br>  设 $f: M \to M’$ 是流形间的映射, 则可诱导出一个多元函数 $\psi’_\beta \circ f \circ \psi_\alpha^{-1}$ ($\psi’_\beta$ 与 $\psi’_\alpha$ 分别是 $M’$ 与 $M$ 上的坐标系). 若对于任意 $p \in M$, 该多元函数是 $C^{r}$ 的, 则称映射 $f$ 是 $C^{r}$ 类映射.</li></ul><p>&emsp;&emsp;类似与之前定义的拓扑同胚, 这里可以定义微分同胚, 反映两个流形微分结构的一致性:</p><ul><li><u><strong>微分同胚:</strong></u><br>  若存在 $f: M \to M’$, 满足:<ol><li>$f$ 是一一到上的;</li><li>$f$ 及 $f^{-1}$ 是 $C^{\infty}$ 的;<br>则称 $f$ 是 $M$ 到 $M’$ 的微分同胚映射, 且称 $M$ 与 $M’$ 互为微分同胚.</li></ol></li></ul><p>流形间的映射 $f: M \to M’$ 有一个特例, 即 $M’$ 为 $\mathbb{R}$ 的情形, 此时流形 $M$ 的每一点都对应着一个实数, 由此可引出第一个关于 “场” 的概念:</p><ul><li><u><strong>流形上的标量场:</strong></u><br>  称映射 $f: M \to \mathbb{R}$ 为流形 $M$ 上的 <strong>函数</strong>, 或 $M$ 上的 <strong>标量场</strong>. 若 $f$ 为 $C^{\infty}$ 的, 则称该标量场是 <strong>光滑的</strong>. 将 $M$ 上全体光滑标量场的集合记为 $\mathscr{F}_{M}$ 或 $\mathscr{F}$.</li></ul>]]></content>
     
     
     <categories>
@@ -32,8 +332,8 @@
   
   <entry>
     <title>球面坐标系中的微分几何及其应用</title>
-    <link href="/PHYS_mathematical_physics/2020-12-05_(DG)_DG_in_spherical_coordinate/"/>
-    <url>/PHYS_mathematical_physics/2020-12-05_(DG)_DG_in_spherical_coordinate/</url>
+    <link href="/PHYS_mathematical_physics/2020-12-05_DG_in_spherical_coordinate/"/>
+    <url>/PHYS_mathematical_physics/2020-12-05_DG_in_spherical_coordinate/</url>
     
     <content type="html"><![CDATA[<blockquote><p>本文于去年 (2020) 写于高量期末考试结束后, 主要受当时作数物助教时球坐标系 Laplace 算符及高量考试涉及的径向角动量算符的启发所写, 首发于<a href="https://zhuanlan.zhihu.com/p/331773455">知乎</a>.</p></blockquote><span id="more"></span><p><img src="/fig/cover/cover.png" alt=""></p><blockquote><p>前几个月一直忙着保研的事情, 好像已经好几个月没写成形一些的 note 了… 算一算上一次在知乎上传 note 好像是上学期期末? 话说这学期也快到期末了, 没想到鸽一下一个学期就没了 <code>┑(￣Д ￣)┍</code>.</p><p>今后上传的笔记在相比以往会有一些调整. 最显注的可能是封面选择. 主要是考虑到文风似乎过于严肃了一些, 所以向其它一些文章作者学习一下, 封面干脆换成可爱的二次元妹子, 希望能吸引更多的 (lsp) 读者 <code>(⊙ω⊙)</code> (虽然我有点怀疑是不是因为前面的大半年压力太大, 导致现在整个人变宅了一点…). 其二是之前上传笔记的动机是为了复习四大力学以应对理论所的面试, 但后来我将专栏名称改成了 “冬季银河的理论物理笔记”, 因此只要是和物理相关的一些内容应该都会上传. 其三是之前的笔记内容上更专一一些, 基本上每一篇都是来自某本教材的某一节或某几节, 今后的笔记应该会以平时碰到的问题为主干来组织内容, 因而可能会混杂好几门教材或好几门课的内容的情况 (比如这次的就混杂了微分几何, 数学物理方法, 量子力学三门课程的内容. 之所以想到计算球面坐标系的 Christoff 符号, 也是因为看宇宙学的时候计算了 FRW 度规下的 Christoff 符号, 打算再找个算 Christoff 符号的例子练习一下.). 最近一段时间主要是在看场论和宇宙学, 之后可能这些方面的内容会多一点. 最后一点是笔记上传格式的变化, 之前的时候都是把 LaTeX 编译的 pdf 文件导出后拼接成一整张长图, 但现在看来不拼接可能阅读体验会好一些, 而且也便于有需要的读者将每页图片保存后重新整合为单独的 pdf 文件. 所以今后除了将多余的页边剪裁一下以外, 不再将图片进行拼接.</p><blockquote><p>写这篇文章的主要动机是前不久在写数理方法的作业的参考答案的时候, 刚好碰到了球坐标下 Laplace 算符的问题, 加之高量考试又有径向角动量算符的题目, 以及一直想算一个微分几何的具体算例, 所以就写了这篇 note.</p></blockquote><p>这次的封面是藤原大佬 (pid: 27517) 的画中我最喜欢的一张, 算是入坑作吧 (最早好像在贴吧时代就看见过了).</p></blockquote><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;正文部分一开始先计算了球面坐标系下的度规张量, 并由此计算了相应的 Christoff 符号. 随后利用相应的计算结果, 讨论了 Laplace 算符和角动量算符在球面坐标系下的形式. 其中在 Laplace 算符的部分, 简单讨论了分离变量的问题. 在角动量算符的部分, 简单阐述了协变导数在动量及角动量算符中的必要性, 随后分别利用抽象指标和具体指标进行了计算, 并定义了径向动量模方算符, 以及能过对比证明了了角向 Laplace 算符与角动量算符只相差一个常系数. 文章的最后, 还从径向动量算符的定义出发, 证明了该算符的平方正是之前所定义的径向动量模方算符.</p><p>&emsp;&emsp;附录部分是笔记的手稿, 内有具体的计算过程. 用英文主要是因为英文写起来比较省力 <code>_(:з」∠)_</code>. (注意手稿的每一页是从左往右的, 水印的位置是每一页的右上角)</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><img src="figure/main_body-1.jpg" alt=""><br><img src="figure/main_body-2.jpg" alt=""><br><img src="figure/main_body-3.jpg" alt=""><br><img src="figure/main_body-4.jpg" alt=""><br><img src="figure/main_body-5.jpg" alt=""><br><img src="figure/main_body-6.jpg" alt=""><br><img src="figure/main_body-7.jpg" alt=""></p><h2 id="附录-手稿"><a href="#附录-手稿" class="headerlink" title="附录 (手稿)"></a>附录 (手稿)</h2><p><img src="figure/handwriting_1.jpg" alt=""><br><img src="figure/handwriting_2.jpg" alt=""><br><img src="figure/handwriting_3.jpg" alt=""><br><img src="figure/handwriting_4.jpg" alt=""><br><img src="figure/handwriting_5.jpg" alt=""><br><img src="figure/handwriting_6.jpg" alt=""><br><img src="figure/handwriting_7.jpg" alt=""><br><img src="figure/handwriting_8.jpg" alt=""><br><img src="figure/handwriting_9.jpg" alt=""></p>]]></content>
     
@@ -87,7 +387,7 @@
     <link href="/PHYS_mathematical_physics/BOOK_Arfken_2013/2021-05-29_chapter_7_ODE/"/>
     <url>/PHYS_mathematical_physics/BOOK_Arfken_2013/2021-05-29_chapter_7_ODE/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>This essay is a reading notes of <em>Mathematical Method of Physics (Arfken et al. 2013)</em>, <em>Chapter 1 A brief introduction</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Arfken, George B., Hans J. Weber, and Frank E. Harris. 2013. Mathematical Methods for Physics. 7th ed. Elsevier. https://doi.org/10.1016/B978-0-12-384654-9.00030-X.">[1]</span></a></sup></p></blockquote><span id="more"></span><h2 id="7-5-Series-Solutions-—-Frobenius’s-Method"><a href="#7-5-Series-Solutions-—-Frobenius’s-Method" class="headerlink" title="7.5 Series Solutions — Frobenius’s Method"></a>7.5 Series Solutions — Frobenius’s Method</h2><ul><li>theory of linear second order ODE</li><li>get solution for inhomogeneous equation: specific solution + general solution for corresponding homogeneous ODE.</li></ul><h3 id="First-Example-—-Linear-Oscillator"><a href="#First-Example-—-Linear-Oscillator" class="headerlink" title="First Example — Linear Oscillator"></a>First Example — Linear Oscillator</h3><ul><li>Frobenius’s method series expanding</li><li>$j = 0$ case, <em>indicial equation</em>: equation coming from the coefficient of the lowest power of $x$</li><li>$j = 1$ case</li><li>$j \geq 1$ case: recurrence relation</li></ul><h3 id="Expansion-about-x-0"><a href="#Expansion-about-x-0" class="headerlink" title="Expansion about $x_0$"></a>Expansion about $x_0$</h3><ul><li>limitation of $x_0$: $x_0$ should not be chosen at an essential singularity or Frobenius’s method will probably fail</li></ul><h3 id="Symmetry-of-Solutions"><a href="#Symmetry-of-Solutions" class="headerlink" title="Symmetry of Solutions"></a>Symmetry of Solutions</h3><ul><li>result: if operator $\hat A(x)$ has a specific parity, meas $\hat A(x) = \pm \hat A(x)$, then solution of equation $\hat A(x) y(x) = 0$ will also has a specific parity</li><li>“Most interactions (beta decay is the big exception) are also even or odd,”</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Arfken, George B., Hans J. Weber, and Frank E. Harris. 2013. Mathematical Methods for Physics. 7th ed. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-384654-9.00030-X">https://doi.org/10.1016/B978-0-12-384654-9.00030-X</a>.<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>This essay is a reading notes of <em>Mathematical Method of Physics (Arfken et al. 2013)</em>, <em>Chapter 1 A brief introduction</em> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Arfken, George B., Hans J. Weber, and Frank E. Harris. 2013. Mathematical Methods for Physics. 7th ed. Elsevier. https://doi.org/10.1016/B978-0-12-384654-9.00030-X.">[1]</span></a></sup></p></blockquote><span id="more"></span><h2 id="7-5-Series-Solutions-—-Frobenius’s-Method"><a href="#7-5-Series-Solutions-—-Frobenius’s-Method" class="headerlink" title="7.5 Series Solutions — Frobenius’s Method"></a>7.5 Series Solutions — Frobenius’s Method</h2><ul><li>theory of linear second order ODE</li><li>get solution for inhomogeneous equation: specific solution + general solution for corresponding homogeneous ODE.</li></ul><h3 id="First-Example-—-Linear-Oscillator"><a href="#First-Example-—-Linear-Oscillator" class="headerlink" title="First Example — Linear Oscillator"></a>First Example — Linear Oscillator</h3><ul><li>Frobenius’s method series expanding</li><li>$j = 0$ case, <em>indicial equation</em>: equation coming from the coefficient of the lowest power of $x$</li><li>$j = 1$ case</li><li>$j \geq 1$ case: recurrence relation</li></ul><h3 id="Expansion-about-x-0"><a href="#Expansion-about-x-0" class="headerlink" title="Expansion about $x_0$"></a>Expansion about $x_0$</h3><ul><li>limitation of $x_0$: $x_0$ should not be chosen at an essential singularity or Frobenius’s method will probably fail</li></ul><h3 id="Symmetry-of-Solutions"><a href="#Symmetry-of-Solutions" class="headerlink" title="Symmetry of Solutions"></a>Symmetry of Solutions</h3><ul><li>result: if operator $\hat A(x)$ has a specific parity, meas $\hat A(x) = \pm \hat A(x)$, then solution of equation $\hat A(x) y(x) = 0$ will also has a specific parity</li><li>“Most interactions (beta decay is the big exception) are also even or odd,”</li></ul><h3 id="A-Second-Example-—-Bessel’s-Equation"><a href="#A-Second-Example-—-Bessel’s-Equation" class="headerlink" title="A Second Example — Bessel’s Equation"></a>A Second Example — Bessel’s Equation</h3><ul><li>$s = -n$ and $n$ is interger: a divergency problem raise in the case.</li></ul><h3 id="Fuchs’-Theorem"><a href="#Fuchs’-Theorem" class="headerlink" title="Fuchs’ Theorem"></a>Fuchs’ Theorem</h3><ul><li>Description: we can always obtain at lest one power-series solution at ordinary point or a regular singularity point.</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Arfken, George B., Hans J. Weber, and Frank E. Harris. 2013. Mathematical Methods for Physics. 7th ed. Elsevier. <a href="https://doi.org/10.1016/B978-0-12-384654-9.00030-X">https://doi.org/10.1016/B978-0-12-384654-9.00030-X</a>.<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
