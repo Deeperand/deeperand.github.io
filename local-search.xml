@@ -4,6 +4,222 @@
   
   
   <entry>
+    <title>[REF] YGOPro Guide</title>
+    <link href="/YGO/2021-07-11_REF_ygopro_guide/"/>
+    <url>/YGO/2021-07-11_REF_ygopro_guide/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>由于 YGOPro 及 YGOPro2 的说明都是在软件包目录中, 平时查阅不太方便, 因此将其复制出来并重新排版以便查阅。</p></blockquote><span id="more"></span><h2 id="YGOPro"><a href="#YGOPro" class="headerlink" title="YGOPro"></a>YGOPro</h2><p>A script engine for “yu-gi-oh!” and sample gui</p><p><a href="https://github.com/Fluorohydride/ygopro/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E">中文说明</a></p><h3 id="Keys"><a href="#Keys" class="headerlink" title="Keys:"></a>Keys:</h3><ul><li><code>ESC</code>: Minimize the window.</li><li><code>A</code>: Holding down this button will let the system stop at every timing.</li><li><code>S</code>: Holding down this button will let the system skip every timing.</li><li><code>D</code>: Holding down this button will let the system stop at available timing.</li><li><code>R</code>: Fix the font glitch.</li><li><code>F1</code>~<code>F4</code>: Show the cards in your grave, banished zone, extra deck, xyz materials.</li><li><code>F5</code>~<code>F8</code>: Show the cards in your opponent’s grave, banished zone, extra deck, xyz materials.</li></ul><h3 id="Color-in-card-list"><a href="#Color-in-card-list" class="headerlink" title="Color in card list:"></a>Color in card list:</h3><h4 id="Background"><a href="#Background" class="headerlink" title="Background:"></a>Background:</h4><ul><li>White = your card, Grey = your opponent’s card  </li></ul><h4 id="Text"><a href="#Text" class="headerlink" title="Text:"></a>Text:</h4><p>Cards in deck, extra deck and banished zone: </p><ul><li>Black = face-up, Blue = face-down</li></ul><p>Xyz materials:</p><ul><li>Black = default, Blue = the owner of the xyz material is different from its controller</li></ul><h3 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence:"></a>Sequence:</h3><ul><li>Monster Zone: 1~5, starting from the left hand side.</li><li>Spell &amp; Trap Zone: 1~5, starting from the left hand side.</li><li>Field Zone: 6</li><li>Pendulum Zone: 0~1, starting from the left hand side.</li><li>The others: 1~n, starting from the bottom.</li></ul><h3 id="Deck-edit-page"><a href="#Deck-edit-page" class="headerlink" title="Deck edit page:"></a>Deck edit page:</h3><ul><li>All numeric textboxs: They support <code>&gt;</code>, <code>=</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> signs.</li><li>Card name: Search card names and texts by default, <code>$foo</code> will only search foo in card names, and <code>@foo</code> will search cards of <code>foo</code> archetype (due to translation, card name contains <code>foo</code> does not mean that card is <code>foo</code> card).</li></ul><h3 id="Command-line-options"><a href="#Command-line-options" class="headerlink" title="Command-line options:"></a>Command-line options:</h3><ul><li><code>-e foo.cdb</code>: Load foo.cdb as the extra database.</li><li><code>-n nickname</code>: Set the nickname.</li><li><code>-h 192.168.0.2</code>: Set the host to join in LAN mode.</li><li><code>-p 7911</code>: Set the port to join in LAN mode.</li><li><code>-w abc</code>: Set the password to join in LAN mode.</li><li><code>-d</code>: Enter the deck edit page.</li><li><code>-d deck</code>: If used along with <code>-j</code> it mean select the deck, or it will open the deck to edit.</li><li><code>-c</code>: Create host with default settings.</li><li><code>-j</code>: Join the host specified in above, or if absent, lasthost in system.conf file.</li><li><code>-r</code>: Enter the replay mode page.</li><li><code>-r replay.yrp</code>: Load the replay.yrp in replay mode.</li><li><code>-s</code>: Enter the single mode page.</li><li><code>-s puzzle.lua</code>: Load the puzzle.lua in single mode.</li><li><code>-k</code>: Keep when duel finished. See below.</li></ul><h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><ul><li><code>-c</code> <code>-j</code> <code>-e</code> <code>-r</code> <code>-s</code> shoule be the last parameter, because any parameters after it will get ignored.</li><li><code>-d</code> <code>-c</code> <code>-j</code> <code>-e</code> <code>-r</code> <code>-s</code> will make YGOPro automatically exit when the duel or deck editing is finished. This is useful for some launchers. If you want to keep it, add <code>-k</code> before them.</li><li><code>-d</code> <code>-r</code> <code>-s</code> support full path of file, or just filename. But remember deck filename should NOT have extension when replay and single filename MUST have extension.</li></ul><h3 id="Directories"><a href="#Directories" class="headerlink" title="Directories:"></a>Directories:</h3><ul><li><code>pics</code>: <code>.jpg</code> card images (177*254).</li><li><code>pics</code> \ <code>thumbnail</code>: <code>.jpg</code> thumbnail images(44*64).</li><li><code>script</code>: <code>.lua</code> script files.</li><li><code>textures</code>: Other image files.</li><li><code>deck</code>: <code>.ydk</code> deck files.</li><li><code>replay</code>: <code>.yrp</code> replay files.</li><li><code>expansions</code>: <code>*.cdb</code> will be loaded as extra databases.</li></ul><h2 id="YGOPro2"><a href="#YGOPro2" class="headerlink" title="YGOPro2"></a>YGOPro2</h2><blockquote><p>注意：<br>YGOPro2对电脑有一定配置需求，若无法流畅运行推荐使用 <a href="http://ygocore.ys168.com/">YGOPro 原版游戏</a></p></blockquote><h3 id="常用联机对战方法"><a href="#常用联机对战方法" class="headerlink" title="常用联机对战方法"></a>常用联机对战方法</h3><p>主机地址的两个空分别填入 <code>s1.ygo233.com</code> 和 <code>233</code><br>房间密码留空，点击加入游戏，进入比赛模式（三局两胜）的随机对战。<br>房间密码输入 <code>AI</code>，可与在线人机对战    【本地人机目前无法使用，请用在线人机代替】。<br>房间密码输入 <code>S</code>，可进入单局的随机对战。输入 <code>T</code>，可进入 2V2 模式的随机对战。</p><h3 id="约战方法"><a href="#约战方法" class="headerlink" title="约战方法"></a>约战方法</h3><p>房间密码输入任意其他文字，可以以那串文字为房间名建立房间，让你的对手输入同样的文字，即可加入房间。在房间名前加 <code>M#</code> 可以设置房间为比赛模式。加 <code>T#</code> 可以设置房间为 2V2 模式。大小写随意。房间名还支持更多特殊代码，详见 <a href="https://ygo233.com/usage">YGOPro 使用方法</a></p><h3 id="游戏更新方法"><a href="#游戏更新方法" class="headerlink" title="游戏更新方法"></a>游戏更新方法</h3><p><a href="http://ygopro2.lofter.com/">官网</a> 目前受 lofter 限制无法提供下载链接，需从<a href="http://ygocore.ys168.com/">娱乐力量全开网盘</a>下载更新。 完整版整合了发布日期之前的全部更新补丁，若存在完整版更新日期之后的补丁则需下载安装。</p><p>也可以从 <a href="https://ygopro2.link/downloads.html">YGOPro2 完整版及更新</a> 下载, 或进 YGOPro2 官群（966380039）从群文件下载。</p><h3 id="更换卡背、背景、头像的方法"><a href="#更换卡背、背景、头像的方法" class="headerlink" title="更换卡背、背景、头像的方法"></a>更换卡背、背景、头像的方法</h3><ul><li>背景: 背景文件为游戏目录 <code>\texture\common</code> 文件夹下的 <code>desk.jpg</code> 文件。将它删除或者重命名，然后将你想要的背景图片（必须也是jpg格式）放在该文件夹，并且命名为 <code>desk.jpg</code>。重启游戏。</li><li>卡背：卡背文件为游戏目录 <code>\texture\duel</code> 文件夹下的 <code>me.jpg</code> 文件。将它删除或者重命名，然后将你想要的卡背（必须也是 jpg 格式）放在该文件夹，并且命名为 <code>me.jpg</code>。对手卡背的文件为同一文件夹下的 <code>opponent.jpg</code> 文件，进行类似操作即可更换对方卡背。重启游戏。</li><li>头像：头像文件为游戏目录 <code>\texture\face</code> 文件夹下的”你的游戏 <code>id.png</code> “文件，把合适的图片放在 <code>face</code> 文件夹并命名为你的游戏 <code>id</code>。</li></ul><p>更换其他美术素材也都在游戏目录 <code>\texture</code> 文件夹下，方法同上。YGOPro2 官群（966380039）群文件有大量替换用美术素材下载。</p><h3 id="FQA"><a href="#FQA" class="headerlink" title="FQA"></a>FQA</h3><p>Q：为什么我按照上面的操作更换了图片文件，我的卡背/背景/头像替换失败了？<br>A：系统中，文件可能默认不显示jpg等后缀名，可能替换的图片后缀名和之前的不一样，自行百度搜索“怎么显示文件后缀名”，处理后再进行操作。</p><p>关于”安装到萌卡.exe”： <a href="https://mycard.moe/">萌卡</a> 是一个对战平台，内置原版 YGOPro，有玩家社区、聊天室、决斗数据、天梯排名等功能。若电脑安装有萌卡，运行”安装到萌卡.exe” 即可把萌卡中启动 YGOPro 替代为启动 YGOPro2。</p><p>关于手机版YGOPro2下载：<br>注意：以下版本均非 YGOPro2 实验室官方开发。</p><ul><li>安卓版：QQ群 1030685516 。</li><li><a href="https://cli.koishi.pro/download/">iOS版</a>：一般需连接电脑使用助手安装，详情见下载页面。</li></ul><h3 id="Advenced-Guide"><a href="#Advenced-Guide" class="headerlink" title="Advenced Guide"></a>Advenced Guide</h3><h4 id="安装扩展："><a href="#安装扩展：" class="headerlink" title="安装扩展："></a>安装扩展：</h4><p>将ypk格式的扩展包文件放至expansions文件夹中重启YGOPro2即可。</p><h4 id="文件结构："><a href="#文件结构：" class="headerlink" title="文件结构："></a>文件结构：</h4><ul><li><code>cdb</code>：支持读取其中数据库文件 (<code>*.cdb</code>)与字段文件 (<code>*.conf</code>)</li><li><code>data</code>：支持读取其中<code>zip</code>文件</li><li><code>expansions</code>：支持读取其中ypk文件，数据库文件(<em>.cdb)与字段文件(</em>.conf)</li><li><code>diy</code>：建议弃用，改用 <code>expansions</code>，<code>ypk</code> 与 <code>zip</code> 本质为同一格式</li><li><code>pack</code>：卡包数据（年久失修）</li></ul><p>开源地址为: <a href="https://github.com/lllyasviel/YGOProUnity_V2">YGOProUnity_V2</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>YGO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>REF</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TODO] 编写 YGO 对战 AI</title>
+    <link href="/YGO/2021-07-11_ygopro_AI/"/>
+    <url>/YGO/2021-07-11_ygopro_AI/</url>
+    
+    <content type="html"><![CDATA[<p>先挖个坑, 以后有时间再研究一个如何编写 YGO 的对站 AI (会用到 Lua 语言)。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.jianshu.com/p/762d78417576">YGOPro AI脚本教程（译文）</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>YGO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>TODO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] 百度网盘限速破解方法 (未解决)</title>
+    <link href="/CS_web/2021-07-11_TRICK_speed_limit_of_Baidu_netdist/"/>
+    <url>/CS_web/2021-07-11_TRICK_speed_limit_of_Baidu_netdist/</url>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;之前尝试了绕过百度网盘限速的方法, 但遗憾的是尚未成功不限速下载到所需资源。大体来说, 绕过限速需要先通过各种方法对资源的地址进行解析 (如 KinhDown <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="KinhDown（加速！永无止境）">[1]</span></a></sup> 及油猴脚本 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="使用油猴与IDM实现百度直链下载（破解限速）">[2]</span></a></sup> ), 之后通过一个 Windows 平台的下载器 <em>Internet Dowloading Manager</em> (IDM), 下载将解析得到的链接。但部分资源进行下载时可能会显示没有权限, 这种情况很可能是因为 “某度为了防止用外部下载工具突破限速加入了cookie验证” <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="idm服务器响应显示你没有权限下载此文件这个怎么办？">[4]</span></a></sup> ,目前我自己还没尝试过绕问题的应对方法。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://kinhdown.kinh.cc">KinhDown（加速！永无止境）</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://zhuanlan.zhihu.com/p/346674068">使用油猴与IDM实现百度直链下载（破解限速）</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://zhuanlan.zhihu.com/p/379708002">度盘+IDM不限速！跑满宽带！</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://www.zhihu.com/question/373322044/answer/1138118303">idm服务器响应显示你没有权限下载此文件这个怎么办？</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TODO</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Forbid Auto-launch while Starting Up</title>
+    <link href="/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/"/>
+    <url>/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/</url>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;At few days ago, I found <code>Steam.app</code> will always launch while I loging in or starting up my MacBook even I trun off the auto launch option at <code>Perference</code> of <code>Steam.app</code>. Later I found to ture off it, one need cancel log in loading options at <code>System Perference</code> -&gt; <code>Users &amp; Groups</code> -&gt; <code>Login Items</code>.</p><p><img src="login_items.png" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] 删除 Word 中的空白页</title>
+    <link href="/CS_GUI_software/MS_office/2021-07-11_TRICK_delete_empty_page_in_word/"/>
+    <url>/CS_GUI_software/MS_office/2021-07-11_TRICK_delete_empty_page_in_word/</url>
+    
+    <content type="html"><![CDATA[<p>删除空白页的原理实际是删除换页符 (不可见字符, Word 中会以特殊符号标记), 于是最简单的方法是选中换页符, 用 <code>backspace</code> 或 <code>delete</code> (<code>shift</code> + <code>backspace</code>) 删除 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Word空白页怎么都删除不掉？用这6个方法随便删！">[1]</span></a></sup> , 或者直接选中空白页的第一行, 使用 <code>delete</code> (此时换页符在光标的下一个字符, 因而 <code>delete</code> 刚好将其删除)。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://zhuanlan.zhihu.com/p/148757304">Word空白页怎么都删除不掉？用这6个方法随便删！</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Hide Comments in Word</title>
+    <link href="/CS_GUI_software/MS_office/2021-07-11_TRICK_hide_comment/"/>
+    <url>/CS_GUI_software/MS_office/2021-07-11_TRICK_hide_comment/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>Sometims there is a comments side area in Word, this article introduced how to hide it.</p></blockquote><span id="more"></span><h2 id="Main-Body"><a href="#Main-Body" class="headerlink" title="Main Body"></a>Main Body</h2><p>&emsp;&emsp;To control the activy or hidden behavior, one can find the setting at <code>Review</code>. There are 4 types of the setting <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to Display or Hide Comments in Word 2016">[1]</span></a></sup> .</p><ul><li><strong>Simple Markup</strong>: Chose this item to display the markup area and view comments and revisions.</li><li><strong>All Markup</strong>: Choose this item to display the markup area. Any comments or revisions are shown, along with lines referencing their locations in the text.</li><li><strong>No Markup</strong>: Choose this item to hide the markup area. Comments don’t appear, and any revisions are hidden in the text.</li><li><strong>Original</strong>: Choose this item to hide the markup area as well as any revisions made to the document. With regards to comments, this item is identical to No Markup.</li></ul><p>the effect is showen following</p><p><img src="mark_1.png" alt="active"></p><p><img src="mark_2.png" alt="hide"></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.dummies.com/software/microsoft-office/word/how-to-display-or-hide-comments-in-word-2016/">How to Display or Hide Comments in Word 2016</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+      <category>MS Office</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] 在 LaTeX 中插入 PDF</title>
+    <link href="/CS_latex/2021-06-14_TRICK_insert_pdf/"/>
+    <url>/CS_latex/2021-06-14_TRICK_insert_pdf/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文介绍了使用 LaTeX 插入 PDF 页面的方法。</p></blockquote><span id="more"></span><p>&emsp;&emsp;使用包 <code>pdfpages</code> 可以实现。设要插入的 PDF 文件为 <code>file.pdf</code>, 则:</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\usepackage</span>&#123;pdfpages&#125;<br><span class="hljs-keyword">\includepdf</span>&#123;file.pdf&#125; <br><span class="hljs-keyword">\newpage</span><br></code></pre></div></td></tr></table></figure><p>可加入 <code>pages</code> 选项来指定插入的页码, 如</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% insert page 1 to 4</span><br><span class="hljs-keyword">\includepdf</span>[pages=&#123;1-4&#125;]&#123;file.pdf&#125; <br><br><span class="hljs-comment">% insert page 3</span><br><span class="hljs-keyword">\includepdf</span>[pages=&#123;1,3&#125;]&#123;file.pdf&#125; <br><br><span class="hljs-comment">% insert page 1, an empty page and page 3 </span><br><span class="hljs-keyword">\includepdf</span>[pages=&#123;1, &#123;&#125;, 3&#125;]&#123;file.pdf&#125; <span class="hljs-comment">% &quot;&#123;&#125;&quot; means empty page</span><br><br><span class="hljs-comment">% insert all pages</span><br><span class="hljs-keyword">\includepdf</span>[&#123;pages=-&#125;]&#123;file.pdf&#125;<br><br><span class="hljs-comment">% insert last 1 page</span><br><span class="hljs-keyword">\includepdf</span>[pages=&#123;last-1&#125;]&#123;file.pdf&#125;<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>&emsp;&emsp;可通过查阅宏包文档获取更多信息 <code>texdoc pdfpages</code></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] Docker is unable to find image locally</title>
+    <link href="/CS_linux/2021-06-13_DEBUG_docker_unable_find_image/"/>
+    <url>/CS_linux/2021-06-13_DEBUG_docker_unable_find_image/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>今天安装了 Docker 后, 发现运行 <code>docker run -d -p 80:80 docker/getting-started</code>, 后来发现是代理设置问题。</p></blockquote><span id="more"></span><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>&emsp;&emsp;在按照 Docker 的帮助文档的指示运行 <code>docker run -d -p 80:80 docker/getting-started</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Docker: Start the tutorial">[1]</span></a></sup> 时出现报错 <code>Unable to find image &#39;docker/getting-started&#39; locally</code></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>&emsp;&emsp;实际上之后 Docker 会自动下载 <code>docker/getting-started</code>, 但由于当时我的代理设置成了全局模式, 所以自动下载无法进行。取肖全局模式即可解决问题 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Docker is unable to find image locally">[2]</span></a></sup> 。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://docs.docker.com/get-started/#start-the-tutorial">Docker: Start the tutorial</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://forums.docker.com/t/docker-is-unable-to-find-image-locally/99504">Docker is unable to find image locally</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] Fluid 中的 Categories 设置选项</title>
     <link href="/CS_hexo/2021-05-31_TRICK_fluid_categories_setting/"/>
     <url>/CS_hexo/2021-05-31_TRICK_fluid_categories_setting/</url>
@@ -709,7 +925,7 @@
     <link href="/CS_latex/2021-05-13_DEBUG_bug_in_undergraduate_paper/"/>
     <url>/CS_latex/2021-05-13_DEBUG_bug_in_undergraduate_paper/</url>
     
-    <content type="html"><![CDATA[<p>这篇文章用于记录撰写毕业论文时遇到的与 LaTeX 相关的问题</p><span id="more"></span><h2 id="LaTeX-mathscr-字体上下标几乎对齐"><a href="#LaTeX-mathscr-字体上下标几乎对齐" class="headerlink" title="[LaTeX] \mathscr 字体上下标几乎对齐"></a>[LaTeX] <code>\mathscr</code> 字体上下标几乎对齐</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用 <code>\mathscr</code> 字体时, 指令 <code>\tensor</code> 生成的上标与下标几乎对齐</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>\mathscr</code> 的符号后加上小间隔 <code>\,</code>, 如<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-built_in">$</span><span class="hljs-keyword">\tensor</span>&#123;&#123;<span class="hljs-keyword">\mathscr</span>&#123;G&#125;<span class="hljs-keyword">\,</span>&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;i&#125;<span class="hljs-built_in">_</span>&#123;j&#125;&#125;<span class="hljs-built_in">$</span><br></code></pre></div></td></tr></table></figure></p><h2 id="Vim-vimtex-无法识别文件为主文件的子文件"><a href="#Vim-vimtex-无法识别文件为主文件的子文件" class="headerlink" title="[Vim] vimtex 无法识别文件为主文件的子文件"></a>[Vim] <code>vimtex</code> 无法识别文件为主文件的子文件</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><ul><li>对于子文件, 原本会在状态栏 (<code>airline</code> 提供) 下显示 <code>&#123;m&#125;</code>, 但之前一直没显示 </li><li>在子文件中打开目录 (<code>vimtex</code> 提供) 时为空</li><li>子文件中代码高亮无法把 <code>align</code> 环境识别为数学类环境, 除非在子文件中再一次使用 <code>\usepackage&#123;amsmath&#125;</code></li><li>子文件发生变化并保存时, 即使处于 <code>contimue mode</code> 也无法自动编绎</li></ul><p>经分析, 背后的原因是 <code>vimtex</code> 没有将这些文件识别为主文件的子文件.</p><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>&emsp;&emsp;最终发现是 <code>\documentclass</code> 的格式问题. 将原本 <code>cquthesis</code> 主文件 <code>main.tex</code> 中默认的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span><span class="hljs-comment">%</span><br>    [type=bachelor, bilinguallist=apart,]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><br>改为<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[type=bachelor, bilinguallist=apart,]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><br>后问题解决.</p><h2 id="LaTeX-附录部分公式编号没有附录的节名"><a href="#LaTeX-附录部分公式编号没有附录的节名" class="headerlink" title="[LaTeX] 附录部分公式编号没有附录的节名"></a>[LaTeX] 附录部分公式编号没有附录的节名</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><ul><li>附录中的公式编号形如 “(.1)”, 而预期的应形如 “(A.1)”</li><li>使用 <code>\eqref</code> 引用公式时也形如 “式 (.1)”</li></ul><h3 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>\appendix</code> 指令后显式设置公式编号格式, 如<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\renewcommand</span><span class="hljs-keyword">\theequation</span>&#123;<span class="hljs-comment">%</span><br>    <span class="hljs-keyword">\thechapter</span>.<span class="hljs-keyword">\arabic</span>&#123;equation&#125;&#125;<br></code></pre></div></td></tr></table></figure></p><h2 id="Vim-vimtex-目录中不显示注释中的-TODO"><a href="#Vim-vimtex-目录中不显示注释中的-TODO" class="headerlink" title="[Vim] vimtex 目录中不显示注释中的 TODO"></a>[Vim] <code>vimtex</code> 目录中不显示注释中的 <code>TODO</code></h2><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>理论上来说, 在 <code>.tex</code> 的注释中包含了 <code>TODO</code> 的部分会在 <code>vimtex</code> 的目录指令中显示出来, 但在使用 <code>% TODO</code> 时该条目不显示</p><h3 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h3><p>经测试, <code>TODO</code> 后必须包含文字才可以, 且其后跟着的冒号不会在目录中额外显示. 如, 下面两种写法是等效的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% <span class="hljs-doctag">TODO:</span> introduction for GW</span><br><span class="hljs-comment">% TODO introduction for GW</span><br></code></pre></div></td></tr></table></figure><br>均会在 <code>vimtex</code> 提供的目录 <em>顶端</em> 中显示该 <code>TODO</code> 条目, 后面会跟随相应的文字描述</p><p><img src="content_TODO.png" alt=""></p><p>另一方面, 若只使用<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% TODO</span><br></code></pre></div></td></tr></table></figure><br>则在 <code>vimtex</code> 的目录中不会有任何显示.</p><h2 id="LaTeX-清除空白页"><a href="#LaTeX-清除空白页" class="headerlink" title="[LaTeX] 清除空白页"></a>[LaTeX] 清除空白页</h2><h3 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h3><p>将 <code>cquthesis</code> 设为 <code>twoside</code> 模式后发现部分章节在结束后出现空白页.</p><h3 id="解决方法-4"><a href="#解决方法-4" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>cquthesis.cls</code> 中发现了代码</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\DeclareDefaultOption</span>&#123;<span class="hljs-keyword">\PassOptionsToClass</span>&#123;<span class="hljs-keyword">\CurrentOption</span>&#125;&#123;ctexbook&#125;&#125;<br></code></pre></div></td></tr></table></figure><p>意味着在 <code>cquthesis</code> 文档类的 <code>option</code> 会传递给 <code>ctexbook</code> 因此解决方法参考普通文档的即可. 问题发生的根本原因在于 <code>book</code> 中默认强制章节从奇数页开始. 为了解决此问题, 可加上选项 <code>openany</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Latex 如何清除空白页？">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTex的book类型中，目录及chapter前自动插入空白页面">[2]</span></a></sup> , 如</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[type=bachelor, bilinguallist=apart, printmode=twoside, openany]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.zhihu.com/question/266237548">Latex 如何清除空白页？</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://blog.csdn.net/Sarah_LZ/article/details/90737631">LaTex的book类型中，目录及chapter前自动插入空白页面</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    <content type="html"><![CDATA[<p>这篇文章用于记录撰写毕业论文时遇到的与 LaTeX 相关的问题</p><span id="more"></span><h2 id="LaTeX-mathscr-字体上下标几乎对齐"><a href="#LaTeX-mathscr-字体上下标几乎对齐" class="headerlink" title="[LaTeX] \mathscr 字体上下标几乎对齐"></a>[LaTeX] <code>\mathscr</code> 字体上下标几乎对齐</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用 <code>\mathscr</code> 字体时, 指令 <code>\tensor</code> 生成的上标与下标几乎对齐</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>\mathscr</code> 的符号后加上小间隔 <code>\,</code>, 如<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-built_in">$</span><span class="hljs-keyword">\tensor</span>&#123;&#123;<span class="hljs-keyword">\mathscr</span>&#123;G&#125;<span class="hljs-keyword">\,</span>&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;i&#125;<span class="hljs-built_in">_</span>&#123;j&#125;&#125;<span class="hljs-built_in">$</span><br></code></pre></div></td></tr></table></figure></p><h2 id="Vim-vimtex-无法识别文件为主文件的子文件"><a href="#Vim-vimtex-无法识别文件为主文件的子文件" class="headerlink" title="[Vim] vimtex 无法识别文件为主文件的子文件"></a>[Vim] <code>vimtex</code> 无法识别文件为主文件的子文件</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><ul><li>对于子文件, 原本会在状态栏 (<code>airline</code> 提供) 下显示 <code>&#123;m&#125;</code>, 但之前一直没显示 </li><li>在子文件中打开目录 (<code>vimtex</code> 提供) 时为空</li><li>子文件中代码高亮无法把 <code>align</code> 环境识别为数学类环境, 除非在子文件中再一次使用 <code>\usepackage&#123;amsmath&#125;</code></li><li>子文件发生变化并保存时, 即使处于 <code>contimue mode</code> 也无法自动编绎</li></ul><p>经分析, 背后的原因是 <code>vimtex</code> 没有将这些文件识别为主文件的子文件.</p><h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>&emsp;&emsp;最终发现是 <code>\documentclass</code> 的格式问题. 将原本 <code>cquthesis</code> 主文件 <code>main.tex</code> 中默认的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span><span class="hljs-comment">%</span><br>    [type=bachelor, bilinguallist=apart,]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><br>改为<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[type=bachelor, bilinguallist=apart,]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><br>后问题解决.</p><h2 id="LaTeX-附录部分公式编号没有附录的节名"><a href="#LaTeX-附录部分公式编号没有附录的节名" class="headerlink" title="[LaTeX] 附录部分公式编号没有附录的节名"></a>[LaTeX] 附录部分公式编号没有附录的节名</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><ul><li>附录中的公式编号形如 “(.1)”, 而预期的应形如 “(A.1)”</li><li>使用 <code>\eqref</code> 引用公式时也形如 “式 (.1)”</li></ul><h3 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>\appendix</code> 指令后显式设置公式编号格式, 如<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\renewcommand</span><span class="hljs-keyword">\theequation</span>&#123;<span class="hljs-comment">%</span><br>    <span class="hljs-keyword">\thechapter</span>.<span class="hljs-keyword">\arabic</span>&#123;equation&#125;&#125;<br></code></pre></div></td></tr></table></figure></p><h2 id="Vim-vimtex-目录中不显示注释中的-TODO"><a href="#Vim-vimtex-目录中不显示注释中的-TODO" class="headerlink" title="[Vim] vimtex 目录中不显示注释中的 TODO"></a>[Vim] <code>vimtex</code> 目录中不显示注释中的 <code>TODO</code></h2><h3 id="问题描述-3"><a href="#问题描述-3" class="headerlink" title="问题描述"></a>问题描述</h3><p>理论上来说, 在 <code>.tex</code> 的注释中包含了 <code>TODO</code> 的部分会在 <code>vimtex</code> 的目录指令中显示出来, 但在使用 <code>% TODO</code> 时该条目不显示</p><h3 id="解决方法-3"><a href="#解决方法-3" class="headerlink" title="解决方法"></a>解决方法</h3><p>经测试, <code>TODO</code> 后必须包含文字才可以, 且其后跟着的冒号不会在目录中额外显示. 如, 下面两种写法是等效的<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% <span class="hljs-doctag">TODO:</span> introduction for GW</span><br><span class="hljs-comment">% TODO introduction for GW</span><br></code></pre></div></td></tr></table></figure><br>均会在 <code>vimtex</code> 提供的目录 <em>顶端</em> 中显示该 <code>TODO</code> 条目, 后面会跟随相应的文字描述</p><p><img src="content_TODO.png" alt=""></p><p>另一方面, 若只使用<br>    <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% TODO</span><br></code></pre></div></td></tr></table></figure><br>则在 <code>vimtex</code> 的目录中不会有任何显示.</p><h2 id="LaTeX-清除空白页"><a href="#LaTeX-清除空白页" class="headerlink" title="[LaTeX] 清除空白页"></a>[LaTeX] 清除空白页</h2><h3 id="问题描述-4"><a href="#问题描述-4" class="headerlink" title="问题描述"></a>问题描述</h3><p>将 <code>cquthesis</code> 设为 <code>twoside</code> 模式后发现部分章节在结束后出现空白页.</p><h3 id="解决方法-4"><a href="#解决方法-4" class="headerlink" title="解决方法"></a>解决方法</h3><p>在 <code>cquthesis.cls</code> 中发现了代码</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\DeclareDefaultOption</span>&#123;<span class="hljs-keyword">\PassOptionsToClass</span>&#123;<span class="hljs-keyword">\CurrentOption</span>&#125;&#123;ctexbook&#125;&#125;<br></code></pre></div></td></tr></table></figure><p>意味着在 <code>cquthesis</code> 文档类的 <code>option</code> 会传递给 <code>ctexbook</code> 因此解决方法参考普通文档的即可. 问题发生的根本原因在于 <code>book</code> 中默认强制章节从奇数页开始. 为了解决此问题, 可加上选项 <code>openany</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Latex 如何清除空白页？">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTex的book类型中，目录及chapter前自动插入空白页面">[2]</span></a></sup> , 如</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[type=bachelor, bilinguallist=apart, printmode=twoside, openany]&#123;cquthesis&#125;<span class="hljs-comment">%</span><br></code></pre></div></td></tr></table></figure><h2 id="LaTeX-中文句号-2021-06-07"><a href="#LaTeX-中文句号-2021-06-07" class="headerlink" title="[LaTeX] 中文句号 (2021.06.07)"></a>[LaTeX] 中文句号 (2021.06.07)</h2><h3 id="问题描述-5"><a href="#问题描述-5" class="headerlink" title="问题描述"></a>问题描述</h3><p>&emsp;&emsp;修改论文的过程中, 指导老师提醒到中文写作中应用句号而不是句点。但之前一直用的是句点, 希望能够在 LaTeX 的正文中输入半角句点, 在输出的 PDF 中自动替换为句号。</p><h3 id="解决方法-5"><a href="#解决方法-5" class="headerlink" title="解决方法"></a>解决方法</h3><p>&emsp;&emsp;没有找到任何令人满意的方法, (不过一篇文章 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="批量将句号改为句点">[3]</span></a></sup> 多少有点启发)。最后决定用正则表达式 </p><figure class="highlight taggerscript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs taggerscript">[^A-Za-z0-9<span class="hljs-symbol">\[</span><span class="hljs-symbol">\]</span><span class="hljs-symbol">\&#123;</span><span class="hljs-symbol">\&#125;</span><span class="hljs-symbol">\(</span><span class="hljs-symbol">\)</span>]<span class="hljs-symbol">\z</span>s<span class="hljs-symbol">\.</span><span class="hljs-symbol">\s</span>*<br></code></pre></div></td></tr></table></figure><p>先找到正文中的一部分句点进行批量替换, 再手动处理漏网之鱼。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.zhihu.com/question/266237548">Latex 如何清除空白页？</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://blog.csdn.net/Sarah_LZ/article/details/90737631">LaTex的book类型中，目录及chapter前自动插入空白页面</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="http://kuing.orzweb.net/archiver/?tid-527.html">批量将句号改为句点</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
