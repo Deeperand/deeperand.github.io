@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>[TRICK] Text Editing Tricks of Mathematica</title>
+    <link href="/CS_MMA/2021-08-22_text_edition/"/>
+    <url>/CS_MMA/2021-08-22_text_edition/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>This article list some useful shortcut of Mathematica (macOS version) about text edition and also cell formatting, then provide some tricks.</p></blockquote><span id="more"></span><h2 id="Short-Cut-Related-to-lt-C-gt-and-lt-D-gt"><a href="#Short-Cut-Related-to-lt-C-gt-and-lt-D-gt" class="headerlink" title="Short Cut Related to &lt;C-&gt; and &lt;D-&gt;"></a>Short Cut Related to <code>&lt;C-&gt;</code> and <code>&lt;D-&gt;</code></h2><h3 id="lt-C-gt-related"><a href="#lt-C-gt-related" class="headerlink" title="&lt;C-&gt; related"></a><code>&lt;C-&gt;</code> related</h3><ul><li>⌃ =: Inline Free-form Input </li><li>⌃ ␣: End Subexpression </li><li>⌃ 6: Superscript </li><li>⌃ -: Subscript</li><li>⌃ 7: Above</li><li>⌃ 4: Below</li><li>⌃ 5: Opposite Position</li></ul><h3 id="Format-Related"><a href="#Format-Related" class="headerlink" title="Format Related"></a>Format Related</h3><ul><li>⌘ 1: Title</li><li>⌘ 2: Subtitle </li><li>⌘ 3: Chapter </li><li>⌘ 4: Section </li><li>⌘ 5: Subsection </li><li>⌘ 6: Subsubsection</li><li>⌘ 7: Text</li><li>⌘ 8: Code</li><li>⌘ 9: Input</li><li>⌘ 0: Other…</li><li>⇧⌘ ⌫ : Clear Formatting</li><li>⌫ : Clear Formatting </li><li>⇧⌘ O: Option Inspector… </li><li>⌥⇧⌘ O: Option Inspector…</li><li>⌘ T: Show Fonts…</li><li>⌘ B: Bold</li><li>⌘ I: Italic</li><li>⌘ =: Larger</li><li>⌘ -: Smaller</li></ul><h2 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h2><ul><li>use <code>&lt;C-lp&gt;</code> (<code>lp</code> means “left parenthesis”) to start math typying and <code>&lt;C-rp&gt;</code> to stop <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Insert Inline Math in Text">[1]</span></a></sup> ;</li><li>“Format” command (specially for <code>&lt;D-1&gt;</code> to <code>&lt;D-9&gt;</code>) can not only act on the whole cell, but <em>also for selected text</em>, which is specially useful to create inline-expression. e.g., selected the text you want to change it into inline-expression, then press <code>&lt;D-8&gt;</code>;</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://reference.wolfram.com/language/workflow/InsertInlineMathInText.html">Insert Inline Math in Text</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Mathematica</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卡组笔记: 电脑堺</title>
+    <link href="/YGO/2021-07-11_%E7%94%B5%E8%84%91%E5%A0%BA/"/>
+    <url>/YGO/2021-07-11_%E7%94%B5%E8%84%91%E5%A0%BA/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Combo"><a href="#Combo" class="headerlink" title="Combo"></a>Combo</h3><ul><li>九龙, 瑞瑞 + 任一卡 -&gt; m7, 法王, 朱雀 p1<ul><li>发九龙, 开朱雀门</li><li>点朱雀门, 卡组青龙送墓特召瑞瑞, 检索麟麟</li><li>点朱雀门, 卡组青龙送墓特召麟麟, 卡组送墓娘娘</li><li>除外一青龙, 检索老老, 手卡任一卡送墓</li><li>瑞瑞与麟麟同调仙仙</li><li>点朱雀门, 卡组豸豸送墓特召老老, 老老拉墓地麟麟</li><li>老老与麟麟叠 M7, M7 从墓地检索豸豸, 点仙仙送墓朱雀门特召豸豸</li><li>豸豸特召成功时娘娘从墓地跳上场, 边锁墓地朱雀门, 让豸豸上升 3 星</li><li>豸豸与娘娘同调古鱼龙。娘娘离场时除外, 并将青龙拿回卡组</li><li>仙仙与古鱼龙叠法王兽</li><li>结束阶段豸豸效果, 卡组检索瑞瑞 (结束时除外区有青龙, 朱雀, 娘娘三卡)</li></ul></li><li>九龙, 瑞瑞 + 任一卡 -&gt; m7, 法王, 朱雀 p2 (t2 三次解场)<ul><li>发九龙, 开朱雀门</li><li>点朱雀门, 卡组青龙送墓特召瑞瑞, 检索麟麟</li><li>点朱雀门, 卡组白虎送墓特召麟麟, 卡组送墓娘娘</li><li>瑞瑞与麟麟同调炮车</li><li>除外一青龙, 检索老老, 手卡任一卡送墓</li><li>点朱雀门, 卡组豸豸送墓特召老老, 老老拉墓地麟麟</li><li>老老与麟麟叠 M7, M7 从墓地检索豸豸, 点朱雀门送墓娘娘特召豸豸</li><li>除外一玄武, 特召墓地瑞瑞, 与此同时墓地跳娘娘</li><li>瑞瑞与豸豸同调鹫鹫, 鹫鹫与娘娘同调仙仙。娘娘离场除外, 从除个区回收青龙入卡组</li><li>仙仙与炮车叠法王兽</li><li>结束阶段豸豸效果, 检索瑞瑞 (结束时除外区有玄武, 娘娘二卡)</li></ul></li><li>九龙, 瑞瑞 + 任一卡 -&gt; m7, 法王, 朱雀 p2 (t2 三次解场)</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>YGO</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DECK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[REF] YGOPro Guide</title>
     <link href="/YGO/2021-07-11_REF_ygopro_guide/"/>
     <url>/YGO/2021-07-11_REF_ygopro_guide/</url>
@@ -72,9 +124,9 @@
       
       <tag>CS</tag>
       
-      <tag>TODO</tag>
-      
       <tag>TRICK</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
