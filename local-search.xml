@@ -4,11 +4,198 @@
   
   
   <entry>
+    <title>[TRICK] Set `brew` Software as Default</title>
+    <link href="/CS_macOS/2021-09-02_TRICK_set_brew_software_as_default/"/>
+    <url>/CS_macOS/2021-09-02_TRICK_set_brew_software_as_default/</url>
+    
+    <content type="html"><![CDATA[<p>Sometimes, there are two different versions of one software, where one of them is provided by system and the another is from <code>homebrew</code>. To set software installed by <code>homebrew</code>, one should make sure the path of <code>homebrew</code> is ahead the system’s. To this end, one can add the following command into <code>.bashrc</code> (or <code>.zshrc</code>)</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;/opt/homebrew/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br></code></pre></div></td></tr></table></figure><p>However, one can also use command <code>brew doctor</code> and check the advices, e.g. <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew doctor<br>==&gt; /usr/bin occurs before /usr/<span class="hljs-built_in">local</span>/bin This means that system-provided programs will be used instead of those provided by Homebrew. This is an issue <span class="hljs-keyword">if</span> you eg. brew installed Python.<br><br>Consider editing your .bash_profile to put: /usr/<span class="hljs-built_in">local</span>/bin ahead of /usr/bin <span class="hljs-keyword">in</span> your <span class="hljs-variable">$PATH</span>.<br></code></pre></div></td></tr></table></figure><p>Note if there exist more than one software wich same name below <code>$PATH</code>, one can use <code>which -a</code> to check their own path, e.g.</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-built_in">which</span> -a python3<br>/opt/homebrew/bin/python3<br>/usr/bin/python3<br>/opt/homebrew/bin/python3<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://stackoverflow.com/questions/5157678/how-do-i-use-brew-installed-python-as-the-default-python">How do I use brew installed Python as the default Python?</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] [defx] &quot;Send2Trash&quot; is not installed</title>
+    <link href="/CS_vim/2021-09-02_DEBUG_defx_Send2Trash_is_not_installed/"/>
+    <url>/CS_vim/2021-09-02_DEBUG_defx_Send2Trash_is_not_installed/</url>
+    
+    <content type="html"><![CDATA[<p>When I use <code>defx</code> as my new MacBook Air to delete files (keymapping use <code>&lt;d&gt;</code>), the operation doesn’t work, and pop an error message</p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">[defx] <span class="hljs-string">&quot;Send2Trash&quot;</span> <span class="hljs-keyword">is</span> not installed<br></code></pre></div></td></tr></table></figure><p>To solve the problem, one need to konw that <code>defx</code> is based on <code>python</code>, and <code>send2trash</code> is a <code>python</code> package. So one can use <code>pip</code> to install the package and solve the problem</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install send2trash<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Set Higher Resolution for Extend Screen in macOS</title>
+    <link href="/CS_macOS/2021-09-02_TRICK_adjust_resolution_of_ext_screen/"/>
+    <url>/CS_macOS/2021-09-02_TRICK_adjust_resolution_of_ext_screen/</url>
+    
+    <content type="html"><![CDATA[<p>One can adjust the screen resolution at <code>System Perference</code> -&gt; <code>Display</code> -&gt; <code>Resolution</code>. However, recently, I connect my new MacBook Air to extend screen, but the resolution is low, and the maximum optional resolution just have 1920<em>1080. From official website of </em>Apple*, to set higher resolution, one can try to click <code>Scaled</code> with pressing <code>Option</code> key. <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://support.apple.com/zh-cn/guide/mac-help/mchl86d72b76/mac">更改 Mac 显示器的分辨率</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>`zsh` Quick Config</title>
+    <link href="/CS_macOS/2021-09-02_zsh_quick_config/"/>
+    <url>/CS_macOS/2021-09-02_zsh_quick_config/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Install-zsh"><a href="#Install-zsh" class="headerlink" title="Install zsh"></a>Install <code>zsh</code></h2><p>Since from macOS Catalina, macOS set <code>zsh</code> as default shell, so you no need install <code>zsh</code> by yourself.</p><h2 id="Install-oh-my-zsh"><a href="#Install-oh-my-zsh" class="headerlink" title="Install oh-my-zsh"></a>Install <code>oh-my-zsh</code></h2><p>There are two ways to install <code>oh-my-zsh</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> <sup><a href="#fn_4" id="reffn_4">4</a></sup></p><ul><li><p><code>curl</code></p>  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span><br></code></pre></div></td></tr></table></figure></li><li><p><code>wget</code></p>  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>&quot;</span> <br></code></pre></div></td></tr></table></figure></li></ul><h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="Powerlevel10k"><a href="#Powerlevel10k" class="headerlink" title="Powerlevel10k"></a><code>Powerlevel10k</code></h3><p><code>Powerlevel10k</code> is a theme of <code>zsh</code>. One can use <code>git</code> to install <sup><a href="#fn_2" id="reffn_2">2</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br></code></pre></div></td></tr></table></figure><p>or use mirror source of <code>gitee.com</code> (Chinese)</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br></code></pre></div></td></tr></table></figure><p>To use the theme, add the following command into <code>~/.zshrc</code></p><figure class="highlight zsh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs zsh">open ~/.zshrc<br><br>ZSH_THEME=<span class="hljs-string">&quot;powerlevel10k/powerlevel10k&quot;</span><br></code></pre></div></td></tr></table></figure><p>&emsp;&emsp;The final step is install <code>nerdfont</code>. One can download it by <code>brew</code> <sup><a href="#fn_3" id="reffn_3">3</a></sup> . For example, use the following command to download <code>hack-nerd-font</code></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install --cask font-hack-nerd-font<br></code></pre></div></td></tr></table></figure><p>Then set the terminal font as the nerd font. If use <code>iTerm</code>, set the font at <code>Perference</code> -&gt; <code>Profiles</code> -&gt; <code>Text</code></p><h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a><code>zsh-autosuggestions</code></h3><p><code>zsh-autosuggestions</code> can provide suggests commands based on history and completions when you type command <sup><a href="#fn_5" id="reffn_5">5</a></sup>. To install the plugin, clone the repository at first <sup><a href="#fn_6" id="reffn_6">6</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions<br></code></pre></div></td></tr></table></figure><p>then <code>source</code> the <code>.zsh</code> file</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-built_in">source</span> ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh<br></code></pre></div></td></tr></table></figure><p>one can also use the following command <sup><a href="#fn_8" id="reffn_8">8</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">git <span class="hljs-built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions <span class="hljs-variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions<br></code></pre></div></td></tr></table></figure><h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a><code>zsh-syntax-highlighting</code></h3><p><code>zsh-syntax-highlighting</code> provids yntax highlighting for the shell zsh <sup><a href="#fn_7" id="reffn_7">7</a></sup> . The installing method is as same as <code>zsh-autosuggestions</code> (just need a substitution <code>zsh-autosuggestions</code> -&gt; <code>zsh-syntax-highlighting</code>)</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting<br>$ <span class="hljs-built_in">source</span> ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://zhuanlan.zhihu.com/p/35283688">Oh My Zsh, 『 安装 &amp; 配置 』</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://zhuanlan.zhihu.com/p/265525597">Oh My Zsh, 『 Powerlevel10k 安装 &amp; 配置 』</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://github.com/ryanoasis/nerd-fonts#option-3-install-script">ryanoasis/nerd-fonts</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh/ohmyzsh</a><br><sup><a href="#fn_5" id="reffn_5">5</a></sup> <a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-users/zsh-autosuggestions</a><br><sup><a href="#fn_6" id="reffn_6">6</a></sup> <a href="https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md">zsh-users/zsh-autosuggestions/INSTALL.md</a><br><sup><a href="#fn_7" id="reffn_7">7</a></sup> <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-users/zsh-syntax-highlighting</a><br><sup><a href="#fn_8" id="reffn_8">8</a></sup> <a href="https://www.jianshu.com/p/b4dec723c52f">MAC下安装oh-my-zsh和zsh-autosuggestion</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Show File Extensions in macOS</title>
+    <link href="/CS_macOS/2021-09-02_TRICK_show_file_extensions/"/>
+    <url>/CS_macOS/2021-09-02_TRICK_show_file_extensions/</url>
+    
+    <content type="html"><![CDATA[<p>To show files extensions in macOS, open <code>Finder</code> -&gt; <code>Perference</code> -&gt; <code>Advanced</code> -&gt; <code>Show all filename extensions</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><p><img src="file_ext.png" alt=""></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://howchoo.com/macos/always-show-file-extensions-in-macos">How to Always Show File Extensions in MacOS</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] can&#39;t Install `homebrew` with error `Not a valid ref`</title>
+    <link href="/CS_macOS/2021-09-02_DEBUG_brew_not_valid_ref/"/>
+    <url>/CS_macOS/2021-09-02_DEBUG_brew_not_valid_ref/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>To solve the problem <code>Not a valid ref</code>, the most simple method is uninstall the installed part of <code>homebrew</code>.</p></blockquote><span id="more"></span><p>If run the following command to install homebrew <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>&quot;</span><br></code></pre></div></td></tr></table></figure><p>meet the error message including <code>Not a valid</code> similar as the following <sup><a href="#fn_2" id="reffn_2">2</a></sup></p><figure class="highlight subunit"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs subunit">==&gt; Downloading and installing Homebrew...<br>HEAD is now at 8175e404e Merge pull request #7942 from sjackman/bottle_tag<br><span class="hljs-keyword">error: </span>Not a valid ref: refs/remotes/origin/master<br>fatal: ambiguous argument &#x27;refs/remotes/origin/master&#x27;: unknown revision or path not in the working tree.<br></code></pre></div></td></tr></table></figure><p>The error is arisen from downloading many times, the most simple method to solve the problem is uninstalling installed <code>homebrew</code> files. To reach this, create an <code>ruby</code> script (extension name is <code>.rb</code>, e.g. <code>brew_uninstall.rb</code>) with the following content <sup><a href="#fn_2" id="reffn_2">2</a></sup></p><figure class="highlight ruby"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ruby"><span class="hljs-meta">#!/usr/bin/ruby</span><br><br>STDERR.print &lt;&lt;EOS<br><span class="hljs-symbol">Warning:</span> The Ruby Homebrew uninstaller is now deprecated <span class="hljs-keyword">and</span> has been rewritten <span class="hljs-keyword">in</span><br>Bash. Please migrate to the following <span class="hljs-symbol">command:</span><br>  /bin/bash -c <span class="hljs-string">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)&quot;</span><br><br>EOS<br><br>Kernel.exec <span class="hljs-string">&quot;/bin/bash&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, <span class="hljs-string">&#x27;/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)&quot;&#x27;</span> + <span class="hljs-string">&#x27; uninstall &#x27;</span> +  ARGV.join(<span class="hljs-string">&quot; &quot;</span>)<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://brew.sh">Homebrew</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://www.cnblogs.com/lfri/p/14310513.html">安装homebrew报错error: Not a valid ref: refs/remotes/origin/master 的解决方法</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] gutentags: ctags job failed, returned: 1</title>
+    <link href="/CS_vim/2021-09-01_DEBUG_gutentages_error_1/"/>
+    <url>/CS_vim/2021-09-01_DEBUG_gutentages_error_1/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>The problem <code>ctags job failed</code> probably is arisen by the version of <code>ctags</code>.</p></blockquote><span id="more"></span><p>To detect the logs of <code>gutentags</code>, set </p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_trace</span> = <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>then use command <code>:messages</code> to check the error log <sup><a href="#fn_1" id="reffn_1">1</a></sup> . The full logs of the error is as following</p><figure class="highlight scilab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs scilab">gutentags: [job stdout]: [<span class="hljs-string">&#x27;Locking tags file...&#x27;</span>, <span class="hljs-string">&#x27;Running ctags on whole project&#x27;</span>, <span class="hljs-string">&#x27;ctags -f &quot;</span>/Users/he/.cache/tags/Users-he-Documents-my_config-Blade-Vim-.tags.temp<span class="hljs-string">&quot; &quot;</span>--options=/Users/he/.vim/plugged/vi<br>m-gutentags/res/ctags_recursive.options<span class="hljs-string">&quot;  &quot;</span>/Users/he/Documents/my_config/Blade-Vim<span class="hljs-string">&quot;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stdout]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -&#x27;</span>, <span class="hljs-string">&#x27;usage: ctags [-BFadtuwvx] [-f tagsfile] file ...&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: Finished ctags job.<br>gutentags: ctags job failed, returned: <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>I guess the problem is arisen from the version of <code>ctags</code>. The above messages shown that the <code>ctags</code> I use is provided by <em>command line tool (CLT)</em> of macOS. So I try to use other version of <code>ctags</code>. Finally, I choose <code>universal-ctags</code> <sup><a href="#fn_2" id="reffn_2">2</a></sup> . To install the software, one can use <code>homebrew</code> like this <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags<br></code></pre></div></td></tr></table></figure><p>If the <code>ctags</code> is provided by <code>universal-ctags</code> or <code>Exuberant Ctags</code>, one can use command <code>ctags --version</code> to check the version. For example, my output is</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ ctags --version<br>Universal Ctags 5.9.0, Copyright (C) 2015 Universal Ctags Team<br>Universal Ctags is derived from Exuberant Ctags.<br>Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert<br>  Compiled: Aug 29 2021, 20:42:35<br>  URL: https://ctags.io/<br>  Optional compiled features: +wildcards, +regex, +gnulib_fnmatch, +gnulib_regex, +iconv, +option-directory, +xpath, +json, +interactive, +yaml, +case-insensitive-filenames, +packcc, +optscript<br></code></pre></div></td></tr></table></figure><p>However, if the <code>ctags</code> is provided by CLT of macOS, the output will show <code>illegal option</code> <sup><a href="#fn_4" id="reffn_4">4</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ /usr/bin/ctags --version<br>/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -<br>usage: ctags [-BFadtuwvx] [-f tagsfile] file ...<br></code></pre></div></td></tr></table></figure><p>After installing <code>universal-ctags</code></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://wuruofan.com/2020/07/07/ubuntu-vim-gutentags-work-abnormally-solved-with-universal-ctags-and-global-recompiled/">vim-gutentags插件异常问题解决 &amp; gtags源码编译安装</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://github.com/universal-ctags/ctags">universal-ctags/ctags</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://github.com/universal-ctags/homebrew-universal-ctags">universal-ctags/homebrew-universal-ctags</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://blog.csdn.net/u011031257/article/details/80652570">vim ctags —Exuberant Ctags(Mac 版安装)</a></p><p>the following discussiong is also probably useful:</p><p><a href="https://github.com/ludovicchabant/vim-gutentags/issues/169">ctags job failed, returned: 1</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[DEBUG] Defx Icon Overlap</title>
     <link href="/CS_vim/2021-08-31_DEBUG_defx_icon_overlap/"/>
     <url>/CS_vim/2021-08-31_DEBUG_defx_icon_overlap/</url>
     
-    <content type="html"><![CDATA[<p>I met a problem when I configure <em>MacBook Air</em> that the icons of defx will overlap like this</p><p><img src="overlap.png" alt=""></p><p>there are two step to remission the problme. </p><ul><li>First step: use <code>space</code> to add a space like this  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">    <br></code></pre></div></td></tr></table></figure></li></ul><p>The following setting will cause the distance between git icon and folder icont too close</p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>to keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon<br><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>I met a problem when I configure <em>MacBook Air</em> that the icons of defx will overlap like this</p><p><img src="overlap.png" alt=""></p><p>there are two step to remission the problme. </p><ul><li><p><strong>First step:</strong> use <code>space</code> to add a space like this</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#option(<span class="hljs-string">&#x27;_&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;columns&#x27;</span>: <span class="hljs-string">&#x27;indent:git:icon:icons:space:filename&#x27;</span><br>    \ &#125;)<br></code></pre></div></td></tr></table></figure></li><li><p><strong>Second step:</strong> The following setting will cause the distance between git icon and folder icont too close</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  <img src="too_close.png" alt=""></p><p>  To keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  the effect is like this</p><p>  <img src="final_effect.png" alt=""></p></li></ul>]]></content>
     
     
     <categories>
@@ -174,11 +361,11 @@
     
     <tags>
       
+      <tag>TODO</tag>
+      
       <tag>CS</tag>
       
       <tag>TRICK</tag>
-      
-      <tag>TODO</tag>
       
     </tags>
     
@@ -827,9 +1014,9 @@
     
     <tags>
       
-      <tag>CS</tag>
-      
       <tag>TODO</tag>
+      
+      <tag>CS</tag>
       
     </tags>
     
@@ -912,9 +1099,9 @@
     
     <tags>
       
-      <tag>CS</tag>
-      
       <tag>TODO</tag>
+      
+      <tag>CS</tag>
       
     </tags>
     
@@ -979,7 +1166,7 @@
     <link href="/CS_linux/2021-05-16_convert_pdf/"/>
     <url>/CS_linux/2021-05-16_convert_pdf/</url>
     
-    <content type="html"><![CDATA[<p>本文介绍了如何利用 <code>ImageMagick</code> 提供的 <code>conver</code> 指令将 PDF 转化为图片, 以及如何调整图片的分辨率. 其中 PDF 转换为图片的部分最早记录于 2020.05.19, 分辨率调整的部分最早记录于 2020.07.08.</p><span id="more"></span><h2 id="PDF-与图片的转化"><a href="#PDF-与图片的转化" class="headerlink" title="PDF 与图片的转化"></a>PDF 与图片的转化</h2><p>&emsp;&emsp;PDF 与图片的转化可以使用 <code>ImageMagick</code> 提供的 <code>convert</code> 指令来实现 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Linux下使用ImageMagick将pdf转换为jpg">[1]</span></a></sup> (<code>ImageMagick</code> 一般在安装 LaTeX 时会一起安装). 下面的代码先将图片转化, 随后纵向拼接:</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 400 input.pdf out.jpg<br>$ convert -append out-*.jpg out.jpg <span class="hljs-comment"># vertical joint</span><br></code></pre></div></td></tr></table></figure><p>如果 PDF 源文件 <code>input.pdf</code> 有三页, 则转化出的图片名称为 <code>out-0,jpg</code>, <code>out-1.jpg</code>. 第二行代码中的 <code>*</code> 是通配符. 此外, 也可实现向 <code>.png</code> 的转化:<br><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 150 input.pdf -quality 90 output.png<br></code></pre></div></td></tr></table></figure></p><p>以及横向拼接:</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert in-1.jpg in-5.jpg in-N.jpg +append out.jpg <span class="hljs-comment"># horizontal joint</span><br></code></pre></div></td></tr></table></figure><p>值得注意的是, 在 LaTeX 的 <code>ctex</code> 类的文档类中, 如果选择了 <code>hyperref</code>, 则交叉引用会自动建立超链接, 且在 PDF 浏览时会看见红框. 但这些红框在将 PDF 转化为图片时不会出现, 因此不必刻意消去那些红框.</p><h2 id="利用-convert-调整图像分辨率"><a href="#利用-convert-调整图像分辨率" class="headerlink" title="利用 convert 调整图像分辨率"></a>利用 <code>convert</code> 调整图像分辨率</h2><p>&emsp;&emsp;利用 <code>convert</code> 调整图像分辨率的指令如 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Linux 下处理图片分辨率的神器">[2]</span></a></sup> :</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">convert -resize 720x720 image.jpg image_1.jpg<br></code></pre></div></td></tr></table></figure><p>上面的指令在转换时是保比例的, 亦即如果图片的原始比例是 3:2, 那么经上面的指令转化后仍然是 3:2, 而非 1:1 (估计是取转化尺寸的最小或最大值作为转化后图片长或宽的尺寸?)</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://blog.csdn.net/lpwmm/article/details/83067698">Linux下使用ImageMagick将pdf转换为jpg</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.jianshu.com/p/5977674430c2">Linux 下处理图片分辨率的神器</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    <content type="html"><![CDATA[<p>本文介绍了如何利用 <code>ImageMagick</code> 提供的 <code>conver</code> 指令将 PDF 转化为图片, 以及如何调整图片的分辨率. 其中 PDF 转换为图片的部分最早记录于 2020.05.19, 分辨率调整的部分最早记录于 2020.07.08.</p><span id="more"></span><h2 id="PDF-与图片的转化"><a href="#PDF-与图片的转化" class="headerlink" title="PDF 与图片的转化"></a>PDF 与图片的转化</h2><p>&emsp;&emsp;PDF 与图片的转化可以使用 <code>ImageMagick</code> 提供的 <code>convert</code> 指令来实现 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Linux下使用ImageMagick将pdf转换为jpg">[1]</span></a></sup> (<code>ImageMagick</code> 一般在安装 LaTeX 时会一起安装). 若没有安装, 可通过 <code>brew</code> 进行安装</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">brew install ImageMagick<br></code></pre></div></td></tr></table></figure><p>下面的代码先将图片转化, 随后纵向拼接:</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 400 input.pdf out.jpg<br>$ convert -append out-*.jpg out.jpg <span class="hljs-comment"># vertical joint</span><br></code></pre></div></td></tr></table></figure><p>如果 PDF 源文件 <code>input.pdf</code> 有三页, 则转化出的图片名称为 <code>out-0,jpg</code>, <code>out-1.jpg</code>. 第二行代码中的 <code>*</code> 是通配符. 此外, 也可实现向 <code>.png</code> 的转化:<br><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 150 input.pdf -quality 90 output.png<br></code></pre></div></td></tr></table></figure></p><p>以及横向拼接:</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert in-1.jpg in-5.jpg in-N.jpg +append out.jpg <span class="hljs-comment"># horizontal joint</span><br></code></pre></div></td></tr></table></figure><p>值得注意的是, 在 LaTeX 的 <code>ctex</code> 类的文档类中, 如果选择了 <code>hyperref</code>, 则交叉引用会自动建立超链接, 且在 PDF 浏览时会看见红框. 但这些红框在将 PDF 转化为图片时不会出现, 因此不必刻意消去那些红框.</p><h2 id="利用-convert-调整图像分辨率"><a href="#利用-convert-调整图像分辨率" class="headerlink" title="利用 convert 调整图像分辨率"></a>利用 <code>convert</code> 调整图像分辨率</h2><p>&emsp;&emsp;利用 <code>convert</code> 调整图像分辨率的指令如 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Linux 下处理图片分辨率的神器">[2]</span></a></sup> :</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">convert -resize 720x720 image.jpg image_1.jpg<br></code></pre></div></td></tr></table></figure><p>上面的指令在转换时是保比例的, 亦即如果图片的原始比例是 3:2, 那么经上面的指令转化后仍然是 3:2, 而非 1:1 (估计是取转化尺寸的最小或最大值作为转化后图片长或宽的尺寸?)</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://blog.csdn.net/lpwmm/article/details/83067698">Linux下使用ImageMagick将pdf转换为jpg</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.jianshu.com/p/5977674430c2">Linux 下处理图片分辨率的神器</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
@@ -1363,9 +1550,9 @@
     
     <tags>
       
-      <tag>CS</tag>
-      
       <tag>TODO</tag>
+      
+      <tag>CS</tag>
       
     </tags>
     

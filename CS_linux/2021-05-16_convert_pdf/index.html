@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      434 字
+      450 字
     </span>
   
 
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.30, 10:32
+                  最后更新：2021.09.02, 21:10
                 
               </p>
             
@@ -250,7 +250,9 @@
               <p>本文介绍了如何利用 <code>ImageMagick</code> 提供的 <code>conver</code> 指令将 PDF 转化为图片, 以及如何调整图片的分辨率. 其中 PDF 转换为图片的部分最早记录于 2020.05.19, 分辨率调整的部分最早记录于 2020.07.08.</p>
 <span id="more"></span>
 <h2 id="PDF-与图片的转化"><a href="#PDF-与图片的转化" class="headerlink" title="PDF 与图片的转化"></a>PDF 与图片的转化</h2><p>&emsp;&emsp;PDF 与图片的转化可以使用 <code>ImageMagick</code> 提供的 <code>convert</code> 指令来实现 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Linux下使用ImageMagick将pdf转换为jpg
-">[1]</span></a></sup> (<code>ImageMagick</code> 一般在安装 LaTeX 时会一起安装). 下面的代码先将图片转化, 随后纵向拼接:</p>
+">[1]</span></a></sup> (<code>ImageMagick</code> 一般在安装 LaTeX 时会一起安装). 若没有安装, 可通过 <code>brew</code> 进行安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">brew install ImageMagick<br></code></pre></div></td></tr></table></figure>
+<p>下面的代码先将图片转化, 随后纵向拼接:</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 400 input.pdf out.jpg<br>$ convert -append out-*.jpg out.jpg <span class="hljs-comment"># vertical joint</span><br></code></pre></div></td></tr></table></figure>
 <p>如果 PDF 源文件 <code>input.pdf</code> 有三页, 则转化出的图片名称为 <code>out-0,jpg</code>, <code>out-1.jpg</code>. 第二行代码中的 <code>*</code> 是通配符. 此外, 也可实现向 <code>.png</code> 的转化:<br><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ convert -density 150 input.pdf -quality 90 output.png<br></code></pre></div></td></tr></table></figure></p>
 <p>以及横向拼接:</p>

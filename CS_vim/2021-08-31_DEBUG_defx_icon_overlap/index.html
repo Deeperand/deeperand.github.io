@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      115 字
+      142 字
     </span>
   
 
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.08.31, 21:27
+                  最后更新：2021.09.02, 16:41
                 
               </p>
             
@@ -251,12 +251,18 @@
 <p><img src="overlap.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>there are two step to remission the problme. </p>
 <ul>
-<li>First step: use <code>space</code> to add a space like this  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">    <br></code></pre></div></td></tr></table></figure>
+<li><p><strong>First step:</strong> use <code>space</code> to add a space like this</p>
+  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#option(<span class="hljs-string">&#x27;_&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;columns&#x27;</span>: <span class="hljs-string">&#x27;indent:git:icon:icons:space:filename&#x27;</span><br>    \ &#125;)<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p><strong>Second step:</strong> The following setting will cause the distance between git icon and folder icont too close</p>
+  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure>
+<p>  <img src="too_close.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>  To keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon</p>
+  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure>
+<p>  the effect is like this</p>
+<p>  <img src="final_effect.png" srcset="/img/loading.gif" lazyload alt=""></p>
 </li>
 </ul>
-<p>The following setting will cause the distance between git icon and folder icont too close</p>
-<figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure>
-<p>to keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon<br><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure></p>
 
             </div>
             <hr>
@@ -292,6 +298,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/CS_vim/2021-09-01_DEBUG_gutentages_error_1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[DEBUG] gutentags: ctags job failed, returned: 1</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
