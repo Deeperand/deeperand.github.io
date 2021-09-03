@@ -4,6 +4,135 @@
   
   
   <entry>
+    <title>[TRICK] Add Remote Support for *Neovim* and Config `vimtex` Back Search)</title>
+    <link href="/CS_vim/2021-09-03_TRICK_nvim_add_remote/"/>
+    <url>/CS_vim/2021-09-03_TRICK_nvim_add_remote/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h2><p>Some times the “remote” support is necessary, and an example is config the back-search function for <code>vimtex</code>. To add the support, one can install <code>neovim-remote</code> with <code>pip3</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install neovim-remote<br></code></pre></div></td></tr></table></figure><h2 id="Configure-Back-search-of-LaTeX-neovim"><a href="#Configure-Back-search-of-LaTeX-neovim" class="headerlink" title="Configure Back-search of LaTeX (neovim)"></a>Configure Back-search of LaTeX (neovim)</h2><p>Assuming <code>vimtex</code> and <code>skim.app</code>is installed, open <code>skim.app</code> -&gt; <code>Perference</code> -&gt; <code>Sync</code>. Set <code>PDF-Tex Sync support</code> like the following</p><ul><li><code>Preset</code>: <code>Custom</code></li><li><code>Command</code>: <code>nvr</code></li><li><code>Argument</code>: <code>--remote-silent +&quot;%line&quot; &quot;%file&quot;</code></li></ul><p><img src="sync.png" alt=""> </p><p>If successfully, one can press <code>&lt;Shift-Cmd&gt;</code> and <code>&lt;Click&gt;</code> the <code>.pdf</code> file to use back-search.</p><p>&emsp;&emsp;Sometimes the back-search doesn’t work, in the case, one can try to remove <code>/tmp/nvimsocket</code> and relaunch <em>Neovim</em>.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://github.com/mhinz/neovim-remote">mhinz/neovim-remote</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Add `python` Support for Neovim</title>
+    <link href="/CS_vim/2021-09-03_TRICK_nvim_add_python_support/"/>
+    <url>/CS_vim/2021-09-03_TRICK_nvim_add_python_support/</url>
+    
+    <content type="html"><![CDATA[<p>To add <code>python</code> support for Neovim, one need install package <code>pynvim</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install --user --upgrade pynvim<br></code></pre></div></td></tr></table></figure><p>Further more, one can run <code>nvim +checkhelth</code>, and check <code>/## Python 3</code> at the opened file to check details <sup><a href="#fn_2" id="reffn_2">2</a></sup> . The message probably like this</p><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-section">## Python 3 provider (optional)</span><br><span class="hljs-bullet">  -</span> INFO: <span class="hljs-code">`g:python3_host_prog`</span> is not set.  Searching for python3 in the environment.<br><span class="hljs-bullet">  -</span> INFO: Multiple python3 executables found.  Set <span class="hljs-code">`g:python3_host_prog`</span> to avoid surprises.<br><span class="hljs-bullet">  -</span> INFO: Executable: /opt/homebrew/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Other python executable: /usr/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Python version: 3.9.6<br><span class="hljs-bullet">  -</span> INFO: pynvim version: 0.4.3<br><span class="hljs-bullet">  -</span> OK: Latest pynvim is installed.<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://www.jianshu.com/p/8e07b2ef4829">neovim 增加python3.5的支持</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://segmentfault.com/a/1190000017784831">NeoVim初识</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Use Tsinghua source to Install `Homebrew`</title>
+    <link href="/CS_macOS/2021-09-03_TRICK_use_Tsinghua_source_to_install_homebrew/"/>
+    <url>/CS_macOS/2021-09-03_TRICK_use_Tsinghua_source_to_install_homebrew/</url>
+    
+    <content type="html"><![CDATA[<p>The most simple way to install <code>homebrew</code> is run the command provided by the official website</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ /bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></div></td></tr></table></figure><p>However, the speed is extremely slow in China. To accelerate the process, one can choose the mirror source provided by Tsinghua <sup><a href="#fn_2" id="reffn_2">2</a></sup> . On macOS, to install <code>homebrew</code>, you need install command line tool of macOS at first. One can run <code>xcode-select --install</code> to install or use <code>xcode-select -p</code> to check if installed. Then run the following command to set environment variable</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-keyword">if</span> [[ <span class="hljs-string">&quot;<span class="hljs-subst">$(uname -s)</span>&quot;</span> == <span class="hljs-string">&quot;Linux&quot;</span> ]]; <span class="hljs-keyword">then</span> BREW_TYPE=<span class="hljs-string">&quot;linuxbrew&quot;</span>; <span class="hljs-keyword">else</span> BREW_TYPE=<span class="hljs-string">&quot;homebrew&quot;</span>; <span class="hljs-keyword">fi</span><br><span class="hljs-built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="hljs-string">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span><br><span class="hljs-built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="hljs-string">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/<span class="hljs-variable">$&#123;BREW_TYPE&#125;</span>-core.git&quot;</span><br></code></pre></div></td></tr></table></figure><p>Finally, use the mirror source to install <code>homebrew</code> from Tsinghua mirror source</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install<br>/bin/bash brew-install/install.sh<br>rm -rf brew-install<br></code></pre></div></td></tr></table></figure><p>For <em>Apple Sillicon</em> (run <code>uname -m</code> get the output <code>arm64</code>), run the following command</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-built_in">test</span> -r ~/.bash_profile &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.bash_profile<br><span class="hljs-built_in">test</span> -r ~/.zprofile &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; ~/.zprofile<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://brew.sh">Homebrew</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/">Homebrew / Linuxbrew 镜像使用帮助</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Check if Command Line Tool (CLT) of macOS is installed</title>
+    <link href="/CS_macOS/2021-09-03_TRICK_check_if_CLT_installed/"/>
+    <url>/CS_macOS/2021-09-03_TRICK_check_if_CLT_installed/</url>
+    
+    <content type="html"><![CDATA[<p>The simplist way is use the following command <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ xcode-select -p<br></code></pre></div></td></tr></table></figure><p>the command will print the directory of command line tool (if it already installed). On my M1 MacBook Air (Big Sur), the out put is like this</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ xcode-select -p<br>/Library/Developer/CommandLineTools<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://stackoverflow.com/questions/15371925/how-to-check-if-command-line-tools-is-installed">How to check if command line tools is installed</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Zotero Quick Config</title>
+    <link href="/CS_GUI_software/2021_09_02_Zotero_quick_config/"/>
+    <url>/CS_GUI_software/2021_09_02_Zotero_quick_config/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Set-Base-Directory-of-Link"><a href="#Set-Base-Directory-of-Link" class="headerlink" title="Set Base Directory of Link"></a>Set Base Directory of Link</h2><p>If you have many devices, use absolute path to create a link isn’t a wise choice, which probably lead the link created at a device can’t be open at another device. To solve the problem, a direct way is set a “home directory” for those link. In <code>Zotero</code>, this can be realized by set <code>Linked Attachment Base Directory</code>. Once the directory set, the link is a <em>relative path</em> to refer to the directory.</p><p>&emsp;&emsp;Next we introduce how to set it. Open <code>Perference</code> -&gt; <code>Advanced</code> -&gt; <code>Files and Folders</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> , then choose the directory you want to set. My set is a folder named <code>zotero_files</code> under the iCould folder of <code>PDF Expert</code> (we will call the folder <code>$ZOTERO_FILES</code> for convenient).</p><h2 id="Zotfile"><a href="#Zotfile" class="headerlink" title="Zotfile"></a><code>Zotfile</code></h2><p>To install extension <code>Zotfile</code>, one can download the package at official website <sup><a href="#fn_2" id="reffn_2">2</a></sup> . Then lunch <code>Zotero</code>, open menu <code>Tools</code> -&gt; <code>Add-ones</code> and click the gear icon. Click <code>Install Add-one From File</code> to install <code>Zotfile</code> from downloaded file (<code>zotfile-5.0.16-fx.xpi</code>).</p><p><img src="install.png" alt=""></p><p>Next, open <code>Perference</code> -&gt; <code>Tools</code> -&gt; <code>Zotfile Perference</code>, set <code>Source Folder for Attaching new Files</code> and <code>Location of Files</code> as <code>$ZOTERO_FILES</code>. At <code>Use subfolder defined by</code> you can set the form of subfolder, and my setting is <code>/%c</code>. The meaning of the setting is <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><ul><li>%a last names of authors (not editors etc) or inventors. The maximum number of authors are changed under ‘Additional Settings’.</li><li>%I author initials.</li><li>%F author’s last name with first letter of first name (e.g. EinsteinA).</li><li>%A first letter of author (useful for subfolders)</li><li>%d, %D, %L, %l wildcards for editors, same as for authors.</li><li>%y year (extracted from Date field)</li><li>%t title. Usually truncated after : . ? The maximal length of the remaining part of the title can be changed.</li><li>%T item type (localized)</li><li>%j name of the journal</li><li>%p name of the publisher</li><li><p>%w name of the journal or publisher (same as “%p”)</p></li><li><p>%s journal abbreviation</p></li><li>%v journal volume</li><li>%e journal issue</li><li>%f pages</li><li>%c collection path (only for sub-folders, not file names). When item is in multiple collections, user can choose between the different collections.</li><li>%n patent number (patent items only)</li><li>%i assignee (patent items only)</li></ul><h2 id="Accompany-with-Nutstore"><a href="#Accompany-with-Nutstore" class="headerlink" title="Accompany with Nutstore"></a>Accompany with <code>Nutstore</code></h2><p>If you wish to use <code>Nutstore</code> accompany with <code>Zotero</code>, you can see the article <sup><a href="#fn_4" id="reffn_4">4</a></sup> .</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="http://zotfile.com/#renaming-rules">Why can’t Zotero find a linked file?</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="http://zotfile.com/index.html#changelog">ZotFile</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="http://zotfile.com/#renaming-rules">ZotFile Renaming Rule</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://help.jianguoyun.com/?p=4190">坚果云使用 Zotero 配置过程详解</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] Set `brew` Software as Default</title>
     <link href="/CS_macOS/2021-09-02_TRICK_set_brew_software_as_default/"/>
     <url>/CS_macOS/2021-09-02_TRICK_set_brew_software_as_default/</url>
@@ -195,7 +324,7 @@
     <link href="/CS_vim/2021-08-31_DEBUG_defx_icon_overlap/"/>
     <url>/CS_vim/2021-08-31_DEBUG_defx_icon_overlap/</url>
     
-    <content type="html"><![CDATA[<p>I met a problem when I configure <em>MacBook Air</em> that the icons of defx will overlap like this</p><p><img src="overlap.png" alt=""></p><p>there are two step to remission the problme. </p><ul><li><p><strong>First step:</strong> use <code>space</code> to add a space like this</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#option(<span class="hljs-string">&#x27;_&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;columns&#x27;</span>: <span class="hljs-string">&#x27;indent:git:icon:icons:space:filename&#x27;</span><br>    \ &#125;)<br></code></pre></div></td></tr></table></figure></li><li><p><strong>Second step:</strong> The following setting will cause the distance between git icon and folder icont too close</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  <img src="too_close.png" alt=""></p><p>  To keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  the effect is like this</p><p>  <img src="final_effect.png" alt=""></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>I met a problem when I configure <em>MacBook Air</em> that the icons of defx will overlap like this</p><p><img src="overlap.png" alt=""></p><p>there are two step to remission the problme. </p><ul><li><p><strong>First step:</strong> use <code>space</code> to add a space like this</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#option(<span class="hljs-string">&#x27;_&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;columns&#x27;</span>: <span class="hljs-string">&#x27;indent:git:icon:icons:space:filename&#x27;</span><br>    \ &#125;)<br></code></pre></div></td></tr></table></figure></li><li><p><strong>Second step:</strong> The following setting will cause the distance between git icon and folder icont too close</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27;▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27;▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  <img src="too_close.png" alt=""></p><p>  To keep uniformity of both folder and single file (<code>root</code>), add an extra space at icon</p>  <figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">call</span> defx#custom#column(<span class="hljs-string">&#x27;icon&#x27;</span>, &#123;<br>    \ <span class="hljs-string">&#x27;directory_icon&#x27;</span>: <span class="hljs-string">&#x27; ▸&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;opened_icon&#x27;</span>: <span class="hljs-string">&#x27; ▾&#x27;</span>,<br>    \ <span class="hljs-string">&#x27;root_icon&#x27;</span>: <span class="hljs-string">&#x27; &#x27;</span>,<br>    \ &#125;)<br></code></pre></div></td></tr></table></figure><p>  the effect is like this</p><p>  <img src="final_effect.png" alt=""></p></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>The following discussion might also helpful</p><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://github.com/kristijanhusak/defx-icons/issues/30">The icon is only half displayed #30</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://github.com/romkatv/powerlevel10k#icons-cut-off-in-konsole">powerlevel10k: Icons cut off in Konsole</a></p>]]></content>
     
     
     <categories>
@@ -361,11 +490,11 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
       
       <tag>TRICK</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
@@ -410,7 +539,9 @@
     
     <categories>
       
-      <category>CS</category>
+      <category>CS GUI Software</category>
+      
+      <category>MS Office</category>
       
     </categories>
     
@@ -1014,9 +1145,9 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
@@ -1099,9 +1230,9 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
@@ -1550,9 +1681,9 @@
     
     <tags>
       
-      <tag>TODO</tag>
-      
       <tag>CS</tag>
+      
+      <tag>TODO</tag>
       
     </tags>
     
