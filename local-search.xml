@@ -4,11 +4,258 @@
   
   
   <entry>
+    <title>[DEBUG] Convert pdf into picture but Black Background Appear</title>
+    <link href="/CS_linux/2021-09-17_DEBUG_convert_pdf_but_black_bg_appear/"/>
+    <url>/CS_linux/2021-09-17_DEBUG_convert_pdf_but_black_bg_appear/</url>
+    
+    <content type="html"><![CDATA[<p>Yestarday, when I try to convert a <code>.pdf</code> file which contains a picture into <code>.jpg</code> with <code>conver</code>, I found the background of the output picture becames black</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">convert -density 400  QFT\ 1\ \(Homework\).pdf handwriting.jpg<br></code></pre></div></td></tr></table></figure><p><img src="black_bg.jpg" alt=""></p><p>I guess the problem might raise from the existing of a picture in the <code>.pdf</code> file itself, which lead other area became transparency. To solve the problme, one can add parameter <code>-alpha remove</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Replace transparency in PNG images with white background">[1]</span></a></sup> , e.g.</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">convert -density 400  QFT\ 1\ \(Homework\).pdf -alpha remove handwriting.jpg<br></code></pre></div></td></tr></table></figure><p>then the problem is solved</p><p><img src="normal_bg.jpg" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://stackoverflow.com/questions/2322750/replace-transparency-in-png-images-with-white-background">Replace transparency in PNG images with white background</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Let Key Holding and Repeating in VSCode</title>
+    <link href="/CS_GUI_software/VSCode/2021-09-17_TRICK_hold_and_repeat/"/>
+    <url>/CS_GUI_software/VSCode/2021-09-17_TRICK_hold_and_repeat/</url>
+    
+    <content type="html"><![CDATA[<p>When hold a key for a while (e.g. <code>#</code>), one except the same key will repeat automatically (i.e. <code>############</code>). However, the method doesn’t work by default with VSCode of macOS. To disable <em>Apple Press</em>, one need run the command in command line <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How do I press and hold a key and have it repeat in VSCode?">[1]</span></a></sup> and re-open VSCode</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool <span class="hljs-literal">false</span><br></code></pre></div></td></tr></table></figure><p>if you want to enable again</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode">How do I press and hold a key and have it repeat in VSCode?</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Find Directory GoodNotes Documents in macOS</title>
+    <link href="/CS_macOS/2021-09-17_TRICK_find_GoodNotes_docs_at_macOS/"/>
+    <url>/CS_macOS/2021-09-17_TRICK_find_GoodNotes_docs_at_macOS/</url>
+    
+    <content type="html"><![CDATA[<p>The documents of <em>GoodNotes</em> of macOS aren’t some single files which stored at iCould folder. To find these directories, one can use <em>TencentLemon</em>.</p><ul><li><p>1st step: open <em>TencentLemon</em>, click <code>App Uninstall</code> (note which doesn’t means we really want to delete <em>GoodNotes</em> !)</p><p>  <img src="app_uninstall_1.png" alt=""></p></li><li><p>2ed step: find <code>GoodNotes</code>, click <code>Details</code></p><p>  <img src="app_uninstall_2.png" alt=""></p></li><li><p>3rd step: check each type of files, the largest item is the documents of <em>GoodNotes</em></p><p>  <img src="sand_box.png" alt=""></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Open Current Directory in iTerm from Finder</title>
+    <link href="/CS_macOS/2021-09-17_TRICK_open_dir_in_iterm/"/>
+    <url>/CS_macOS/2021-09-17_TRICK_open_dir_in_iterm/</url>
+    
+    <content type="html"><![CDATA[<p>The software <code>Go2Shell</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Go2Shell">[1]</span></a></sup> can help user open current directory in iTerm from Finder. To open in new tab rather than new window, set <code>Open terminal in</code> as <code>New Tab (Experimental)</code></p><p><img src="open_in_new_tab.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://zipzapmac.com/Go2Shell">Go2Shell</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Sync Personal Configuration of VSCode</title>
+    <link href="/CS_GUI_software/VSCode/2021-09-17_TRICK_sync_config/"/>
+    <url>/CS_GUI_software/VSCode/2021-09-17_TRICK_sync_config/</url>
+    
+    <content type="html"><![CDATA[<p>VSCode now support personal configuration syncing by it self, so the extension <code>Settings Sync</code> is no need now. To turn on syncing, click the gear icon at the left-down corner, then click <code>Turn on Setting Sync</code></p><p><img src="sync_config.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://zhuanlan.zhihu.com/p/353856858">Settings Sync——同步VSCode配置</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+      <category>VSCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Common Used Shortcut of Musescore</title>
+    <link href="/CS_GUI_software/Musescore/2021-09-17_TRICK_musescore_shortcut/"/>
+    <url>/CS_GUI_software/Musescore/2021-09-17_TRICK_musescore_shortcut/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Note-Edit"><a href="#Note-Edit" class="headerlink" title="Note Edit"></a>Note Edit</h1><ul><li><p>augmentation dot</p><p>  <img src="augmentation_dot.png" alt=""></p></li><li><p>accident</p><p>  <img src="accidental.png" alt=""></p></li><li><p>tied</p><p>  <img src="tied.png" alt=""></p></li><li><p>change staff without change voice part: <code>&lt;cmd-S-up&gt;</code>, <code>&lt;cmd-S-down&gt;</code> <sup><a href="#fn_2" id="reffn_2">2</a></sup></p></li><li>change voices: <code>&lt;cmd-M-1&gt;</code>, <code>&lt;cmd-M-2&gt;</code>, <code>&lt;cmd-M-3&gt;</code>, <code>&lt;cmd-M-4&gt;</code> <sup><a href="#fn_3" id="reffn_3">3</a></sup></li></ul><h1 id="Measure"><a href="#Measure" class="headerlink" title="Measure"></a>Measure</h1><ul><li><p>insert measure: <code>&lt;S-I&gt;</code></p><p>  <img src="insert_measure.png" alt=""></p></li><li><p>delete measure: <code>&lt;cmd-fn-backspace&gt;</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup></p></li></ul><h1 id="Rhythm"><a href="#Rhythm" class="headerlink" title="Rhythm"></a>Rhythm</h1><ul><li><p>triplet</p><p>  <img src="triplet.png" alt=""></p></li></ul><h1 id="Type-Setting"><a href="#Type-Setting" class="headerlink" title="Type Setting"></a>Type Setting</h1><ul><li><p>position of elements</p><p>  <img src="elements_position.png" alt=""></p></li></ul><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://musescore.org/en/node/71">Measure operations</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://musescore.org/en/handbook/2/cross-staff-notation">Cross-staff notation</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://musescore.org/en/handbook/3/voices">Voices</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+      <category>Musescore</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Set Time Format for macOS</title>
+    <link href="/CS_macOS/2021-09-17_TRICK_set_time_format/"/>
+    <url>/CS_macOS/2021-09-17_TRICK_set_time_format/</url>
+    
+    <content type="html"><![CDATA[<p>To change the format of macOS, such as 24-hour, one can set at <code>System Perference</code> -&gt; <code>Dock &amp; Manu Bar</code> -&gt; <code>Clock</code></p><p><img src="clock_format.png" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] Install Markdown Preview Plug `iamcco/markdown-preview.nvim`</title>
+    <link href="/CS_vim/2021-09-07_DEBUG_install_markdown_preview_nvim/"/>
+    <url>/CS_vim/2021-09-07_DEBUG_install_markdown_preview_nvim/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>To install <code>iamcco/markdown-preview.nvim</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> , just select a correct network environment and wait and ignore the network warning.</p></blockquote><span id="more"></span><p>On macOS, the first step is make sure you already have package <code>nodejs</code> and <code>yarn</code>. One can install them via <code>brew</code></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install nodejs yarn<br></code></pre></div></td></tr></table></figure><p>where <code>yarn</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> will be used to install the deepending packages. Then (assume you use <code>vim-plug</code> to manage your vim packages) add the following line to your <code>vimrc</code></p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim">Plug <span class="hljs-string">&#x27;iamcco/markdown-preview.nvim&#x27;</span>, &#123; <span class="hljs-string">&#x27;do&#x27;</span>: <span class="hljs-string">&#x27;cd app &amp;&amp; yarn install&#x27;</span>  &#125;<br></code></pre></div></td></tr></table></figure><p>then run <code>:PlugInstall</code>. The command <code>&#39;do&#39;: &#39;cd app &amp;&amp; yarn install&#39;</code> means it will run shell command <code>cd app &amp;&amp; yarn install</code> at the root directory of <code>iamcco/markdown-preview.nvim</code> package, whern <code>yarn install</code> means use <code>yarn</code> to install depending packages. One week ago, when I try to install <code>iamcco/markdown-preview.nvim</code> at my MacBook Air (M1), but alwayse meet the problem that <code>yarn</code> told me checking my network condition. Finally, <em>I ignored the warning, but the installing still continue!</em> The most important things is if the depending package is not installed properly, the plug can’t run as what you wish. Furthermore, one can check if the depending packages is installed by the size of the folder <code>node_modules</code> is around 118 Mb, and the total size of plug folder <code>markdown-preview.nvim</code> is around 130 Mb.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://github.com/iamcco/markdown-preview.nvim">iamcco/markdown-preview.nvim</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://classic.yarnpkg.com/en/docs/cli/install/">yarn install</a></p><p>the following links might be also helpful<br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://github.com/iamcco/markdown-preview.nvim/issues/50">E117: Unknown function: mkdp#util#install #50</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>DEBUG</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Change Account Name of macOS</title>
+    <link href="/CS_macOS/2021-09-07_TRICK_change_account_name/"/>
+    <url>/CS_macOS/2021-09-07_TRICK_change_account_name/</url>
+    
+    <content type="html"><![CDATA[<h2 id="STEP-1-Rename-Home-Folder"><a href="#STEP-1-Rename-Home-Folder" class="headerlink" title="STEP 1: Rename Home Folder (~/)"></a>STEP 1: Rename Home Folder (<code>~/</code>)</h2><ul><li>At first, <em>make sure you have an another administrator account</em> (denotes as <em>Account B</em>) which is different from what you want to renaming (denotes as <em>Account A</em>). Then log out of the account you’re renaming  and log in <em>Account B</em>.</li><li>If assume the new name of <em>Account A</em> is <em>Bob</em> and the old name is <em>Alice</em>. Rename <code>/Users/Alice</code> as <code>/Users/Bob</code>. (NOTE: if you still log in with <em>Account A</em>, the operation can’t be executed!)</li></ul><h2 id="STEP-2-Rename-Account"><a href="#STEP-2-Rename-Account" class="headerlink" title="STEP 2: Rename Account"></a>STEP 2: Rename Account</h2><ul><li>keep logging in with <em>Account B</em>, entering <code>System Perference</code> -&gt; <code>Users &amp; Groups</code>, <code>&lt;Ctrl-click&gt;</code> the users you want to rename, then choose <code>Advanced Options</code>.</li><li>Change <code>Account name</code> with new account name <em>Bob</em> (<em>Alice</em> -&gt; <em>Bob</em>)</li><li>Change <code>Home directory</code> as <code>/Users/Bob</code></li><li><code>Full name</code> is an alternative name of <code>Account name</code> when you need to input user name and its password, you can change it if you like.</li><li>“Click OK, then restart your Mac.” <sup><a href="#fn_1" id="reffn_1">1</a></sup></li><li>“Log in to the renamed account, then verify that your old files and folders are visible and the account is working as expected.” <sup><a href="#fn_1" id="reffn_1">1</a></sup></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://support.apple.com/en-us/HT201548">Change the name of your macOS user account and home folder</a></p><p>The following links might be also helpful<br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://www.macbookproslow.com/change-admin-name-mac/">How to Change Admin Name on MacBook Pro</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] Add Remote Support for *Neovim* and Config `vimtex` Back Search)</title>
     <link href="/CS_vim/2021-09-03_TRICK_nvim_add_remote/"/>
     <url>/CS_vim/2021-09-03_TRICK_nvim_add_remote/</url>
     
-    <content type="html"><![CDATA[<h2 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h2><p>Some times the “remote” support is necessary, and an example is config the back-search function for <code>vimtex</code>. To add the support, one can install <code>neovim-remote</code> with <code>pip3</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install neovim-remote<br></code></pre></div></td></tr></table></figure><h2 id="Configure-Back-search-of-LaTeX-neovim"><a href="#Configure-Back-search-of-LaTeX-neovim" class="headerlink" title="Configure Back-search of LaTeX (neovim)"></a>Configure Back-search of LaTeX (neovim)</h2><p>Assuming <code>vimtex</code> and <code>skim.app</code>is installed, open <code>skim.app</code> -&gt; <code>Perference</code> -&gt; <code>Sync</code>. Set <code>PDF-Tex Sync support</code> like the following</p><ul><li><code>Preset</code>: <code>Custom</code></li><li><code>Command</code>: <code>nvr</code></li><li><code>Argument</code>: <code>--remote-silent +&quot;%line&quot; &quot;%file&quot;</code></li></ul><p><img src="sync.png" alt=""> </p><p>If successfully, one can press <code>&lt;Shift-Cmd&gt;</code> and <code>&lt;Click&gt;</code> the <code>.pdf</code> file to use back-search.</p><p>&emsp;&emsp;Sometimes the back-search doesn’t work, in the case, one can try to remove <code>/tmp/nvimsocket</code> and relaunch <em>Neovim</em>.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://github.com/mhinz/neovim-remote">mhinz/neovim-remote</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h2><p>Some times the “remote” support is necessary, and an example is config the back-search function for <code>vimtex</code>. To add the support, one can install <code>neovim-remote</code> with <code>pip3</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install neovim-remote<br></code></pre></div></td></tr></table></figure><h2 id="Configure-Back-search-of-LaTeX-neovim"><a href="#Configure-Back-search-of-LaTeX-neovim" class="headerlink" title="Configure Back-search of LaTeX (neovim)"></a>Configure Back-search of LaTeX (neovim)</h2><p>Assuming <code>vimtex</code> and <code>skim.app</code>is installed, open <code>skim.app</code> -&gt; <code>Perference</code> -&gt; <code>Sync</code>. Set <code>PDF-Tex Sync support</code> like the following</p><ul><li><code>Preset</code>: <code>Custom</code></li><li><code>Command</code>: <code>nvr</code></li><li><code>Argument</code>: <code>--remote-silent +&quot;%line&quot; &quot;%file&quot;</code></li></ul><p><img src="sync.png" alt=""> </p><p>If successfully, one can press <code>&lt;Shift-Cmd&gt;</code> and <code>&lt;Click&gt;</code> the <code>.pdf</code> file to use back-search.</p><p>&emsp;&emsp;Sometimes back-search doesn’t work, in the case, one can try to remove <code>/tmp/nvimsocket</code> and relaunch <em>Neovim</em>.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://github.com/mhinz/neovim-remote">mhinz/neovim-remote</a></p>]]></content>
     
     
     <categories>
@@ -35,7 +282,7 @@
     <link href="/CS_vim/2021-09-03_TRICK_nvim_add_python_support/"/>
     <url>/CS_vim/2021-09-03_TRICK_nvim_add_python_support/</url>
     
-    <content type="html"><![CDATA[<p>To add <code>python</code> support for Neovim, one need install package <code>pynvim</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install --user --upgrade pynvim<br></code></pre></div></td></tr></table></figure><p>Further more, one can run <code>nvim +checkhelth</code>, and check <code>/## Python 3</code> at the opened file to check details <sup><a href="#fn_2" id="reffn_2">2</a></sup> . The message probably like this</p><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-section">## Python 3 provider (optional)</span><br><span class="hljs-bullet">  -</span> INFO: <span class="hljs-code">`g:python3_host_prog`</span> is not set.  Searching for python3 in the environment.<br><span class="hljs-bullet">  -</span> INFO: Multiple python3 executables found.  Set <span class="hljs-code">`g:python3_host_prog`</span> to avoid surprises.<br><span class="hljs-bullet">  -</span> INFO: Executable: /opt/homebrew/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Other python executable: /usr/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Python version: 3.9.6<br><span class="hljs-bullet">  -</span> INFO: pynvim version: 0.4.3<br><span class="hljs-bullet">  -</span> OK: Latest pynvim is installed.<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://www.jianshu.com/p/8e07b2ef4829">neovim 增加python3.5的支持</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://segmentfault.com/a/1190000017784831">NeoVim初识</a></p>]]></content>
+    <content type="html"><![CDATA[<p>To add <code>python</code> support for Neovim, one need install package <code>pynvim</code> like this <sup><a href="#fn_1" id="reffn_1">1</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ pip3 install --user --upgrade pynvim<br></code></pre></div></td></tr></table></figure><p>Further more, one can run <code>nvim +checkhelth</code>, and use command <code>:/## Python 3</code> with vim at the opened file to check details <sup><a href="#fn_2" id="reffn_2">2</a></sup> . The message probably like this</p><figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown"><span class="hljs-section">## Python 3 provider (optional)</span><br><span class="hljs-bullet">  -</span> INFO: <span class="hljs-code">`g:python3_host_prog`</span> is not set.  Searching for python3 in the environment.<br><span class="hljs-bullet">  -</span> INFO: Multiple python3 executables found.  Set <span class="hljs-code">`g:python3_host_prog`</span> to avoid surprises.<br><span class="hljs-bullet">  -</span> INFO: Executable: /opt/homebrew/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Other python executable: /usr/bin/python3<br><span class="hljs-bullet">  -</span> INFO: Python version: 3.9.6<br><span class="hljs-bullet">  -</span> INFO: pynvim version: 0.4.3<br><span class="hljs-bullet">  -</span> OK: Latest pynvim is installed.<br></code></pre></div></td></tr></table></figure><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://www.jianshu.com/p/8e07b2ef4829">neovim 增加python3.5的支持</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://segmentfault.com/a/1190000017784831">NeoVim初识</a></p>]]></content>
     
     
     <categories>
@@ -112,7 +359,7 @@
     <link href="/CS_GUI_software/2021_09_02_Zotero_quick_config/"/>
     <url>/CS_GUI_software/2021_09_02_Zotero_quick_config/</url>
     
-    <content type="html"><![CDATA[<h2 id="Set-Base-Directory-of-Link"><a href="#Set-Base-Directory-of-Link" class="headerlink" title="Set Base Directory of Link"></a>Set Base Directory of Link</h2><p>If you have many devices, use absolute path to create a link isn’t a wise choice, which probably lead the link created at a device can’t be open at another device. To solve the problem, a direct way is set a “home directory” for those link. In <code>Zotero</code>, this can be realized by set <code>Linked Attachment Base Directory</code>. Once the directory set, the link is a <em>relative path</em> to refer to the directory.</p><p>&emsp;&emsp;Next we introduce how to set it. Open <code>Perference</code> -&gt; <code>Advanced</code> -&gt; <code>Files and Folders</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> , then choose the directory you want to set. My set is a folder named <code>zotero_files</code> under the iCould folder of <code>PDF Expert</code> (we will call the folder <code>$ZOTERO_FILES</code> for convenient).</p><h2 id="Zotfile"><a href="#Zotfile" class="headerlink" title="Zotfile"></a><code>Zotfile</code></h2><p>To install extension <code>Zotfile</code>, one can download the package at official website <sup><a href="#fn_2" id="reffn_2">2</a></sup> . Then lunch <code>Zotero</code>, open menu <code>Tools</code> -&gt; <code>Add-ones</code> and click the gear icon. Click <code>Install Add-one From File</code> to install <code>Zotfile</code> from downloaded file (<code>zotfile-5.0.16-fx.xpi</code>).</p><p><img src="install.png" alt=""></p><p>Next, open <code>Perference</code> -&gt; <code>Tools</code> -&gt; <code>Zotfile Perference</code>, set <code>Source Folder for Attaching new Files</code> and <code>Location of Files</code> as <code>$ZOTERO_FILES</code>. At <code>Use subfolder defined by</code> you can set the form of subfolder, and my setting is <code>/%c</code>. The meaning of the setting is <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><ul><li>%a last names of authors (not editors etc) or inventors. The maximum number of authors are changed under ‘Additional Settings’.</li><li>%I author initials.</li><li>%F author’s last name with first letter of first name (e.g. EinsteinA).</li><li>%A first letter of author (useful for subfolders)</li><li>%d, %D, %L, %l wildcards for editors, same as for authors.</li><li>%y year (extracted from Date field)</li><li>%t title. Usually truncated after : . ? The maximal length of the remaining part of the title can be changed.</li><li>%T item type (localized)</li><li>%j name of the journal</li><li>%p name of the publisher</li><li><p>%w name of the journal or publisher (same as “%p”)</p></li><li><p>%s journal abbreviation</p></li><li>%v journal volume</li><li>%e journal issue</li><li>%f pages</li><li>%c collection path (only for sub-folders, not file names). When item is in multiple collections, user can choose between the different collections.</li><li>%n patent number (patent items only)</li><li>%i assignee (patent items only)</li></ul><h2 id="Accompany-with-Nutstore"><a href="#Accompany-with-Nutstore" class="headerlink" title="Accompany with Nutstore"></a>Accompany with <code>Nutstore</code></h2><p>If you wish to use <code>Nutstore</code> accompany with <code>Zotero</code>, you can see the article <sup><a href="#fn_4" id="reffn_4">4</a></sup> .</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="http://zotfile.com/#renaming-rules">Why can’t Zotero find a linked file?</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="http://zotfile.com/index.html#changelog">ZotFile</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="http://zotfile.com/#renaming-rules">ZotFile Renaming Rule</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://help.jianguoyun.com/?p=4190">坚果云使用 Zotero 配置过程详解</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Set-Base-Directory-of-Link"><a href="#Set-Base-Directory-of-Link" class="headerlink" title="Set Base Directory of Link"></a>Set Base Directory of Link</h2><p>If you have many devices, use absolute path to create a link isn’t a wise choice, which probably lead the link created at a device can’t be open at another device. To solve the problem, a direct way is set a “home directory” for those link. In <code>Zotero</code>, this can be realized by set <code>Linked Attachment Base Directory</code>. Once the directory set, the link is a <em>relative path</em> to refer to the directory.</p><p>&emsp;&emsp;Next we introduce how to set it. Open <code>Perference</code> -&gt; <code>Advanced</code> -&gt; <code>Files and Folders</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> , then choose the directory you want to set. My set is a folder named <code>zotero_files</code> under the iCould folder of <code>PDF Expert</code> (we will call the folder <code>$ZOTERO_FILES</code> for convenient).</p><p><img src="base_dir.png" alt=""></p><h2 id="Zotfile"><a href="#Zotfile" class="headerlink" title="Zotfile"></a><code>Zotfile</code></h2><p>To install extension <code>Zotfile</code>, one can download the package at official website <sup><a href="#fn_2" id="reffn_2">2</a></sup> . Then lunch <code>Zotero</code>, open menu <code>Tools</code> -&gt; <code>Add-ones</code> and click the gear icon. Click <code>Install Add-one From File</code> to install <code>Zotfile</code> from downloaded file (<code>zotfile-5.0.16-fx.xpi</code>).</p><p><img src="install.png" alt=""></p><p>Next, open <code>Perference</code> -&gt; <code>Tools</code> -&gt; <code>Zotfile Perference</code>, set <code>Source Folder for Attaching new Files</code> and <code>Location of Files</code> as <code>$ZOTERO_FILES</code>. </p><p><img src="source_folder.png" alt=""></p><p>At <code>Use subfolder defined by</code> you can set the form of subfolder, and my setting is <code>/%c</code>. The meaning of the setting is <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><ul><li>%a last names of authors (not editors etc) or inventors. The maximum number of authors are changed under ‘Additional Settings’.</li><li>%I author initials.</li><li>%F author’s last name with first letter of first name (e.g. EinsteinA).</li><li>%A first letter of author (useful for subfolders)</li><li>%d, %D, %L, %l wildcards for editors, same as for authors.</li><li>%y year (extracted from Date field)</li><li>%t title. Usually truncated after : . ? The maximal length of the remaining part of the title can be changed.</li><li>%T item type (localized)</li><li>%j name of the journal</li><li>%p name of the publisher</li><li><p>%w name of the journal or publisher (same as “%p”)</p></li><li><p>%s journal abbreviation</p></li><li>%v journal volume</li><li>%e journal issue</li><li>%f pages</li><li>%c collection path (only for sub-folders, not file names). When item is in multiple collections, user can choose between the different collections.</li><li>%n patent number (patent items only)</li><li>%i assignee (patent items only)</li></ul><p>The following picture shows <code>year-author-title</code> format</p><p><img src="rename_format.png" alt=""></p><h2 id="Accompany-with-Nutstore"><a href="#Accompany-with-Nutstore" class="headerlink" title="Accompany with Nutstore"></a>Accompany with <code>Nutstore</code></h2><p>If you wish to use <code>Nutstore</code> accompany with <code>Zotero</code>, you can see the article <sup><a href="#fn_4" id="reffn_4">4</a></sup> .</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="http://zotfile.com/#renaming-rules">Why can’t Zotero find a linked file?</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="http://zotfile.com/index.html#changelog">ZotFile</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="http://zotfile.com/#renaming-rules">ZotFile Renaming Rule</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://help.jianguoyun.com/?p=4190">坚果云使用 Zotero 配置过程详解</a></p>]]></content>
     
     
     <categories>
@@ -160,7 +407,7 @@
   
   
   <entry>
-    <title>[DEBUG] [defx] &quot;Send2Trash&quot; is not installed</title>
+    <title>[DEBUG] Defx &quot;Send2Trash&quot; is not installed</title>
     <link href="/CS_vim/2021-09-02_DEBUG_defx_Send2Trash_is_not_installed/"/>
     <url>/CS_vim/2021-09-02_DEBUG_defx_Send2Trash_is_not_installed/</url>
     
@@ -297,7 +544,7 @@
     <link href="/CS_vim/2021-09-01_DEBUG_gutentages_error_1/"/>
     <url>/CS_vim/2021-09-01_DEBUG_gutentages_error_1/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>The problem <code>ctags job failed</code> probably is arisen by the version of <code>ctags</code>.</p></blockquote><span id="more"></span><p>To detect the logs of <code>gutentags</code>, set </p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_trace</span> = <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>then use command <code>:messages</code> to check the error log <sup><a href="#fn_1" id="reffn_1">1</a></sup> . The full logs of the error is as following</p><figure class="highlight scilab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs scilab">gutentags: [job stdout]: [<span class="hljs-string">&#x27;Locking tags file...&#x27;</span>, <span class="hljs-string">&#x27;Running ctags on whole project&#x27;</span>, <span class="hljs-string">&#x27;ctags -f &quot;</span>/Users/he/.cache/tags/Users-he-Documents-my_config-Blade-Vim-.tags.temp<span class="hljs-string">&quot; &quot;</span>--options=/Users/he/.vim/plugged/vi<br>m-gutentags/res/ctags_recursive.options<span class="hljs-string">&quot;  &quot;</span>/Users/he/Documents/my_config/Blade-Vim<span class="hljs-string">&quot;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stdout]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -&#x27;</span>, <span class="hljs-string">&#x27;usage: ctags [-BFadtuwvx] [-f tagsfile] file ...&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: Finished ctags job.<br>gutentags: ctags job failed, returned: <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>I guess the problem is arisen from the version of <code>ctags</code>. The above messages shown that the <code>ctags</code> I use is provided by <em>command line tool (CLT)</em> of macOS. So I try to use other version of <code>ctags</code>. Finally, I choose <code>universal-ctags</code> <sup><a href="#fn_2" id="reffn_2">2</a></sup> . To install the software, one can use <code>homebrew</code> like this <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags<br></code></pre></div></td></tr></table></figure><p>If the <code>ctags</code> is provided by <code>universal-ctags</code> or <code>Exuberant Ctags</code>, one can use command <code>ctags --version</code> to check the version. For example, my output is</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ ctags --version<br>Universal Ctags 5.9.0, Copyright (C) 2015 Universal Ctags Team<br>Universal Ctags is derived from Exuberant Ctags.<br>Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert<br>  Compiled: Aug 29 2021, 20:42:35<br>  URL: https://ctags.io/<br>  Optional compiled features: +wildcards, +regex, +gnulib_fnmatch, +gnulib_regex, +iconv, +option-directory, +xpath, +json, +interactive, +yaml, +case-insensitive-filenames, +packcc, +optscript<br></code></pre></div></td></tr></table></figure><p>However, if the <code>ctags</code> is provided by CLT of macOS, the output will show <code>illegal option</code> <sup><a href="#fn_4" id="reffn_4">4</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ /usr/bin/ctags --version<br>/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -<br>usage: ctags [-BFadtuwvx] [-f tagsfile] file ...<br></code></pre></div></td></tr></table></figure><p>After installing <code>universal-ctags</code></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://wuruofan.com/2020/07/07/ubuntu-vim-gutentags-work-abnormally-solved-with-universal-ctags-and-global-recompiled/">vim-gutentags插件异常问题解决 &amp; gtags源码编译安装</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://github.com/universal-ctags/ctags">universal-ctags/ctags</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://github.com/universal-ctags/homebrew-universal-ctags">universal-ctags/homebrew-universal-ctags</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://blog.csdn.net/u011031257/article/details/80652570">vim ctags —Exuberant Ctags(Mac 版安装)</a></p><p>the following discussiong is also probably useful:</p><p><a href="https://github.com/ludovicchabant/vim-gutentags/issues/169">ctags job failed, returned: 1</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>The problem <code>ctags job failed</code> probably is arisen by the version of <code>ctags</code>.</p></blockquote><span id="more"></span><h1 id="ctags-Install"><a href="#ctags-Install" class="headerlink" title="ctags Install"></a><code>ctags</code> Install</h1><p>To detect the logs of <code>gutentags</code>, set </p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_trace</span> = <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>then use command <code>:messages</code> to check the error log <sup><a href="#fn_1" id="reffn_1">1</a></sup> . The full logs of the error is as following</p><figure class="highlight scilab"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs scilab">gutentags: [job stdout]: [<span class="hljs-string">&#x27;Locking tags file...&#x27;</span>, <span class="hljs-string">&#x27;Running ctags on whole project&#x27;</span>, <span class="hljs-string">&#x27;ctags -f &quot;</span>/Users/he/.cache/tags/Users-he-Documents-my_config-Blade-Vim-.tags.temp<span class="hljs-string">&quot; &quot;</span>--options=/Users/he/.vim/plugged/vi<br>m-gutentags/res/ctags_recursive.options<span class="hljs-string">&quot;  &quot;</span>/Users/he/Documents/my_config/Blade-Vim<span class="hljs-string">&quot;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stdout]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -&#x27;</span>, <span class="hljs-string">&#x27;usage: ctags [-BFadtuwvx] [-f tagsfile] file ...&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: [job stderr]: [<span class="hljs-string">&#x27;&#x27;</span>]<br>gutentags: Finished ctags job.<br>gutentags: ctags job failed, returned: <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><p>I guess the problem is arisen from the version of <code>ctags</code>. The above messages shown that the <code>ctags</code> I use is provided by <em>command line tool (CLT)</em> of macOS. So I try to use other version of <code>ctags</code>. Finally, I choose <code>universal-ctags</code> <sup><a href="#fn_2" id="reffn_2">2</a></sup> . To install the software, one can use <code>homebrew</code> like this <sup><a href="#fn_3" id="reffn_3">3</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags<br></code></pre></div></td></tr></table></figure><p>If the <code>ctags</code> is provided by <code>universal-ctags</code> or <code>Exuberant Ctags</code>, one can use command <code>ctags --version</code> to check the version. For example, my output is</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ ctags --version<br>Universal Ctags 5.9.0, Copyright (C) 2015 Universal Ctags Team<br>Universal Ctags is derived from Exuberant Ctags.<br>Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert<br>  Compiled: Aug 29 2021, 20:42:35<br>  URL: https://ctags.io/<br>  Optional compiled features: +wildcards, +regex, +gnulib_fnmatch, +gnulib_regex, +iconv, +option-directory, +xpath, +json, +interactive, +yaml, +case-insensitive-filenames, +packcc, +optscript<br></code></pre></div></td></tr></table></figure><p>However, if the <code>ctags</code> is provided by CLT of macOS, the output will show <code>illegal option</code> <sup><a href="#fn_4" id="reffn_4">4</a></sup></p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ /usr/bin/ctags --version<br>/Library/Developer/CommandLineTools/usr/bin/ctags: illegal option -- -<br>usage: ctags [-BFadtuwvx] [-f tagsfile] file ...<br></code></pre></div></td></tr></table></figure><h1 id="gutentags-Config"><a href="#gutentags-Config" class="headerlink" title="gutentags Config"></a><code>gutentags</code> Config</h1><p>After installing <code>universal-ctags</code>, the error messages still pop. Finally, I found the problem is caused by no root file detected <sup><a href="#fn_5" id="reffn_5">5</a></sup> . To solve the problem, one can set format of project root, and the common choose is <code>.git</code> etc. If the project didn’t use any version contral software, one can also set a special file extensions such as <code>.project</code>. Here list my config of <code>gutentags</code></p><figure class="highlight vim"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vim"><span class="hljs-comment">&quot; coorperate with airline</span><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">g:airline</span>#extensions#grepper#enabled = <span class="hljs-number">1</span><br><span class="hljs-comment">&quot; name of the tags file</span><br>    set tags=./.tags;,.tags<br><span class="hljs-comment">&quot; gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归</span><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_project_root</span> = [<span class="hljs-string">&#x27;.root&#x27;</span>, <span class="hljs-string">&#x27;.svn&#x27;</span>, <span class="hljs-string">&#x27;.git&#x27;</span>, <span class="hljs-string">&#x27;.hg&#x27;</span>, <span class="hljs-string">&#x27;.project&#x27;</span>]<br><span class="hljs-comment">&quot; 所生成的数据文件的名称</span><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_ctags_tagfile</span> = <span class="hljs-string">&#x27;.tags&#x27;</span><br><span class="hljs-comment">&quot; 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录</span><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">s:vim_tags</span> = <span class="hljs-built_in">expand</span>(<span class="hljs-string">&#x27;~/.cache/tags&#x27;</span>)<br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_cache_dir</span> = <span class="hljs-variable">s:vim_tags</span><br><span class="hljs-comment">&quot; 检测 ~/.cache/tags 不存在就新建</span><br>    <span class="hljs-keyword">if</span> !isdirectory(<span class="hljs-variable">s:vim_tags</span>)<br>        silent! <span class="hljs-keyword">call</span> <span class="hljs-built_in">mkdir</span>(<span class="hljs-variable">s:vim_tags</span>, <span class="hljs-string">&#x27;p&#x27;</span>)<br>    <span class="hljs-keyword">endif</span><br><span class="hljs-comment">&quot; output error message (use command &#x27;messages&#x27;. hide the option to avoid</span><br><span class="hljs-comment">&quot; unwanted pop message)</span><br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">g:gutentags_trace</span> = <span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a href="https://wuruofan.com/2020/07/07/ubuntu-vim-gutentags-work-abnormally-solved-with-universal-ctags-and-global-recompiled/">vim-gutentags插件异常问题解决 &amp; gtags源码编译安装</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a href="https://github.com/universal-ctags/ctags">universal-ctags/ctags</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a href="https://github.com/universal-ctags/homebrew-universal-ctags">universal-ctags/homebrew-universal-ctags</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a href="https://blog.csdn.net/u011031257/article/details/80652570">vim ctags —Exuberant Ctags(Mac 版安装)</a><br><sup><a href="#fn_5" id="reffn_5">5</a></sup> <a href="https://github.com/ludovicchabant/vim-gutentags/issues/234">How do I enable gutentags for directories which are not version controlled?</a></p><p>the following discussiong is also probably useful:</p><p><a href="https://github.com/ludovicchabant/vim-gutentags/issues/169">ctags job failed, returned: 1</a></p>]]></content>
     
     
     <categories>
@@ -484,6 +731,35 @@
     <categories>
       
       <category>CS Web</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+      <tag>TODO</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[DEBUG] Can&#39;t Open Application with Current Version of macOS</title>
+    <link href="/CS_macOS/2021-07-11_DEBUG_cant_open_app_with_macos_version/"/>
+    <url>/CS_macOS/2021-07-11_DEBUG_cant_open_app_with_macos_version/</url>
+    
+    <content type="html"><![CDATA[<p>When I try to open <code>ygopro.app</code>, I meet a warning “You can’t use this version of the application “ygopro.app” with this version of macOS.”. The solution I thought is modify the <code>Minimum system version</code> option of <code>info.plist</code> file <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to open applications regardless of required version?">[1]</span></a></sup> (<code>Show Package Contents</code> -&gt; <code>Contents</code>), but it doesn’t work.</p><p><img src="warning.png" alt=""></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://apple.stackexchange.com/questions/192533/how-to-open-applications-regardless-of-required-version">How to open applications regardless of required version?</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
       
     </categories>
     
