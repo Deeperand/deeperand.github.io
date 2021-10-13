@@ -4,6 +4,239 @@
   
   
   <entry>
+    <title>[TRICK] Add QQ mail to mail.app</title>
+    <link href="/CS_macOS/2021-10-13_TRICK_add_QQ_email_to_mail_app/"/>
+    <url>/CS_macOS/2021-10-13_TRICK_add_QQ_email_to_mail_app/</url>
+    
+    <content type="html"><![CDATA[<p>To add QQ mail to mail.app, you need open IMAP/SMTP <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="IMAP和POP的区别">[3]</span></a></sup> at the setting of QQ mail (web version) <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="怎样设置iPhone邮件（添加QQ邮箱及删除账户）？">[1]</span></a></sup> , then input the <code>授权码</code> as the password of e-mail <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="iphone/Mac上添加QQ邮箱">[2]</span></a></sup> . Note the pop window of “input independent password” is only appearing <em>when the language setting of QQ mail web UI is Chinese!</em></p><p><img src="IMAP_en.png" alt=""></p><p><img src="IMAP_ch.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://jingyan.baidu.com/article/3a2f7c2e04b63826afd6111e.html">怎样设置iPhone邮件（添加QQ邮箱及删除账户）？</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.jianshu.com/p/4d6e951cfad7">iphone/Mac上添加QQ邮箱</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://blog.csdn.net/li_adou/article/details/78165683">IMAP和POP的区别</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Screen Record with Inner Voice</title>
+    <link href="/CS_macOS/2021-10-13_TRICK_screen_record_with_inner_voice/"/>
+    <url>/CS_macOS/2021-10-13_TRICK_screen_record_with_inner_voice/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>By default, macOS’s screen record can’t record inner voice and can just record voice receive from microphone. To record inner voice, one can with the help of <code>Loopback.app</code>.</p></blockquote><h1 id="Install-Loopback"><a href="#Install-Loopback" class="headerlink" title="Install Loopback"></a>Install <code>Loopback</code></h1><p>The installing process of <code>Loopback.app</code> is nontrivial. To install it, you should “boot into your mac’s recovery environment”. To the end, you should press and hold the Touch ID or power button on your Mac until you seen “Loading startup options…” in your screen. The complete process is long, more information can be seen at official guide <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Installing ACE on MacOS 11 (Big Sur) and MacOS 12 (Monterey)">[2]</span></a></sup></p><h1 id="Basic-Config"><a href="#Basic-Config" class="headerlink" title="Basic Config"></a>Basic Config</h1><p>After installing <code>Loopback.app</code> successfully, one need to add the application you wish to record its voice into the channel. Then, just open screen record (i.e., use “QuickTime Player” to record screen), and select <code>Options</code> -&gt; <code>microphone</code> -&gt; <code>loopback</code>. Note <em>any setting of <code>microphone</code> rather than <code>none</code> will lead the opening of the screen record slow! Even you choose mac’s microphone!</em> So if you didn’t wish to use slow the opening speed, choose <code>none</code> when you don’t demand inner voice record. Furthermore, if you wish to sound voice while recording, cancel option <code>Mute when capturing</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="MacBook录屏带内录声音的方法 ｜录屏教程 ｜ 留学生网课">[3]</span></a></sup> .</p><p><img src="mute.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://rogueamoeba.com/loopback/">LOOPBACK</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-BigSur#mchipinstructions">Installing ACE on MacOS 11 (Big Sur) and MacOS 12 (Monterey)</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://www.youtube.com/watch?v=ccNVG2v44ZI">MacBook录屏带内录声音的方法 ｜录屏教程 ｜ 留学生网课</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] 日语特殊音输入方法</title>
+    <link href="/LANG_Japanese/2021-10-13_TRICK_Japanese_input/"/>
+    <url>/LANG_Japanese/2021-10-13_TRICK_Japanese_input/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Main-Body"><a href="#Main-Body" class="headerlink" title="Main Body"></a>Main Body</h1><ul><li>拗音: 去掉元音 “i”, 加上拗音对应的复元音, 不过根据输入法的不同, 也有用 “i” 代替 “y” 的. 如用 squirrel 的日语输入 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="gkovacs/rime-japanese">[2]</span></a></sup> : きゃ(kya), しゅ(shu)</li><li>促音: 双打后一个假名的第一个辅音, 如: もっと(motto)</li><li>长音: 片假名输入减号 “-“</li></ul><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://zhuanlan.zhihu.com/p/75109736">日语拨音、促音、拗音、外来语的输入规则</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://github.com/gkovacs/rime-japanese">gkovacs/rime-japanese</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://blog.csdn.net/sxjk1987/article/details/110431038">日语中的长音用输入法怎么打</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>LANG Japanese</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+      <tag>LANGUAGE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Common Used Shortcuts of Logic Pro</title>
+    <link href="/CS_GUI_software/Logic_Pro/2021-10-03_TRICK_commom_used_shortcuts_of_Logic_Pro/"/>
+    <url>/CS_GUI_software/Logic_Pro/2021-10-03_TRICK_commom_used_shortcuts_of_Logic_Pro/</url>
+    
+    <content type="html"><![CDATA[<p>This list just record the shortcuts I’ve used. The more detailed list can see <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="2016 Logic Pro X 常用快捷鍵總整理：Version 10.2.4">[1]</span></a></sup>. Note</p><ul><li><code>&lt;M-&gt;</code> $\equiv$ <code>&lt;option-&gt;</code></li><li><code>&lt;C-&gt;</code> $\equiv$ <code>&lt;control-&gt;</code></li><li><code>&lt;S-&gt;</code> $\equiv$ <code>&lt;shift-&gt;</code></li></ul><p>And the notation in Logic Pro shortcuts means</p><ul><li>⌤: Projective, <code>&lt;fn-enter&gt;</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="What is the Mac keyboard key with a symbol ⌅ of an up arrow pointing into a horizontal line?">[2]</span></a></sup></li></ul><h1 id="General-Operation"><a href="#General-Operation" class="headerlink" title="General Operation"></a>General Operation</h1><h2 id="Edit-General"><a href="#Edit-General" class="headerlink" title="Edit (General)"></a>Edit (General)</h2><ul><li><code>&lt;cmd-c&gt;</code>: copy</li><li><code>&lt;cmd-x&gt;</code>: cut</li><li><code>&lt;cmd-v&gt;</code>: paste</li><li><code>&lt;cmd-S-v&gt;</code>: “取代貼上”</li><li><code>&lt;cmd-a&gt;</code>: select all</li><li><code>&lt;cmd-z&gt;</code>/<code>&lt;cmd-S-z&gt;</code>: undo/redo</li><li><code>&lt;cmd-M-z&gt;</code>: “檢視操作歷史紀錄”</li><li><code>T</code>: “更換滑鼠工具”</li></ul><h2 id="Move-Play-General"><a href="#Move-Play-General" class="headerlink" title="Move/Play (General)"></a>Move/Play (General)</h2><ul><li><code>&lt;space&gt;</code>: play/pause</li><li><code>&lt;enter&gt;</code>/<code>&lt;return&gt;</code>: jump to start of the project</li><li><code>&lt;.&gt;</code>: </li><li><code>&lt;&gt;</code><br>快轉（以 1小節 為單位移動 Play Head）：。 (大於/句號)<br>倒轉（以 1小節 為單位移動 Play Head）：， (小於/逗號)<br>快轉（以 1小節 為單位移動 Play Head）：Shift + 。 (大於/句號)<br>倒轉（以 1小節 為單位移動 Play Head）：Shift + ， (小於/逗號)<br>啟動/關閉 圈選範圍 （Cycle）：C<br>圈選目前選取的 Region 或是 MIDI Note 範圍 （Cycle）：Ｕ<br>移動 Play Head 到指定位置： / （問號 / ㄥ）</li></ul><h2 id="Marker"><a href="#Marker" class="headerlink" title="Marker"></a>Marker</h2><ul><li><code>&lt;M-k&gt;</code>: show/hide markder track</li><li><code>&lt;M-&#39;&gt;</code>: Create Marker</li><li><code>&lt;M-C-&#39;&gt;</code>: Create Marker without rounding</li><li><code>&lt;M-S-&#39;&gt;</code>: Create Marker for Selected Regions</li><li><code>none</code>: Create Marker by Cycle Area •</li><li><code>&lt;M-delete&gt;</code>: Delete Marker</li><li><code>none</code>: Open Marker List</li><li><code>none</code>: Open Marker Text</li><li><code>&lt;M-S-C&gt;</code>: Set Locators by Marker and Enable Cycle</li><li><code>&lt;M-S-,&gt;</code>Set Locators by Previous Marker and Enable Cycle</li><li><code>&lt;M-S-.&gt;</code>: Set Locators by Next Märker and Enable Cycle</li><li><code>none</code>: Go to Previous Marker</li><li><code>none</code>: Go to Next Marker</li><li><code>&lt;M-,&gt;</code>Go to Previous Marker And Set Locators</li><li><code>&lt;M-.&gt;</code>: Go to Next Marker And Set Locators</li><li><code>&lt;M-/&gt;</code>: Go to Marker Number…</li><li><code>&lt;S-&#39;&gt;</code>Rename Marker</li></ul><h1 id="Window-Control"><a href="#Window-Control" class="headerlink" title="Window Control"></a>Window Control</h1><h2 id="Display-Close-Main-Window"><a href="#Display-Close-Main-Window" class="headerlink" title="Display/Close Main Window"></a>Display/Close Main Window</h2><ul><li><code>Y</code>: library</li><li><code>I</code>: inspector</li><li><code>&lt;cmd-M-T&gt;</code>: tool bar</li><li><code>B</code>: smart control</li><li><code>X</code>: mixer</li><li><code>E</code>: audio track edit / piano roll / drummer</li><li><code>P</code>: piano roll</li><li><code>G</code>: global track</li><li><code>D</code>: event list edit</li><li><code>O</code>: apple loops</li><li><code>&lt;M-C-P&gt;</code>: note pads</li><li><code>F</code>: (media) browser</li><li><code>&lt;M-k&gt;</code>: key command (shortcuts setting)</li></ul><h2 id="Open-Single-Window"><a href="#Open-Single-Window" class="headerlink" title="Open Single Window"></a>Open Single Window</h2><ul><li><code>&lt;cmd-1&gt;</code>: open main window</li><li><code>&lt;cmd-2&gt;</code>: open mixer</li><li><code>&lt;cmd-3&gt;</code>: smart control</li><li><code>&lt;cmd-4&gt;</code>: piano roll</li><li><code>&lt;cmd-5&gt;</code>: score</li><li><code>&lt;cmd-6&gt;</code>: audio file edit</li><li><code>&lt;cmd-7&gt;</code>: event list</li><li><code>&lt;cmd-8&gt;</code>: project audio browser</li><li><code>&lt;cmd-9&gt;</code>: MIDI transformation </li><li><code>&lt;M-E&gt;</code>: “event float”</li><li><code>&lt;M-R&gt;</code>: region inspector</li><li><code>&lt;cmd-K&gt;</code>: musical typing</li><li><code>&lt;cmd=,&gt;</code>: preference</li><li><code>&lt;cmd-P&gt;</code>: project setting</li></ul><h2 id="Piano-Roll"><a href="#Piano-Roll" class="headerlink" title="Piano Roll"></a>Piano Roll</h2><p>(main ref<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="14 Essential Piano Roll Shortcuts Logic Pro X">[4]</span></a></sup>)</p><ul><li><code>Q</code>: quantication</li><li><code>&lt;S-click&gt;</code>: multi-select</li><li><code>&lt;cmd-R&gt;</code>: repeat</li><li><code>;</code>: shift to playhead location</li><li><code>&lt;S-F&gt;</code>: select following</li><li><code>&lt;S-I&gt;</code>: inverse selection</li><li><code>&lt;M-S-up&gt;</code>/<code>&lt;M-S-down&gt;</code>: move octave</li><li><code>&lt;M-up&gt;</code>/<code>&lt;M-down&gt;</code>: move octave</li><li><code>&lt;C-M&gt;</code>: mute</li><li><code>&lt;S-\&gt;</code>: force legato</li><li><code>&lt;\&gt;</code>: conceal overleap</li><li><code>&lt;M-S-&gt;</code>: assign operation for all the selected notes<ul><li><code>&lt;M-S-velocity tool&gt;</code>: assign the same velocity for all the selected notes <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="在 Logic Pro 钢琴卷帘编辑器中编辑力度">[3]</span></a></sup></li><li><code>&lt;M-S-prolog notes&gt;</code>: prolong all the selected notes to the same length</li></ul></li></ul><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://liswei.com/tw/logic-pro-x-key-command/">2016 Logic Pro X 常用快捷鍵總整理：Version 10.2.4</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://apple.stackexchange.com/questions/81850/what-is-the-mac-keyboard-key-with-a-symbol-of-an-up-arrow-pointing-into-a-hori">What is the Mac keyboard key with a symbol ⌅ of an up arrow pointing into a horizontal line?</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://support.apple.com/zh-cn/guide/logicpro/lgcpa8fee137/mac">在 Logic Pro 钢琴卷帘编辑器中编辑力度</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://www.youtube.com/watch?v=p5kMTr9iaNI&amp;list=PL8QCYiyFnvM6UYsz85wCMZQ0UVYWQT1zw&amp;index=5&amp;t=174s">14 Essential Piano Roll Shortcuts Logic Pro X</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS GUI Software</category>
+      
+      <category>Logic Pro</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Authorize Apple Music at macOS</title>
+    <link href="/CS_macOS/2021-09-24_TRICK_authorize_apple_music_at_macOS/"/>
+    <url>/CS_macOS/2021-09-24_TRICK_authorize_apple_music_at_macOS/</url>
+    
+    <content type="html"><![CDATA[<p>Open <code>Music.app</code>, then click <code>Account</code> -&gt; <code>Authorizations</code> -&gt; <code>Authorize This Computer</code></p><p><img src="authorize.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://support.apple.com/en-us/HT201251">Authorize or deauthorize your computer for iTunes Store purchases</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Close Update Check of Office</title>
+    <link href="/CS_macOS/2021-09-24_TRICK_close_office_update_check/"/>
+    <url>/CS_macOS/2021-09-24_TRICK_close_office_update_check/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>To the end, most convenient way is use <code>Lemon.app</code> to close relating startup items</p></blockquote><span id="more"></span><p>Launch <code>Lemon.app</code>, then click <code>Startup Items</code> and disable the term <code>Microsoft AutoUpdate</code></p><p><img src="startup_items_0.png" alt=""></p><p><img src="startup_items_1.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><sup><a href="#fn_1" id="reffn_1">1</a></sup>L <a href="https://www.jianshu.com/p/69d0d7706377">Mac 关闭Microsoft Autoupdate(office自动更新)更新提示弹窗</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Use `mail.app` to Receive Message from UCAS Mail</title>
+    <link href="/CS_macOS/2021-09-24_TRICK_use_app_mail_to_receive_from_ucas_mail/"/>
+    <url>/CS_macOS/2021-09-24_TRICK_use_app_mail_to_receive_from_ucas_mail/</url>
+    
+    <content type="html"><![CDATA[<p>The exact introduction see the official help documentation <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="如何在iPhone iOS13系统中设置SSL加密的IMAP帐户？">[1]</span></a></sup> . Note the set for macOS and IOS is similiar, and the most important thing is the host name is <code>mail.cstnet.cn</code> even your mail extension is <code>itp.ac.cn</code> or others.</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="http://help.cstnet.cn/changjianwenti/youjianshoufa/iphoneios13imapssl.htm">如何在iPhone iOS13系统中设置SSL加密的IMAP帐户？</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Transfer Apple Music Library into New MacBook</title>
+    <link href="/CS_macOS/2021-09-24_TRICK_transfer_apple_music_library_into_new_macbook/"/>
+    <url>/CS_macOS/2021-09-24_TRICK_transfer_apple_music_library_into_new_macbook/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>The main step of transfer library of Apple Music is orgnizing the old library and copying the old one to the new machine, then choose the library at the new MacBook.</p></blockquote><span id="more"></span><p>Recently, I found the iCloud syncing and playing of Apple Music on MacBook is not stable, so I want to turn off the iCloud sync of Apple Music and sync the library with iPhone manually. To this end, I need to transfer the library from old machine to the new one.</p><p>&emsp;&emsp;The first step is organizing the old library, which can copy all the files outside the media folder into the media folder to solve the links breaking problem which might occur when transfer library.</p><p><img src="orgnize_lib.png" alt=""></p><p>The next step is copying the whole library folder into the new machine. Then <code>&lt;Option-click&gt;</code> the application <code>Music.app</code>, </p><p><img src="choose_lib.png" alt=""></p><p>select <code>Choose Library</code>, and open <code>iTunes Library.ltl</code> (or <code>Music Library.musiclibrary</code> for macOS version higher than <code>Catalina</code>).</p><p><img src="old_lib.png" alt=""></p><p>Probably since the new version of <code>Music.app</code> has different types of library (the new one is <code>.musiclibrary</code> and the old one is <code>.ltl</code>), it need to save the file as new type (<code>.musiclibrary</code>)</p><p><img src="save-as.png" alt=""></p><p><img src="new_lib.png" alt=""></p><p>The final step is checking the path of media folder if is what you like. After I choosing the library, the media folder is in the copied library</p><p><img src="media_folder.png" alt=""></p><p>after clicking <code>Reset</code>, the path becomes</p><p><img src="default_media_folder.png" alt=""></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://sspai.com/post/26426">Mac 基础教程：如何将 iTunes 资料库转移至外置硬盘</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Transfer Timemachine Backup into New Hard Disc</title>
+    <link href="/CS_macOS/2021-09-24_TRICK_transfer_timemachine_into_new_hard_disc/"/>
+    <url>/CS_macOS/2021-09-24_TRICK_transfer_timemachine_into_new_hard_disc/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>A weeks ago, I try to transfer my Time Machine backup of old MacBook into another disc, but meet the problem such as can’t copy, can’t use <code>Disc Utility</code>‘s <code>Restore</code> function etc. This article record the things you need to be care and how I solve these problems.</p></blockquote><span id="more"></span><h1 id="Turn-off-Auto-backup"><a href="#Turn-off-Auto-backup" class="headerlink" title="Turn off Auto-backup"></a>Turn off Auto-backup</h1><p>To avoid some possible problmes, before start to transfer backup, one need to trun off auto-backup at <code>Time Machine</code> -&gt; <code>Back Up Automatically</code></p><p><img src="turn_off_auto_backup.png" alt=""></p><h1 id="Formatting-and-Encrypting-New-Hard-Disc"><a href="#Formatting-and-Encrypting-New-Hard-Disc" class="headerlink" title="Formatting and Encrypting New Hard Disc"></a>Formatting and Encrypting New Hard Disc</h1><p>At macOS, there are two main formats <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="HDD格成HFS+好还是APFS好？">[1]</span></a></sup> , the one is <code>APFS</code> and the another is <code>HFS+</code> (<code>Mac OS Extended</code>) <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="HDD格成HFS+好还是APFS好？">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="What’s the Difference Between APFS, Mac OS Extended (HFS+), and ExFAT?">[2]</span></a></sup> . The first is more suitable for SSD and the later is for HDD, and the both two type can be encrypted. However, it seems like from <code>macOS Catalina</code>, one can’t format with <code>Mac OS Extended (Journaled, Encrypted)</code> anymore <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Mac OS Extended (Journaled, Encrypted)">[3]</span></a></sup> <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Mac OS Extended (Journaled, Encrypted) not available!">[6]</span></a></sup> . Furthermore, even you encrypt <code>Mac OS Extended (Journaled)</code> at such machine (via <code>&lt;C-click&gt;</code> in Finder <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to Use Apple’s Built-in Features to Encrypt Files and Folders">[4]</span></a></sup> ), it will be converted into <code>APFS</code> automatically.</p><p>Before start to formatting, set <code>Show All Devices</code> will be helpful</p><p><img src="formatting_1.png" alt=""></p><p>Then one can start to formatting (erase) such as</p><p><img src="formatting_2.png" alt=""></p><p>Note both the <em>name</em> and the <em>format</em> of the old disc would be better as same as the old one <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="将Time Machine备份转移到新硬盘的方法和若干常见失败原因">[5]</span></a></sup> <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="Transfer your Time Machine backups to a new drive with this guide">[7]</span></a></sup> .</p><h1 id="Copy-Backup-to-New-Hard-Disc"><a href="#Copy-Backup-to-New-Hard-Disc" class="headerlink" title="Copy Backup to New Hard Disc"></a>Copy Backup to New Hard Disc</h1><p>When I try to copy the whole <em>Time Machine</em> folder from old disc to the new one, always meet the problem “The operation can’t be completed because the disc is full” even though the folder size is less than the disc space (in my case, the copying didn’t stop even the copied file is already arrive 585.8 GB).</p><p><img src="copy_failed_1.png" alt=""></p><p><img src="copy_failed_2.png" alt=""></p><p>So, the final solution is use <code>Disc Utility</code> to “Restore” disc <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="Moving Time Machine backup to new drive">[8]</span></a></sup> , which restore the date from source disc to target disc <em>byte-by-byte</em>. However, if you use <code>Disc Utility</code> directly, the problem “Could not validate source - Operation not permitted” will arise. To use the <code>Restore</code> function, “Hold cmd+r when booting, then use Disk Utility to recover” <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="Clone Time Machine volume">[9]</span></a></sup> .</p><h1 id="Change-New-Disc-as-Backup-Target"><a href="#Change-New-Disc-as-Backup-Target" class="headerlink" title="Change New Disc as Backup Target"></a>Change New Disc as Backup Target</h1><p>After the data is already copied into new disc, one need to open <code>Time Machine</code>, then choose new disc as backup disc.</p><p><img src="choose_new_disc_1.png" alt=""></p><p><img src="choose_new_disc_2.png" alt=""></p><h1 id="Appendix-Turn-on-Time-Machine-on-New-MacBook"><a href="#Appendix-Turn-on-Time-Machine-on-New-MacBook" class="headerlink" title="Appendix: Turn on Time Machine on New MacBook"></a>Appendix: Turn on <code>Time Machine</code> on New MacBook</h1><p>The way to turn on <code>Time Machine</code> on a new MacBook is similar to change backup disc. You need choose which disc you wise to use to make backup, then decide if you want to encrypt the data. Note at macOS version <code>Big Sur</code>, the formatting type will be converted to APFS automatically even thought you’ve already formatted the disc as HFS+ before the operation.</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.zhihu.com/question/316795817">HDD格成HFS+好还是APFS好？</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.howtogeek.com/331042/whats-the-difference-between-apfs-macos-extended-hfs-and-exfat/">What’s the Difference Between APFS, Mac OS Extended (HFS+), and ExFAT?</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://forums.macrumors.com/threads/mac-os-extended-journaled-encrypted.2298265/">Mac OS Extended (Journaled, Encrypted)</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://www.intego.com/mac-security-blog/how-to-use-apples-built-in-features-to-encrypt-files-and-folders/">How to Use Apple’s Built-in Features to Encrypt Files and Folders</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a href="https://zhuanlan.zhihu.com/p/385139938">将Time Machine备份转移到新硬盘的方法和若干常见失败原因</a><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a href="https://discussions.apple.com/thread/8140633?answerId=32616317022#32616317022">Mac OS Extended (Journaled, Encrypted) not available!</a><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a href="https://appletoolbox.com/transfer-your-time-machine-backups-to-a-new-drive-with-this-guide/">Transfer your Time Machine backups to a new drive with this guide</a><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a href="https://discussions.apple.com/thread/8328053">Moving Time Machine backup to new drive</a><a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:9" class="footnote-text"><span><a href="https://apple.stackexchange.com/questions/340432/clone-time-machine-volume">Clone Time Machine volume</a><a href="#fnref:9" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[DEBUG] Convert pdf into picture but Black Background Appear</title>
     <link href="/CS_linux/2021-09-17_DEBUG_convert_pdf_but_black_bg_appear/"/>
     <url>/CS_linux/2021-09-17_DEBUG_convert_pdf_but_black_bg_appear/</url>
@@ -739,9 +972,9 @@
       
       <tag>CS</tag>
       
-      <tag>TRICK</tag>
-      
       <tag>TODO</tag>
+      
+      <tag>TRICK</tag>
       
     </tags>
     
@@ -768,9 +1001,9 @@
       
       <tag>CS</tag>
       
-      <tag>TRICK</tag>
-      
       <tag>TODO</tag>
+      
+      <tag>TRICK</tag>
       
     </tags>
     
@@ -2076,7 +2309,7 @@
     <link href="/CS_Hexo/2021-05-02_hexo_quick_start/"/>
     <url>/CS_Hexo/2021-05-02_hexo_quick_start/</url>
     
-    <content type="html"><![CDATA[<p>本文绝大部分内容参考自 Hexo 的官方参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 官方中文文档">[1]</span></a></sup>, 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会.</p><h2 id="建站及-Hexo-目录结构"><a href="#建站及-Hexo-目录结构" class="headerlink" title="建站及 Hexo 目录结构"></a>建站及 Hexo 目录结构</h2><p>&emsp;&emsp;类似于 <code>git</code> 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 建站">[2]</span></a></sup>. 如</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ hexo init &lt;folder&gt;<br>$ <span class="hljs-built_in">cd</span> &lt;folder&gt;<br>$ npm install<br></code></pre></div></td></tr></table></figure><p>其中第一行是 <code>hexo</code> 的初始化语句, 第二行是跳转至建站的路径, 第三行是在路径下使用 <code>npm</code> 安装所需插件. 新建完成后的目录结构为</p><figure class="highlight sqf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sqf">.<br>├── <span class="hljs-variable">_config</span>.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── <span class="hljs-variable">_drafts</span><br>|   └── <span class="hljs-variable">_posts</span><br>└── themes<br></code></pre></div></td></tr></table></figure><p>各个路径的简介如下 (详细介绍见官方文档 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 建站">[2]</span></a></sup>)</p><ul><li><code>_config.yml</code>: Hexo 的 (全局) 配置文件</li><li><code>package.json</code>: 通过 <code>npm install</code> 安装的包</li><li><code>scaffolds</code>: 模板文件夹. 如使用指令 <code>hexo new [layout] &lt;title&gt;</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 写作">[3]</span></a></sup>, 将按照 <code>scaffolds</code> 中的模板文件 <code>[layout].md</code> 在当前目录下建立标题为 <code>&lt;title&gt;</code> 的新文件. (如果设置了资源文件夹<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo资 源文件夹">[5]</span></a></sup>, 除了建立 <code>&lt;title&gt;.md</code> 以外, 还会在当前位置建立名为 <code>&lt;title&gt;</code> 的文件夹)</li><li><code>source</code>: 存放博客的核心—Markdown 文件及图片等资源的地方. 该文件夹中除了 <code>_posts</code> 文件夹以外的以下划线 <code>_</code> 开头的文件夹将被忽略, 你可以利用此特性在 <code>source</code> 文件夹下额外建立一个 <code>_draft</code> 的文件夹来存放草稿 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 草稿">[8]</span></a></sup> .</li><li><code>theme</code>: 主题文件</li></ul><h2 id="Markdown-写作"><a href="#Markdown-写作" class="headerlink" title="Markdown 写作"></a>Markdown 写作</h2><p>&emsp;&emsp;采用 Hexo 等博客框架的一大优势就是可以直接使用 Markdown 进行写作, 并自动生成最终所需的 HTML 文件, 而无需直接面对 HTML 文件. 相比通常的 Markdown 语法, Hexo 有自己独有的一些特点. 笔者将简单介绍如下</p><h3 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front Matter"></a>Front Matter</h3><p>&emsp;&emsp;相比于一般的 Markdonw 语法, Hexo 提供了 Front Matter <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo Front-matter">[6]</span></a></sup>用以指定每篇文章的变量. 如标题名, 建立日期, 分类, 标签等. Front Matter 区域在 Markdonw 文件开头, 以两条三横线分隔, 如</p><figure class="highlight md"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs md">---<br>title: <br>math: true<br>data: 2021-05-02<br>categories:<br><span class="hljs-bullet">-</span> <br>tags: <br>---<br></code></pre></div></td></tr></table></figure><p>其中若有项目没有指定值. 将采用默认值. 部分参数控制的功能如下</p><ul><li><code>layout</code>: 文章布局, 默认为 <code>config.default_layout</code></li><li><code>title</code>: 文章标题, 默认为文章的文件名</li><li><code>date</code>: 文章的建立日期, 默认为文件建立日期.</li><li><code>update</code>: 文章更新日期</li><li><code>comments</code>: 是否开启文章评论</li><li><p><code>tags</code>: 标签. 若希望有多个标签, 可采取类似 Markdown list 的形式, 如</p>  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">tags:<br><span class="hljs-bullet">-</span> CS<br><span class="hljs-bullet">-</span> TODO<br></code></pre></div></td></tr></table></figure></li><li><p><code>categories:</code>文章的分类. 采用类似 Markdown list 的形式, 前一个分类为后一个分类的父分类. 如</p>  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">categories:<br><span class="hljs-bullet">-</span> Diary<br><span class="hljs-bullet">-</span> Life<br></code></pre></div></td></tr></table></figure><p>  其含义为: 该文件属于父分类 <code>Diary</code> 的子分类 <code>Life</code>. 关于为文章添加多个分类的方法详见官方参考文档 <sup><a href="#fn_Front Matter" id="reffn_Front Matter">Front Matter</a></sup>.</p></li></ul><p>部分主题 <code>theme</code> 提供了更丰富的 Front Matter. 如 Fluid 主题 <sup><a href="#fn_Fluid" id="reffn_Fluid">Fluid</a></sup> 提供了 <code>math</code>, <code>mermaid</code> 等来控制数学公式和 <code>mermaid</code> 流程图 <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="Mermaid">[7]</span></a></sup> 的渲染开关.</p><h3 id="Tag-插件"><a href="#Tag-插件" class="headerlink" title="Tag 插件"></a>Tag 插件</h3><p>&emsp;&emsp;官方文档直接翻译的是 “标签插件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 标签插件（Tag Plugins）">[4]</span></a></sup>“. 这个名字一开始让我有些不明所以. 后来才认识到, 这个词语应分为两部分: “标签 (Tag)” 与 “插件 (Plugin)”, 亦即这是一类插件, 不过是比较特殊的一类插件. “Plugin” 表明, 这类功能的实现往往需要一些第三方程序—-也就是插件提供; “Tag” 表明, 这类功能的实现主要是由一种被称为 “标签 (Tag)” 的特殊语法来实现. 其与 “HTML 标签” 在使用上有相似之处, 但毕竟是不同的东西, 要注意与 “HTML 标签” 进行区分. 当然, 这一节的标题特意将前半部分用英文、而后半部分用中文, 亦是为了强调对这个名词的正确断句.</p><p>&emsp;&emsp;标签的基本形式形如 <code>&#123;% <syntax> %&#125;</code>, 其中 <code>&lt;syntax&gt;</code> 部分没有特别统一的形式, 需要根据使用的具体插件进行学习. 官方文档 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 标签插件（Tag Plugins）">[4]</span></a></sup> 中给出了一些插件的例子.</p><p>&emsp;&emsp;值得主要, 既然这些东西属于 “插件”, 自然必须安装了对应的第三方程序才能使用. 如果你发现一段代码在其他人的文章介绍里可以进行渲染, 但在自己的 Hexo 却无法实现, 就得怀疑是否是因为没有安装相应插件了.</p><h2 id="资源-Asset-文件夹"><a href="#资源-Asset-文件夹" class="headerlink" title="资源 (Asset) 文件夹"></a>资源 (Asset) 文件夹</h2><p>&emsp;&emsp;相比于在 <code>source</code> 文件夹下建立诸如 <code>fig</code> 文件夹来统一管理文章所用到的资源 (如图片插入), 笔者更喜欢采取 “project” 的范式来撰写文章. 亦即将每一篇视为一个独立的 “project”, 不同 “project” 的资源彼此独立存储, 以减少不同 “project” 之间的耦合, 增强各自的独立性. 为在 Hexo 中实现此目的, 可在 <code>_config.yml</code> 中配置 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo资 源文件夹">[5]</span></a></sup></p><figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">marked:</span><br>  <span class="hljs-attr">prependRoot:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">postAsset:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure><p>当这些选项开启后, 可在与文章同名的文件夹中放置资源, 并在对应文章中通过相对该文件夹的路径来引用资源. 例如, <code>source/</code> 下有博客 <code>hello.md</code>, 以及文件夹 <code>source/hello/</code>, 该文件夹中有子文件夹 <code>fig/</code>, 其中有图片 <code>test.png</code>. 那么在 <code>hello.md</code> 中使用该图片时, 可以直接使用相对与 <code>source/hello/</code> 的路径 <code>fig/test.png</code>, 而非相对 <code>source</code> 的路径. </p><p>&emsp;&emsp;在官方中文文档中, 资源文件夹对应的是 Asset 文件夹, 而非 Source 文件夹. 笔者个人认为, Asset 文件夹的功效其实更接近英文 “Assistant”, 亦即辅助. 实际上, 官方文档中将 “Asset” 诠释为 “<code>source</code> 文件夹中除了文章以外的所有文件”. 从这个角度来说, 将此文件夹理解为 “使博客内容更加丰富的辅助文件” 也颇为贴切.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/index.html">Hexo 官方中文文档</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/setup">Hexo 建站</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing">Hexo 写作</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/tag-plugins.html">Hexo 标签插件（Tag Plugins）</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/asset-folders">Hexo资 源文件夹</a><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/front-matter">Hexo Front-matter</a><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing#草稿">Hexo 草稿</a><a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    <content type="html"><![CDATA[<p>本文绝大部分内容参考自 Hexo 的官方参考文档 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 官方中文文档">[1]</span></a></sup>, 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会.</p><h2 id="建站及-Hexo-目录结构"><a href="#建站及-Hexo-目录结构" class="headerlink" title="建站及 Hexo 目录结构"></a>建站及 Hexo 目录结构</h2><p>&emsp;&emsp;类似于 <code>git</code> 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 建站">[2]</span></a></sup>. 如</p><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ hexo init &lt;folder&gt;<br>$ <span class="hljs-built_in">cd</span> &lt;folder&gt;<br>$ npm install<br></code></pre></div></td></tr></table></figure><p>其中第一行是 <code>hexo</code> 的初始化语句, 第二行是跳转至建站的路径, 第三行是在路径下使用 <code>npm</code> 安装所需插件. 新建完成后的目录结构为</p><figure class="highlight sqf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sqf">.<br>├── <span class="hljs-variable">_config</span>.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── <span class="hljs-variable">_drafts</span><br>|   └── <span class="hljs-variable">_posts</span><br>└── themes<br></code></pre></div></td></tr></table></figure><p>各个路径的简介如下 (详细介绍见官方文档 <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 建站">[2]</span></a></sup>)</p><ul><li><code>_config.yml</code>: Hexo 的 (全局) 配置文件</li><li><code>package.json</code>: 通过 <code>npm install</code> 安装的包</li><li><code>scaffolds</code>: 模板文件夹. 如使用指令 <code>hexo new [layout] &lt;title&gt;</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 写作">[3]</span></a></sup>, 将按照 <code>scaffolds</code> 中的模板文件 <code>[layout].md</code> 在当前目录下建立标题为 <code>&lt;title&gt;</code> 的新文件. (如果设置了资源文件夹<sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo资 源文件夹">[5]</span></a></sup>, 除了建立 <code>&lt;title&gt;.md</code> 以外, 还会在当前位置建立名为 <code>&lt;title&gt;</code> 的文件夹)</li><li><code>source</code>: 存放博客的核心—Markdown 文件及图片等资源的地方. 该文件夹中除了 <code>_posts</code> 文件夹以外的以下划线 <code>_</code> 开头的文件夹将被忽略, 你可以利用此特性在 <code>source</code> 文件夹下额外建立一个 <code>_draft</code> 的文件夹来存放草稿 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 草稿">[8]</span></a></sup> .</li><li><code>theme</code>: 主题文件</li></ul><h2 id="Markdown-写作"><a href="#Markdown-写作" class="headerlink" title="Markdown 写作"></a>Markdown 写作</h2><p>&emsp;&emsp;采用 Hexo 等博客框架的一大优势就是可以直接使用 Markdown 进行写作, 并自动生成最终所需的 HTML 文件, 而无需直接面对 HTML 文件. 相比通常的 Markdown 语法, Hexo 有自己独有的一些特点. 笔者将简单介绍如下</p><h3 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front Matter"></a>Front Matter</h3><p>&emsp;&emsp;相比于一般的 Markdonw 语法, Hexo 提供了 Front Matter <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo Front-matter">[6]</span></a></sup>用以指定每篇文章的变量. 如标题名, 建立日期, 分类, 标签等. Front Matter 区域在 Markdonw 文件开头, 以两条三横线分隔, 如</p><figure class="highlight md"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs md">---<br>title: <br>math: true<br>data: 2021-05-02<br>categories:<br><span class="hljs-bullet">-</span> <br>tags: <br>---<br></code></pre></div></td></tr></table></figure><p>其中若有项目没有指定值. 将采用默认值. 部分参数控制的功能如下</p><ul><li><code>layout</code>: 文章布局, 默认为 <code>config.default_layout</code></li><li><code>title</code>: 文章标题, 默认为文章的文件名</li><li><code>date</code>: 文章的建立日期, 默认为文件建立日期.</li><li><code>update</code>: 文章更新日期</li><li><code>comments</code>: 是否开启文章评论</li><li><p><code>tags</code>: 标签. 若希望有多个标签, 可采取类似 Markdown list 的形式, 如</p>  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">tags:<br><span class="hljs-bullet">-</span> CS<br><span class="hljs-bullet">-</span> TODO<br></code></pre></div></td></tr></table></figure></li><li><p><code>categories:</code>文章的分类. 采用类似 Markdown list 的形式, 前一个分类为后一个分类的父分类. 如</p>  <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">categories:<br><span class="hljs-bullet">-</span> Diary<br><span class="hljs-bullet">-</span> Life<br></code></pre></div></td></tr></table></figure><p>  其含义为: 该文件属于父分类 <code>Diary</code> 的子分类 <code>Life</code>. 关于为文章添加多个分类的方法详见官方参考文档 <sup><a href="#fn_Front Matter" id="reffn_Front Matter">Front Matter</a></sup>.</p></li></ul><p>部分主题 <code>theme</code> 提供了更丰富的 Front Matter. 如 Fluid 主题 <sup><a href="#fn_Fluid" id="reffn_Fluid">Fluid</a></sup> 提供了 <code>math</code>, <code>mermaid</code> 等来控制数学公式和 <code>mermaid</code> 流程图 <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="Mermaid">[7]</span></a></sup> 的渲染开关.</p><h3 id="Tag-插件"><a href="#Tag-插件" class="headerlink" title="Tag 插件"></a>Tag 插件</h3><p>&emsp;&emsp;官方文档直接翻译的是 “标签插件 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 标签插件（Tag Plugins）">[4]</span></a></sup>“. 这个名字一开始让我有些不明所以. 后来才认识到, 这个词语应分为两部分: “标签 (Tag)” 与 “插件 (Plugin)”, 亦即这是一类插件, 不过是比较特殊的一类插件. “Plugin” 表明, 这类功能的实现往往需要一些第三方程序—-也就是插件提供; “Tag” 表明, 这类功能的实现主要是由一种被称为 “标签 (Tag)” 的特殊语法来实现. 其与 “HTML 标签” 在使用上有相似之处, 但毕竟是不同的东西, 要注意与 “HTML 标签” 进行区分. 当然, 这一节的标题特意将前半部分用英文、而后半部分用中文, 亦是为了强调对这个名词的正确断句.</p><p>&emsp;&emsp;标签的基本形式形如 <code>&#123;% <syntax> %&#125;</code>, 其中 <code>&lt;syntax&gt;</code> 部分没有特别统一的形式, 需要根据使用的具体插件进行学习. 官方文档 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo 标签插件（Tag Plugins）">[4]</span></a></sup> 中给出了一些插件的例子.</p><p>&emsp;&emsp;值得主要, 既然这些东西属于 “插件”, 自然必须安装了对应的第三方程序才能使用. 如果你发现一段代码在其他人的文章介绍里可以进行渲染, 但在自己的 Hexo 却无法实现, 就得怀疑是否是因为没有安装相应插件了.</p><h2 id="资源-Asset-文件夹"><a href="#资源-Asset-文件夹" class="headerlink" title="资源 (Asset) 文件夹"></a>资源 (Asset) 文件夹</h2><p>&emsp;&emsp;相比于在 <code>source</code> 文件夹下建立诸如 <code>fig</code> 文件夹来统一管理文章所用到的资源 (如图片插入), 笔者更喜欢采取 “project” 的范式来撰写文章. 亦即将每一篇视为一个独立的 “project”, 不同 “project” 的资源彼此独立存储, 以减少不同 “project” 之间的耦合, 增强各自的独立性. 为在 Hexo 中实现此目的, 可在 <code>_config.yml</code> 中配置 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo资 源文件夹">[5]</span></a></sup></p><figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">marked:</span><br>  <span class="hljs-attr">prependRoot:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">postAsset:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure><p>当这些选项开启后, 可在与文章同名的文件夹中放置资源, 并在对应文章中通过相对该文件夹的路径来引用资源. 例如, <code>source/</code> 下有博客 <code>hello.md</code>, 以及文件夹 <code>source/hello/</code>, 该文件夹中有子文件夹 <code>fig/</code>, 其中有图片 <code>test.png</code>. 那么在 <code>hello.md</code> 中使用该图片时, 可以直接使用相对与 <code>source/hello/</code> 的路径 <code>fig/test.png</code>, 而非相对 <code>source</code> 的路径. </p><p>&emsp;&emsp;在官方中文文档中, 资源文件夹对应的是 Asset 文件夹, 而非 Source 文件夹. 笔者个人认为, Asset 文件夹的功效其实更接近英文 “Assistant”, 亦即辅助. 实际上, 官方文档中将 “Asset” 诠释为 “<code>source</code> 文件夹中除了文章以外的所有文件”. 从这个角度来说, 将此文件夹理解为 “使博客内容更加丰富的辅助文件” 也颇为贴切.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>other reference</p><ul><li>use python to add water marker (4.5): <a href="https://hiyoungai.com/posts/4dbbde95#5-图片添加水印">Hexo: 图片添加水印</a><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/index.html">Hexo 官方中文文档</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/setup">Hexo 建站</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing">Hexo 写作</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/tag-plugins.html">Hexo 标签插件（Tag Plugins）</a><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/asset-folders">Hexo资 源文件夹</a><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/front-matter">Hexo Front-matter</a><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a href="https://hexo.io/zh-cn/docs/writing#草稿">Hexo 草稿</a><a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></li></ul>]]></content>
     
     
     <categories>
