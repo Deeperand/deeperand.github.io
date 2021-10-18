@@ -18,7 +18,7 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>[DEBUG] Can&#39;t Open Application with Current Version of macOS - 博客 | 冬季银河</title>
+  <title>什么是 HTTP 与 HTTPS 协议? - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="[DEBUG] Can't Open Application with Current Version of macOS">
+            <span class="h2" id="subtitle" title="什么是 HTTP 与 HTTPS 协议?">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-11 15:44" pubdate>
-        2021.07.11, 15:44
+      <time datetime="2021-05-04 09:43" pubdate>
+        2021.05.04, 09:43
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      61 字
+      458 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -238,19 +238,29 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">[DEBUG] Can&#39;t Open Application with Current Version of macOS</h1>
+            <h1 style="display: none">什么是 HTTP 与 HTTPS 协议?</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.09.17, 17:38
+                  最后更新：2021.05.30, 10:31
                 
               </p>
             
             <div class="markdown-body">
-              <p>When I try to open <code>ygopro.app</code>, I meet a warning “You can’t use this version of the application “ygopro.app” with this version of macOS.”. The solution I thought is modify the <code>Minimum system version</code> option of <code>info.plist</code> file <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to open applications regardless of required version?
-">[1]</span></a></sup> (<code>Show Package Contents</code> -&gt; <code>Contents</code>), but it doesn’t work.</p>
-<p><img src="warning.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/192533/how-to-open-applications-regardless-of-required-version">How to open applications regardless of required version?</a>
+              <p>&emsp;&emsp;简单来说, HTTP 与 HTTPS <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="HTTP和HTTPS有什么区别？
+">[1]</span></a></sup> 都是是通信协议. 但二者最大的区别在于, HTTP 是通过明文进行数据传输, 而 HTTPS 在传输过程中进行加密 (通过 SSL/TLS 协议). 试想这样一个过程: 在数据传输途中, 其被第三方进行了截获. 如果是采用的 HTTP 协议, 则截获者可以直接读懂传输的数据; 但如果采用的是 HTTPS 协议, 截获者必须找到正确的破译方法才能读懂其中的数据. 由此可见, 为了网站数据通信的安全性—-特别是设计密码输入时, 采用 HTTPS 协议很有必要.</p>
+<p>&emsp;&emsp;那么如何区分自己平时访问的网页是 HTTP 协议还是 HTTPS 协议呢? 设我们有一个名为 <code>11.11.11.11</code> 的公网 IP, 使用 HTTP 对其进行访问时, 基本格式为 </p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span><span class="hljs-number">11.11</span>.<span class="hljs-number">11.11</span><br></code></pre></div></td></tr></table></figure>
+<p>而使用 HTTPS 协议进行访问时, 基本格式为 </p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span><span class="hljs-number">11.11</span>.<span class="hljs-number">11.11</span><br></code></pre></div></td></tr></table></figure>
+<p>可见, 二者的区别在于域名前指定通信协议的字符.</p>
+<p>&emsp;&emsp;另一方面, 现在的浏览器都会自动检测协议的安全性. 一般来说, 如果浏览器地址栏中提示 “Not Secure”, 则一般为 HTTP 协议; 如果有一个类似锁的图标 (或显示 “Secure” 等), 则一般为 HTTPS 协议. 此外, 采用 HTTP 协议时, 地址栏中一般不会把 <code>http://</code> 字段显示出来, 而采用 HTTPS 协议时,  <code>https://</code> 字段一般会被显示出来.</p>
+<p><img src="http_1.png" srcset="/img/loading.gif" lazyload alt="HTTP 协议: 浏览器提示 &quot;Not Secure&quot;" title="HTTP 协议: 浏览器提示 &quot;Not Secure&quot;"></p>
+<p><img src="https_1.png" srcset="/img/loading.gif" lazyload alt="HTTPS 协议: 无 &quot;Not Secure&quot; 提示" title="HTTP 协议: 无 &quot;Not Secure&quot; 提示"></p>
+<p><img src="http_2.png" srcset="/img/loading.gif" lazyload alt="HTTP 协议: 不显示通信协议" title="HTTP 协议: 不显示通信协议"></p>
+<p><img src="https_2.png" srcset="/img/loading.gif" lazyload alt="HTTPS 协议: 地址栏显示通信协议" title="HTTPS 协议: 地址栏显示通信协议"></p>
+<p>&emsp;&emsp;由于 HTTPS 通常通过 SSL/TLS 协议, 因此开启 HTTPS 协议需要相应的证书. 不过现在这类证书一般都可以免费申请 (如笔者是直接在腾讯云申请的证书).</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/151764515">HTTP和HTTPS有什么区别？</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
@@ -260,7 +270,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-macOS/">CS macOS</a>
+                      <a class="hover-with-bg" href="/categories/CS-Web/">CS Web</a>
                     
                   </div>
                 
@@ -269,10 +279,6 @@
                     <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/CS/">CS</a>
-                    
-                      <a class="hover-with-bg" href="/tags/TRICK/">TRICK</a>
-                    
-                      <a class="hover-with-bg" href="/tags/TODO/">TODO</a>
                     
                   </div>
                 
@@ -289,9 +295,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/CS_Web/2021-07-11_TRICK_speed_limit_of_Baidu_netdist/">
+                      <a href="/CS_Hexo/2021-05-04_cite_local_post/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[TRICK] 百度网盘限速破解方法 (未解决)</span>
+                        <span class="hidden-mobile">在 Hexo 中引用站内文章</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -299,8 +305,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/">
-                        <span class="hidden-mobile">[TRICK] Forbid Auto-launch while Starting Up</span>
+                      <a href="/CS_Web/2021-05-03_build_blog_with_tencent_and_hexo/">
+                        <span class="hidden-mobile">使用腾讯云和 Hexo 搭建个人博客</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -511,6 +517,45 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
