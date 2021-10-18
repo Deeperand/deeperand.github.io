@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="Fluid 主题的配置文件中有配置项 post: date:, 但这并不是控制日期的输入格式的, 而是控制输出格式的.">
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>[DEBUG] Can&#39;t Open Application with Current Version of macOS - 博客 | 冬季银河</title>
+  <title>[TRICK] Fluid 主题中的日期显示 - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="[DEBUG] Can't Open Application with Current Version of macOS">
+            <span class="h2" id="subtitle" title="[TRICK] Fluid 主题中的日期显示">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-11 15:44" pubdate>
-        2021.07.11, 15:44
+      <time datetime="2021-05-06 22:55" pubdate>
+        2021.05.06, 22:55
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      61 字
+      237 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -238,19 +238,24 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">[DEBUG] Can&#39;t Open Application with Current Version of macOS</h1>
+            <h1 style="display: none">[TRICK] Fluid 主题中的日期显示</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.09.17, 17:38
+                  最后更新：2021.05.30, 10:32
                 
               </p>
             
             <div class="markdown-body">
-              <p>When I try to open <code>ygopro.app</code>, I meet a warning “You can’t use this version of the application “ygopro.app” with this version of macOS.”. The solution I thought is modify the <code>Minimum system version</code> option of <code>info.plist</code> file <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to open applications regardless of required version?
-">[1]</span></a></sup> (<code>Show Package Contents</code> -&gt; <code>Contents</code>), but it doesn’t work.</p>
-<p><img src="warning.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/192533/how-to-open-applications-regardless-of-required-version">How to open applications regardless of required version?</a>
+              <p>Fluid 主题的配置文件中有配置项 <code>post: date:</code>, 但这并不是控制日期的输入格式的, 而是控制输出格式的.</p>
+<span id="more"></span>
+<p>&emsp;&emsp;Fluid 主题的配置文件中有配置项 <code>post: date:</code>, 但这并不是控制日期的输入格式的, 而是控制输出格式的. 基本配置为</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">date:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-comment"># 格式参照 ISO-8601 日期格式化</span><br>    <span class="hljs-comment"># See: http://momentjs.cn/docs/#/parsing/string-format/</span><br>    <span class="hljs-attr">format:</span> <span class="hljs-string">&quot;YYYY.MM.DD, HH:mm&quot;</span><br></code></pre></div></td></tr></table></figure>
+<p>如注释中所述, 日期格式化标准为 ISO-8601 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Moment.js 文档 (moment(String))
+">[1]</span></a></sup> . 要注意, 该设置 <strong>并不影响在 Front-matter 中的日期输入格式</strong>. 不论该设置如何改变, Front-matter 中的日期输入方式始终不变. 例如, 在 Front-matter 中写入</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">title: &#x27;[TRICK] Fluid 主题中的日期显示&#x27;<br>data: 2021-05-06 22:55<br></code></pre></div></td></tr></table></figure>
+<p>则输出的日期形如 <code>2021.05.06, 22:54</code> (可参考本文标题下方的显示效果).</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://momentjs.cn/docs/#/parsing/string-format/">Moment.js 文档 (moment(String))</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
@@ -260,15 +265,13 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-macOS/">CS macOS</a>
+                      <a class="hover-with-bg" href="/categories/CS-Hexo/">CS Hexo</a>
                     
                   </div>
                 
                 
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/TODO/">TODO</a>
                     
                       <a class="hover-with-bg" href="/tags/CS/">CS</a>
                     
@@ -289,9 +292,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/CS_Web/2021-07-11_TRICK_speed_limit_of_Baidu_netdist/">
+                      <a href="/PHYS_string_theory/BOOK_a_first_course_in_string_theory/2021-05-08_READ_chapter_1_introduction/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[TRICK] 百度网盘限速破解方法 (未解决)</span>
+                        <span class="hidden-mobile">[READ] Chapter 1 A Brief Introduction</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -299,8 +302,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/">
-                        <span class="hidden-mobile">[TRICK] Forbid Auto-launch while Starting Up</span>
+                      <a href="/CS_macOS/2021-05-06_DEBUG_brew_clean_permisson/">
+                        <span class="hidden-mobile">[DEBUG] 运行 brew clean 时碰到权限问题</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
