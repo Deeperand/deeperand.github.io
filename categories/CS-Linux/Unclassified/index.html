@@ -18,25 +18,9 @@
   <meta name="author" content="冬季银河">
   <meta name="keywords" content="">
   
-  <title>Zotero Quick Config - 博客 | 冬季银河</title>
+  <title>Categories - Unclassified - 博客 | 冬季银河</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/a11y-dark.min.css" />
-    
-  
-
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
 
 
 
@@ -64,7 +48,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -158,64 +142,14 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/fig/blackhole.jpg') no-repeat center center;
+         style="background: url('/fig/galaxy_1.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Zotero Quick Config">
+            <span class="h2" id="subtitle" title="Category - Unclassified">
               
             </span>
-
-            
-              <div class="mt-3">
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-author" aria-hidden="true"></i>
-      冬季银河
-    </span>
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-02 23:26" pubdate>
-        2021.09.02, 23:26
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      417 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      8
-       分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- LeanCloud 统计文章PV -->
-      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="leancloud-page-views"></span> 次
-      </span>
-    
-  
-</div>
 
             
           </div>
@@ -228,134 +162,58 @@
 
   <main>
     
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="list-group">
+  <p class="h4">4 posts in total.</p>
+  <hr>
+  
+  
+    
       
+      <p class="h5">2021</p>
+    
+    <a href="/CS_linux/2021-10-20_find_command/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">`find` Command</span>
+      <time style="float: right;">10-20</time>
+    </a>
+  
+    
+    <a href="/CS_linux/2021-09-17_DEBUG_convert_pdf_but_black_bg_appear/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">[DEBUG] Convert pdf into picture but Black Background Appear</span>
+      <time style="float: right;">09-17</time>
+    </a>
+  
+    
+    <a href="/CS_linux/2021-06-13_DEBUG_docker_unable_find_image/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">[DEBUG] Docker is unable to find image locally</span>
+      <time style="float: right;">06-13</time>
+    </a>
+  
+    
+    <a href="/CS_linux/2021-05-16_convert_pdf/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">利用 convert 将 PDF 转化为图片并调整分辩率</span>
+      <time style="float: right;">05-16</time>
+    </a>
+  
+</div>
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">Zotero Quick Config</h1>
-            
-              <p class="note note-info">
-                
-                  最后更新：2021.09.17, 14:22
-                
-              </p>
-            
-            <div class="markdown-body">
-              <h2 id="Set-Base-Directory-of-Link"><a href="#Set-Base-Directory-of-Link" class="headerlink" title="Set Base Directory of Link"></a>Set Base Directory of Link</h2><p>If you have many devices, use absolute path to create a link isn’t a wise choice, which probably lead the link created at a device can’t be open at another device. To solve the problem, a direct way is set a “home directory” for those link. In <code>Zotero</code>, this can be realized by set <code>Linked Attachment Base Directory</code>. Once the directory set, the link is a <em>relative path</em> to refer to the directory.</p>
-<p>&emsp;&emsp;Next we introduce how to set it. Open <code>Perference</code> -&gt; <code>Advanced</code> -&gt; <code>Files and Folders</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> , then choose the directory you want to set. My set is a folder named <code>zotero_files</code> under the iCould folder of <code>PDF Expert</code> (we will call the folder <code>$ZOTERO_FILES</code> for convenient).</p>
-<p><img src="base_dir.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h2 id="Zotfile"><a href="#Zotfile" class="headerlink" title="Zotfile"></a><code>Zotfile</code></h2><p>To install extension <code>Zotfile</code>, one can download the package at official website <sup><a href="#fn_2" id="reffn_2">2</a></sup> . Then lunch <code>Zotero</code>, open menu <code>Tools</code> -&gt; <code>Add-ones</code> and click the gear icon. Click <code>Install Add-one From File</code> to install <code>Zotfile</code> from downloaded file (<code>zotfile-5.0.16-fx.xpi</code>).</p>
-<p><img src="install.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>Next, open <code>Perference</code> -&gt; <code>Tools</code> -&gt; <code>Zotfile Perference</code>, set <code>Source Folder for Attaching new Files</code> and <code>Location of Files</code> as <code>$ZOTERO_FILES</code>. </p>
-<p><img src="source_folder.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>At <code>Use subfolder defined by</code> you can set the form of subfolder, and my setting is <code>/%c</code>. The meaning of the setting is <sup><a href="#fn_3" id="reffn_3">3</a></sup></p>
-<ul>
-<li>%a last names of authors (not editors etc) or inventors. The maximum number of authors are changed under ‘Additional Settings’.</li>
-<li>%I author initials.</li>
-<li>%F author’s last name with first letter of first name (e.g. EinsteinA).</li>
-<li>%A first letter of author (useful for subfolders)</li>
-<li>%d, %D, %L, %l wildcards for editors, same as for authors.</li>
-<li>%y year (extracted from Date field)</li>
-<li>%t title. Usually truncated after : . ? The maximal length of the remaining part of the title can be changed.</li>
-<li>%T item type (localized)</li>
-<li>%j name of the journal</li>
-<li>%p name of the publisher</li>
-<li><p>%w name of the journal or publisher (same as “%p”)</p>
-</li>
-<li><p>%s journal abbreviation</p>
-</li>
-<li>%v journal volume</li>
-<li>%e journal issue</li>
-<li>%f pages</li>
-<li>%c collection path (only for sub-folders, not file names). When item is in multiple collections, user can choose between the different collections.</li>
-<li>%n patent number (patent items only)</li>
-<li>%i assignee (patent items only)</li>
-</ul>
-<p>The following picture shows <code>year-author-title</code> format</p>
-<p><img src="rename_format.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h2 id="Accompany-with-Nutstore"><a href="#Accompany-with-Nutstore" class="headerlink" title="Accompany with Nutstore"></a>Accompany with <code>Nutstore</code></h2><p>If you wish to use <code>Nutstore</code> accompany with <code>Zotero</code>, you can see the article <sup><a href="#fn_4" id="reffn_4">4</a></sup> .</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a target="_blank" rel="noopener" href="http://zotfile.com/#renaming-rules">Why can’t Zotero find a linked file?</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a target="_blank" rel="noopener" href="http://zotfile.com/index.html#changelog">ZotFile</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a target="_blank" rel="noopener" href="http://zotfile.com/#renaming-rules">ZotFile Renaming Rule</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a target="_blank" rel="noopener" href="https://help.jianguoyun.com/?p=4190">坚果云使用 Zotero 配置过程详解</a></p>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/CS-GUI-Software/">CS GUI Software</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/CS/">CS</a>
-                    
-                  </div>
-                
+
+
+
               </div>
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/CS_macOS/2021-09-03_TRICK_check_if_CLT_installed/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[TRICK] Check if Command Line Tool (CLT) of macOS is installed</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/CS_macOS/2021-09-02_TRICK_set_brew_software_as_default/">
-                        <span class="hidden-mobile">[TRICK] Set `brew` Software as Default</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
-
-            
-          </article>
+          </div>
         </div>
       </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
     
 
     
@@ -487,15 +345,9 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 

@@ -192,7 +192,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.4k 字
+      2.7k 字
     </span>
   
 
@@ -202,7 +202,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      30
+      36
        分钟
     </span>
   
@@ -244,7 +244,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.10.18, 19:58
+                  最后更新：2021.10.21, 12:05
                 
               </p>
             
@@ -253,8 +253,9 @@
 <p>本文收集了从 2020.01.28 到 2020.06.08 期间记录的 git 使用方法, 主体内容是 git 常用指令.</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="1-Branch"><a href="#1-Branch" class="headerlink" title="1 Branch"></a>1 Branch</h1><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># create branch</span><br>$ git branch &lt;branch_name&gt;<br><br><span class="hljs-comment"># rename branch</span><br>$ git branch -m &lt;new_name&gt;<br><br><span class="hljs-comment"># switch branch</span><br>$ git checkout &lt;branch_name&gt;<br><br><span class="hljs-comment"># create and switch</span><br>$ git checkout -b &lt;branch_name&gt;<br><br><span class="hljs-comment"># merge and save the record</span><br>$ git merge --no-ff -m <span class="hljs-string">&quot;&lt;merge_message&gt;&quot;</span> &lt;branch_name&gt;<br><br><span class="hljs-comment"># delete branch</span><br>$ git branch -d &lt;branch_name&gt;<br></code></pre></div></td></tr></table></figure>
-<p><strong>Notation :</strong> </p>
+<h1 id="File-Operate"><a href="#File-Operate" class="headerlink" title="File Operate"></a>File Operate</h1><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># add files</span><br>$ git add &lt;file_1&gt; &lt;file_2&gt; ...<br><br><span class="hljs-comment"># add dir</span><br>$ git add &lt;dir&gt;<br><br><span class="hljs-comment"># stage all the files in the workspace</span><br>$ git add .<br><br><span class="hljs-comment"># remove files and add the change into stage</span><br>$ git rm  &lt;file_1&gt; &lt;file_2&gt; ...<br><br><span class="hljs-comment"># untrack files but keep the files in the workspace</span><br>$ git rm --cached &lt;file&gt;<br><br><span class="hljs-comment"># rename files and stage the change</span><br>$ git mv &lt;old_name&gt; &lt;new_name&gt;<br></code></pre></div></td></tr></table></figure>
+<h1 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h1><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># create branch</span><br>$ git branch &lt;branch_name&gt;<br><br><span class="hljs-comment"># rename branch</span><br>$ git branch -m &lt;new_name&gt;<br><br><span class="hljs-comment"># switch branch</span><br>$ git checkout &lt;branch_name&gt;<br><br><span class="hljs-comment"># create and switch</span><br>$ git checkout -b &lt;branch_name&gt;<br><br><span class="hljs-comment"># merge and save the record</span><br>$ git merge --no-ff -m <span class="hljs-string">&quot;&lt;merge_message&gt;&quot;</span> &lt;branch_name&gt;<br><br><span class="hljs-comment"># delete branch</span><br>$ git branch -d &lt;branch_name&gt;<br></code></pre></div></td></tr></table></figure>
+<p><strong>Notation :</strong></p>
 <ol>
 <li>参数 <code>--no-ff</code> 的作用是禁用 <code>Fast forward</code> 模式, 使 Git 在 <code>merge</code> 的时候生成一个新的 commit, 这样就可以看出分支的合并历史.</li>
 <li><p>如果没有分支冲突, 通过 <code>git log --graph</code> 显示的分支图只会是单线, 而不会出现分叉. 如果出现分叉, 表示该次和并时出现了分支冲突并被解决了。如</p>
@@ -265,8 +266,19 @@
  <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">log</span> --graph --pretty=oneline --abbrev-commit<br>* 8bc27fe (HEAD -&gt; master) change: snippet of LaTeX (`tilde` ---&gt; `widetilde`)<br>* 2bd1518 change: reduce the length of segment line of C language<br>...<br>* afcf62d (origin/master) add: snippet of html (code, font size, space)<br>* 2e1658c add: short cut to change markdown<span class="hljs-string">&#x27;s preview style (in markdown&#x27;</span>s ftplugin)<br>...<br>* 47e170b (origin/tmp, tmp) change: combine template of <span class="hljs-string">&quot;diary (schedule)&quot;</span> and <span class="hljs-string">&quot;log&quot;</span> as <span class="hljs-string">&quot;schedule&quot;</span><br>* 7a745f0 feat: enhanced the <span class="hljs-built_in">functions</span> purovided by plugs<br>...<br></code></pre></div></td></tr></table></figure>
 <p> 输出结果中 <code>(HEAD -&gt; master)</code>, <code>(origin/master)</code> 分别标出了本地 <code>master</code> 与远程 <code>master</code> 分支所处的位置 (<code>origin</code> 为 remote 分支的名字), 而 <code>(origin/tmp, tmp)</code> 则表明远程 <code>tmp</code> 分支与本地 <code>tmp</code> 分支处于同一位置。</p>
 </li>
+<li>the flow of merge other branch (marked as <code>dev</code>) to <code>master</code> branch can be (label branch with square): <ul>
+<li><strong>1st step:</strong> [<code>dev</code>] stage and commit </li>
+<li><strong>2ed step:</strong> [<code>dev</code>] use <code>git merge master</code></li>
+<li><strong>3rd step:</strong> [<code>dev</code>] solve the possible conflict </li>
+<li><strong>4th step:</strong> [<code>dev</code>] stage solving of conflicting and commit</li>
+<li><strong>5th step:</strong> [<code>dev</code>] use <code>git merge master</code> again</li>
+<li><strong>6th step:</strong> [<code>dev</code>] use <code>git checkout master</code></li>
+<li><strong>7th step:</strong> [<code>master</code>] use <code>git merge dev</code> to set pointer of <code>master</code> to the node of merged <code>dev</code></li>
+</ul>
+</li>
 </ol>
-<h1 id="2-Remote"><a href="#2-Remote" class="headerlink" title="2 Remote"></a>2 Remote</h1><p>首先给出与远程同步相关的命令</p>
+<h1 id="Version-Switch"><a href="#Version-Switch" class="headerlink" title="Version Switch"></a>Version Switch</h1><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># came back to the last commit</span><br>$ $ git reset --hard HEAD^<br><br><span class="hljs-comment"># set HEAD of current branch to a specific commit</span><br>$ git reset --hard &lt;coomit_id&gt;<br><br><span class="hljs-comment"># check history commit id of operations</span><br>$ git reflog<br></code></pre></div></td></tr></table></figure>
+<h1 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h1><p>首先给出与远程同步相关的命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># 下载远程仓库的所有变动</span><br>$ git fetch &lt;remote&gt;<br><br><span class="hljs-comment"># 显示所有远程仓库</span><br>$ git remote -v<br><br><span class="hljs-comment"># 显示某个远程仓库的信息</span><br><br><br><span class="hljs-comment"># 增加一个新的远程仓库，并命名</span><br>$ git remote add &lt;shortname&gt; &lt;url&gt;<br><br><span class="hljs-comment"># 取回远程仓库的变化，并与本地分支合并</span><br>$ git pull &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 上传本地指定分支到远程仓库</span><br>$ git push &lt;remote&gt; &lt;branch&gt;<br><br><span class="hljs-comment"># 强行推送当前分支到远程仓库，即使有冲突</span><br>$ git push &lt;remote&gt; --force<br>$ git push &lt;remote&gt; &lt;branch&gt; -f<br><br><span class="hljs-comment"># 推送所有分支到远程仓库</span><br>$ git push &lt;remote&gt; --all<br></code></pre></div></td></tr></table></figure>
 <h2 id="Collide"><a href="#Collide" class="headerlink" title="Collide"></a>Collide</h2><p>如果远程库与本地库不同, 将无法 <code>push</code> 成功. 此时需要先 <code>pull</code> 下来, 手动解决冲突并在本地进行提交后再进行 <code>push</code>. 具体来说, 可能遇到如下类型的冲突:</p>
 <ol>
@@ -276,12 +288,12 @@
 <p>&emsp;&emsp;如, 对某文件, 若本地库内容为:</p>
 <figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs applescript"><span class="hljs-keyword">local</span> learngit<br></code></pre></div></td></tr></table></figure>
 <p>远程库内容为:</p>
-<figure class="highlight basic"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs basic"><span class="hljs-comment">remote learngit </span><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight basic"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs basic"><span class="hljs-comment">remote learngit</span><br></code></pre></div></td></tr></table></figure>
 <p>则 <code>pull</code> 后该文件显示为:</p>
 <figure class="highlight asciidoc"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs asciidoc">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>local learngit<br>=======<br>remote learngit<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt;ecb3fc62eaa45f3a4b28a0ff5e8640358886c644<br></code></pre></div></td></tr></table></figure>
 <p>后面的序号可能不同, 这一点不要在意. 此时只要手工处理掉冲突标识符再保存即可正常 <code>push</code> 了, 分支冲突的解决也是类似的. (似乎再 <code>merge</code> 的时候会自动把文件改成带冲突标识符的样子, 具体的我还没试过)</p>
 <p>&emsp;&emsp;应注意, 如果本地的分支和远程的分支从来没有建立过联系, 则无法采取上面的方式. 也就是说: 不要既在 Github 上新开项目并建立 LICENSE 又在本地建立新库. 这样的话同名的分支 (如 <code>master</code>) 从来没有历史联系, 但又存在不同, 于是只有通过本地强制覆盖远程来完成同步.</p>
-<h1 id="3-Commit"><a href="#3-Commit" class="headerlink" title="3 Commit"></a>3 Commit</h1><p>在每次提交更新时通常要写入对该次更新的描述. 一般而言, 使用 <code>git commit -m &#39;&lt;msg&gt;&#39;</code> 即可. 但如果需要写的内容较多, 可以考虑直接使用 <code>git commit</code> 来写入 commit 的信息. </p>
+<h1 id="Commit"><a href="#Commit" class="headerlink" title="Commit"></a>Commit</h1><p>在每次提交更新时通常要写入对该次更新的描述. 一般而言, 使用 <code>git commit -m &#39;&lt;msg&gt;&#39;</code> 即可. 但如果需要写的内容较多, 可以考虑直接使用 <code>git commit</code> 来写入 commit 的信息.</p>
 <p>&emsp;&emsp;在执行 <code>git commit</code> 后, 将启动文本编辑器以便输入本次提交的说明. 默认会启用 shell 的环境变量 <code>$EDITOR</code> 所指定的软件, 一般都是 Vim 或 Emacs. 此时会看到类似下面的文本信息:</p>
 <figure class="highlight plain"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gitcommit"><br># Please enter the commit message for your changes. Lines starting<br># with &#39;#&#39; will be ignored, and an empty message aborts the commit.<br>#<br># On branch tmp<br># Changes to be committed:<br>#	new file:   Software (cmd)&#x2F;Git Blog.md<br>#	new file:   Software (cmd)&#x2F;Git Log.md<br>#	modified:   Syntax&#x2F;Shell Log.md<br>#<br># Changes not staged for commit:<br>#	modified:   Software (cmd)&#x2F;Git Blog.md<br>#<br></code></pre></div></td></tr></table></figure>
 <p>特点可归纳如下 :</p>
@@ -296,6 +308,7 @@
 <p><em>Notation :</em></p>
 <ol>
 <li>可以在后面加上 <code>-v</code> 选项将所作的改变的 diff 输出放在编辑器中总而可知道本次具体做了哪些修改.</li>
+<li>可使用 <code>git -commit --amend</code> 来修改最近提交的 <code>commit</code> 信息</li>
 </ol>
 <h2 id="Standard-of-commit-message"><a href="#Standard-of-commit-message" class="headerlink" title="Standard of commit message"></a>Standard of commit message</h2><p>本部分内容主要来自 <em>阮一峰的网络日志</em> <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="Commit message 和 Change log 编写指南
 ">[6]</span></a></sup>. 每次提交, commit message 都包括三个部分 : Header, Body, Footer. 基本格式为 :</p>
@@ -314,7 +327,7 @@
 </ol>
 </li>
 <li><code>&lt;scope&gt;</code> ( 可选 ) : 用于说明 commit 影响的范围, 比如数据层、控制层、视图层等等, 视项目不同而不同.</li>
-<li><code>&lt;subject&gt;</code> ( 必需 ) : commit 目的的简短描述, 应遵循以下规范 : <ol>
+<li><code>&lt;subject&gt;</code> ( 必需 ) : commit 目的的简短描述, 应遵循以下规范 :<ol>
 <li>不超过 50 个字符.</li>
 <li>以动词开头, 使用第一人称现在时,</li>
 <li>第一个字母小写</li>
@@ -336,15 +349,19 @@
 </ol>
 <h3 id="Revert"><a href="#Revert" class="headerlink" title="Revert"></a>Revert</h3><p>还有一种特殊情况, 如果当前 commit 用于撤销以前的 commit, 则必须以 <code>revert:</code> 开头, 后面跟着被撤销 commit 的 Header. 如</p>
 <figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">revert</span>: feat(pencil): add &#x27;graphiteWidth&#x27; option<br><br><span class="hljs-attribute">This</span> reverts commit <span class="hljs-number">667</span>ecc<span class="hljs-number">1654</span>a<span class="hljs-number">317</span>a<span class="hljs-number">13331</span>b<span class="hljs-number">17617</span>d<span class="hljs-number">973392</span>f<span class="hljs-number">415</span>f<span class="hljs-number">02</span>.<br></code></pre></div></td></tr></table></figure>
-<p>Body部分的格式是固定的, 必须写成 <code>This reverts commit &amp;lt;hash&gt;.</code>, 其中的hash是被撤销 commit 的 SHA 标识符. </p>
-<h1 id="4-Ignore-File"><a href="#4-Ignore-File" class="headerlink" title="4 Ignore File"></a>4 Ignore File</h1><p><code>git</code> 中忽略文件基本的方法是通过编写 <code>.gitignore</code> 文件完成对文件的忽略. 对于文件路径的描述支持 glob 的正则表达式 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label=".gitignore
+<p>Body部分的格式是固定的, 必须写成 <code>This reverts commit &amp;lt;hash&gt;.</code>, 其中的hash是被撤销 commit 的 SHA 标识符.</p>
+<h1 id="Ignore-File"><a href="#Ignore-File" class="headerlink" title="Ignore File"></a>Ignore File</h1><p><code>git</code> 中忽略文件基本的方法是通过编写 <code>.gitignore</code> 文件完成对文件的忽略. 对于文件路径的描述支持 glob 的正则表达式 <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label=".gitignore
 ">[5]</span></a></sup> . 主要特点有</p>
 <ol>
 <li>以 <code>#</code> 开头的行为注释行.</li>
 <li><code>/path</code> 表示相对当前目录的路径, <code>path/</code> 表示所有路径 <code>path</code> 之下的子目录.</li>
+<li>文件名中含有空格需使用转义符, 如 <code>Course\ (Markdown)</code> <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="git: gitignore
+">[7]</span></a></sup></li>
+<li>使用 <code>**</code> 表示匹配任意层级的目录。如 <code>**/fig</code> 可匹配 <code>doc/fig</code>, <code>doc/section/fig</code> 等目录</li>
 </ol>
-<h1 id="5-DEBUG"><a href="#5-DEBUG" class="headerlink" title="5 DEBUG"></a>5 DEBUG</h1><h3 id="Collide-between-Local-and-Remote-Repository"><a href="#Collide-between-Local-and-Remote-Repository" class="headerlink" title="Collide between Local and Remote Repository"></a>Collide between Local and Remote Repository</h3><p>(2020.02.22) 在整理群论笔记的时候, 发现之前忘记了把在 Github 上建立的 LICENSE 给 <code>pull</code> 下来, 所以直接 <code>push</code> 发生了冲突. 之后通过先 <code>pull</code>, 再提交 <code>pull</code> 得到的新增内容到本地, 最后再 <code>push</code>, 从而解决了问题. <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="解决冲突 
-">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="github远程仓库和本地仓库冲突 
+<h1 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h1><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># add tag to `HEAD` commit</span><br>$ git tag v0.1.0<br><br><span class="hljs-comment"># add tag with specific commit</span><br>$ git tag &lt;tag_name&gt; &lt;commit_id&gt;<br><br>$ git tag v0.1.0 32737ec<br><br><span class="hljs-comment"># delete tag</span><br>$ git tag -d &lt;tag_name&gt;<br><br>$ git tag -d v0,1.0<br></code></pre></div></td></tr></table></figure>
+<h1 id="DEBUG"><a href="#DEBUG" class="headerlink" title="DEBUG"></a>DEBUG</h1><h2 id="Collide-between-Local-and-Remote-Repository"><a href="#Collide-between-Local-and-Remote-Repository" class="headerlink" title="Collide between Local and Remote Repository"></a>Collide between Local and Remote Repository</h2><p>(2020.02.22) 在整理群论笔记的时候, 发现之前忘记了把在 Github 上建立的 LICENSE 给 <code>pull</code> 下来, 所以直接 <code>push</code> 发生了冲突. 之后通过先 <code>pull</code>, 再提交 <code>pull</code> 得到的新增内容到本地, 最后再 <code>push</code>, 从而解决了问题. <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="解决冲突
+">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="github远程仓库和本地仓库冲突
 ">[2]</span></a></sup> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Git —— 解决本地仓库和GitHub库的冲突
 ">[3]</span></a></sup></p>
 <h2 id="git-log-中文编码错误"><a href="#git-log-中文编码错误" class="headerlink" title="git log 中文编码错误"></a><code>git log</code> 中文编码错误</h2><p>可以在 <code>.gitconfig</code> 内加入 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="GIT使用log命令显示中文乱码
@@ -362,7 +379,8 @@
 <a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yanzige/p/9810333.html">GIT使用log命令显示中文乱码</a>
 <a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">.gitignore</a>
 <a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html">Commit message 和 Change log 编写指南</a>
-<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://git-scm.com/docs/gitignore">git: gitignore</a>
+<a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
