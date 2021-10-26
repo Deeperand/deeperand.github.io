@@ -4,6 +4,189 @@
   
   
   <entry>
+    <title>[TRICK] General Tricks of LaTeX</title>
+    <link href="/CS_latex/2021-10-26_TRICK_general_trick_of_latex/"/>
+    <url>/CS_latex/2021-10-26_TRICK_general_trick_of_latex/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Use-Alias-of-Title-in-Content"><a href="#Use-Alias-of-Title-in-Content" class="headerlink" title="Use Alias of Title in Content"></a>Use Alias of Title in Content</h1><p>Some time you want to use different name in content and in mainbody, which can happen when the title is too long or you wish to change line by your hands. To realize it, one can add option to command like <code>\chapter</code> etc. e.g.</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\chapter</span>[Symmetry and Conservation Law]&#123;Symmetry and Conserva-<span class="hljs-keyword">\\</span>tion Law&#125;<br></code></pre></div></td></tr></table></figure><p>In mainbody is looks like</p><p><img src="alias_1.png" alt=""></p><p>and in the content it looks like</p><p><img src="alias_2.png" alt=""></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Usage of `ctex` Packages</title>
+    <link href="/CS_latex/2021-10-26_useage_of_ctex/"/>
+    <url>/CS_latex/2021-10-26_useage_of_ctex/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Title-Control"><a href="#Title-Control" class="headerlink" title="Title Control"></a>Title Control</h1><p>&emsp;&emsp;The basic conception about title can be shown as</p><p><img src="title_form.png" alt=""></p><p>More details can ref</p><p><img src="format.png" alt=""></p><p><img src="numberformat.png" alt=""></p><p><img src="titleformat.png" alt=""></p><p>&emsp;&emsp;A nice application is use the above command to realize pending and right-justify type setting for chapter</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\usepackage</span>&#123;varwidth&#125;          <span class="hljs-comment">% used to define chapter title</span><br><br><span class="hljs-keyword">\newfontfamily</span><span class="hljs-keyword">\Chpfont</span>&#123;Futura&#125; <span class="hljs-comment">% ref: Rockwell, PT Sans, PT, Arial, Futura</span><br><br><span class="hljs-keyword">\newcommand</span><span class="hljs-keyword">\chaptertitleformat</span>[1]&#123;<span class="hljs-comment">%% 以标题内容为参数</span><br>    <span class="hljs-keyword">\Huge</span><span class="hljs-keyword">\hspace</span>*&#123;1.7em&#125;<span class="hljs-keyword">\begin</span>&#123;varwidth&#125;&#123;.8<span class="hljs-keyword">\columnwidth</span>&#125;<span class="hljs-params">#1</span><span class="hljs-keyword">\end</span>&#123;varwidth&#125;&#125;<br><br><span class="hljs-keyword">\ctexset</span>&#123;<br>    chapter/format = <span class="hljs-keyword">\huge</span><span class="hljs-keyword">\bfseries</span><span class="hljs-keyword">\Chpfont</span><span class="hljs-keyword">\raggedright</span>,<br>    chapter/titleformat = <span class="hljs-keyword">\chaptertitleformat</span>,<br>    <span class="hljs-comment">% chapter/format = \chaptertitleformat,</span><br>    chapter/number = <span class="hljs-keyword">\arabic</span>&#123;chapter&#125;,<br>    chapter/name = &#123;Chapter<span class="hljs-keyword">\,</span><span class="hljs-keyword">\,</span>&#125;,<br>    chapter/aftername = &#123;<span class="hljs-keyword">\\</span>[1ex]&#125;,<br>    chapter/indent = -0.6em<br>&#125;<br></code></pre></div></td></tr></table></figure><p>The result looks like</p><p><img src="eg_chapter_title.png" alt=""></p><p>Note the about code use the package <code>varwidth</code>, which is used to replace <code>\minipage</code>. More details can see the package doc</p><p><img src="varwidth.png" alt=""></p><h1 id="Title-of-Content"><a href="#Title-of-Content" class="headerlink" title="Title of Content"></a>Title of Content</h1><p>The command is looks like</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\ctexset</span>&#123;contentsname = &lt;contant<span class="hljs-built_in">_</span>title&gt;&#125;<br></code></pre></div></td></tr></table></figure><p>e.g.</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\ctexset</span>&#123;contentsname = CONTENT&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Watermark Control in LaTeX</title>
+    <link href="/CS_latex/2021-10-26_watermark_control/"/>
+    <url>/CS_latex/2021-10-26_watermark_control/</url>
+    
+    <content type="html"><![CDATA[<p>Package <code>draftwatermark</code> provide a nice solution to add and control watermark.</p><h1 id="Turn-on-off-Wartermarker-for-Specific-Page"><a href="#Turn-on-off-Wartermarker-for-Specific-Page" class="headerlink" title="Turn on/off Wartermarker for Specific Page"></a>Turn on/off Wartermarker for Specific Page</h1><p>The command <code>\DraftwatermarkOptions</code> (with option <code>stamp=true/false</code>) can be added in arbitrary place to turn on/off watermark.</p><p><img src="DraftwatermarkOptions_1.png" alt=""></p><p><img src="DraftwatermarkOptions_2.png" alt=""></p><p>The following code turn off watermark only for cover</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\DraftwatermarkOptions</span>&#123;stamp=false&#125;<br><span class="hljs-keyword">\maketitle</span> <span class="hljs-comment">% title page</span><br><span class="hljs-keyword">\DraftwatermarkOptions</span>&#123;stamp=true&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Create Package and Documentclass of LaTeX</title>
+    <link href="/CS_latex/2021-10-26_create_package_and_doc_class/"/>
+    <url>/CS_latex/2021-10-26_create_package_and_doc_class/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Load-Packages-and-Class"><a href="#Load-Packages-and-Class" class="headerlink" title="Load Packages and Class"></a>Load Packages and Class</h1><p>The specific command <code>\RequirePackage</code> and <code>\Loadclass</code> can load packages and class at <code>.pkg</code> and <code>.cls</code> files, which can avoid some possible problems when load a same packages with many times. e.g.</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\RequirePackage</span>&#123;kvoptions&#125;<br><span class="hljs-keyword">\LoadClass</span>[UTF8, oneside, hyperref, fntef]&#123;ctexbook&#125;<br></code></pre></div></td></tr></table></figure><h1 id="Option-Passing"><a href="#Option-Passing" class="headerlink" title="Option Passing"></a>Option Passing</h1><p>To pass option from the current package to specific package, one need <code>declare</code> it then <code>process</code> it. To auto-declare options, one can use package <code>kvoptions</code>, which provide a command <code>\DeclareDefaultOption</code> which can auto-declare the options pass to current package or class and set the default process to it. </p><p><img src="DeclareDefaultOption.png" alt=""></p><p>Then is an complete example</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% declare options to ctexbook</span><br><span class="hljs-keyword">\RequirePackage</span>&#123;kvoptions&#125;<br><span class="hljs-keyword">\DeclareDefaultOption</span>&#123;<span class="hljs-keyword">\PassOptionsToClass</span>&#123;<span class="hljs-keyword">\CurrentOption</span>&#125;&#123;ctexbook&#125;&#125;<br><span class="hljs-comment">% process the declared options</span><br><span class="hljs-keyword">\ProcessKeyvalOptions</span>*<br><span class="hljs-comment">% use classes</span><br><span class="hljs-keyword">\LoadClass</span>[UTF8, oneside, hyperref, fntef]&#123;ctexbook&#125;<br></code></pre></div></td></tr></table></figure><p>more details can see <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="写给LATEX 2ε 类与宏包的作者">[1]</span></a></sup> .</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="http://blog.foool.net/wp-content/uploads/2011/10/clsguide-zh-cn_p38.pdf">写给LATEX 2ε 类与宏包的作者</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Tricks of `latexmk`</title>
+    <link href="/CS_latex/2021-10-26_TRICKS_latexmk/"/>
+    <url>/CS_latex/2021-10-26_TRICKS_latexmk/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Let-latexmk-Compile-with-xetex"><a href="#Let-latexmk-Compile-with-xetex" class="headerlink" title="Let latexmk Compile with xetex"></a>Let latexmk Compile with xetex</h1><p>Set </p><figure class="highlight gams"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gams"><span class="hljs-meta"><span class="hljs-meta-keyword">$pdf</span>_mode = 5;</span><br></code></pre></div></td></tr></table></figure><p>to let <code>latexmk</code> compile with <code>xelatex</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Using Latexmk">[1]</span></a></sup> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="LaTeX 技巧938：如何配置 latexmk">[2]</span></a></sup>. Some configure about <code>vimtex</code> can see <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="Vimtex and Xelatex">[3]</span></a></sup> .</p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://mg.readthedocs.io/latexmk.html">Using Latexmk</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.latexstudio.net/archives/51493.html">LaTeX 技巧938：如何配置 latexmk</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a href="https://tex.stackexchange.com/questions/392198/vimtex-and-xelatex">Vimtex and Xelatex</a><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS LaTeX</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICKS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] Tricks of Safari</title>
+    <link href="/CS_macOS/2021-10-26_TRICKS_tricks_of_safari/"/>
+    <url>/CS_macOS/2021-10-26_TRICKS_tricks_of_safari/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Turn-off-auto-unzipping-of-Safari"><a href="#Turn-off-auto-unzipping-of-Safari" class="headerlink" title="Turn off auto-unzipping of Safari"></a>Turn off auto-unzipping of Safari</h1><p>“In the menu bar, go <code>Safari</code> -&gt; <code>Preferences</code>. In the <code>General</code> tab, uncheck <code>Open &#39;safe&#39; files after downloading</code>. This will stop Safari from automatically unzipping the files.” <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to stop Safari from unzipping files after download">[1]</span></a></sup></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://apple.stackexchange.com/questions/961/how-to-stop-safari-from-unzipping-files-after-download">How to stop Safari from unzipping files after download</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[TRICK] System Operation Tricks about macOS</title>
+    <link href="/CS_macOS/2021-10-26_TRICK_system_operation_tricks/"/>
+    <url>/CS_macOS/2021-10-26_TRICK_system_operation_tricks/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>This article conclude the tricks about system operation tricks about macOS, and also include the previous articles about the topic.</p></blockquote><h1 id="Exclude-Folders-for-Spotlight-amp-Alfred"><a href="#Exclude-Folders-for-Spotlight-amp-Alfred" class="headerlink" title="Exclude Folders for Spotlight &amp; Alfred"></a>Exclude Folders for <em>Spotlight</em> &amp; <em>Alfred</em></h1><p><code>System Preferences</code> -&gt; <code>Spotlight</code> -&gt; <code>Privacy</code> -&gt; add folders you wish to exclude</p><p><img src="spotlight_exclude.png" alt=""></p><h1 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h1><h2 id="Input-Emoji-amp-Symbols"><a href="#Input-Emoji-amp-Symbols" class="headerlink" title="Input Emoji &amp; Symbols"></a>Input Emoji &amp; Symbols</h2><p>To show emoji and other symbols, open <code>Show Emoji &amp; Symbols</code> at input method switcher. Then one can switch full list and shorter list by clicking witch icon at right-top.</p><p><img src="emoji_and_symbol_1.png" alt=""></p><p><img src="emoji_and_symbol_2.png" alt=""></p><p><img src="emoji_and_symbol_3.png" alt=""></p><h2 id="Turn-off-Autocorrect"><a href="#Turn-off-Autocorrect" class="headerlink" title="Turn off Autocorrect"></a>Turn off Autocorrect</h2><p><code>System Perference</code> -&gt; <code>Keyboard</code> -&gt; <code>Text</code> -&gt; turn off <code>Correct spelling automatically</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to turn off autocorrect on your Mac computer in 4 steps">[1]</span></a></sup></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.businessinsider.com/how-to-turn-off-autocorrect-on-mac">How to turn off autocorrect on your Mac computer in 4 steps</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.alfredforum.com/topic/1412-excluding-folders/">Excluding Folders</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>CS macOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CS</tag>
+      
+      <tag>TRICK</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[TRICK] 为中文添加下划线</title>
     <link href="/CS_latex/2021-10-20_TRICK_add_underline_for_Chinese/"/>
     <url>/CS_latex/2021-10-20_TRICK_add_underline_for_Chinese/</url>
@@ -1323,7 +1506,7 @@
     <link href="/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/"/>
     <url>/CS_macOS/2021-07-11_TRICK_forbid_startup_auto_launch/</url>
     
-    <content type="html"><![CDATA[<p>&emsp;&emsp;At few days ago, I found <code>Steam.app</code> will always launch while I loging in or starting up my MacBook even I trun off the auto launch option at <code>Perference</code> of <code>Steam.app</code>. Later I found to ture off it, one need cancel log in loading options at <code>System Perference</code> -&gt; <code>Users &amp; Groups</code> -&gt; <code>Login Items</code>.</p><p><img src="login_items.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="General"><a href="#General" class="headerlink" title="General"></a>General</h1><p>&emsp;&emsp;At few days ago, I found <code>Steam.app</code> will always launch while I loging in or starting up my MacBook even I trun off the auto launch option at <code>Perference</code> of <code>Steam.app</code>. Later I found to ture off it, one need cancel log in loading options at <code>System Perference</code> -&gt; <code>Users &amp; Groups</code> -&gt; <code>Login Items</code>.</p><p><img src="login_items.png" alt=""></p><h1 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h1><p>&emsp;&emsp;To forbid auto-launch of <em>Spotify</em>, one need open <em>Spotify</em> then <code>Perference</code> -&gt; <code>SHOW ADVANCED SETTINGS</code> -&gt;  turn off <code>Open spotify automatically after you log in the computer</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How To Stop Spotify From Opening On Startup">[1]</span></a></sup></p><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.alphr.com/stop-spotify-opening-startup/">How To Stop Spotify From Opening On Startup</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
     <categories>
@@ -1953,7 +2136,7 @@
     <link href="/CS_latex/2021-05-27_multiline_equation/"/>
     <url>/CS_latex/2021-05-27_multiline_equation/</url>
     
-    <content type="html"><![CDATA[<p>本文归纳了常见的 LaTeX 多行公式指令以及一些注意事项.</p><span id="more"></span><h2 id="公式的对齐"><a href="#公式的对齐" class="headerlink" title="公式的对齐"></a>公式的对齐</h2><p>对齐符号 <code>&amp;</code> 一般放在等号的前面, 但有时会有一两行公式需要在等号后面对齐, 此时可采用 <code>\phantom</code> 指令, 不过需要加上 <code>\mathrel</code> 以获得正确的间距. 如</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>    <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\mathrel</span>&#123;<span class="hljs-keyword">\phantom</span>&#123;=&#125;&#125; (a + b)(a - b) <span class="hljs-keyword">\nonumber</span> <span class="hljs-keyword">\\</span><br>    <span class="hljs-built_in">&amp;</span> = a<span class="hljs-built_in">^</span>&#123;2&#125; - b<span class="hljs-built_in">^</span>&#123;2&#125;<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></div></td></tr></table></figure><p>将得到如下效果</p><p><img src="align.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>本文归纳了常见的 LaTeX 多行公式指令以及一些注意事项.</p><span id="more"></span><h2 id="公式的对齐"><a href="#公式的对齐" class="headerlink" title="公式的对齐"></a>公式的对齐</h2><p>对齐符号 <code>&amp;</code> 一般放在等号的前面, 但有时会有一两行公式需要在等号后面对齐, 此时可采用 <code>\phantom</code> 指令, 不过需要加上 <code>\mathrel</code> 以获得正确的间距. 如</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>    <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\mathrel</span>&#123;<span class="hljs-keyword">\phantom</span>&#123;=&#125;&#125; (a + b)(a - b) <span class="hljs-keyword">\nonumber</span> <span class="hljs-keyword">\\</span><br>    <span class="hljs-built_in">&amp;</span> = a<span class="hljs-built_in">^</span>&#123;2&#125; - b<span class="hljs-built_in">^</span>&#123;2&#125;<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></div></td></tr></table></figure><p>将得到如下效果</p><p><img src="align.png" alt=""></p><h2 id="Subequations"><a href="#Subequations" class="headerlink" title="Subequations"></a><code>Subequations</code></h2><p>Environment <code>subequations</code> can be used outside the multi-lines environment such as <code>align</code> to get the sub-label looks like <code>(2.8a)</code>. For example</p><figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;subequations&#125;<br><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>    <span class="hljs-built_in">&amp;</span> R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span>&#125; + R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span>&#125; + R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span>&#125; = 0 <span class="hljs-keyword">\\</span><br>    <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span>&#125;&#125; + <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span>&#125;&#125;<br>        + <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span>&#125;&#125; = 0<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br><span class="hljs-keyword">\end</span>&#123;subequations&#125;<br></code></pre></div></td></tr></table></figure><p>the output is looks like</p><p><img src="subequations.png" alt=""></p>]]></content>
     
     
     <categories>

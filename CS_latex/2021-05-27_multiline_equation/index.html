@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      122 字
+      244 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.05.30, 10:32
+                  最后更新：2021.10.25, 17:31
                 
               </p>
             
@@ -253,6 +253,10 @@
 <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>    <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\mathrel</span>&#123;<span class="hljs-keyword">\phantom</span>&#123;=&#125;&#125; (a + b)(a - b) <span class="hljs-keyword">\nonumber</span> <span class="hljs-keyword">\\</span><br>    <span class="hljs-built_in">&amp;</span> = a<span class="hljs-built_in">^</span>&#123;2&#125; - b<span class="hljs-built_in">^</span>&#123;2&#125;<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br></code></pre></div></td></tr></table></figure>
 <p>将得到如下效果</p>
 <p><img src="align.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="Subequations"><a href="#Subequations" class="headerlink" title="Subequations"></a><code>Subequations</code></h2><p>Environment <code>subequations</code> can be used outside the multi-lines environment such as <code>align</code> to get the sub-label looks like <code>(2.8a)</code>. For example</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\begin</span>&#123;subequations&#125;<br><span class="hljs-keyword">\begin</span>&#123;align&#125;<br>    <span class="hljs-built_in">&amp;</span> R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span>&#125; + R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span>&#125; + R<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\sigma</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span>&#125; = 0 <span class="hljs-keyword">\\</span><br>    <span class="hljs-built_in">&amp;</span> <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span>&#125;&#125; + <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\mu</span><span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span>&#125;&#125;<br>        + <span class="hljs-keyword">\tensor</span>&#123;&#123;R&#125;&#125;&#123;<span class="hljs-built_in">^</span>&#123;<span class="hljs-keyword">\sigma</span>&#125;<span class="hljs-built_in">_</span>&#123;<span class="hljs-keyword">\nu</span><span class="hljs-keyword">\lambda</span><span class="hljs-keyword">\mu</span>&#125;&#125; = 0<br><span class="hljs-keyword">\end</span>&#123;align&#125;<br><span class="hljs-keyword">\end</span>&#123;subequations&#125;<br></code></pre></div></td></tr></table></figure>
+<p>the output is looks like</p>
+<p><img src="subequations.png" srcset="/img/loading.gif" lazyload alt=""></p>
 
             </div>
             <hr>
