@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
+  <link rel="icon" href="/fig/avatar.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+本文主要介绍了流形及流形间映射的基本定义. 该文章为 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于知乎, 
+">
+  <meta name="author" content="冬季银河">
+  <meta name="keywords" content="">
+  
+  <title>流形的基本概念 - 博客 | 冬季银河</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/a11y-dark.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"www.dongjiyinhe.com","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/fig/blackhole.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="流形的基本概念">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      冬季银河
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-30 10:54" pubdate>
+        2021.05.30, 10:54
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">流形的基本概念</h1>
+            
+              <p class="note note-info">
+                
+                  最后更新：2021.05.31, 17:19
+                
+              </p>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>本文主要介绍了流形及流形间映射的基本定义. 该文章为 2020 年 5 月 8 日为理论所面试做准备期间所写, 首发于<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139082693">知乎</a>, </p>
+</blockquote>
+<span id="more"></span>
+<h2 id="原-序论"><a href="#原-序论" class="headerlink" title="(原) 序论"></a>(原) 序论</h2><blockquote>
+<p>本来是在看《物理学中的群论》中的第四章的, 奈何实在看不懂里面对李群的介绍, 于是开始看梁灿彬的《微分几何入门与广义相对论》中册的附录中关于李群的部分. 不得不说, 有微分几何基础的话看这部分相当的舒畅. 看的过程中顺带复习了一些关于微分几何的基本概念.</p>
+<p>这篇文章对应《微分几何入门与广义相对论》第 2.1 节的内容.</p>
+</blockquote>
+<p><img src="./2.1_basic_conception_about_manifold.png" srcset="/img/loading.gif" lazyload alt="outline"></p>
+<h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1 基本概念"></a>1 基本概念</h2><p>&emsp;&emsp;首先给出流形的定义:</p>
+<ul>
+<li><u><strong>微分流形:</strong></u><br>对于拓扑空间 $M$, 若其有开覆盖 $\left{ O<em>\alpha \right}$ (即 $M = \bigcap</em>{\alpha} O_\alpha$) 满足下列条件, 则可称为 $n$ 维微分流形, 或简称 $n$ 维流形:<ol>
+<li>$\forall\ O<em>\alpha$, $\exists$ 拓扑同胚映射 $\psi</em>\alpha: O<em>\alpha \to V</em>\alpha$ ($V_\alpha$ 是用通常拓扑衡量的开子集);</li>
+<li>若 $O<em>\alpha \cap O</em>\beta$, 则复合映射 $\psi<em>\beta \circ \psi</em>\alpha^{-1}$ 是 $C^{\infty}$ 光滑的;</li>
+</ol>
+</li>
+</ul>
+<p>粗略地说, $n$ 维流形是带有微分结构的拓扑空间, 其局部地像 $\mathbb{R}^n$ (体现在可以局部地构建该集合与 $\mathbb{R}^n$ 的同胚关系), 但整体不一定像 $\mathbb{R}^n$. 具体而言, 定义的第一条表明, 微分流形是由一片一片的开集构成的, 每一片 $n$ 维微分流形上的开集, 都可通过某种映射, 使得其与 $R^{n}$ 上的某个开集同胚. 而定义的第二条表明, 如果 $M$ 的两个开集有交, 则可诱导出一个 $R^{n}$ 的某个开区域到 $R^{n}$ 的另一开区域的映射, 这个映射按照通常在数学分析中的定义是 $C^{\infty}$ 的.</p>
+<h2 id="2-坐标系与图"><a href="#2-坐标系与图" class="headerlink" title="2 坐标系与图"></a>2 坐标系与图</h2><p>&emsp;&emsp;由于流形上每一片开集都可和 $\mathbb{R}^n$ 上的某个开区域对应, 因此可以借助这个开区域定义坐标系:</p>
+<ul>
+<li><u><strong>流形上的坐标系:</strong></u><br>设映射 $\psi<em>\alpha: O</em>\alpha \to \psi<em>\alpha[O</em>\alpha] \subset \mathbb{R}^n$ 是流形上的某个开集 $O<em>\alpha$ 到 $\mathbb{R}^n$ 的某个开区域的拓扑同胚映射, 则任一 $p \in O</em>\alpha$ 自然地通过这个映射与 $n$ 个数对应, 称这 $n$ 个数是点 $p$ 对应的坐标, 称 $(O<em>\alpha, \psi</em>\alpha)$ 构成一个坐标系.</li>
+</ul>
+<p>坐标系的取法往往不是唯一的. 试想流形上有交集的两个开区域 $O<em>\alpha$ 与 $O</em>\beta$, 其分别对应映射 $\psi<em>\alpha$ 与 $\psi</em>\beta$. 则在交集 $O<em>\alpha \cap O</em>\beta$ 中, 即可使用坐标系 $(O<em>\alpha, \psi</em>\alpha$, 也可使用坐标系 $(O<em>\beta, \psi</em>\beta)$. 于是同一个点对应两个 $\mathbb{R}^{n}$ 上的点, 由此可诱导出联系则两个点的一个的映射 (或者说 $n$ 个 $n$ 元函数):</p>
+<script type="math/tex; mode=display">
+    x'^{\mu} = \phi^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>称这个映射 (或者说 $n$ 个 $n$ 元函数) 为一个 <strong>坐标变换</strong>. 此外, 通常也将对应的 $n$ 个数 $\left{ x^{\mu} \right}$ 称为坐标系, 以及将坐标变换简记为:</p>
+<script type="math/tex; mode=display">
+    x'^{\mu} = x'^{\mu}(x^{\nu}),\ \mu, \nu = 1, \dots , n</script><p>&emsp;&emsp;接下来介绍数学上另一种看待坐标系的观点:</p>
+<ul>
+<li><u><strong>图:</strong></u><br>坐标系 $(O<em>\alpha, \psi</em>\alpha)$ 在数学上又叫 <strong>图</strong>. 若图中的映射满足微分流形定义中对映射的要求, 则将这样的图的集合 $\left{ (O<em>\alpha, \psi</em>\alpha) \right}$ 称为 <strong>图册</strong>. 其中定义第二个要求又叫相容性条件, 因此图册中任意两个图都是相容的.</li>
+</ul>
+<p>对于同一个微分流形, 可以两个图册并不一定是相容的, 此时说两个图册代表不同的 <strong>微分结构</strong>.</p>
+<h2 id="3-流形间的映射"><a href="#3-流形间的映射" class="headerlink" title="3 流形间的映射"></a>3 流形间的映射</h2><p>&emsp;&emsp;流形与拓扑不同的是, 除了具有拓扑结构以外, 还具有微分结构 (可以视为通过 $\mathbb{R}^n$ 上的函数来间接体现的). 对于流形间的映射, 除了一般的连续性以外, 还可谈论高阶的连续性. 具体定义如下:</p>
+<ul>
+<li><u><strong>流形间映射的连续性:</strong></u><br>  设 $f: M \to M’$ 是流形间的映射, 则可诱导出一个多元函数 $\psi’<em>\beta \circ f \circ \psi</em>\alpha^{-1}$ ($\psi’<em>\beta$ 与 $\psi’</em>\alpha$ 分别是 $M’$ 与 $M$ 上的坐标系). 若对于任意 $p \in M$, 该多元函数是 $C^{r}$ 的, 则称映射 $f$ 是 $C^{r}$ 类映射.</li>
+</ul>
+<p>&emsp;&emsp;类似与之前定义的拓扑同胚, 这里可以定义微分同胚, 反映两个流形微分结构的一致性:</p>
+<ul>
+<li><u><strong>微分同胚:</strong></u><br>  若存在 $f: M \to M’$, 满足:<ol>
+<li>$f$ 是一一到上的;</li>
+<li>$f$ 及 $f^{-1}$ 是 $C^{\infty}$ 的;<br>则称 $f$ 是 $M$ 到 $M’$ 的微分同胚映射, 且称 $M$ 与 $M’$ 互为微分同胚.</li>
+</ol>
+</li>
+</ul>
+<p>流形间的映射 $f: M \to M’$ 有一个特例, 即 $M’$ 为 $\mathbb{R}$ 的情形, 此时流形 $M$ 的每一点都对应着一个实数, 由此可引出第一个关于 “场” 的概念:</p>
+<ul>
+<li><u><strong>流形上的标量场:</strong></u><br>  称映射 $f: M \to \mathbb{R}$ 为流形 $M$ 上的 <strong>函数</strong>, 或 $M$ 上的 <strong>标量场</strong>. 若 $f$ 为 $C^{\infty}$ 的, 则称该标量场是 <strong>光滑的</strong>. 将 $M$ 上全体光滑标量场的集合记为 $\mathscr{F}_{M}$ 或 $\mathscr{F}$.</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/PHYS-General-Relativity/">PHYS General Relativity</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PHYS/">PHYS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MATH/">MATH</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/52333/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">量子力学复习概要</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/43558/">
+                        <span class="hidden-mobile">球面坐标系中的微分几何及其应用</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        渝ICP备2021004293号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002502374"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/fig/beian_icon.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>渝公网安备 50019002502374号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
+  <link rel="icon" href="/fig/avatar.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+由于 YGOPro 及 YGOPro2 的说明都是在软件包目录中, 平时查阅不太方便, 因此将其复制出来并重新排版以便查阅。
+">
+  <meta name="author" content="冬季银河">
+  <meta name="keywords" content="">
+  
+  <title>[REF] YGOPro Guide - 博客 | 冬季银河</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/a11y-dark.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"www.dongjiyinhe.com","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/fig/blackhole.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[REF] YGOPro Guide">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      冬季银河
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-11 16:03" pubdate>
+        2021.07.11, 16:03
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[REF] YGOPro Guide</h1>
+            
+              <p class="note note-info">
+                
+                  最后更新：2021.07.11, 16:24
+                
+              </p>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>由于 YGOPro 及 YGOPro2 的说明都是在软件包目录中, 平时查阅不太方便, 因此将其复制出来并重新排版以便查阅。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="YGOPro"><a href="#YGOPro" class="headerlink" title="YGOPro"></a>YGOPro</h2><p>A script engine for “yu-gi-oh!” and sample gui</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Fluorohydride/ygopro/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E">中文说明</a></p>
+<h3 id="Keys"><a href="#Keys" class="headerlink" title="Keys:"></a>Keys:</h3><ul>
+<li><code>ESC</code>: Minimize the window.</li>
+<li><code>A</code>: Holding down this button will let the system stop at every timing.</li>
+<li><code>S</code>: Holding down this button will let the system skip every timing.</li>
+<li><code>D</code>: Holding down this button will let the system stop at available timing.</li>
+<li><code>R</code>: Fix the font glitch.</li>
+<li><code>F1</code>~<code>F4</code>: Show the cards in your grave, banished zone, extra deck, xyz materials.</li>
+<li><code>F5</code>~<code>F8</code>: Show the cards in your opponent’s grave, banished zone, extra deck, xyz materials.</li>
+</ul>
+<h3 id="Color-in-card-list"><a href="#Color-in-card-list" class="headerlink" title="Color in card list:"></a>Color in card list:</h3><h4 id="Background"><a href="#Background" class="headerlink" title="Background:"></a>Background:</h4><ul>
+<li>White = your card, Grey = your opponent’s card  </li>
+</ul>
+<h4 id="Text"><a href="#Text" class="headerlink" title="Text:"></a>Text:</h4><p>Cards in deck, extra deck and banished zone: </p>
+<ul>
+<li>Black = face-up, Blue = face-down</li>
+</ul>
+<p>Xyz materials:</p>
+<ul>
+<li>Black = default, Blue = the owner of the xyz material is different from its controller</li>
+</ul>
+<h3 id="Sequence"><a href="#Sequence" class="headerlink" title="Sequence:"></a>Sequence:</h3><ul>
+<li>Monster Zone: 1~5, starting from the left hand side.</li>
+<li>Spell &amp; Trap Zone: 1~5, starting from the left hand side.</li>
+<li>Field Zone: 6</li>
+<li>Pendulum Zone: 0~1, starting from the left hand side.</li>
+<li>The others: 1~n, starting from the bottom.</li>
+</ul>
+<h3 id="Deck-edit-page"><a href="#Deck-edit-page" class="headerlink" title="Deck edit page:"></a>Deck edit page:</h3><ul>
+<li>All numeric textboxs: They support <code>&gt;</code>, <code>=</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> signs.</li>
+<li>Card name: Search card names and texts by default, <code>$foo</code> will only search foo in card names, and <code>@foo</code> will search cards of <code>foo</code> archetype (due to translation, card name contains <code>foo</code> does not mean that card is <code>foo</code> card).</li>
+</ul>
+<h3 id="Command-line-options"><a href="#Command-line-options" class="headerlink" title="Command-line options:"></a>Command-line options:</h3><ul>
+<li><code>-e foo.cdb</code>: Load foo.cdb as the extra database.</li>
+<li><code>-n nickname</code>: Set the nickname.</li>
+<li><code>-h 192.168.0.2</code>: Set the host to join in LAN mode.</li>
+<li><code>-p 7911</code>: Set the port to join in LAN mode.</li>
+<li><code>-w abc</code>: Set the password to join in LAN mode.</li>
+<li><code>-d</code>: Enter the deck edit page.</li>
+<li><code>-d deck</code>: If used along with <code>-j</code> it mean select the deck, or it will open the deck to edit.</li>
+<li><code>-c</code>: Create host with default settings.</li>
+<li><code>-j</code>: Join the host specified in above, or if absent, lasthost in system.conf file.</li>
+<li><code>-r</code>: Enter the replay mode page.</li>
+<li><code>-r replay.yrp</code>: Load the replay.yrp in replay mode.</li>
+<li><code>-s</code>: Enter the single mode page.</li>
+<li><code>-s puzzle.lua</code>: Load the puzzle.lua in single mode.</li>
+<li><code>-k</code>: Keep when duel finished. See below.</li>
+</ul>
+<h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><ul>
+<li><code>-c</code> <code>-j</code> <code>-e</code> <code>-r</code> <code>-s</code> shoule be the last parameter, because any parameters after it will get ignored.</li>
+<li><code>-d</code> <code>-c</code> <code>-j</code> <code>-e</code> <code>-r</code> <code>-s</code> will make YGOPro automatically exit when the duel or deck editing is finished. This is useful for some launchers. If you want to keep it, add <code>-k</code> before them.</li>
+<li><code>-d</code> <code>-r</code> <code>-s</code> support full path of file, or just filename. But remember deck filename should NOT have extension when replay and single filename MUST have extension.</li>
+</ul>
+<h3 id="Directories"><a href="#Directories" class="headerlink" title="Directories:"></a>Directories:</h3><ul>
+<li><code>pics</code>: <code>.jpg</code> card images (177*254).</li>
+<li><code>pics</code> \ <code>thumbnail</code>: <code>.jpg</code> thumbnail images(44*64).</li>
+<li><code>script</code>: <code>.lua</code> script files.</li>
+<li><code>textures</code>: Other image files.</li>
+<li><code>deck</code>: <code>.ydk</code> deck files.</li>
+<li><code>replay</code>: <code>.yrp</code> replay files.</li>
+<li><code>expansions</code>: <code>*.cdb</code> will be loaded as extra databases.</li>
+</ul>
+<h2 id="YGOPro2"><a href="#YGOPro2" class="headerlink" title="YGOPro2"></a>YGOPro2</h2><blockquote>
+<p>注意：<br>YGOPro2对电脑有一定配置需求，若无法流畅运行推荐使用 <a target="_blank" rel="noopener" href="http://ygocore.ys168.com/">YGOPro 原版游戏</a></p>
+</blockquote>
+<h3 id="常用联机对战方法"><a href="#常用联机对战方法" class="headerlink" title="常用联机对战方法"></a>常用联机对战方法</h3><p>主机地址的两个空分别填入 <code>s1.ygo233.com</code> 和 <code>233</code><br>房间密码留空，点击加入游戏，进入比赛模式（三局两胜）的随机对战。<br>房间密码输入 <code>AI</code>，可与在线人机对战    【本地人机目前无法使用，请用在线人机代替】。<br>房间密码输入 <code>S</code>，可进入单局的随机对战。输入 <code>T</code>，可进入 2V2 模式的随机对战。</p>
+<h3 id="约战方法"><a href="#约战方法" class="headerlink" title="约战方法"></a>约战方法</h3><p>房间密码输入任意其他文字，可以以那串文字为房间名建立房间，让你的对手输入同样的文字，即可加入房间。在房间名前加 <code>M#</code> 可以设置房间为比赛模式。加 <code>T#</code> 可以设置房间为 2V2 模式。大小写随意。房间名还支持更多特殊代码，详见 <a target="_blank" rel="noopener" href="https://ygo233.com/usage">YGOPro 使用方法</a></p>
+<h3 id="游戏更新方法"><a href="#游戏更新方法" class="headerlink" title="游戏更新方法"></a>游戏更新方法</h3><p><a target="_blank" rel="noopener" href="http://ygopro2.lofter.com/">官网</a> 目前受 lofter 限制无法提供下载链接，需从<a target="_blank" rel="noopener" href="http://ygocore.ys168.com/">娱乐力量全开网盘</a>下载更新。 完整版整合了发布日期之前的全部更新补丁，若存在完整版更新日期之后的补丁则需下载安装。</p>
+<p>也可以从 <a target="_blank" rel="noopener" href="https://ygopro2.link/downloads.html">YGOPro2 完整版及更新</a> 下载, 或进 YGOPro2 官群（966380039）从群文件下载。</p>
+<h3 id="更换卡背、背景、头像的方法"><a href="#更换卡背、背景、头像的方法" class="headerlink" title="更换卡背、背景、头像的方法"></a>更换卡背、背景、头像的方法</h3><ul>
+<li>背景: 背景文件为游戏目录 <code>\texture\common</code> 文件夹下的 <code>desk.jpg</code> 文件。将它删除或者重命名，然后将你想要的背景图片（必须也是jpg格式）放在该文件夹，并且命名为 <code>desk.jpg</code>。重启游戏。</li>
+<li>卡背：卡背文件为游戏目录 <code>\texture\duel</code> 文件夹下的 <code>me.jpg</code> 文件。将它删除或者重命名，然后将你想要的卡背（必须也是 jpg 格式）放在该文件夹，并且命名为 <code>me.jpg</code>。对手卡背的文件为同一文件夹下的 <code>opponent.jpg</code> 文件，进行类似操作即可更换对方卡背。重启游戏。</li>
+<li>头像：头像文件为游戏目录 <code>\texture\face</code> 文件夹下的”你的游戏 <code>id.png</code> “文件，把合适的图片放在 <code>face</code> 文件夹并命名为你的游戏 <code>id</code>。</li>
+</ul>
+<p>更换其他美术素材也都在游戏目录 <code>\texture</code> 文件夹下，方法同上。YGOPro2 官群（966380039）群文件有大量替换用美术素材下载。</p>
+<h3 id="FQA"><a href="#FQA" class="headerlink" title="FQA"></a>FQA</h3><p>Q：为什么我按照上面的操作更换了图片文件，我的卡背/背景/头像替换失败了？<br>A：系统中，文件可能默认不显示jpg等后缀名，可能替换的图片后缀名和之前的不一样，自行百度搜索“怎么显示文件后缀名”，处理后再进行操作。</p>
+<p>关于”安装到萌卡.exe”： <a target="_blank" rel="noopener" href="https://mycard.moe/">萌卡</a> 是一个对战平台，内置原版 YGOPro，有玩家社区、聊天室、决斗数据、天梯排名等功能。若电脑安装有萌卡，运行”安装到萌卡.exe” 即可把萌卡中启动 YGOPro 替代为启动 YGOPro2。</p>
+<p>关于手机版YGOPro2下载：<br>注意：以下版本均非 YGOPro2 实验室官方开发。</p>
+<ul>
+<li>安卓版：QQ群 1030685516 。</li>
+<li><a target="_blank" rel="noopener" href="https://cli.koishi.pro/download/">iOS版</a>：一般需连接电脑使用助手安装，详情见下载页面。</li>
+</ul>
+<h3 id="Advenced-Guide"><a href="#Advenced-Guide" class="headerlink" title="Advenced Guide"></a>Advenced Guide</h3><h4 id="安装扩展："><a href="#安装扩展：" class="headerlink" title="安装扩展："></a>安装扩展：</h4><p>将ypk格式的扩展包文件放至expansions文件夹中重启YGOPro2即可。</p>
+<h4 id="文件结构："><a href="#文件结构：" class="headerlink" title="文件结构："></a>文件结构：</h4><ul>
+<li><code>cdb</code>：支持读取其中数据库文件 (<code>*.cdb</code>)与字段文件 (<code>*.conf</code>)</li>
+<li><code>data</code>：支持读取其中<code>zip</code>文件</li>
+<li><code>expansions</code>：支持读取其中ypk文件，数据库文件(<em>.cdb)与字段文件(</em>.conf)</li>
+<li><code>diy</code>：建议弃用，改用 <code>expansions</code>，<code>ypk</code> 与 <code>zip</code> 本质为同一格式</li>
+<li><code>pack</code>：卡包数据（年久失修）</li>
+</ul>
+<p>开源地址为: <a target="_blank" rel="noopener" href="https://github.com/lllyasviel/YGOProUnity_V2">YGOProUnity_V2</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/YGO/">YGO</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/REF/">REF</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/65119/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">卡组笔记: 电脑堺</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/11580/">
+                        <span class="hidden-mobile">[TODO] 编写 YGO 对战 AI</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        渝ICP备2021004293号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002502374"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/fig/beian_icon.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>渝公网安备 50019002502374号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
