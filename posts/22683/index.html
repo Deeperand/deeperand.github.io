@@ -242,14 +242,14 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.08.31, 21:24
+                  最后更新：2021.11.09, 10:41
                 
               </p>
             
             <div class="markdown-body">
               <p><em>Macbook Air</em></p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>&emsp;&emsp;基本思路 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="将hexo个人博客部署到个人云服务器—最详细踩坑教程
-">[1]</span></a></sup> 是在本地先进行 Hexo 的配置 (可参考我的这篇文章: <a href="/posts/undefined/" title="Hexo 快速上手">Hexo 快速上手</a>) 后, 在远程服务器搭建远程 git 库. 每次 <code>deploy</code> 时, 通过 <code>hexo-deployer-git</code> 插件先将本地的 <code>hexo</code> 生成的 <code>public</code> 内容推送到服务器上的远程库, 再通过 <code>hook</code> 自动将远程库中的内容拉取到网站存储的目录. 其中远程服务器采用 <code>Nginx</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="8分钟带你深入浅出搞懂Nginx
+">[1]</span></a></sup> 是在本地先进行 Hexo 的配置 (可参考我的这篇文章: <a href="/posts/6453/" title="Hexo 快速上手">Hexo 快速上手</a>) 后, 在远程服务器搭建远程 git 库. 每次 <code>deploy</code> 时, 通过 <code>hexo-deployer-git</code> 插件先将本地的 <code>hexo</code> 生成的 <code>public</code> 内容推送到服务器上的远程库, 再通过 <code>hook</code> 自动将远程库中的内容拉取到网站存储的目录. 其中远程服务器采用 <code>Nginx</code> <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="8分钟带你深入浅出搞懂Nginx
 ">[2]</span></a></sup></p>
 <h2 id="1-云服务器的带宽选择"><a href="#1-云服务器的带宽选择" class="headerlink" title="1 云服务器的带宽选择"></a>1 云服务器的带宽选择</h2><p>&emsp;&emsp;带宽选择方面 <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="云服务器1M的带宽到底多大？90%的网站够用了
 ">[3]</span></a></sup>, 如果是静态博客, 通过 CDN 加速后可获得相当满意的访问速度, 因此一般来说不需要太大 (对于纯静态博客, 甚至可以只使用 <code>cos-cdn</code> 而不需要服务器! Hexo 有插件 <code>hexo-deployer-cos-cdn</code> 来辅助实现 <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Hexo-deployer-cos-cdn 插件安装使用指南
@@ -263,7 +263,7 @@
 <h3 id="3-DEBUG-权限问题"><a href="#3-DEBUG-权限问题" class="headerlink" title="(3) DEBUG: 权限问题"></a>(3) DEBUG: 权限问题</h3><p>&emsp;&emsp;笔者在配置完远程仓库, 并在 <code>deploy</code> 设置好推送至的远程库地址 <code>repo</code> 后, 执行 <code>hexo g -d</code> 时发现出现 <code>unpack failed</code> 的错误 <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="【Git服务器】搭建Git服务器（源码安装）
 ">[8]</span></a></sup> <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="【Git学习】解决git push操作的时候出错，提示 error: unpack failed: unable to create temporary object directory
 ">[9]</span></a></sup>. 经排查, 该问题的出现不在于 <code>hexo</code>, 而是由于笔者登录帐号是使用的 <code>git</code>, 其不具有将文件写入远程库的权限. 使用指令 <code>chmod</code> 修改远程库权限后, 该 bug 被消除.</p>
-<h2 id="3-启用-HTTPS"><a href="#3-启用-HTTPS" class="headerlink" title="3 启用 HTTPS"></a>3 启用 HTTPS</h2><p>&emsp;&emsp;关于 HTTP/HTTPS 协议的简介可以参考我的这篇博客: <a href="/posts/undefined/" title="什么是 HTTP 与 HTTPS 协议?">什么是 HTTP 与 HTTPS 协议?</a></p>
+<h2 id="3-启用-HTTPS"><a href="#3-启用-HTTPS" class="headerlink" title="3 启用 HTTPS"></a>3 启用 HTTPS</h2><p>&emsp;&emsp;关于 HTTP/HTTPS 协议的简介可以参考我的这篇博客: <a href="/posts/2541/" title="什么是 HTTP 与 HTTPS 协议?">什么是 HTTP 与 HTTPS 协议?</a></p>
 <h3 id="1-获取-SSL-证书"><a href="#1-获取-SSL-证书" class="headerlink" title="(1) 获取 SSL 证书"></a>(1) 获取 SSL 证书</h3><p>&emsp;&emsp;笔者自己是选用的腾讯云的服务器, 所以为了部署方便, 也是在腾讯云上申请的 SSL 证书. 对于域名型 (DV) 证书, 可免费进行申请 <sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote"><span class="hint--top hint--rounded" aria-label="域名型（DV）免费 SSL 证书申请流程
 ">[10]</span></a></sup></p>
 <h3 id="2-为-Nginx-服务器进行配置"><a href="#2-为-Nginx-服务器进行配置" class="headerlink" title="(2) 为 Nginx 服务器进行配置"></a>(2) 为 Nginx 服务器进行配置</h3><p>&emsp;&emsp;配置方式可参考文章 <sup id="fnref:11" class="footnote-ref"><a href="#fn:11" rel="footnote"><span class="hint--top hint--rounded" aria-label="hexo 博客开启 https (SSL 证书)
