@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      225 字
+      550 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      10
        分钟
     </span>
   
@@ -242,23 +242,42 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2022.03.04, 09:11
                 
               </p>
             
             <div class="markdown-body">
               <blockquote>
-<p>By default, macOS’s screen record can’t record inner voice and can just record voice receive from microphone. To record inner voice, one can with the help of <code>Loopback.app</code>.</p>
+<p>By default, macOS’s screen record can’t record inner voice and can just record voice receive from microphone. To record inner voice, there are several methods</p>
 </blockquote>
-<h1 id="Install-Loopback"><a href="#Install-Loopback" class="headerlink" title="Install Loopback"></a>Install <code>Loopback</code></h1><p>The installing process of <code>Loopback.app</code> is nontrivial. To install it, you should “boot into your mac’s recovery environment”. To the end, you should press and hold the Touch ID or power button on your Mac until you seen “Loading startup options…” in your screen. The complete process is long, more information can be seen at official guide <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Installing ACE on MacOS 11 (Big Sur) and MacOS 12 (Monterey)
+<h1 id="Use-Loopback"><a href="#Use-Loopback" class="headerlink" title="Use Loopback"></a>Use <code>Loopback</code></h1><h2 id="Install-Loopback"><a href="#Install-Loopback" class="headerlink" title="Install Loopback"></a>Install <code>Loopback</code></h2><p>The installing process of <code>Loopback.app</code> is nontrivial. To install it, you should “boot into your mac’s recovery environment”. To the end, you should press and hold the Touch ID or power button on your Mac until you seen “Loading startup options…” in your screen. The complete process is long, more information can be seen at official guide <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Installing ACE on MacOS 11 (Big Sur) and MacOS 12 (Monterey)
 ">[2]</span></a></sup></p>
-<h1 id="Basic-Config"><a href="#Basic-Config" class="headerlink" title="Basic Config"></a>Basic Config</h1><p>After installing <code>Loopback.app</code> successfully, one need to add the application you wish to record its voice into the channel. Then, just open screen record (i.e., use “QuickTime Player” to record screen), and select <code>Options</code> -&gt; <code>microphone</code> -&gt; <code>loopback</code>. Note <em>any setting of <code>microphone</code> rather than <code>none</code> will lead the opening of the screen record slow! Even you choose mac’s microphone!</em> So if you didn’t wish to use slow the opening speed, choose <code>none</code> when you don’t demand inner voice record. Furthermore, if you wish to sound voice while recording, cancel option <code>Mute when capturing</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="MacBook录屏带内录声音的方法 ｜录屏教程 ｜ 留学生网课
+<h2 id="Basic-Config"><a href="#Basic-Config" class="headerlink" title="Basic Config"></a>Basic Config</h2><p>After installing <code>Loopback.app</code> successfully, one need to add the application you wish to record its voice into the channel. Then, just open screen record (i.e., use “QuickTime Player” to record screen), and select <code>Options</code> -&gt; <code>microphone</code> -&gt; <code>loopback</code>. Note <em>any setting of <code>microphone</code> rather than <code>none</code> will lead the opening of the screen record slow! Even you choose mac’s microphone!</em> So if you didn’t wish to use slow the opening speed, choose <code>none</code> when you don’t demand inner voice record. Furthermore, if you wish to sound voice while recording, cancel option <code>Mute when capturing</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="MacBook录屏带内录声音的方法 ｜录屏教程 ｜ 留学生网课
 ">[3]</span></a></sup> .</p>
 <p><img src="mute.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="Uninstall"><a href="#Uninstall" class="headerlink" title="Uninstall"></a>Uninstall</h2><p>Uninstall <code>Loopback</code> need also remove <code>ACE</code>, which needs the help of <code>Loopback</code> itself. From official document <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="Completely uninstalling and removing Loopback
+">[5]</span></a></sup></p>
+<blockquote>
+<p>When Loopback is first launched, it will install both the ACE audio capture component needed to pull in audio, and a background component which keeps its virtual audio devices available at all times, even if the main Loopback app isn’t running.</p>
+<p>If you wish to uninstall and remove Loopback completely, be sure to use the Uninstall ACE option in the Loopback menu of the app itself. If you instead just delete the Loopback application from your Mac without running the uninstaller, Loopback’s virtual devices will remain.</p>
+<p>If you’ve already deleted the Loopback application and are attempting to remove its virtual devices, you’ll need to re-download Loopback from this link. Open Loopback, then run the Uninstall ACE option in the Loopback menu.</p>
+<p>Once you’ve completed the steps in the uninstaller process, all Loopback devices on your system will be removed and the software will be fully uninstalled. You can then delete Loopback from your Mac.</p>
+</blockquote>
+<h1 id="Use-Blackhole"><a href="#Use-Blackhole" class="headerlink" title="Use Blackhole"></a>Use <code>Blackhole</code></h1><p>First one can download <code>Blackhole</code> <a target="_blank" rel="noopener" href="https://nginx.mostintelligentape.com/blogimg/202202/QuickTime/BlackHole16ch.v0.2.10.pkg">there</a> or from <a target="_blank" rel="noopener" href="https://github.com/ExistentialAudio/BlackHole">ExistentialAudio/BlackHole</a>, then one can configure the virtual device at <code>Audio MIDI Setup.app</code>. After installed <code>BlackHole</code>, there will be a device named <code>BlackHole 16ch</code>. Then <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="如何在MacOS中进行声音内录
+">[4]</span></a></sup></p>
+<ul>
+<li>step 1: crate <code>Aggregate Device (Inner Record In)</code>, and select <code>BlackHole 16ch</code></li>
+<li>step 2: crate <code>Multi-Output Device</code> (rename as <code>Inner Record Out</code>), select both <code>BlackHole 16ch</code> and the speaker (or earphone) of your computer such as <code>Macbook Air Speaker</code> (note <code>BlackHole 16ch</code> should <em>at bottom</em>!)</li>
+<li>step 3: set sound output of computer with <code>Inner Record Out</code></li>
+<li>step 4: when record screen, set <code>option</code> -&gt; <code>Microphone</code> as <code>Inner Record In</code></li>
+</ul>
+<p>The limit of this method is once you switch sound output to <code>Inner Record Out</code>, then you <em>cannot change voice</em>. So you need to adjust the voice before switching.</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://rogueamoeba.com/loopback/">LOOPBACK</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-BigSur#mchipinstructions">Installing ACE on MacOS 11 (Big Sur) and MacOS 12 (Monterey)</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ccNVG2v44ZI">MacBook录屏带内录声音的方法 ｜录屏教程 ｜ 留学生网课</a>
-<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/464071208">如何在MacOS中进行声音内录</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://rogueamoeba.com/support/knowledgebase/?showArticle=UninstallingLoopback">Completely uninstalling and removing Loopback</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>

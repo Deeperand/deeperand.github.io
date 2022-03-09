@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      239 字
+      446 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      8
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2021.11.24, 15:15
                 
               </p>
             
@@ -256,11 +256,11 @@
 ">[1]</span></a></sup> such as</p>
 <figure class="highlight mma"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs mma"><span class="hljs-variable">R</span> <span class="hljs-operator">=</span> <span class="hljs-built_in">ArrayFlatten</span><span class="hljs-punctuation">[</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-punctuation">&#123;</span><span class="hljs-variable">A</span><span class="hljs-operator">,</span> <span class="hljs-punctuation">&#123;</span><span class="hljs-variable">t</span><span class="hljs-punctuation">&#125;</span><span class="hljs-variable">\[Transpose]</span><span class="hljs-punctuation">&#125;</span><span class="hljs-operator">,</span><span class="hljs-punctuation">&#123;</span><span class="hljs-number">0</span><span class="hljs-operator">,</span> <span class="hljs-number">1</span><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">&#125;</span> <span class="hljs-punctuation">]</span><br><span class="hljs-comment">(*</span><br><span class="hljs-comment">=&gt; &#123;&#123;1, 0, 0, 1&#125;, &#123;0, 0, 1, 1&#125;, &#123;0, -1, 0, 1&#125;, &#123;0, 0, 0, 1&#125;&#125;</span><br><span class="hljs-comment">*)</span><br></code></pre></div></td></tr></table></figure>
 <h1 id="Special-Symbols"><a href="#Special-Symbols" class="headerlink" title="Special Symbols"></a>Special Symbols</h1><ul>
-<li><code>NonCommutativeMultiply</code>: **</li>
-<li><code>GreaterEqual</code>: <code>&lt;esc&gt;&gt;=&lt;esc&gt;</code></li>
-<li><code>Conjugate</code>: <code>&lt;esc&gt;co&lt;esc&gt;</code></li>
-<li><code>Transpose</code>: </li>
-<li><code>Element</code> (<code>∈</code>): <code>&lt;esc&gt;el&lt;esc&gt;</code></li>
+<li><code>**</code>: <code>NonCommutativeMultiply</code></li>
+<li><code>&lt;esc&gt;&gt;=&lt;esc&gt;</code>: <code>GreaterEqual</code></li>
+<li><code>&lt;esc&gt;co&lt;esc&gt;</code>: <code>Conjugate</code></li>
+<li><code>&lt;esc&gt;tr&lt;esc&gt;</code>: <code>Transpose</code></li>
+<li><code>&lt;esc&gt;el&lt;esc&gt;</code> (<code>∈</code>): <code>Element</code></li>
 </ul>
 <h1 id="Function-which-Linked-to-Some-Symbols"><a href="#Function-which-Linked-to-Some-Symbols" class="headerlink" title="Function which Linked to Some Symbols"></a>Function which Linked to Some Symbols</h1><ul>
 <li><code>Optional[s_,v]</code>: <code>s_:v</code></li>
@@ -285,6 +285,8 @@
 <li><code>||</code>: <code>Or</code></li>
 <li><code>!</code>: <code>Not</code></li>
 </ul>
+<p>one can use bool operation to define domain <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="How do I define the domain of a function?
+">[3]</span></a></sup> such as <code>x&lt;=1 &amp;&amp; x&gt;=0</code></p>
 <h2 id="Pattern-Related"><a href="#Pattern-Related" class="headerlink" title="Pattern Related"></a>Pattern Related</h2><ul>
 <li><code>_</code>: <code>Blank</code></li>
 <li><code>__</code>: <code>BlankSequence</code></li>
@@ -299,8 +301,31 @@
 <li><code>$Context</code></li>
 <li><code>$ContextPath</code></li>
 </ul>
+<h1 id="Basic-Command-of-wolframscript"><a href="#Basic-Command-of-wolframscript" class="headerlink" title="Basic Command of wolframscript"></a>Basic Command of <code>wolframscript</code></h1><p>from official website <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="WolframScript
+">[2]</span></a></sup></p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">wolframscript -code code [-cloud [cloudbase] | -<span class="hljs-built_in">local</span> [kernelpath] | -wstpserver [wstpserverbase]] [arg1 …]<br>wolframscript -file file|url [-cloud [cloudbase] | -<span class="hljs-built_in">local</span> [kernelpath] | -wstpserver [wstpserverbase]] [arg1 …]<br>wolframscript -api url|uuid|file [-cloud [cloudbase] | -<span class="hljs-built_in">local</span> [kernelpath] | -wstpserver [wstpserverbase]] [-args key=value …]<br>wolframscript -<span class="hljs-keyword">function</span> code [-cloud [cloudbase] | -<span class="hljs-built_in">local</span> [-kernelpath] | -wstpserver [wstpserverbase]] [-signature <span class="hljs-built_in">type</span> …] [-args values …]<br></code></pre></div></td></tr></table></figure>
+<h1 id="Basic-Knowledge-about-Package"><a href="#Basic-Knowledge-about-Package" class="headerlink" title="Basic Knowledge about Package"></a>Basic Knowledge about Package</h1><h2 id="Install-Package"><a href="#Install-Package" class="headerlink" title="Install Package"></a>Install Package</h2><ul>
+<li>Method 1: copy the package file as the 1st level sub-path in list <code>$Path</code> (normally, single files placed at <code>Packages/</code>, and multiple files placed in <code>Applications/</code>)</li>
+<li>Method 2 (recommand) <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="How do I install packages?
+">[4]</span></a></sup> : <code>File</code> -&gt; <code>Install</code> -&gt; <code>Package</code> (for a single files) or <code>Application</code> (for a directory), the <em>Mathematia</em> will <em>copy</em> the files to the corresponding path (in <code>$BaseDirectory</code> or <code>$UserBaseDirectory</code>).</li>
+</ul>
+<h2 id="Some-useful-Package"><a href="#Some-useful-Package" class="headerlink" title="Some useful Package"></a>Some useful Package</h2><ul>
+<li><code>xAct</code>: <a target="_blank" rel="noopener" href="http://www.xact.es/index.html">xAct:  Efficient tensor computer algebra for the Wolfram Language</a></li>
+<li><code>szhorvat/MaTeX</code>: <a target="_blank" rel="noopener" href="https://github.com/szhorvat/MaTeX">szhorvat/MaTeX</a></li>
+<li><code>Quantum Mathematica</code>: <a target="_blank" rel="noopener" href="https://library.wolfram.com/infocenter/MathSource/7622/">Quantum Mathematica</a><ul>
+<li>there is a related question (<a target="_blank" rel="noopener" href="https://mathematica.stackexchange.com/questions/253322/simplifying-quantum-operators-ladder-operators-with-multiple-modes?noredirect=1#comment633171_253322">Simplifying quantum operators (ladder operators with multiple modes)</a>)</li>
+</ul>
+</li>
+<li><code>NCAlgebra/NC</code>: <a target="_blank" rel="noopener" href="https://github.com/NCAlgebra/NC">NCAlgebra/NC</a><ul>
+<li>there is a related question (<a target="_blank" rel="noopener" href="https://mathematica.stackexchange.com/questions/253372/trouble-installing-ncalgebra-package">Trouble installing NCAlgebra package</a>)</li>
+</ul>
+</li>
+</ul>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://mathematica.stackexchange.com/questions/761/how-to-enter-matrices-in-block-matrix-format">How to enter matrices in block matrix format?</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://reference.wolfram.com/language/ref/program/wolframscript.html">WolframScript</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://mathematica.stackexchange.com/questions/23737/how-do-i-define-the-domain-of-a-function">How do I define the domain of a function?</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://support.wolfram.com/5648?src=mathematica">How do I install packages?</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>

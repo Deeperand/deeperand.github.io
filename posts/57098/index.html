@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      101 字
+      226 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      4
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2022.02.24, 08:49
                 
               </p>
             
@@ -258,9 +258,21 @@
 <p><img src="emoji_and_symbol_3.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <h2 id="Turn-off-Autocorrect"><a href="#Turn-off-Autocorrect" class="headerlink" title="Turn off Autocorrect"></a>Turn off Autocorrect</h2><p><code>System Perference</code> -&gt; <code>Keyboard</code> -&gt; <code>Text</code> -&gt; turn off <code>Correct spelling automatically</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to turn off autocorrect on your Mac computer in 4 steps
 ">[1]</span></a></sup></p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.businessinsider.com/how-to-turn-off-autocorrect-on-mac">How to turn off autocorrect on your Mac computer in 4 steps</a>
+<h1 id="Finder"><a href="#Finder" class="headerlink" title="Finder"></a>Finder</h1><h2 id="Relaunch-Finder"><a href="#Relaunch-Finder" class="headerlink" title="Relaunch Finder"></a>Relaunch Finder</h2><p>hold <code>&lt;option&gt;</code> and <code>Right-click</code> <em>Finder</em> icon -&gt; <code>Relaunch</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="HOW TO FORCE THE FINDER TO RESTART IN MACOS CATALINA
+">[3]</span></a></sup></p>
+<h1 id="File-Format"><a href="#File-Format" class="headerlink" title="File Format"></a>File Format</h1><h2 id="Transform-epub-into-pdf"><a href="#Transform-epub-into-pdf" class="headerlink" title="Transform .epub into .pdf"></a>Transform <code>.epub</code> into <code>.pdf</code></h2><p>on macOS, one can use software <code>Epubor Ultimate for Mac</code> <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to Convert EPUB to PDF on Mac
+">[4]</span></a></sup></p>
+<h1 id="Rename"><a href="#Rename" class="headerlink" title="Rename"></a>Rename</h1><h2 id="Rename-Files-with-Created-Time"><a href="#Rename-Files-with-Created-Time" class="headerlink" title="Rename Files with Created Time"></a>Rename Files with Created Time</h2><p>The following command rename all the files in current directory with format like <code>2022-02-21_21.12.12</code> <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to rename a list of files in directory based on creation time on mac
+">[5]</span></a></sup></p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> `ls`;<br>    <span class="hljs-keyword">do</span> mv <span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span> <span class="hljs-string">&quot;`stat -f %SB -t %Y-%m-%d_%H.%M.%S <span class="hljs-variable">$f</span>`.`echo <span class="hljs-variable">$f</span> | cut -d &#x27;.&#x27; -f 2`&quot;</span>;<br><span class="hljs-keyword">done</span><br></code></pre></div></td></tr></table></figure>
+<h2 id="rename"><a href="#rename" class="headerlink" title="rename"></a><code>rename</code></h2><p>A command line tool <code>rename</code> is helpful <sup><a href="#fn_6" id="reffn_6">6</a></sup></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><sup><a href="#fn_6" id="reffn_6">6</a></sup> <a target="_blank" rel="noopener" href="http://plasmasturm.org/code/rename/">rename</a></p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.businessinsider.com/how-to-turn-off-autocorrect-on-mac">How to turn off autocorrect on your Mac computer in 4 steps</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.alfredforum.com/topic/1412-excluding-folders/">Excluding Folders</a>
-<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://eshop.macsales.com/blog/60503-how-to-force-the-finder-to-restart-in-macos-catalina/">HOW TO FORCE THE FINDER TO RESTART IN MACOS CATALINA</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.epubor.com/how-to-convert-epub-to-pdf-on-mac.html">How to Convert EPUB to PDF on Mac</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/38499146/how-to-rename-a-list-of-files-in-directory-based-on-creation-time-on-mac">How to rename a list of files in directory based on creation time on mac</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
