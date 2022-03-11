@@ -68,7 +68,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      394 字
+      433 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      8
        分钟
     </span>
   
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  最后更新：2022.03.10, 17:16
+                  最后更新：2022.03.11, 09:01
                 
               </p>
             
@@ -268,6 +268,9 @@
 ">[5]</span></a></sup></p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> `ls`;<br>    <span class="hljs-keyword">do</span> mv <span class="hljs-string">&quot;<span class="hljs-variable">$f</span>&quot;</span> <span class="hljs-string">&quot;`stat -f %SB -t %Y-%m-%d_%H.%M.%S <span class="hljs-variable">$f</span>`.`echo <span class="hljs-variable">$f</span> | cut -d &#x27;.&#x27; -f 2`&quot;</span>;<br><span class="hljs-keyword">done</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="rename"><a href="#rename" class="headerlink" title="rename"></a><code>rename</code></h2><p>A command line tool <code>rename</code> is helpful <sup><a href="#fn_6" id="reffn_6">6</a></sup></p>
+<h1 id="Web-amp-Server-Related"><a href="#Web-amp-Server-Related" class="headerlink" title="Web &amp; Server Related"></a>Web &amp; Server Related</h1><h2 id="Flush-the-DNS-Cache"><a href="#Flush-the-DNS-Cache" class="headerlink" title="Flush the DNS Cache"></a>Flush the DNS Cache</h2><p>For <em>Big Sur</em> or later, use the following command to flush DNC cache <sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to Flush the DNS Cache in Mac OS X &amp; macOS
+">[10]</span></a></sup></p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder<br></code></pre></div></td></tr></table></figure>
 <h1 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h1><h2 id="Exclude-Folders-for-Spotlight-amp-Alfred"><a href="#Exclude-Folders-for-Spotlight-amp-Alfred" class="headerlink" title="Exclude Folders for Spotlight &amp; Alfred"></a>Exclude Folders for <em>Spotlight</em> &amp; <em>Alfred</em></h2><p><code>System Preferences</code> -&gt; <code>Spotlight</code> -&gt; <code>Privacy</code> -&gt; add folders you wish to exclude</p>
 <p><img src="spotlight_exclude.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <h2 id="Use-“Sidecar”-Function"><a href="#Use-“Sidecar”-Function" class="headerlink" title="Use “Sidecar” Function"></a>Use “Sidecar” Function</h2><p>(<code>Big Sur</code> or later) <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote"><span class="hint--top hint--rounded" aria-label="Use an iPad as a second display for a Mac
@@ -286,7 +289,8 @@
 <a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46779942/how-to-display-hidden-files-with-visual-studio-code">How to display hidden files with Visual Studio Code</a>
 <a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://steachs.com/archives/45289">MAC 小技巧 – 讓垃圾桶中超過 30 天的檔案自動清除</a>
 <a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:9" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://support.apple.com/en-us/HT210380">Use an iPad as a second display for a Mac</a>
-<a href="#fnref:9" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+<a href="#fnref:9" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:10" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://appletoolbox.com/flush-dns-cache-mac-os-x/">How to Flush the DNS Cache in Mac OS X &amp; macOS</a>
+<a href="#fnref:10" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>

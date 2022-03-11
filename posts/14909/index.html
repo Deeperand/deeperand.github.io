@@ -18,7 +18,7 @@
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
   
-  <title>Create Package and Documentclass of LaTeX - Blog | Deeperand</title>
+  <title>Use Hexo to Build Your GitHub Pages - Blog | Deeperand</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Create Package and Documentclass of LaTeX">
+            <span class="h2" id="subtitle" title="Use Hexo to Build Your GitHub Pages">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-26 09:36" pubdate>
-        2021.10.26, 09:36
+      <time datetime="2022-03-11 09:13" pubdate>
+        2022.03.11, 09:13
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      154 字
+      512 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      9
        分钟
     </span>
   
@@ -238,25 +238,49 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Create Package and Documentclass of LaTeX</h1>
+            <h1 style="display: none">Use Hexo to Build Your GitHub Pages</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2022.03.11, 10:13
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="Load-Packages-and-Class"><a href="#Load-Packages-and-Class" class="headerlink" title="Load Packages and Class"></a>Load Packages and Class</h1><p>The specific command <code>\RequirePackage</code> and <code>\Loadclass</code> can load packages and class at <code>.pkg</code> and <code>.cls</code> files, which can avoid some possible problems when load a same packages with many times. e.g.</p>
-<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\RequirePackage</span>&#123;kvoptions&#125;<br><span class="hljs-keyword">\LoadClass</span>[UTF8, oneside, hyperref, fntef]&#123;ctexbook&#125;<br></code></pre></div></td></tr></table></figure>
-<h1 id="Option-Passing"><a href="#Option-Passing" class="headerlink" title="Option Passing"></a>Option Passing</h1><p>To pass option from the current package to specific package, one need <code>declare</code> it then <code>process</code> it. To auto-declare options, one can use package <code>kvoptions</code>, which provide a command <code>\DeclareDefaultOption</code> which can auto-declare the options pass to current package or class and set the default process to it. </p>
-<p><img src="DeclareDefaultOption.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>Then is an complete example</p>
-<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-comment">% declare options to ctexbook</span><br><span class="hljs-keyword">\RequirePackage</span>&#123;kvoptions&#125;<br><span class="hljs-keyword">\DeclareDefaultOption</span>&#123;<span class="hljs-keyword">\PassOptionsToClass</span>&#123;<span class="hljs-keyword">\CurrentOption</span>&#125;&#123;ctexbook&#125;&#125;<br><span class="hljs-comment">% process the declared options</span><br><span class="hljs-keyword">\ProcessKeyvalOptions</span>*<br><span class="hljs-comment">% use classes</span><br><span class="hljs-keyword">\LoadClass</span>[UTF8, oneside, hyperref, fntef]&#123;ctexbook&#125;<br></code></pre></div></td></tr></table></figure>
-<p>more details can see <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="写给LATEX 2ε 类与宏包的作者
-">[1]</span></a></sup> .</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://blog.foool.net/wp-content/uploads/2011/10/clsguide-zh-cn_p38.pdf">写给LATEX 2ε 类与宏包的作者</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+              <h1 id="Build-Repository-at-GitHub"><a href="#Build-Repository-at-GitHub" class="headerlink" title="Build Repository at GitHub"></a>Build Repository at GitHub</h1><p>First, crate repository <code>&lt;account&gt;.github.io</code> at GitHub, where <code>&lt;account&gt;</code> is your GitHub ID, i.e. <code>deeperand.github.io</code>. To make sure deploy properly, the SSH setting for GitHub is necessary, the tutorial can see here <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="Connecting to GitHub with SSH
+">[4]</span></a></sup> .</p>
+<h1 id="Hexo-Deploy-Setting"><a href="#Hexo-Deploy-Setting" class="headerlink" title="Hexo Deploy Setting"></a>Hexo Deploy Setting</h1><p><code>Hexo</code> plugin <code>hexo-deployer-git</code> is need, use the following command to install</p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">npm install hexo-deployer-git --save<br></code></pre></div></td></tr></table></figure>
+<p>Then configure <code>_config.yml</code> as following (replace <code>deeperand</code> to your own GitHub ID!)</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/deeperand/deeperand.github.io.git</span><br>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></div></td></tr></table></figure>
+<h1 id="Use-Your-Own-Domain-and-Allow-HTTPS"><a href="#Use-Your-Own-Domain-and-Allow-HTTPS" class="headerlink" title="Use Your Own Domain and Allow HTTPS"></a>Use Your Own Domain and Allow HTTPS</h1><h2 id="Custom-Domain-at-GitHub"><a href="#Custom-Domain-at-GitHub" class="headerlink" title="Custom Domain at GitHub"></a>Custom Domain at GitHub</h2><p>Enter the repository of your GitHub pages, then fill your domain at <code>Settings</code> -&gt; <code>Pages</code> -&gt; <code>Custom domain</code> and click <code>Save</code>, select <code>Enforce HTTPS</code> to enable HTTPS.</p>
+<h2 id="Config-CNAME-File-for-Hexo"><a href="#Config-CNAME-File-for-Hexo" class="headerlink" title="Config CNAME File for Hexo"></a>Config <code>CNAME</code> File for Hexo</h2><p>Crate text file <code>CNAME</code> under <code>source/</code>, and add your domain into to the file <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="hexo部署后，CNAME会被自动删除，怎么办？
+">[3]</span></a></sup> , i.e.</p>
+<figure class="highlight gauss"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gauss">www.deeperand.<span class="hljs-built_in">xyz</span><br></code></pre></div></td></tr></table></figure>
+<p>In fact, in <code>Hexo</code>, the files under <code>source/</code> will be included after generating, which can help to avoid <code>CNAME</code> file on GitHub repository being deleted after deploying.</p>
+<h1 id="DEBUG"><a href="#DEBUG" class="headerlink" title="DEBUG"></a>DEBUG</h1><h2 id="DNS-Problem"><a href="#DNS-Problem" class="headerlink" title="DNS Problem"></a>DNS Problem</h2><p>If your domain can’t resolve to your github pages, a possible solution is as following <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to fix: Domain does not resolve to the GitHub Pages server. Error in Github Pages for custom domain setup with Enforce HTTPS Enabled?
+">[1]</span></a></sup> <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="你可能并不知道的骚操作之github pages https
+">[5]</span></a></sup> . First run the following command (replace <code>deepperand</code> to your github user name!)</p>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ dig deeperand.github.io +noall +answer<br><br>; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; deeperand.github.io +noall +answer<br>;; global options: +cmd<br>deeperand.github.io.    4502    IN      A       185.199.108.153<br>deeperand.github.io.    4502    IN      A       185.199.110.153<br>deeperand.github.io.    4502    IN      A       185.199.111.153<br>deeperand.github.io.    4502    IN      A       185.199.109.153<br></code></pre></div></td></tr></table></figure>
+<p>then add the output ip to your DNS record with type <code>A</code> (left hostname space). More knowledge about record type of DNS resolve can see here <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="DNS域名解析中A、AAAA、CNAME、MX、NS、TXT、SRV、SOA、PTR各项记录的作用
+">[2]</span></a></sup> .</p>
+<h2 id="Can’t-Enable-HTTPS"><a href="#Can’t-Enable-HTTPS" class="headerlink" title="Can’t Enable HTTPS"></a>Can’t Enable HTTPS</h2><p>For me, this problem is tightly associate with DNS problem. However, there need some other operations, but the I didn’t knowledge the principle of them. The most helpful operation includes <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="你可能并不知道的骚操作之github pages https
+">[5]</span></a></sup> <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="GitHub Pages 对自定义域名支持 HTTPS
+">[6]</span></a></sup></p>
+<ul>
+<li>delete custom domain (for me is <code>www.deeperand.xyz</code>) at <code>Settings</code> -&gt; <code>Pages</code> -&gt; <code>Custom domain</code> and save</li>
+<li>fill the domain again</li>
+<li>try to access website with https (for me is <code>https://www.deeperand.xyz</code>)</li>
+</ul>
+<p>if the option is still can’t enable, check if the https certification is already generated, since a new certification for GitHub pages need some time (less than 24H) to generate <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="你可能并不知道的骚操作之github pages https
+">[5]</span></a></sup> . If it also helpful, try to repeat the above operation, then it might can enable https dramatically.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54059217/how-to-fix-domain-does-not-resolve-to-the-github-pages-server-error-in-github">How to fix: Domain does not resolve to the GitHub Pages server. Error in Github Pages for custom domain setup with Enforce HTTPS Enabled?</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://itbilu.com/other/relate/EyxzdVl3.html">DNS域名解析中A、AAAA、CNAME、MX、NS、TXT、SRV、SOA、PTR各项记录的作用</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/28814437">hexo部署后，CNAME会被自动删除，怎么办？</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/48696569">你可能并不知道的骚操作之github pages https</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://likfe.com/2018/05/03/github-pages-custom-domains-support-https/">GitHub Pages 对自定义域名支持 HTTPS</a>
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -265,7 +289,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/CS-LaTeX/">CS LaTeX</a>
+                      <a class="hover-with-bg" href="/categories/CS-Hexo/">CS Hexo</a>
                     
                   </div>
                 
@@ -290,18 +314,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/36551/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Watermark Control in LaTeX</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/64322/">
-                        <span class="hidden-mobile">[TRICK] Tricks of `latexmk`</span>
+                      <a href="/posts/46105/">
+                        <span class="hidden-mobile">Basic Use of Visual Studio Code</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
