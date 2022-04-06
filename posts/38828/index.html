@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,16 +9,37 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
   
-  <title>[TRICK] 为中文添加下划线 - Blog | Deeperand</title>
+    <meta name="description" content="ctex 标题设置Title Control&amp;emsp;&amp;emsp;The basic conception about title can be shown as  More details can ref    &amp;emsp;&amp;emsp;A nice application is use the above command to realize pending and right-justify">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 LaTeX 中使用中文">
+<meta property="og:url" content="https://deeperand.github.io/posts/38828/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:description" content="ctex 标题设置Title Control&amp;emsp;&amp;emsp;The basic conception about title can be shown as  More details can ref    &amp;emsp;&amp;emsp;A nice application is use the above command to realize pending and right-justify">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/title_form.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/format.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/numberformat.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/titleformat.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/eg_chapter_title.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/varwidth.png">
+<meta property="og:image" content="https://deeperand.github.io/posts/38828/underline_h.jpg">
+<meta property="article:published_time" content="2021-10-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-25T03:55:55.572Z">
+<meta property="article:author" content="Deeperand">
+<meta property="article:tag" content="CS">
+<meta property="article:tag" content="TRICK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://deeperand.github.io/posts/38828/title_form.png">
+  
+  
+  <title>在 LaTeX 中使用中文 - Blog | Deeperand</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -39,7 +60,6 @@
   
 
 
-
 <!-- 主题依赖的图标库，不要自行修改 -->
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
@@ -56,7 +76,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -67,8 +87,9 @@
   <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -142,13 +163,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -163,7 +185,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="[TRICK] 为中文添加下划线">
+            <span class="h2" id="subtitle" title="在 LaTeX 中使用中文">
               
             </span>
 
@@ -178,8 +200,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-20 21:33" pubdate>
-        2021.10.20, 21:33
+      <time datetime="2021-10-20 08:00" pubdate>
+        2021.10.20, 08:00
       </time>
     </span>
   
@@ -187,21 +209,18 @@
 
 <div class="mt-1">
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      222 字
+      1.5k 字
     </span>
   
 
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
-       分钟
+      13 分钟
     </span>
   
 
@@ -238,16 +257,35 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">[TRICK] 为中文添加下划线</h1>
+            <h1 style="display: none">在 LaTeX 中使用中文</h1>
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2022.03.25, 11:55
                 
               </p>
             
             <div class="markdown-body">
-              <p>前几天在编译一个旧文件时, 发现添加下划线的指令 <code>\CJKunderwave</code> 报错显示没有该指令。经研究发现, 这是由于 LaTeX 发行版的问题。这个指令用来添加下划波浪线, 原本是由宏包 <code>CJKfntef</code> 提供, 但 2021 年的发行版之后, 不能通过 <code>\usepackage&#123;CJKfntef&#125;</code> 导入这些指令了, 而只能通过在调用 <code>ctex</code> 宏包时加入选项 <code>CJKfntef</code>, 如</p>
+              <h1 id="ctex-标题设置"><a href="#ctex-标题设置" class="headerlink" title="ctex 标题设置"></a><code>ctex</code> 标题设置</h1><h2 id="Title-Control"><a href="#Title-Control" class="headerlink" title="Title Control"></a>Title Control</h2><p>&emsp;&emsp;The basic conception about title can be shown as</p>
+<p><img src="title_form.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>More details can ref</p>
+<p><img src="format.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="numberformat.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="titleformat.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>&emsp;&emsp;A nice application is use the above command to realize pending and right-justify type setting for chapter</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\usepackage</span>&#123;varwidth&#125;          <span class="hljs-comment">% used to define chapter title</span><br><br><span class="hljs-keyword">\newfontfamily</span><span class="hljs-keyword">\Chpfont</span>&#123;Futura&#125; <span class="hljs-comment">% ref: Rockwell, PT Sans, PT, Arial, Futura</span><br><br><span class="hljs-keyword">\newcommand</span><span class="hljs-keyword">\chaptertitleformat</span>[1]&#123;<span class="hljs-comment">%% 以标题内容为参数</span><br>    <span class="hljs-keyword">\Huge</span><span class="hljs-keyword">\hspace</span>*&#123;1.7em&#125;<span class="hljs-keyword">\begin</span>&#123;varwidth&#125;&#123;.8<span class="hljs-keyword">\columnwidth</span>&#125;<span class="hljs-params">#1</span><span class="hljs-keyword">\end</span>&#123;varwidth&#125;&#125;<br><br><span class="hljs-keyword">\ctexset</span>&#123;<br>    chapter/format = <span class="hljs-keyword">\huge</span><span class="hljs-keyword">\bfseries</span><span class="hljs-keyword">\Chpfont</span><span class="hljs-keyword">\raggedright</span>,<br>    chapter/titleformat = <span class="hljs-keyword">\chaptertitleformat</span>,<br>    <span class="hljs-comment">% chapter/format = \chaptertitleformat,</span><br>    chapter/number = <span class="hljs-keyword">\arabic</span>&#123;chapter&#125;,<br>    chapter/name = &#123;Chapter<span class="hljs-keyword">\,</span><span class="hljs-keyword">\,</span>&#125;,<br>    chapter/aftername = &#123;<span class="hljs-keyword">\\</span>[1ex]&#125;,<br>    chapter/indent = -0.6em<br>&#125;<br></code></pre></div></td></tr></table></figure>
+<p>The result looks like</p>
+<p><img src="eg_chapter_title.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p>Note the about code use the package <code>varwidth</code>, which is used to replace <code>\minipage</code>. More details can see the package doc</p>
+<p><img src="varwidth.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="Title-of-Content"><a href="#Title-of-Content" class="headerlink" title="Title of Content"></a>Title of Content</h2><p>The command is looks like</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\ctexset</span>&#123;contentsname = &lt;contant<span class="hljs-built_in">_</span>title&gt;&#125;<br></code></pre></div></td></tr></table></figure>
+<p>e.g.</p>
+<figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\ctexset</span>&#123;contentsname = CONTENT&#125;<br></code></pre></div></td></tr></table></figure>
+<h1 id="为中文添加下划线"><a href="#为中文添加下划线" class="headerlink" title="为中文添加下划线"></a>为中文添加下划线</h1><blockquote>
+<p>最早写于 2021-10-20</p>
+</blockquote>
+<p>前几天在编译一个旧文件时, 发现添加下划线的指令 <code>\CJKunderwave</code> 报错显示没有该指令。经研究发现, 这是由于 LaTeX 发行版的问题。这个指令用来添加下划波浪线, 原本是由宏包 <code>CJKfntef</code> 提供, 但 2021 年的发行版之后, 不能通过 <code>\usepackage&#123;CJKfntef&#125;</code> 导入这些指令了, 而只能通过在调用 <code>ctex</code> 宏包时加入选项 <code>CJKfntef</code>, 如</p>
 <figure class="highlight tex"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs tex"><span class="hljs-keyword">\documentclass</span>[UTF8, oneside, fntef]&#123;ctexbook&#125;<br></code></pre></div></td></tr></table></figure>
 <p>下图给出了 <code>texdoc CJKfntef</code> 给出的宏包指令及效果</p>
 <p><img src="underline_h.jpg" srcset="/img/loading.gif" lazyload alt=""></p>
@@ -294,9 +332,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/57098/">
+                      <a href="/posts/56217/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[TRICK] System Operation Tricks of macOS</span>
+                        <span class="hidden-mobile">[DEBUG] `a git process may have crashed`</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -304,8 +342,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/21991/">
-                        <span class="hidden-mobile">[DEBUG] `vim/macvim` Crash when use Python</span>
+                      <a href="/posts/53557/">
+                        <span class="hidden-mobile">Configure Global Setting of `git`</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -325,21 +363,18 @@
   <div id="valine"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
-        new Valine({
-          el: "#valine",
-          app_id: "wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI",
-          app_key: "DUXAXpsqA1waDIXf9aqAYegs",
-          placeholder: "welcome to discuss!",
-          path: window.location.pathname,
-          avatar: "mp",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "en",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "",
-        });
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI","appKey":"DUXAXpsqA1waDIXf9aqAYegs","path":"window.location.pathname","placeholder":"welcome to discuss!","avatar":"mp","meta":["nick","mail","link"],"requiredFields":["nick"],"pageSize":10,"lang":"en","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI","appkey":"DUXAXpsqA1waDIXf9aqAYegs","visiter":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
       });
     });
   </script>
@@ -370,7 +405,7 @@
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -461,6 +496,10 @@
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -471,19 +510,18 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
 
 
 
@@ -498,24 +536,9 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,6 +191,102 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/39553/" target="_self">
+          Tricks of Command Line Tools of macOS
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/39553/" target="_self">
+          
+          HomebrewUse Tsinghua source to Install HomebrewThe most simple way to install homebrew [3] is run the command provided by the official website 1$ &#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubuser
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-03-25 09:42" pubdate>
+              2022-03-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-macOS/">CS macOS</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+              <a href="/tags/TRICK/">TRICK</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/43222/" target="_self">
+          Setting Font in LaTeX
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/43222/" target="_self">
+          
+          General Knowledge about Font FileOTF and TTFTTF is abbreviation of “True Type Fonts”, and OTF is abbreviation of “Open Type Fonts”. OTF is newer than TTF, and it is normally more powerful than TTF [3]
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-03-21 21:08" pubdate>
+              2022-03-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/14909/" target="_self">
           Use Hexo to Build Your GitHub Pages
         </a>
@@ -190,10 +295,7 @@
       <p class="index-excerpt">
         <a href="/posts/14909/" target="_self">
           
-          
-            
-          
-          Build Repository at GitHubFirst, crate repository &lt;account&gt;.github.io at GitHub, where &lt;account&gt; is your GitHub ID, i.e. deeperand.github.io. To make sure deploy properly, the SSH setting 
+          Build Repository at GitHubFirst, crate repository &lt;account&gt;.github.io at GitHub, where &lt;account&gt; is your GitHub ID, i.e. deeperand.github.io. To make sure deploy properly, the SSH setting
         </a>
       </p>
 
@@ -240,11 +342,7 @@
       <p class="index-excerpt">
         <a href="/posts/46105/" target="_self">
           
-          
-            
-          
           TRICKSCompare Two Files&lt;right-click&gt; the first file, select Select for Compare, then &lt;right-click&gt; another one, select Compare  with &lt;first_file&gt; to compare with the first one [1] .
-
         </a>
       </p>
 
@@ -293,15 +391,7 @@
       <p class="index-excerpt">
         <a href="/posts/64609/" target="_self">
           
-          
-            
-          
-          Most Used Command
-:help [keyword]: search help doc by keyword
-:e [file_dir]: opens a file
-:w: save the current file
-:w [filename]: save file with the name filename
-:wq: write the current file and clos
+          Most Used Command :help [keyword]: search help doc by keyword :e [file_dir]: opens a file :w: save the current file :w [filename]: save file with the name filename :wq: write the current file and clos
         </a>
       </p>
 
@@ -348,15 +438,7 @@
       <p class="index-excerpt">
         <a href="/posts/38863/" target="_self">
           
-          
-            
-          
-          Preliminary Knowledge
-MBR: Mater Boot Recorder
-DNS: Domain Name System
-RPM: RPM Package Manager (RPM) (originally Red Hat Package Manager, now a recursive acronym) [1]
-
-ReferenceRPM Package Manager - 
+          Preliminary Knowledge MBR: Mater Boot Recorder DNS: Domain Name System RPM: RPM Package Manager (RPM) (originally Red Hat Package Manager, now a recursive acronym) [1]  ReferenceRPM Package Manager -
         </a>
       </p>
 
@@ -374,6 +456,8 @@ ReferenceRPM Package Manager -
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/CS-Linux/">CS Linux</a>
+            
+              <a href="/categories/CS-Linux/Server/">Server</a>
             
           </div>
         
@@ -403,13 +487,7 @@ ReferenceRPM Package Manager -
       <p class="index-excerpt">
         <a href="/posts/46335/" target="_self">
           
-          
-            
-          
-          Standard
-数学常数一般用正体, 如自然对数 $\mathrm{e}$, 微分符号 $\mathrm{d}$, 虚数单位 $\mathrm{i}$. 同时, 符号应与含义一一对应, 如电荷量 $e$ 与自然对数 $\mathrm{e}$ 同时出现时, 应使用不同的符号。也有认为 “表示变量的符号斜体，表示文本或文本缩写的符号用正体。” 的说法 [1] .
-
-Special Command I
+          Multi-Line Euqation公式的对齐对齐符号 &amp; 一般放在等号的前面, 但有时会有一两行公式需要在等号后面对齐, 此时可采用 \phantom 指令, 不过需要加上 \mathrel 以获得正确的间距. 如 1234\begin&amp;#123;align&amp;#125;    &amp; \mathrel&amp;#123;\phantom&amp;#123;&#x3D;&amp;#125;&amp;#125; (a + b)
         </a>
       </p>
 
@@ -456,17 +534,7 @@ Special Command I
       <p class="index-excerpt">
         <a href="/posts/15926/" target="_self">
           
-          
-            
-          
-          Shortcut&lt;C-M&gt;: to access the Dock and menu bar.
-
-TRICKSRemove a Virtual Machine(official support)
-
-Shut down the virtual machine
-&lt;right-click&gt; the virtual machine
-choose remove
-Click Move 
+          Shortcut&lt;C-M&gt;: to access the Dock and menu bar.  TRICKSRemove a Virtual Machine(official support)  Shut down the virtual machine &lt;right-click&gt; the virtual machine choose remove Click Move
         </a>
       </p>
 
@@ -515,12 +583,7 @@ Click Move
       <p class="index-excerpt">
         <a href="/posts/12919/" target="_self">
           
-          
-            
-          
           Add DevicesBefore start configuring, one need make sure your devices is selected. To this end, Preference -&gt; Devices -&gt; select your device
-
-
         </a>
       </p>
 
@@ -569,12 +632,7 @@ Click Move
       <p class="index-excerpt">
         <a href="/posts/33307/" target="_self">
           
-          
-            
-          
           Score SetLet Music Score Vertically Scrollpreference -&gt; Canvas -&gt; Scroll Pages -&gt; Vertically
-
-
         </a>
       </p>
 
@@ -609,111 +667,6 @@ Click Move
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/27800/" target="_self">
-          General Tips of Tmux
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/27800/" target="_self">
-          
-          
-            
-          
-          Create a Session and Run Command1tmux new-session -d &quot;cd ~/Documents/project/2021-05_personal_blog/ &amp;&amp; hexo s&quot;
-if wish to create a new window at the session
-1tmux new-window
-(one can
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-09 09:50" pubdate>
-              2021-11-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Tmux/">CS Tmux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CS/">CS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/7891/" target="_self">
-          Bacis Knowledge of Tmux
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/7891/" target="_self">
-          
-          
-            
-          
-          
-the main content is from my notes about tmux written from 2019 November to 2021 January
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-11-09 09:50" pubdate>
-              2021-11-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Tmux/">CS Tmux</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CS/">CS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
@@ -732,7 +685,7 @@ the main content is from my notes about tmux written from 2019 November to 2021 
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -823,6 +776,10 @@ the main content is from my notes about tmux written from 2019 November to 2021 
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -832,14 +789,6 @@ the main content is from my notes about tmux written from 2019 November to 2021 
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -854,24 +803,9 @@ the main content is from my notes about tmux written from 2019 November to 2021 
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

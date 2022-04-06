@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/page/3/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,6 +191,55 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/45181/" target="_self">
+          General Tricks of LaTeX
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/45181/" target="_self">
+          
+          Use Alias of Title in ContentSome time you want to use different name in content and in mainbody, which can happen when the title is too long or you wish to change line by your hands. To realize it, o
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-10-26 10:13" pubdate>
+              2021-10-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+              <a href="/tags/TRICK/">TRICK</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/36551/" target="_self">
           Watermark Control in LaTeX
         </a>
@@ -190,11 +248,7 @@
       <p class="index-excerpt">
         <a href="/posts/36551/" target="_self">
           
-          
-            
-          
-          Package draftwatermark provide a nice solution to add and control watermark.
-Turn on/off Wartermarker for Specific PageThe command \DraftwatermarkOptions (with option stamp=true/false) can be added in
+          Package draftwatermark provide a nice solution to add and control watermark. Turn on&#x2F;off Wartermarker for Specific PageThe command \DraftwatermarkOptions (with option stamp&#x3D;true&#x2F;false) can be added in
         </a>
       </p>
 
@@ -241,9 +295,6 @@ Turn on/off Wartermarker for Specific PageThe command \DraftwatermarkOptions (wi
       <p class="index-excerpt">
         <a href="/posts/28446/" target="_self">
           
-          
-            
-          
           Load Packages and ClassThe specific command \RequirePackage and \Loadclass can load packages and class at .pkg and .cls files, which can avoid some possible problems when load a same packages with man
         </a>
       </p>
@@ -284,22 +335,14 @@ Turn on/off Wartermarker for Specific PageThe command \DraftwatermarkOptions (wi
       <h1 class="index-header">
         
         <a href="/posts/64322/" target="_self">
-          [TRICK] Tricks of `latexmk`
+          Tricks of `latexmk`
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/64322/" target="_self">
           
-          
-            
-          
-          Let latexmk Compile with xetexSet 
-1$pdf_mode = 5;
-to let latexmk compile with xelatex [1] [2]. Some configure about vimtex can see [3] .
-ReferenceUsing Latexmk
- ↩LaTeX 技巧938：如何配置 latexmk
- ↩Vimtex and
+          Let latexmk Compile with xetexSet  1$pdf_mode &#x3D; 5; to let latexmk compile with xelatex [1] [2]. Some configure about vimtex can see [3] . ReferenceUsing Latexmk  ↩LaTeX 技巧938：如何配置 latexmk  ↩Vimtex and
         </a>
       </p>
 
@@ -316,7 +359,7 @@ ReferenceUsing Latexmk
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
+              <a href="/categories/spare/">(spare)</a>
             
           </div>
         
@@ -326,7 +369,7 @@ ReferenceUsing Latexmk
             
               <a href="/tags/CS/">CS</a>
             
-              <a href="/tags/TRICKS/">TRICKS</a>
+              <a href="/tags/TRICK/">TRICK</a>
             
           </div>
         
@@ -341,15 +384,12 @@ ReferenceUsing Latexmk
       <h1 class="index-header">
         
         <a href="/posts/25025/" target="_self">
-          [TRICK] Tricks of Safari
+          Tricks of Safari
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/25025/" target="_self">
-          
-          
-            
           
           Turn off auto-unzipping of Safari“In the menu bar, go Safari -&gt; Preferences. In the General tab, uncheck Open &#39;safe&#39; files after downloading. This will stop Safari from automatically unzipp
         </a>
@@ -393,20 +433,14 @@ ReferenceUsing Latexmk
       <h1 class="index-header">
         
         <a href="/posts/57098/" target="_self">
-          [TRICK] System Operation Tricks of macOS
+          System Operation Tricks of macOS
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/57098/" target="_self">
           
-          
-            
-          
-          
-This article conclude the tricks about system operation tricks about macOS, and also include the previous articles about the topic.
-
-InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
+          This article conclude the tricks about system operation tricks about macOS, and also include the previous articles about the topic.  Account ManagementChange Account Name of macOSSTEP 1: Rename Home
         </a>
       </p>
 
@@ -447,18 +481,15 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/posts/38828/" target="_self">
-          [TRICK] 为中文添加下划线
+        <a href="/posts/64966/" target="_self">
+          Usage of `ctex` Packages
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/posts/38828/" target="_self">
+        <a href="/posts/64966/" target="_self">
           
-          
-            
-          
-          前几天在编译一个旧文件时, 发现添加下划线的指令 \CJKunderwave 报错显示没有该指令。经研究发现, 这是由于 LaTeX 发行版的问题。这个指令用来添加下划波浪线, 原本是由宏包 CJKfntef 提供, 但 2021 年的发行版之后, 不能通过 \usepackage&#123;CJKfntef&#125; 导入这些指令了, 而只能通过在调用 ctex 宏包时加入选项 CJKfnte
+          Title Control&amp;emsp;&amp;emsp;The basic conception about title can be shown as  More details can ref    &amp;emsp;&amp;emsp;A nice application is use the above command to realize pending and right-justify type set
         </a>
       </p>
 
@@ -466,8 +497,8 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-20 21:33" pubdate>
-              2021-10-20
+            <time datetime="2021-10-26 08:00" pubdate>
+              2021-10-26
             </time>
           </div>
         
@@ -484,8 +515,6 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/CS/">CS</a>
-            
-              <a href="/tags/TRICK/">TRICK</a>
             
           </div>
         
@@ -507,11 +536,7 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
       <p class="index-excerpt">
         <a href="/posts/21991/" target="_self">
           
-          
-            
-          
-          上周二晚上因为觉得没配置过的 macvim 太难用, 从旧电脑上把 vimrc 的代码复制到了新电脑, 让新电脑的 vim 和 macvim 在加载时也采用 blade-vim [1] . 
-12345set runtimepath^=~/Documents/my_config/Blade-Vim &quot; runtimepath+=~/Documents/my_config/Blade-Vi
+          上周二晚上因为觉得没配置过的 macvim 太难用, 从旧电脑上把 vimrc 的代码复制到了新电脑, 让新电脑的 vim 和 macvim 在加载时也采用 blade-vim [1] .  12345set runtimepath^&#x3D;~&#x2F;Documents&#x2F;my_config&#x2F;Blade-Vim &quot; runtimepath+&#x3D;~&#x2F;Documents&#x2F;my_config&#x2F;Blade-Vi
         </a>
       </p>
 
@@ -529,6 +554,8 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/CS-Vim/">CS Vim</a>
+            
+              <a href="/categories/CS-Vim/DEBUG/">DEBUG</a>
             
           </div>
         
@@ -560,13 +587,7 @@ InputInput Emoji &amp; SymbolsTo show emoji and other symbols, ope
       <p class="index-excerpt">
         <a href="/posts/43488/" target="_self">
           
-          
-            
-          
-          Basic UsingSome basic use is like [1] [2]
-12# search with name$ find /home -name &quot;*.txt&quot;
-Regular ExpressionTo use RE to search, one can add parameter -regex
-1$ find ./ -regex &#x27;&lt;RE&gt
+          Basic UsingSome basic use is like [1] [2] 12# search with name$ find &#x2F;home -name &quot;*.txt&quot; Regular ExpressionTo use RE to search, one can add parameter -regex 1$ find .&#x2F; -regex &amp;#x27;&lt;RE&amp;gt
         </a>
       </p>
 
@@ -615,11 +636,7 @@ Regular ExpressionTo use RE to search, one can add parameter -regex
       <p class="index-excerpt">
         <a href="/posts/56217/" target="_self">
           
-          
-            
-          
-          This morning, when I discard an operation of deleting files with VSCode, I might an error message when I run git command
-12345Another git process seems to be running in this repository, e.g.an editor 
+          This morning, when I discard an operation of deleting files with VSCode, I might an error message when I run git command 12345Another git process seems to be running in this repository, e.g.an editor
         </a>
       </p>
 
@@ -656,62 +673,6 @@ Regular ExpressionTo use RE to search, one can add parameter -regex
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/53557/" target="_self">
-          [TRICK] Configure Global Setting of `git`
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/53557/" target="_self">
-          
-          
-            
-          
-          To perform global setting for git, one can create ~/.gitconfig and edit it. The basic form is like
-12345[user]    name &#x3D; Alice    email &#x3D; alice@gmail.com[core]	editor &#x3D; nvim
-One can als
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-18 13:15" pubdate>
-              2021-10-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-Linux/">CS Linux</a>
-            
-              <a href="/categories/CS-Linux/Git/">Git</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CS/">CS</a>
-            
-              <a href="/tags/TRICK/">TRICK</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
@@ -730,7 +691,7 @@ One can als
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -821,6 +782,10 @@ One can als
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -830,14 +795,6 @@ One can als
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -852,24 +809,9 @@ One can als
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

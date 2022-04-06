@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,26 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta name="description" content="Install zshSince from macOS Catalina, macOS set zsh as default shell, so you no need install zsh by yourself. Install oh-my-zshThere are two ways to install oh-my-zsh [1] [4]  curl   1$ sh -c &quot;$(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#96;zsh&#96; Quick Config">
+<meta property="og:url" content="https://deeperand.github.io/posts/57289/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:description" content="Install zshSince from macOS Catalina, macOS set zsh as default shell, so you no need install zsh by yourself. Install oh-my-zshThere are two ways to install oh-my-zsh [1] [4]  curl   1$ sh -c &quot;$(">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-02T11:13:00.000Z">
+<meta property="article:modified_time" content="2022-03-25T01:55:15.770Z">
+<meta property="article:author" content="Deeperand">
+<meta property="article:tag" content="CS">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>`zsh` Quick Config - Blog | Deeperand</title>
 
@@ -39,7 +51,6 @@
   
 
 
-
 <!-- 主题依赖的图标库，不要自行修改 -->
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
@@ -56,7 +67,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -67,8 +78,9 @@
   <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -142,13 +154,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -187,21 +200,18 @@
 
 <div class="mt-1">
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      384 字
+      2.1k 字
     </span>
   
 
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
-       分钟
+      18 分钟
     </span>
   
 
@@ -242,13 +252,15 @@
             
               <p class="note note-info">
                 
-                  最后更新：2021.11.09, 10:41
+                  最后更新：2022.03.25, 09:55
                 
               </p>
             
             <div class="markdown-body">
               <h2 id="Install-zsh"><a href="#Install-zsh" class="headerlink" title="Install zsh"></a>Install <code>zsh</code></h2><p>Since from macOS Catalina, macOS set <code>zsh</code> as default shell, so you no need install <code>zsh</code> by yourself.</p>
-<h2 id="Install-oh-my-zsh"><a href="#Install-oh-my-zsh" class="headerlink" title="Install oh-my-zsh"></a>Install <code>oh-my-zsh</code></h2><p>There are two ways to install <code>oh-my-zsh</code> <sup><a href="#fn_1" id="reffn_1">1</a></sup> <sup><a href="#fn_4" id="reffn_4">4</a></sup></p>
+<h2 id="Install-oh-my-zsh"><a href="#Install-oh-my-zsh" class="headerlink" title="Install oh-my-zsh"></a>Install <code>oh-my-zsh</code></h2><p>There are two ways to install <code>oh-my-zsh</code> <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Oh My Zsh, 『 安装 &amp; 配置 』
+">[1]</span></a></sup> <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="ohmyzsh/ohmyzsh
+">[4]</span></a></sup></p>
 <ul>
 <li><p><code>curl</code></p>
   <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span><br></code></pre></div></td></tr></table></figure>
@@ -257,25 +269,38 @@
   <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>&quot;</span> <br></code></pre></div></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="Powerlevel10k"><a href="#Powerlevel10k" class="headerlink" title="Powerlevel10k"></a><code>Powerlevel10k</code></h3><p><code>Powerlevel10k</code> is a theme of <code>zsh</code>. One can use <code>git</code> to install <sup><a href="#fn_2" id="reffn_2">2</a></sup></p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="Powerlevel10k"><a href="#Powerlevel10k" class="headerlink" title="Powerlevel10k"></a><code>Powerlevel10k</code></h3><p><code>Powerlevel10k</code> is a theme of <code>zsh</code>. One can use <code>git</code> to install <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Oh My Zsh, 『 Powerlevel10k 安装 &amp; 配置 』
+">[2]</span></a></sup></p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br></code></pre></div></td></tr></table></figure>
 <p>or use mirror source of <code>gitee.com</code> (Chinese)</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br></code></pre></div></td></tr></table></figure>
 <p>To use the theme, add the following command into <code>~/.zshrc</code></p>
 <figure class="highlight zsh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs zsh">open ~/.zshrc<br><br>ZSH_THEME=<span class="hljs-string">&quot;powerlevel10k/powerlevel10k&quot;</span><br></code></pre></div></td></tr></table></figure>
-<p>&emsp;&emsp;The final step is install <code>nerdfont</code>. One can download it by <code>brew</code> <sup><a href="#fn_3" id="reffn_3">3</a></sup> . For example, use the following command to download <code>hack-nerd-font</code></p>
+<p>&emsp;&emsp;The final step is install <code>nerdfont</code>. One can download it by <code>brew</code> <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="ryanoasis/nerd-fonts
+">[3]</span></a></sup> . For example, use the following command to download <code>hack-nerd-font</code></p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ brew install --cask font-hack-nerd-font<br></code></pre></div></td></tr></table></figure>
 <p>Then set the terminal font as the nerd font. If use <code>iTerm</code>, set the font at <code>Perference</code> -&gt; <code>Profiles</code> -&gt; <code>Text</code></p>
-<h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a><code>zsh-autosuggestions</code></h3><p><code>zsh-autosuggestions</code> can provide suggests commands based on history and completions when you type command <sup><a href="#fn_5" id="reffn_5">5</a></sup>. To install the plugin, clone the repository at first <sup><a href="#fn_6" id="reffn_6">6</a></sup></p>
+<h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a><code>zsh-autosuggestions</code></h3><p><code>zsh-autosuggestions</code> can provide suggests commands based on history and completions when you type command <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote"><span class="hint--top hint--rounded" aria-label="zsh-users/zsh-autosuggestions
+">[5]</span></a></sup>. To install the plugin, clone the repository at first <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="zsh-users/zsh-autosuggestions/INSTALL.md
+">[6]</span></a></sup></p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions<br></code></pre></div></td></tr></table></figure>
 <p>then <code>source</code> the <code>.zsh</code> file</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ <span class="hljs-built_in">source</span> ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh<br></code></pre></div></td></tr></table></figure>
-<p>one can also use the following command <sup><a href="#fn_8" id="reffn_8">8</a></sup></p>
+<p>one can also use the following command <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote"><span class="hint--top hint--rounded" aria-label="MAC下安装oh-my-zsh和zsh-autosuggestion
+">[8]</span></a></sup></p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">git <span class="hljs-built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions <span class="hljs-variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions<br></code></pre></div></td></tr></table></figure>
-<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a><code>zsh-syntax-highlighting</code></h3><p><code>zsh-syntax-highlighting</code> provids yntax highlighting for the shell zsh <sup><a href="#fn_7" id="reffn_7">7</a></sup> . The installing method is as same as <code>zsh-autosuggestions</code> (just need a substitution <code>zsh-autosuggestions</code> -&gt; <code>zsh-syntax-highlighting</code>)</p>
+<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a><code>zsh-syntax-highlighting</code></h3><p><code>zsh-syntax-highlighting</code> provids yntax highlighting for the shell zsh <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote"><span class="hint--top hint--rounded" aria-label="zsh-users/zsh-syntax-highlighting
+">[7]</span></a></sup> . The installing method is as same as <code>zsh-autosuggestions</code> (just need a substitution <code>zsh-autosuggestions</code> -&gt; <code>zsh-syntax-highlighting</code>)</p>
 <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">$ git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting<br>$ <span class="hljs-built_in">source</span> ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<br></code></pre></div></td></tr></table></figure>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><sup><a href="#fn_1" id="reffn_1">1</a></sup> <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35283688">Oh My Zsh, 『 安装 &amp; 配置 』</a><br><sup><a href="#fn_2" id="reffn_2">2</a></sup> <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/265525597">Oh My Zsh, 『 Powerlevel10k 安装 &amp; 配置 』</a><br><sup><a href="#fn_3" id="reffn_3">3</a></sup> <a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts#option-3-install-script">ryanoasis/nerd-fonts</a><br><sup><a href="#fn_4" id="reffn_4">4</a></sup> <a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh/ohmyzsh</a><br><sup><a href="#fn_5" id="reffn_5">5</a></sup> <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-users/zsh-autosuggestions</a><br><sup><a href="#fn_6" id="reffn_6">6</a></sup> <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md">zsh-users/zsh-autosuggestions/INSTALL.md</a><br><sup><a href="#fn_7" id="reffn_7">7</a></sup> <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-users/zsh-syntax-highlighting</a><br><sup><a href="#fn_8" id="reffn_8">8</a></sup> <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b4dec723c52f">MAC下安装oh-my-zsh和zsh-autosuggestion</a></p>
-
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35283688">Oh My Zsh, 『 安装 &amp; 配置 』</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/265525597">Oh My Zsh, 『 Powerlevel10k 安装 &amp; 配置 』</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts#option-3-install-script">ryanoasis/nerd-fonts</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh/ohmyzsh</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-users/zsh-autosuggestions</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md">zsh-users/zsh-autosuggestions/INSTALL.md</a>
+<a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-users/zsh-syntax-highlighting</a>
+<a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b4dec723c52f">MAC下安装oh-my-zsh和zsh-autosuggestion</a>
+<a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -311,7 +336,7 @@
                     
                       <a href="/posts/8561/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[TRICK] Set Higher Resolution for Extend Screen in macOS</span>
+                        <span class="hidden-mobile">Set Higher Resolution for Extend Screen in macOS</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -320,7 +345,7 @@
                     
                     
                       <a href="/posts/39735/">
-                        <span class="hidden-mobile">[TRICK] Show File Extensions in macOS</span>
+                        <span class="hidden-mobile">Show File Extensions in macOS</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -340,21 +365,18 @@
   <div id="valine"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
-        new Valine({
-          el: "#valine",
-          app_id: "wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI",
-          app_key: "DUXAXpsqA1waDIXf9aqAYegs",
-          placeholder: "welcome to discuss!",
-          path: window.location.pathname,
-          avatar: "mp",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "en",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "",
-        });
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI","appKey":"DUXAXpsqA1waDIXf9aqAYegs","path":"window.location.pathname","placeholder":"welcome to discuss!","avatar":"mp","meta":["nick","mail","link"],"requiredFields":["nick"],"pageSize":10,"lang":"en","highlight":false,"recordIP":false,"serverURLs":null,"emojiCDN":null,"emojiMaps":null,"enableQQ":false,"appid":"wNYvhmUL76rLW06m5BRtAJMu-MdYXbMMI","appkey":"DUXAXpsqA1waDIXf9aqAYegs","visiter":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+        })
       });
     });
   </script>
@@ -385,7 +407,7 @@
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -476,6 +498,10 @@
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -486,19 +512,18 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
 
 
 
@@ -513,24 +538,9 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 
@@ -545,6 +555,9 @@
       MathJax = {
         tex: {
           inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          
         },
         options: {
           renderActions: {

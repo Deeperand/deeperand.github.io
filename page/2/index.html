@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/page/2/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,6 +191,100 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/27800/" target="_self">
+          General Tips of Tmux
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/27800/" target="_self">
+          
+          Create a Session and Run Command1tmux new-session -d &quot;cd ~&#x2F;Documents&#x2F;project&#x2F;2021-05_personal_blog&#x2F; &amp;&amp; hexo s&quot; if wish to create a new window at the session 1tmux new-window (one can
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-11-09 09:50" pubdate>
+              2021-11-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Tmux/">CS Tmux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/posts/7891/" target="_self">
+          Bacis Knowledge of Tmux
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/7891/" target="_self">
+          
+          the main content is from my notes about tmux written from 2019 November to 2021 January
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-11-09 09:50" pubdate>
+              2021-11-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Tmux/">CS Tmux</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/16007/" target="_self">
           Brief Introduction of Vim Plugs
         </a>
@@ -190,12 +293,7 @@
       <p class="index-excerpt">
         <a href="/posts/16007/" target="_self">
           
-          
-            
-          
-          dearrrfish/vim-applescript“Vim syntax highlighting for AppleScript.” [1]
-Referencedearrrfish/vim-applescript
- ↩
+          dearrrfish&#x2F;vim-applescript“Vim syntax highlighting for AppleScript.” [1] Referencedearrrfish&#x2F;vim-applescript  ↩
         </a>
       </p>
 
@@ -242,15 +340,7 @@ Referencedearrrfish/vim-applescript
       <p class="index-excerpt">
         <a href="/posts/54618/" target="_self">
           
-          
-            
-          
-          WorkflowThere are some recommended plugin [1]
-
-有道翻译
-
-there is an official introduction [2]
-Use iTerm to Run Shell CommandOne can change preference -&gt; Features -&gt; Terminal -&gt; Application -&gt;
+          WorkflowThere are some recommended plugin [1]  有道翻译  there is an official introduction [2] Use iTerm to Run Shell CommandOne can change preference -&gt; Features -&gt; Terminal -&gt; Application -&gt;
         </a>
       </p>
 
@@ -292,19 +382,14 @@ Use iTerm to Run Shell CommandOne can change preference -&gt; Features -&gt; Ter
       <h1 class="index-header">
         
         <a href="/posts/53756/" target="_self">
-          [TRICK] General Tips of Mathematica
+          Mathematica Quick Start
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/53756/" target="_self">
           
-          
-            
-          
-          Polynomial
-Collect[expr,x]: collects together terms involving the same powers of objects matching x.
-CoefficientList[poly,var]: gives a list of coefficients of powers of var in poly, starting with pow
+          CalculationPolynomial Collect[expr,x]: collects together terms involving the same powers of objects matching x. CoefficientList[poly,var]: gives a list of coefficients of powers of var in poly, starti
         </a>
       </p>
 
@@ -346,18 +431,14 @@ CoefficientList[poly,var]: gives a list of coefficients of powers of var in poly
       <h1 class="index-header">
         
         <a href="/posts/10727/" target="_self">
-          [DEBUG] Some Small Command Line Bugs of macOS
+          Some Small Command Line Bugs of macOS
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/10727/" target="_self">
           
-          
-            
-          
-          xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)The problem can happen after updating macOS system. The solution is re-install command line tools of xcode [1] by
-1xcod
+          xcrun: error: invalid active developer path (&#x2F;Library&#x2F;Developer&#x2F;CommandLineTools)The problem can happen after updating macOS system. The solution is re-install command line tools of xcode [1] by 1xcod
         </a>
       </p>
 
@@ -375,6 +456,8 @@ CoefficientList[poly,var]: gives a list of coefficients of powers of var in poly
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/CS-macOS/">CS macOS</a>
+            
+              <a href="/categories/CS-macOS/DEBUG/">DEBUG</a>
             
           </div>
         
@@ -399,19 +482,14 @@ CoefficientList[poly,var]: gives a list of coefficients of powers of var in poly
       <h1 class="index-header">
         
         <a href="/posts/25223/" target="_self">
-          [TRICK] Change `commit` Message of `git`
+          Change `commit` Message of `git`
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/25223/" target="_self">
           
-          
-            
-          
-          Change the Last Commit MessageChange the Older Commit MessageThe commend 
-1$ git rebase -i HEAD~N
-can change the older commit message, where N means showen the last N times commit (note this command c
+          Change the Last Commit MessageChange the Older Commit MessageThe commend  1$ git rebase -i HEAD~N can change the older commit message, where N means showen the last N times commit (note this command c
         </a>
       </p>
 
@@ -462,19 +540,7 @@ can change the older commit message, where N means showen the last N times commi
       <p class="index-excerpt">
         <a href="/posts/18618/" target="_self">
           
-          
-            
-          
-          GeneralUse Advanced ToolPreference -&gt; Advanced -&gt; Show Advanced Tool
-before
-
-after
-
-before
-
-after
-
-Then one need enable all the selection to use the full-advanced functions. e.g., before enable 
+          GeneralUse Advanced ToolPreference -&gt; Advanced -&gt; Show Advanced Tool before  after  before  after  Then one need enable all the selection to use the full-advanced functions. e.g., before enable
         </a>
       </p>
 
@@ -523,11 +589,7 @@ Then one need enable all the selection to use the full-advanced functions. e.g.,
       <p class="index-excerpt">
         <a href="/posts/1261/" target="_self">
           
-          
-            
-          
-          (some basic knowledge can see [1] )
-There are tow reasons might cause the error. The first is didn’t set ssh‘s config file appropriately to use the specific private key when connect to specific server
+          (some basic knowledge can see [1] ) There are tow reasons might cause the error. The first is didn’t set ssh‘s config file appropriately to use the specific private key when connect to specific server
         </a>
       </p>
 
@@ -546,7 +608,7 @@ There are tow reasons might cause the error. The first is didn’t set ssh‘s c
             
               <a href="/categories/CS-Linux/">CS Linux</a>
             
-              <a href="/categories/CS-Linux/CS-Git/">CS Git</a>
+              <a href="/categories/CS-Linux/Git/">Git</a>
             
           </div>
         
@@ -571,17 +633,14 @@ There are tow reasons might cause the error. The first is didn’t set ssh‘s c
       <h1 class="index-header">
         
         <a href="/posts/55899/" target="_self">
-          [TRICK] General Tricks about Windows
+          General Tricks about Windows
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/55899/" target="_self">
           
-          
-            
-          
-          System Shortcut&lt;win-D&gt;: show desktop&lt;win-E&gt;: open source management&lt;win-I&gt;: open system preference&lt;win-L&gt;: lock screen&lt;win-W&gt;/&lt;win-S-W&gt;: minimal all the windows / s
+          System Shortcut&lt;win-D&gt;: show desktop&lt;win-E&gt;: open source management&lt;win-I&gt;: open system preference&lt;win-L&gt;: lock screen&lt;win-W&gt;&#x2F;&lt;win-S-W&gt;: minimal all the windows &#x2F; s
         </a>
       </p>
 
@@ -616,114 +675,6 @@ There are tow reasons might cause the error. The first is didn’t set ssh‘s c
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/45181/" target="_self">
-          [TRICK] General Tricks of LaTeX
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/45181/" target="_self">
-          
-          
-            
-          
-          Use Alias of Title in ContentSome time you want to use different name in content and in mainbody, which can happen when the title is too long or you wish to change line by your hands. To realize it, o
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-26 10:13" pubdate>
-              2021-10-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CS/">CS</a>
-            
-              <a href="/tags/TRICK/">TRICK</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/64966/" target="_self">
-          Usage of `ctex` Packages
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/64966/" target="_self">
-          
-          
-            
-          
-          Title Control&emsp;&emsp;The basic conception about title can be shown as
-
-More details can ref
-
-
-
-&emsp;&emsp;A nice application is use the above command to realize pending and right-justify type set
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-26 10:00" pubdate>
-              2021-10-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CS/">CS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
@@ -742,7 +693,7 @@ More details can ref
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -833,6 +784,10 @@ More details can ref
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -842,14 +797,6 @@ More details can ref
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -864,24 +811,9 @@ More details can ref
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

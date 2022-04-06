@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/page/11/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,6 +191,55 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/6823/" target="_self">
+          Compile LaTeX
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/6823/" target="_self">
+          
+          Use latexmkLet latexmk Compile with xetexSet  1$pdf_mode &#x3D; 5; to let latexmk compile with xelatex [1] [2]. Some configure about vimtex can see [3] . 多文件编译LaTeX 默认指令 \include&amp;#123;&lt;file&gt;&amp;#125;: 导
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-23 10:26" pubdate>
+              2021-05-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-LaTeX/">CS LaTeX</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+              <a href="/tags/TODO/">TODO</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/48177/" target="_self">
           [DEBUG] 个人博客访问出现 404 问题
         </a>
@@ -190,12 +248,7 @@
       <p class="index-excerpt">
         <a href="/posts/48177/" target="_self">
           
-          
-            
-          
-          
-本文介绍了 404 问题的基本概念, 以及对今天处理的一个 404 问题发生原因的分析.
-
+          本文介绍了 404 问题的基本概念, 以及对今天处理的一个 404 问题发生原因的分析.
         </a>
       </p>
 
@@ -235,19 +288,14 @@
       <h1 class="index-header">
         
         <a href="/posts/16994/" target="_self">
-          [TRICK] Hexo 中设置永久链接
+          Hexo 中设置永久链接
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/16994/" target="_self">
           
-          
-            
-          
-          
-本文介绍了 Hexo 中永久链接的概念和相应设置方法
-
+          本文介绍了 Hexo 中永久链接的概念和相应设置方法
         </a>
       </p>
 
@@ -295,9 +343,6 @@
 
       <p class="index-excerpt">
         <a href="/posts/55253/" target="_self">
-          
-          
-            
           
           本文介绍了如何利用 ImageMagick 提供的 conver 指令将 PDF 转化为图片, 以及如何调整图片的分辨率. 其中 PDF 转换为图片的部分最早记录于 2020.05.19, 分辨率调整的部分最早记录于 2020.07.08.
         </a>
@@ -348,9 +393,6 @@
       <p class="index-excerpt">
         <a href="/posts/52171/" target="_self">
           
-          
-            
-          
           本文主要记录了大调音阶的关键指法, 以及大调音阶的关系小调音阶 (旋律) 的对应升音.
         </a>
       </p>
@@ -397,9 +439,6 @@
 
       <p class="index-excerpt">
         <a href="/posts/42558/" target="_self">
-          
-          
-            
           
           本文为 论钢琴表演艺术 (涅高兹) 第四章的读书笔记.
         </a>
@@ -452,9 +491,6 @@
       <p class="index-excerpt">
         <a href="/posts/25703/" target="_self">
           
-          
-            
-          
           这篇文章用于记录撰写毕业论文时遇到的与 LaTeX 相关的问题
         </a>
       </p>
@@ -504,9 +540,6 @@
       <p class="index-excerpt">
         <a href="/posts/41035/" target="_self">
           
-          
-            
-          
           本文用于记录了 LaTeX 中的计数器相关的知识. 包括计数器的名称, 格式指定及一些相关应用. 主要参考刘海洋的 LaTeX 教材 [1].
         </a>
       </p>
@@ -554,9 +587,6 @@
       <p class="index-excerpt">
         <a href="/posts/5261/" target="_self">
           
-          
-            
-          
           This essay is a reading notes of A First Course in String Theory, Chapter 2 Special relativity and extra dimensions [1]
         </a>
       </p>
@@ -601,15 +631,12 @@
       <h1 class="index-header">
         
         <a href="/posts/5138/" target="_self">
-          [TRICK] 插件 vimtex 中的 Text Objects
+          插件 vimtex 中的 Text Objects
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/5138/" target="_self">
-          
-          
-            
           
           本文记录了插件 vimtex 中定义的的文本对象 [1]
         </a>
@@ -646,62 +673,6 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/13137/" target="_self">
-          [READ] Chapter 1 A Brief Introduction
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/13137/" target="_self">
-          
-          
-            
-          
-          
-This essay is a reading notes of A First Course in String Theory, Chapter 1 A brief introduction [1]
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-08 11:12" pubdate>
-              2021-05-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/PHYS-String-Theory/">PHYS String Theory</a>
-            
-              <a href="/categories/PHYS-String-Theory/BOOK-A-First-Course-in-String-Theory/">BOOK A First Course in String Theory</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PHYS/">PHYS</a>
-            
-              <a href="/tags/READ/">READ</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
@@ -720,7 +691,7 @@ This essay is a reading notes of A First Course in String Theory, Chapter 1 A br
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -811,6 +782,10 @@ This essay is a reading notes of A First Course in String Theory, Chapter 1 A br
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -820,14 +795,6 @@ This essay is a reading notes of A First Course in String Theory, Chapter 1 A br
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -842,24 +809,9 @@ This essay is a reading notes of A First Course in String Theory, Chapter 1 A br
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

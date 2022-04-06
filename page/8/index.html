@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/page/8/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,18 +191,62 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/11580/" target="_self">
+          [TODO] 编写 YGO 对战 AI
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/11580/" target="_self">
+          
+          先挖个坑, 以后有时间再研究一个如何编写 YGO 的对站 AI (会用到 Lua 语言)。 ReferenceYGOPro AI脚本教程（译文）  ↩
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-11 15:59" pubdate>
+              2021-07-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/YGO/">YGO</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/TODO/">TODO</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/11852/" target="_self">
-          [TRICK] 百度网盘限速破解方法 (未解决)
+          百度网盘限速破解方法 (未解决)
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/11852/" target="_self">
           
-          
-            
-          
-          &emsp;&emsp;之前尝试了绕过百度网盘限速的方法, 但遗憾的是尚未成功不限速下载到所需资源。大体来说, 绕过限速需要先通过各种方法对资源的地址进行解析 (如 KinhDown [1] 及油猴脚本 [2] ), 之后通过一个 Windows 平台的下载器 Internet Dowloading Manager (IDM), 下载将解析得到的链接。但部分资源进行下载时可能会显示没有权限, 这种
+          &amp;emsp;&amp;emsp;之前尝试了绕过百度网盘限速的方法, 但遗憾的是尚未成功不限速下载到所需资源。大体来说, 绕过限速需要先通过各种方法对资源的地址进行解析 (如 KinhDown [1] 及油猴脚本 [2] ), 之后通过一个 Windows 平台的下载器 Internet Dowloading Manager (IDM), 下载将解析得到的链接。但部分资源进行下载时可能会显示没有权限, 这种
         </a>
       </p>
 
@@ -237,15 +290,12 @@
       <h1 class="index-header">
         
         <a href="/posts/8962/" target="_self">
-          [DEBUG] Can&#39;t Open Application with Current Version of macOS
+          Can&#39;t Open Application with Current Version of macOS
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/8962/" target="_self">
-          
-          
-            
           
           When I try to open ygopro.app, I meet a warning “You can’t use this version of the application “ygopro.app” with this version of macOS.”. The solution I thought is modify the Minimum system version op
         </a>
@@ -265,6 +315,8 @@
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/CS-macOS/">CS macOS</a>
+            
+              <a href="/categories/CS-macOS/DEBUG/">DEBUG</a>
             
           </div>
         
@@ -291,17 +343,14 @@
       <h1 class="index-header">
         
         <a href="/posts/660/" target="_self">
-          [TRICK] Forbid Auto-launch while Starting Up
+          Forbid Auto-launch while Starting Up
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/660/" target="_self">
           
-          
-            
-          
-          General&emsp;&emsp;At few days ago, I found Steam.app will always launch while I loging in or starting up my MacBook even I trun off the auto launch option at Perference of Steam.app. Later I found to
+          General&amp;emsp;&amp;emsp;At few days ago, I found Steam.app will always launch while I loging in or starting up my MacBook even I trun off the auto launch option at Perference of Steam.app. Later I found to
         </a>
       </p>
 
@@ -318,7 +367,7 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/CS-macOS/">CS macOS</a>
+              <a href="/categories/spare/">(spare)</a>
             
           </div>
         
@@ -343,18 +392,14 @@
       <h1 class="index-header">
         
         <a href="/posts/16883/" target="_self">
-          [TRICK] 删除 Word 中的空白页
+          删除 Word 中的空白页
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/16883/" target="_self">
           
-          
-            
-          
-          删除空白页的原理实际是删除换页符 (不可见字符, Word 中会以特殊符号标记), 于是最简单的方法是选中换页符, 用 backspace 或 delete (shift + backspace) 删除 [1] , 或者直接选中空白页的第一行, 使用 delete (此时换页符在光标的下一个字符, 因而 delete 刚好将其删除)。
-ReferenceWord空白页怎么都删除不掉？用这6个方法随
+          删除空白页的原理实际是删除换页符 (不可见字符, Word 中会以特殊符号标记), 于是最简单的方法是选中换页符, 用 backspace 或 delete (shift + backspace) 删除 [1] , 或者直接选中空白页的第一行, 使用 delete (此时换页符在光标的下一个字符, 因而 delete 刚好将其删除)。 ReferenceWord空白页怎么都删除不掉？用这6个方法随
         </a>
       </p>
 
@@ -398,19 +443,14 @@ ReferenceWord空白页怎么都删除不掉？用这6个方法随
       <h1 class="index-header">
         
         <a href="/posts/6096/" target="_self">
-          [TRICK] Hide Comments in Word
+          Hide Comments in Word
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/6096/" target="_self">
           
-          
-            
-          
-          
-Sometims there is a comments side area in Word, this article introduced how to hide it.
-
+          Sometims there is a comments side area in Word, this article introduced how to hide it.
         </a>
       </p>
 
@@ -454,19 +494,14 @@ Sometims there is a comments side area in Word, this article introduced how to h
       <h1 class="index-header">
         
         <a href="/posts/6572/" target="_self">
-          [TRICK] 在 LaTeX 中插入 PDF
+          在 LaTeX 中插入 PDF
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/6572/" target="_self">
           
-          
-            
-          
-          
-本文介绍了使用 LaTeX 插入 PDF 页面的方法。
-
+          本文介绍了使用 LaTeX 插入 PDF 页面的方法。
         </a>
       </p>
 
@@ -515,12 +550,7 @@ Sometims there is a comments side area in Word, this article introduced how to h
       <p class="index-excerpt">
         <a href="/posts/23053/" target="_self">
           
-          
-            
-          
-          
-今天安装了 Docker 后, 发现运行 docker run -d -p 80:80 docker/getting-started, 后来发现是代理设置问题。
-
+          今天安装了 Docker 后, 发现运行 docker run -d -p 80:80 docker&#x2F;getting-started, 后来发现是代理设置问题。
         </a>
       </p>
 
@@ -564,19 +594,14 @@ Sometims there is a comments side area in Word, this article introduced how to h
       <h1 class="index-header">
         
         <a href="/posts/42734/" target="_self">
-          [TRICK] Fluid 中的 Categories 设置选项
+          Fluid 中的 Categories 设置选项
         </a>
       </h1>
 
       <p class="index-excerpt">
         <a href="/posts/42734/" target="_self">
           
-          
-            
-          
-          
-本文记录了 Hexo 的 Fluid 主题中的 Categories 相关设置选项.
-
+          本文记录了 Hexo 的 Fluid 主题中的 Categories 相关设置选项.
         </a>
       </p>
 
@@ -623,12 +648,7 @@ Sometims there is a comments side area in Word, this article introduced how to h
       <p class="index-excerpt">
         <a href="/posts/55611/" target="_self">
           
-          
-            
-          
-          
-本文总结了本科理论力学学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “两个月速成 (误) 物理学本科高年级课程之理论力学篇: 总纲“.
-
+          本文总结了本科理论力学学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “两个月速成 (误) 物理学本科高年级课程之理论力学篇: 总纲“.
         </a>
       </p>
 
@@ -646,58 +666,6 @@ Sometims there is a comments side area in Word, this article introduced how to h
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/PHYS-Unclassified/">PHYS Unclassified</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/PHYS/">PHYS</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/posts/20105/" target="_self">
-          热力学与统计物理物理复习概要
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/posts/20105/" target="_self">
-          
-          
-            
-          
-          
-本文总结了本科热力学及统计物理学习的主要知识. 该文章于去年为理念经所夏令营面试做准备所写, 最早发布于知乎, 原标题为 “两个月速成 (误) 物理学本科高年级课程之统计物理篇: 总纲“.
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-05-31 17:07" pubdate>
-              2021-05-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/PHYS-Condensed-Physics/">PHYS Condensed Physics</a>
             
           </div>
         
@@ -731,7 +699,7 @@ Sometims there is a comments side area in Word, this article introduced how to h
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -822,6 +790,10 @@ Sometims there is a comments side area in Word, this article introduced how to h
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -831,14 +803,6 @@ Sometims there is a comments side area in Word, this article introduced how to h
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -853,24 +817,9 @@ Sometims there is a comments side area in Word, this article introduced how to h
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

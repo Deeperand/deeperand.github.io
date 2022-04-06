@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,14 +9,21 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/fig/avatar.jpg">
   <link rel="icon" href="/fig/avatar.jpg">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="Deeperand">
   <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Deeperand">
+<meta property="og:url" content="https://deeperand.github.io/page/13/index.html">
+<meta property="og:site_name" content="Blog | Deeperand">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Deeperand">
+<meta name="twitter:card" content="summary_large_image">
+  
   
   <title>Blog | Deeperand</title>
 
@@ -40,7 +47,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com"}}};
+    var CONFIG = {"hostname":"deeperand.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"rUWOyfnPKrha74U4qmAX3upx-gzGzoHsz","app_key":"ip7rFU6LO69hBFLUoU0cCJMd","server_url":"https://ruwoyfnp.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -51,8 +58,9 @@
   <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Deeplog</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Deeplog</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -126,13 +134,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -147,7 +156,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Welcome to Deeperand's Blog">
+            <span class="h2" id="subtitle" title="Welcome to Deeperand&#39;s Blog">
               
             </span>
 
@@ -182,6 +191,53 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/posts/21980/" target="_self">
+          在 Hexo 的 Fluid 主题中使用 LaTeX 公式
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/posts/21980/" target="_self">
+          
+          1 在 Fluid 主题中开启数学公式&amp;emsp;&amp;emsp;Hexo 主题 Fluid 中提供了数学公式支持 [1], 主要流程分为如下几步  在主题配置文件中开启数学公式: 这需要在 Fluid 主题的配置文件 _config.fluid.yml 中进行配置 (摘录于主题默认配置文件 [2]) 123456789101112post:math:    # 开启后文章默认可用，自定义页面如需使用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-05-03 07:41" pubdate>
+              2021-05-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/CS-Hexo/">CS Hexo</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/CS/">CS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/posts/3218/" target="_self">
           Markdown 语法速查
         </a>
@@ -190,13 +246,7 @@
       <p class="index-excerpt">
         <a href="/posts/3218/" target="_self">
           
-          
-            
-          
-          &emsp;&emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用.
-图片及超链接12![fig name](path &quot;alt name&quot;)[link display](link)
-表格Syntax&emsp;&emsp;表格基本格式为 [1]
-1234| item 1 | item 2 ||--------|---
+          &amp;emsp;&amp;emsp;本文并不打算全面地介绍 Markdown, 主要致力于记录一些次常用的 Markdown 语法以备使用. 图片及超链接12![fig name](path &quot;alt name&quot;)[link display](link) 表格Syntax&amp;emsp;&amp;emsp;表格基本格式为 [1] 1234| item 1 | item 2 ||--------|---
         </a>
       </p>
 
@@ -245,13 +295,7 @@
       <p class="index-excerpt">
         <a href="/posts/6453/" target="_self">
           
-          
-            
-          
-          本文绝大部分内容参考自 Hexo 的官方参考文档 [1], 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会.
-建站及 Hexo 目录结构&emsp;&emsp;类似于 git 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 [2]. 如
-123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install
-其中第
+          本文绝大部分内容参考自 Hexo 的官方参考文档 [1], 旨在记录笔者本人建立博客过程中觉得比较实用的东西亦即个人体会. 建站及 Hexo 目录结构&amp;emsp;&amp;emsp;类似于 git 使用时需要进行初始化, 使用 Hexi 建站时同样需要进行初始化 [2]. 如 123$ hexo init &lt;folder&gt;$ cd &lt;folder&gt;$ npm install 其中第
         </a>
       </p>
 
@@ -298,11 +342,7 @@
       <p class="index-excerpt">
         <a href="/posts/58971/" target="_self">
           
-          
-            
-          
-          Flash 插件的兼容性&emsp;&emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 [1] (比如新建网站时公安备案的网站 [2], 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要.
-&emsp;&emsp;Firefox 的较新版本是不支持 Flash 的. 想要正
+          Flash 插件的兼容性&amp;emsp;&amp;emsp;从不久前开始, 几乎所有浏览器都取消了对 Flash 的支持. 但鉴于部分老旧网页的服务仍需 Flash 插件 [1] (比如新建网站时公安备案的网站 [2], 目前其在填写网站备案信息时会提示需要 Flash 插件), 保留一款支持 Flash 的浏览器很有必要. &amp;emsp;&amp;emsp;Firefox 的较新版本是不支持 Flash 的. 想要正
         </a>
       </p>
 
@@ -342,11 +382,7 @@
       <p class="index-excerpt">
         <a href="/posts/16107/" target="_self">
           
-          
-            
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
         </a>
       </p>
 
@@ -379,19 +415,7 @@ Quick
       <p class="index-excerpt">
         <a href="/posts/45122/" target="_self">
           
-          
-            
-          
-          
-写这篇文章的目的是为了记录使用 HEXO 的过程中了解到的插件
-
-hexo-pdf
-(2021-04-19) 
-
-
-Introduce: Hexo tag for embeded pdf
-Install:  1npm install --save hexo-pdf
-Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash
+          写这篇文章的目的是为了记录使用 HEXO 的过程中了解到的插件  hexo-pdf (2021-04-19)    Introduce: Hexo tag for embeded pdf Install:  1npm install --save hexo-pdf Example:  12&amp;#123;% pdf http:&#x2F;&#x2F;7xov2f.com1.z0.glb.clouddn.com&#x2F;bash
         </a>
       </p>
 
@@ -438,11 +462,7 @@ Example:  12&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash
       <p class="index-excerpt">
         <a href="/posts/56113/" target="_self">
           
-          
-            
-          
-          日期开头的分隔符问题&emsp;&emsp;今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了.
-asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时
+          日期开头的分隔符问题&amp;emsp;&amp;emsp;今天尝试在文件名开头使用以下划线分隔的日期, 如 2020_12_05_DG_in_spherical_coordinate, 在网页渲染时会出现无法渲染的情况. 但之后因不明原因, 该情况又自己消失了. asset 文件夹的分隔符问题&amp;emsp;&amp;emsp;另一个关于文件命名的问题是, 使用指令 hexo new &lt;file_name&gt; 时
         </a>
       </p>
 
@@ -493,7 +513,7 @@ asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问�
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -584,6 +604,10 @@ asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问�
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -593,14 +617,6 @@ asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问�
   
 
 
-
-
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
@@ -615,24 +631,9 @@ asset 文件夹的分隔符问题&emsp;&emsp;另一个关于文件命名的问�
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 
